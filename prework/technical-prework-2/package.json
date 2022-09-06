@@ -1,0 +1,22 @@
+{
+  "name": "technical-prework-1",
+  "version": "1.0.0",
+  "description": "### Directions  You will be applying what you've learned about JavaScript by implementing various functions. This assignment will demonstrate your code fluency and problem-solving abilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Marcy-Lab-School/technical-prework-1.git"
+  },
+  "author": "Ann Duong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Marcy-Lab-School/technical-prework-1/issues"
+  },
+  "homepage": "https://github.com/The-Marcy-Lab-School/technical-prework-1#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
