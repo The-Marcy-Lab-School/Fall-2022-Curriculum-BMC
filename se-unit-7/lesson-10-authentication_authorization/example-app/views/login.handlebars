@@ -1,0 +1,19 @@
+{{#if message}}
+  <div>
+    <p>{{message}}</p>
+  </div>
+{{/if}}
+<form action="/login" method="post">
+  <div>
+    <label for="email">Email</label>
+    <input type="text" name="email" id="email" autofocus required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" required>
+  </div>
+
+  <button type="submit">Login</button>
+</form>
+
+<a href="/register">Create Account</a>
