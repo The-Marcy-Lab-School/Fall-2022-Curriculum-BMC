@@ -1,0 +1,50 @@
+col {
+  width: 100px;
+}
+
+tr {
+  height: 100px;
+}
+
+table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td, th {
+  color: inherit;
+  border: 1px solid black;
+}
+
+td {
+  text-align: left;
+  padding-left: 10px;
+}
+#yellow {
+  background-color: yellow;
+}
+
+col:nth-child(5){
+  background-color: #e9e9e9;
+  color: white;
+}
+
+th[scope="row"] {
+  background-color: #e9e9e9;
+}
+
+tbody {
+  background-color: green;
+}
+
+tfoot {
+  background-color: #e9e9e9;
+}
+
+tfoot td {
+  text-align: center;
+}
+
+tfoot > span {
+  font-size: 30px;
+}

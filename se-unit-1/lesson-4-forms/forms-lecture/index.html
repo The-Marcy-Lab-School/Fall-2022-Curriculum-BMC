@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <main>
+    <h1>Participant Information Form</h1>
+    <form action="#" method="post">
+      <fieldset class="contact-info">
+        <legend>Contact Info</legend>
+        <ul>
+          <li>
+            <label for="full-name"> Full Name </label>
+            <input type="text" name="full-name" id="full-name" />
+          </li>
+          <li>
+            <label for="email-address"> Email Address</label>
+            <input type="email" name="email-address" id="email-address" />
+          </li>
+          <li>
+            <label for="address">Address:</label>
+            <textarea name="address" placeholder="Test text" id="address"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="dietary-info">
+        <legend>Dietary Restrictions</legend>
+        <input type="checkbox" name="dietary-restrictions" value="gluten-free" id="dietary-restrictions" />
+        <label for="gluten-free">Gluten-Free</label>
+        <input type="checkbox" name="dietary-restrictions" value="vegetarian" id="vegetarian" />
+        <label for="vegetarian">Vegetarian</label>
+        <label>
+          <input type="checkbox" name="dietary-restrictions" value="vegan" checked/>
+          Vegan
+        </label>
+      </fieldset>
+      <fieldset>
+        <legend>Preferred Spice Level</legend>
+        <label>
+          <input type="radio" name="spice" value="mild" />
+          Mild 
+        </label>
+        <label>
+          <input type="radio" name="spice" value="medium" />
+          Medium
+        </label>
+        <label>
+          <input type="radio" name="spice" value="hot" />
+          Hot
+        </label>
+        <label for="hotsauce-brand">Favorite Hotsauce</label>
+        <select name="favorite-hotsauce" id="hotsauce-brand">
+          <option value="franks">Frank's</option>
+          <option value="texas-petes">Texas Pete's</option>
+          <option value="tobasco">Tobasco 🤮</option>
+        </select>
+      </fieldset>
+      <input type="submit" value="Ready to Go!">
+    </form>
+  </main>
+</body>
+</html>

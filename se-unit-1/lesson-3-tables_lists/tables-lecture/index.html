@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Practice</title>
+  <link rel="stylesheet" href="styles.css" media="all">
+</head>
+<body>
+  <table>
+    <colgroup>
+      <col>
+      <col>
+      <col id="yellow">
+      <col>
+      <col>
+      <col>
+      <col>
+      <col>
+    </colgroup>
+    <thead>
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">Mon</th>
+        <th scope="col">Tues</th>
+        <th scope="col">Weds</th>
+        <th scope="col">Thurs</th>
+        <th scope="col">Fri</th>
+        <th scope="col">Sat</th>
+        <th scope="col">Sun</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1st Period</th>
+        <td>English</td>
+        <td></td>
+        <td></td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th scope="row">2nd Period</th>
+        <td>English</td>
+        <td>English</td>
+        <td></td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th rowspan="2" colspan="2" scope="row">3rd Period</th>
+        <!-- <td></td> -->
+        <!-- <td>German</td> -->
+        <td></td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <!-- <th scope="row">4th Period</th> -->
+        <!-- <td></td> -->
+        <!-- <td>German</td> -->
+        <td></td>
+        <td>German</td>
+        <td>Dutch</td>
+        <td></td>
+        <td></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <td colspan="8">This <span>is the </span>footer</td>
+    </tfoot>
+  </table>
+  
+</body>
+</html>
+

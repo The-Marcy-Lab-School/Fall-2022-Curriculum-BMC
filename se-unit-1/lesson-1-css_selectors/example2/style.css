@@ -1,0 +1,20 @@
+.optional {
+  color: brown;
+}
+
+.important {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 8px;
+}
+
+.large {
+  font-size: 32px;
+}
+
+img[src="https://csswizardry.com/img/content/logo-inuitcss.png"] {
+  width: 500px;
+  border: 20px solid red;
+}

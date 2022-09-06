@@ -1,0 +1,66 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #02C39A;
+}
+
+main {
+  width: 700px;
+  margin: 100px auto;
+  padding: 50px;
+  background-color: #F0F3BD;
+}
+fieldset {
+  border: none;
+}
+
+legend{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  min-height: 35px;
+  height: auto;
+}
+
+label {
+  display: inline-block;
+  width: 33%;
+  height: 25px;
+}
+
+input {
+  display: inline-block;
+  width: 66%;
+  height: 25px;
+}
+
+label {
+  text-align: right;
+  vertical-align: top;
+}
+
+textarea {
+  max-width: 66%;
+  min-width: 66%;
+  min-height: 70px;
+  max-height: 70px;
+}
