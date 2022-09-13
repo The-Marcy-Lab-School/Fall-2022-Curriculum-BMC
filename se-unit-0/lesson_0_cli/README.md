@@ -23,7 +23,7 @@ FWBAT (Fellows Will Be Able To):
    * Viewing and Changing the File System
 
 ## Lab
-1. [CLI Practice](/lesson_0_cli/cli_practice.md)
+1. [CLI Practice](/se-unit-0/lesson_0_cli/cli_practice.md)
 ___
 
 ### Optional Learning
