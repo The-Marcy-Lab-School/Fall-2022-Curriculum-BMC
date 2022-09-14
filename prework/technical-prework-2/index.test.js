@@ -85,6 +85,12 @@ test('doubleArray function works for an empty array', () => {
   expect(doubleArray([])).toEqual([]);
 });
 
+test('doubleArray function doesn\'t alter input arrays', () => {
+  const arr = [1,2,3]
+  doubleArray(arr)
+  expect(arr).toEqual([1,2,3]);
+});
+
 test('negatedArray function works', () => {
   expect(negatedArray([3, 6, 8])).toEqual([-3, -6, -8]);
   expect(negatedArray([3.25, -2, 5.5])).toEqual([-3.25, 2, -5.5]);
@@ -96,16 +102,38 @@ test('negatedArray function works for an empty array', () => {
   expect(negatedArray([])).toEqual([]);
 });
 
+test('negatedArray function doesn\'t alter input arrays', () => {
+  const arr = [1,2,3]
+  negatedArray(arr)
+  expect(arr).toEqual([1,2,3]);
+});
+
 test('addList function works', () => {
   expect(addList([3, 5, 7], [9, 10, 11])).toEqual([12, 15, 18]);
   expect(addList([5, 10, 15, 20], [1, 2, 3, 4])).toEqual([6, 12, 18, 24]);
   expect(addList([1, 2, 3, 4], [1, 2, 3, 4])).toEqual([2, 4, 6, 8]);
 });
 
+test('addList function doesn\'t alter input arrays', () => {
+  const arr1 = [1,2,3]
+  const arr2 = [4,5,6]
+  addList(arr1, arr2)
+  expect(arr1).toEqual([1,2,3]);
+  expect(arr2).toEqual([4,5,6]);
+});
+
 test('multiplyList function works', () => {
   expect(multiplyList([3, 5, 7], [9, 10, 11])).toEqual([27, 50, 77]);
   expect(multiplyList([5, 10, 15, 20], [1, 2, 3, 4])).toEqual([5, 20, 45, 80]);
   expect(multiplyList([1, 1, 1, 1], [1, 2, 3, 4])).toEqual([1, 2, 3, 4]);
+});
+
+test('multiplyList function doesn\'t alter input arrays', () => {
+  const arr1 = [1,2,3]
+  const arr2 = [4,5,6]
+  multiplyList(arr1, arr2)
+  expect(arr1).toEqual([1,2,3]);
+  expect(arr2).toEqual([4,5,6]);
 });
 
 test('introducePerson function matches exactly', () => {
