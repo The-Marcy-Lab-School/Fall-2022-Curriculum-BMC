@@ -7,7 +7,7 @@ The open source community provides a great opportunity for aspiring programmers 
 ## Instructions
 
 A friend of yours has created [this repository](https://github.com/The-Marcy-Lab-School/open-source-hello-world).
-They are a brand new developer and would benefit from your contributions. Their repository has **_a lot_** of typos, and grammatical mistakes in their `READEME.md`.
+They are a brand new developer and would benefit from your contributions. Their repository has **_a lot_** of typos, and grammatical mistakes in their `README.md`.
 They don't even use complete sentences sometimes! Futhermore, they have some bugs in their `helloworld.js` file.
 
 Your job is as followed:
@@ -15,7 +15,7 @@ Your job is as followed:
 
 ![1](assets/1.png)
 
-2. Then clone down _your forked_ repository using your terminal by typing`git clone <url>`. You can confirm that you are cloning the _forked_ repo by making sure the webpage has your username in the top left. Once cloned, make improvements to both the `READEME.md` and `helloworld.js` files. 
+2. Then clone down _your forked_ repository using your terminal by typing`git clone <url>`. You can confirm that you are cloning the _forked_ repo by making sure the webpage has your username in the top left. Once cloned, make improvements to both the `README.md` and `helloworld.js` files. 
 
 ![2](assets/2.png)
 
