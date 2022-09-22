@@ -9,16 +9,18 @@ Fellows will be able to...
 * Create a pull request.
 * Resolve merge conflicts through the Github GUI and CLI.
 
+## Morning Warmup Questions (Be prepared for one of these questions to be presented at the beginning of lecture)
+1. What is the difference between forking, cloning, and branching?
+2. Why might a merge conflict happen?
+
 ## Learning Assignments
 1. [Video on Git Branches](https://www.youtube.com/watch?v=oPpnCh7InLY)
 2. [Video on Forks and Pull Requests](https://www.youtube.com/watch?v=_NrSWLQsDL4)
 3. [Video on Merge Conflicts](https://www.youtube.com/watch?v=JtIX3HJKwfo)
 
-
 ## Lab
 1. [An Intro to Git and GitHub for Beginners (Tutorial)](https://product.hubspot.com/blog/git-and-github-tutorial-for-beginners)
 1. [Github Hello World Lab](https://docs.github.com/en/get-started/quickstart/hello-world)
-
 ____
 
 ### Optional Learning
