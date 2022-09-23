@@ -12,7 +12,7 @@ FWBAT (Fellows Will Be Able To):
 
 
 ## Morning Warmup Questions (Be prepared for one of these questions to be presented at the beginning of lecture)
-1. Why is it called Command Line Interface? 
+1. Why is it called Command Line Interface? How is it different from a Graphical User Interface?
 2. What are some of the commonly used commands in the terminal? 
 3. Why do we use the Command Line? 
 
