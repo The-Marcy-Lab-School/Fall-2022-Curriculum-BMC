@@ -20,13 +20,13 @@ FWBAT...
 
 ## Definitions and terms review
 	
-- Pre-requisites: Everyone should have a Unit 0 folder. If you don't, make one using either the GUI or the CLI
-- Create a new file called notes.txt and write out the usefulness (the what) and purpose (the why) of the following:
-	  - Interface
-	  - Command Line Interface (CLI)
-	  - Graphical User Interface (GUI)
-	- Then, make a list of the CLI commands that you know
-	- Finally, add any fun facts / cool "pro" tricks that you learned about beyond what's above.
+- Pre-requisites: Everyone should have a `unit 0/` folder. If you don't, make one using either the GUI or the CLI
+- Inside `unit-0/`, create a new file called `notes.txt` and write out the usefulness (the what) and purpose (the why) of the following:
+  - Interface
+  - Command Line Interface (CLI)
+  - Graphical User Interface (GUI)
+- Then, make a list of the CLI commands that you know
+- Finally, add any fun facts / cool "pro" tricks that you learned about beyond what's above.
 
 _________________
 
