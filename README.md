@@ -12,7 +12,7 @@
 
 ### Unit 0 - Command Line, Git, Github
 * [Unit 0 Slides](https://docs.google.com/presentation/d/17gitOafNzkmmma5NUQakhtfTFEmfu8P4VKt9l1A07Ag/edit?usp=sharing)
-* [Command Line Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli-lecture-notes.md)
+* [Command Line Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_lecture_notes.md)
 
 ### Unit 1 - HTML & CSS
 ### Unit 2 - JavaScript 
