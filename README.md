@@ -11,8 +11,7 @@
 * [AWS + Github Setup Instructions in Github](https://github.com/The-Marcy-Lab-School/aws-cloud9-environment-setup)
 
 ### Unit 0 - Command Line, Git, Github
-* [Unit 0 Slides](https://docs.google.com/presentation/d/17gitOafNzkmmma5NUQakhtfTFEmfu8P4VKt9l1A07Ag/edit?usp=sharing)
-* [Command Line Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_lecture_notes.md)
+* Command Line [Slides](https://docs.google.com/presentation/d/17gitOafNzkmmma5NUQakhtfTFEmfu8P4VKt9l1A07Ag/edit?usp=sharing) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_lecture_notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/cahmE2fvX0ip9oLrdTCBrPWl6o8fVEHXDKUzq15_Ieb7fboK3ZJGqysrldRf1rrc.TXTMuKktY8CcD7Z2?startTime=1664204552000)
 
 ### Unit 1 - HTML & CSS
 ### Unit 2 - JavaScript 
