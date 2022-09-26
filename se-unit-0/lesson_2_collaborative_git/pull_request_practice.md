@@ -13,22 +13,22 @@ They don't even use complete sentences sometimes! Futhermore, they have some bug
 Your job is as followed:
 1. Fork [their repository](https://github.com/The-Marcy-Lab-School/open-source-hello-world) by clicking the fork button.
 
-![1](assets/1.png)
+![1](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_2_collaborative_git/assets/1.png?raw=true)
 
 2. Then clone down _your forked_ repository using your terminal by typing`git clone <url>`. You can confirm that you are cloning the _forked_ repo by making sure the webpage has your username in the top left. Once cloned, make improvements to both the `README.md` and `helloworld.js` files. 
 
-![2](assets/2.png)
+![2](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_2_collaborative_git/assets/2.png?raw=true)
 
 3. Commit and push your changes to your remote repository.
 
 4. Finally, open a Pull Request so your friend can review (and hopefully approve) your changes.
 
-![3](assets/3.png)
+![3](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_2_collaborative_git/assets/3.png?raw=true)
 
 4a. You can do this by click on "Pull Request" and then "Create pull request".
 
-![4](assets/4.png)
+![4](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_2_collaborative_git/assets/4.png?raw=true)
 
 4b. Near the top, you can confirm that your and making a pull request to merge the master branch of **_your_** repo into the master branch of the **_original_** `The-Marcy-Lab-School` repo. Review your changes, and click "Create Pull Request".
 
-![5](assets/5.png)
+![5](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_2_collaborative_git/assets/5.png?raw=true)
