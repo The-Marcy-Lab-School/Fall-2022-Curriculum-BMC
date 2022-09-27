@@ -72,6 +72,8 @@ Let's continue with our Notepad analogy. When working on your computer (A.K.A. "
 * Any time you make a significant change to your local repository, you **stage** them and **commit** them. This is like saving your document with one key difference:
   * In Notepad, when you press 'Save', you are writing over the previous copy and saving the new copy in its place.
   * In Git, when you `commit`, you are taking a "snapshot" of the current state of your repository and saving that snapshot. When you `commit` multiple times, you are saving multiple snapshots, essentially creating a living history of your repository.
+ 
+![Simple git workflow](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_1_git/git-simple.png?raw=true)
 
 Before long, you want to back your essay up in the cloud. So you create a Google Drive folder to store your files and the file history. You can access Google Drive from anywhere so you know your essay will be safe.
 * Likewise, we can log on to [GitHub.com](Github.com) and create a repository (called the **remote repository**) that will be connected to our local repository.
