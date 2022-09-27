@@ -1,12 +1,17 @@
 # Introduction to Git and GitHub 
 
+What should I be doing?
+* Get comfortable
+* Be present
+* Sign into: **Cloud9, Github, Canvas**
+
 ## Lesson Overview:
 
 ### Agenda
 
-* **0:00-20:00**: Definitions and terms review
-* **20:00-45:00**: guided practice
-* **45:00-60:00**: recap + lab announcements
+* **0:00-10:00**: What is Git/Github?
+* **10:00-40:00**: Forming a mental model
+* **40:00-60:00**: Let's make some repos!
 
 ### Objectives
 Fellows Will Be Able to...
