@@ -33,6 +33,7 @@ ___
 
 #### Extend Your Learning
 A **shell script** is a program written for the Unix shell (or your terminal). Shell scripting can increase your efficiency because it allows you to batch and automate common tasks or commands. The following resources will introduce you to the basics of shell scripting:
+0. [Command History Tricks](https://www.tomshardware.com/how-to/view-command-history-linux)
 1. Codecademy: [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line) 
    * Redirecting Input and Output
    * Configuring the Environment
