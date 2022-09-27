@@ -74,7 +74,21 @@ Before long, you want to back your essay up in the cloud. So you create a Google
 * We can **pull** from the remote repository to sync up our local repository.
 * If you wanted to collaborate, other people can **clone** the remote repository and work in parallel (more on that in the next lesson).
 
+### A Visual Model
+
 ![Git workflow](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_1_git/git-workflow-1.png?raw=true)
+
+This is a lot to unpack so let's take it in pieces:
+
+* First, notice the two large areas: origin and your computer (local).
+    * Origin represents Github
+    * Local shows the Git workflow that occurs on your computer.
+    * Remember, Git is all about version control and Github is all about backing up that version control in the cloud
+* Next, look at the legend. 
+    * The pink numbers show a typical workflow order (though its not absolute). 
+    * The purple text shows git commands that you will become familiar with as we learn and practice.
+    * The white text adds further context/explanation
+* With the context set, put on your detective hat and pull out your magnifying glass. Dive into each step and figure out what is going on!
 
 ## How to create a remote repo on GitHub
 * First, [create a repository on Github using the Github GUI](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository)
