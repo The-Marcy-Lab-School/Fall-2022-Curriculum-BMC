@@ -107,7 +107,7 @@ This is a lot to unpack so let's take it in pieces:
 * `git status` will show you the status of your project
 * `git add <file-name>` will add certain files to the staging area 
     * `git add -A` will add ALL changed files to the staging area (`-A` can be replaced with `.` too)
-* `git commit -m "commit message"` will take all changes files in the staging area and package them into a single commit 
+* `git commit -m "commit message"` will take all changes files in the staging area and package them into a single commit. _Be descriptive!_
 * `git push` pushes the commited changes from the local repo to the remote repo 
 * `git pull` pulls down any changes from the remote repo to the local repo
 
@@ -128,13 +128,13 @@ git push -u origin main
 > * The `-M` flag in `git branch -M main` renames the current branch to `main` (likely called `master` if created using `git init`)
 > * `git push -u <remoteName> <brancName>` sets the "upstream" remote branch for future `git push` commands. `origin` is the name of the repo we just chose and `main` is the name of the branch.
 
-BONUS: [Interesting configuration setup](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault)
+BONUS: A time-saving configuration setup
 
 ```sh
 git config --global push.default current
 ```
 
-> Run this command before the `git push` command and you'll never have to do the `-u` part again.
+> Run this command before the `git push` command and you'll never have to do the `-u` part again. Look into `git config` ([docs](https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushdefault)) for more info!
 
 ## How to commit changes through the Browser (GUI)?
 
