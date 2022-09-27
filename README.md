@@ -12,6 +12,8 @@
 
 ### Unit 0 - Command Line, Git, Github
 * Command Line [Slides](https://docs.google.com/presentation/d/17gitOafNzkmmma5NUQakhtfTFEmfu8P4VKt9l1A07Ag/edit?usp=sharing) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_lecture_notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/cahmE2fvX0ip9oLrdTCBrPWl6o8fVEHXDKUzq15_Ieb7fboK3ZJGqysrldRf1rrc.TXTMuKktY8CcD7Z2?startTime=1664204552000)
+* CLI Practice [Lab Review Recording](https://us02web.zoom.us/rec/share/fZFB7Ad_JUGPnCKYhOHquhrUkqZ3YCFBQ0xVQFCgTqYj-Drk4AT1gVa__HBBSM-m.Zp_rZQXR4rAwzmLO?startTime=1664220679000)
+* Git [Slides](https://docs.google.com/presentation/d/17gitOafNzkmmma5NUQakhtfTFEmfu8P4VKt9l1A07Ag/edit#slide=id.g158fbd3a59f_0_97) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_1_git/git_lecture_notes.md) | Lecture Recording
 
 ### Unit 1 - HTML & CSS
 ### Unit 2 - JavaScript 
