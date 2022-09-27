@@ -24,13 +24,18 @@ Fellows will to able to...
    * Read [Getting Started](https://www.markdownguide.org/getting-started) and the [Cheat Sheet](https://www.markdownguide.org/cheat-sheet) on markdownguide.org.
    * Practice using Markdown elements on [markdownlivepreview.com](https://markdownlivepreview.com/). Just clear the left side of the screen and start writing! You will see your Markdown render in real time on the right side of the screen.
 
-____
-
-
-### Optional Learning
- * [Simplilearn Git Tutorial For Beginners](https://www.simplilearn.com/tutorials/git-tutorial/git-tutorial-for-beginner)
- * [Video: Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org)
-
 #### Cheat Sheets
 * [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet)
+
+____
+
+### Optional Learning
+* [Simplilearn Git Tutorial For Beginners](https://www.simplilearn.com/tutorials/git-tutorial/git-tutorial-for-beginner)
+* [Video: Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org)
+* [A Git Workflow](https://www.getdbt.com/analytics-engineering/transformation/git-workflow/)
+
+#### Extend Your Learning
+* [How to revert (reset to HEAD)](https://devconnected.com/how-to-git-reset-to-head/)
+* [What is a Git fast forward?](https://www.youtube.com/watch?v=Vy0JIwQoI-E&ab_channel=anthonywritescode)
+* [A Better Git Workflow with Rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI&ab_channel=TheModernCoder)
