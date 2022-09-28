@@ -21,6 +21,7 @@ FWBAT (Fellows Will Be Able To):
 1. Codecademy: [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line), the two sections below (Codecademy Projects are optional):
    * Navigating the File System
    * Viewing and Changing the File System
+2. Bookmark this [CLI cheat sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
 
 ## Lab
 1. [CLI Practice](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_practice.md)
