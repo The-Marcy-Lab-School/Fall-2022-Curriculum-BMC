@@ -26,6 +26,7 @@ ____
 ### Optional Learning
 So far, we've been working with Git and GitHub to improve our workflow as solo developers. Git(Hub) really shines as a tool for collaborative development. Explore the resources below to learn more about _branching_ and _merging_, the two concepts that GitHub collaborations rests upon.
 * [Chapter 3: Git Branching](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell) in Pro Git book.
+* [Understanding Git Merge Conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
 #### Extend Your Learning
 Git branching and merging is one of the most complicated topics to conceptualize. The Coding Train does a pretty good jobs breaking down all sorts of git topics explaining them from the perspective of GUI and CLI. You can check out their [Youtube Playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
