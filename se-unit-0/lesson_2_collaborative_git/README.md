@@ -10,8 +10,8 @@ Fellows will be able to...
 * Resolve merge conflicts through the Github GUI and CLI.
 
 ## Morning Warmup Questions (Be prepared for one of these questions to be presented at the beginning of lecture)
-1. What is the difference between forking, cloning, and branching?
-2. Why might a merge conflict happen?
+1. What is a branch? How is it similar/different to a clone or a fork?
+2. What is a Pull Request (PR)? When in the Git/Github Workflow is a PR made?
 
 ## Learning Assignments
 1. [Video on Git Branches](https://www.youtube.com/watch?v=oPpnCh7InLY)
