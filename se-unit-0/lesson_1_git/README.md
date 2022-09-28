@@ -34,8 +34,3 @@ ____
 * [Simplilearn Git Tutorial For Beginners](https://www.simplilearn.com/tutorials/git-tutorial/git-tutorial-for-beginner)
 * [Video: Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg&ab_channel=freeCodeCamp.org)
 * [A Git Workflow](https://www.getdbt.com/analytics-engineering/transformation/git-workflow/)
-
-#### Extend Your Learning
-* [How to revert (reset to HEAD)](https://devconnected.com/how-to-git-reset-to-head/)
-* [What is a Git fast forward?](https://www.youtube.com/watch?v=Vy0JIwQoI-E&ab_channel=anthonywritescode)
-* [A Better Git Workflow with Rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI&ab_channel=TheModernCoder)

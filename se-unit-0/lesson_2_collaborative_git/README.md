@@ -29,4 +29,7 @@ So far, we've been working with Git and GitHub to improve our workflow as solo d
 * [Understanding Git Merge Conflicts](https://www.atlassian.com/git/tutorials/using-branches/merge-conflicts)
 
 #### Extend Your Learning
-Git branching and merging is one of the most complicated topics to conceptualize. The Coding Train does a pretty good jobs breaking down all sorts of git topics explaining them from the perspective of GUI and CLI. You can check out their [Youtube Playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
+* Git branching and merging is one of the most complicated topics to conceptualize. The Coding Train does a pretty good jobs breaking down all sorts of git topics explaining them from the perspective of GUI and CLI. You can check out their [Youtube Playlist](https://www.youtube.com/playlist?list=PLRqwX-V7Uu6ZF9C0YMKuns9sLDzK6zoiV)
+* [How to revert (reset to HEAD)](https://devconnected.com/how-to-git-reset-to-head/)
+* [What is a Git fast forward?](https://www.youtube.com/watch?v=Vy0JIwQoI-E&ab_channel=anthonywritescode)
+* [A Better Git Workflow with Rebase](https://www.youtube.com/watch?v=f1wnYdLEpgI&ab_channel=TheModernCoder)
