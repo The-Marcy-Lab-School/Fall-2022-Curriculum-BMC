@@ -7,6 +7,6 @@ The purpose of this unit is to introduce you to the tools that we will rely on f
 * Solo and Collaborative Workflows with GitHub
 
 ## Links to Bookmark
-- [CLI cheat sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
-- [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
+* [CLI cheat sheet](https://www.git-tower.com/blog/command-line-cheat-sheet/)
+* [Git Cheat Sheet](https://education.github.com/git-cheat-sheet-education.pdf)
 * [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet)
