@@ -28,7 +28,7 @@ Fellows will...
 
 ## Lecture: Code-a-Long - Our Landing Page Mockup
 * We will recreate [our Tribute Page](https://codepen.io/freeCodeCamp/full/zNqgVx) together! But we can make some fun styling changes along the way!
-* We will download the [Page Ruler Chrome Extension](https://chrome.google.com/webstore/detail/page-ruler/emliamioobfffbgcfdchabfibonehkme) to get precise pixel measurements.
+* We will download the [Page Ruler Chrome Extension](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) to get precise pixel measurements.
 * We will use the following elements in our page:
 * We will also download the [Eye Dropper Chrome Extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) to find exact colors.
 
