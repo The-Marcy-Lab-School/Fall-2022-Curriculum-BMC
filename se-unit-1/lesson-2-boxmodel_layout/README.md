@@ -35,4 +35,7 @@ Fellows will be able to answer the questions...
        * Typography
 2. Documentation: [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) on MDN
 3. Documentation: [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats) on MDN
+
+## Optional Learning
+* CSS Tricks: [Box Sizing](https://css-tricks.com/box-sizing/)
 ___
