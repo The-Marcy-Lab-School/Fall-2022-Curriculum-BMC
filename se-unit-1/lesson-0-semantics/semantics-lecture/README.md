@@ -3,7 +3,10 @@
 You know how to manage coding projects using the CLI, Git, and Github — let's start building some stuff!
 
 ## Agenda:
-* 0:00 - 
+* **0:00 - 0:05** | Introduction
+* **0:05 - 0:15** | Everything is a box
+* **0:15 - 0:30** | Semantic HTML
+* **0:30 - 0:60** | Tribute Page (CSS if time)
 
 ## Objectives
 Fellows will...
