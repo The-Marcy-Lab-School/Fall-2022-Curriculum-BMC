@@ -5,10 +5,10 @@
 * Called _cascade_ because all styles cascade from the top of a stylesheet to the bottom, allowing different styles to be added or overwritten.
   * The _cascade_ works inside individual selectors as well.
    ```CSS
-     p {	
-	background: orange;
- 	background: green;
-      }
+    p {	
+        background: orange;
+        background: green;
+    }
    ```
    In this example, since the green background declaration comes after the orange, it will override it.
 
@@ -19,11 +19,11 @@
   * Example:
     ```CSS
     .hotdog p {
-  		background: brown;
-	      }	
+        background: brown;
+    }	
     .hotdog p.mustard {
-  			background: yellow;
-		      }
+        background: yellow;
+    }
     ```
 
 ## The Box Model
@@ -33,16 +33,16 @@
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 * According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
 * Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
-  ```CSS
-  div {
-  	  border: 6px solid #949599;
-       	  height: 100px;
- 	  margin: 20px;
-	  padding: 20px;
-	  width: 400px;
-	}
-	
-  ```
+
+    ```CSS
+    div {
+      border: 6px solid #949599;
+      height: 100px;
+      margin: 20px;
+      padding: 20px;
+      width: 400px;
+    }	
+    ```
 
 * According to the box model, the total width of an element can be calculated using the following formula:
   `margin-right + border-right + padding-right + width + padding-left + border-left + margin-left`
@@ -58,9 +58,9 @@
 
 ### Border Box
 ```css
-	div {
-  		box-sizing: border-box;
-	}
+div {
+    box-sizing: border-box;
+}
 ```
 * the border-box value alters the box model so that any border or padding property values are included within the width and height of an element. When using the border-box value, if an element has a width of 400 pixels, a padding of 20 pixels around every side, and a border of 10 pixels around every side, the actual width will remain 400 pixels.
 
@@ -98,11 +98,11 @@
 * The code below can be used to set `border-box` everywhere.
   ```CSS
     html {
-      box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     *, *::before, *::after {
-      box-sizing: inherit;
+        box-sizing: inherit;
     }
   ```
 
