@@ -15,7 +15,7 @@ Fellows will...
 * Be able to articulate the benefits of writing semantic code.
 * Open, edit, and preview and HTML file their browsers
 
-![A screenshot of a website with the inspect tool opened up. You can see HTML](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/semantics-lecture/images/html-inspect-screenshot.png?raw=true)
+![A screenshot of a website with the inspect tool opened up. You can see HTML](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/html-inspect-screenshot.png?raw=true)
 
 ## Demo - Thinking in HTML
 * HTML and CSS are languages that we can write in files, just like JavaScript. If you open those files in a browser, it will render that code **visually**! 
@@ -38,7 +38,7 @@ Fellows will...
   3. Semantic HTML is search-engine optimized. Search engines can better recognize key parts of your website when they are signaled with semantic HTML. This could help in the search rankings.
   4. Makes styling easier/more efficient. When you target elements based on the structure and meaning of their content _instead_ of how it appears, it will be easier to make uniform style changes to like elements in the future. 
   
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/semantics-lecture/images/div-boxes.gif?raw=true)
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/div-boxes.gif?raw=true)
 
 ## Lecture: Code-a-Long - Our Landing Page Mockup
 * We will recreate [our Tribute Page](https://codepen.io/freeCodeCamp/full/zNqgVx) together! But we can make some fun styling changes along the way!
