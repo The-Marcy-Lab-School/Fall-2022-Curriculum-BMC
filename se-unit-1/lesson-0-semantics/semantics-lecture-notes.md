@@ -29,7 +29,7 @@ Fellows will be able to...
 <div class='container'>
    <h1>This is a header</h1>
    <p>This is some text</p>
-   <img src="some-photo-url.jpg"/>
+   <img alt="a picture of a cat" src="some-cat-photo.jpg"/>
    <a href="https://www.marcylabschool.org/">Marcy Lab School</a>
    <p id="last-paragraph"></p>
 </div>
