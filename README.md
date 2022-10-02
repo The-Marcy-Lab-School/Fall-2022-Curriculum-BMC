@@ -19,6 +19,9 @@
 * **9/30/22 - Review** | [Slides](https://docs.google.com/presentation/d/10tIKIoLKCF5UEh3Do8nSmdK_ELzA8R_Q8mJhaynApnY/edit#slide=id.g158fbd3a59f_0_0) | [Lecture Recording](https://us02web.zoom.us/rec/share/Zd4-FA8GX3OvmoYpSME5tCl8rlMse8mHucwtHU3c_hFGcMqbUpq5o3SO0WiathSk.xBfXljAhcJTm5-Kx)
 
 ### Unit 1 - HTML & CSS (3 weeks + Project week)
+
+* **10/3/22** - HTML Semantics & CSS | [Intro Slides](https://docs.google.com/presentation/d/1bJ7hDGK7EENUmRqG_3TAU4pPyejzcN5Er1e-Ucrf2h4) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/semantics-lecture-notes.md) | Lecture Recording (coming soon...)
+
 ### Unit 2 - JavaScript
 ### Unit 3 - Functional Programming (Higher Order Functions)
 ### Unit 4 - Object-Oriented Programming (Classes)
