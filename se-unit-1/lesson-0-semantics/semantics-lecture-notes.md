@@ -25,6 +25,16 @@ Fellows will be able to...
 
 ## HTML
 
+```html
+<div class='container'>
+   <h1>This is a header</h1>
+   <p>This is some text</p>
+   <img src="some-photo-url.jpg"/>
+   <a href="https://www.marcylabschool.org/">Marcy Lab School</a>
+   <p id="last-paragraph"></p>
+</div>
+```
+
 ### Thinking in HTML - Everything is a box!
 * HTML and CSS are languages that we can write in files, just like JavaScript. If you open those files in a browser, it will render that code **visually**! 
 * We can open up [any webpage](https://www.w3schools.com/html/html5_semantic_elements.asp) and right-click and "Inspect" to see the HTML and CSS that powers them.
