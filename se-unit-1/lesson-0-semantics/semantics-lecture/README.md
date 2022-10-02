@@ -47,12 +47,14 @@ Fellows will...
 * We will also download the [Eye Dropper Chrome Extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) to find exact colors.
 
 ### Our Process
-0. Open up https://codepen.io/freeCodeCamp/full/zNqgVx. Without inspecting the HTML, try to visually identify each of the elements listed in the structure below.
-1. Start by imagining the boxes and use semantic elements to create a structure. Then, you can fill in the content elements (text, pictures, links). We will use this structure:
+0. Open up https://codepen.io/freeCodeCamp/full/zNqgVx. Without inspecting the HTML, try to visually identify each of the elements listed in the structure below. What boxes can you imagine?
+1. Create a file called `index.html` to write your HTML. 
+2. Use semantic elements to create a structure. Then, you can fill in the content elements (text, pictures, links). We will use this structure:
   * `body`
-    * `main`
+    * `header`
       * `h1`
       * `p`
+    * `main`
       * `figure`
         * `img`
         * `figcaption`
@@ -62,10 +64,10 @@ Fellows will...
           * A bunch of `li` elements. (**be sure to target juice with an `id`**)
       * `blockquote`
         * `p`
-        * `cite` 
-      * `h2`
+        * `cite`
+    * `footer`
+      * `h3`
         * `a`
-2. Create a file called `index.html` to write this structure. 
 3. Be mindful of spacing and indentation!
 4. Code a little, test a little. Use the "Preview" button to see your rendered HTML. Then pop it out into a new window.
 5. Style the page
