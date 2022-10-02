@@ -63,7 +63,8 @@ Fellows will...
       * `blockquote`
         * `p`
         * `cite` 
-      * `h2` and `a`
+      * `h2`
+        * `a`
 2. Create a file called `index.html` to write this structure. 
 3. Be mindful of spacing and indentation!
 4. Code a little, test a little. Use the "Preview" button to see your rendered HTML. Then pop it out into a new window.
