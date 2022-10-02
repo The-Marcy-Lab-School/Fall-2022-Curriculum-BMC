@@ -3,7 +3,7 @@
 You know how to manage coding projects using the CLI, Git, and Github — let's start building some stuff!
 
 ## Agenda:
-* **0:00 - 0:05** | Introduction
+* **0:00 - 0:05** | Introduction ([Slides](https://docs.google.com/presentation/d/1bJ7hDGK7EENUmRqG_3TAU4pPyejzcN5Er1e-Ucrf2h4/edit#slide=id.g14977507604_0_9))
 * **0:05 - 0:15** | Everything is a box
 * **0:15 - 0:30** | Semantic HTML
 * **0:30 - 0:60** | Tribute Page (CSS if time)
