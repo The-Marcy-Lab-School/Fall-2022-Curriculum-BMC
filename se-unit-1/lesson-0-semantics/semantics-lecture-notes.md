@@ -2,20 +2,30 @@
 
 You know how to manage coding projects using the CLI, Git, and Github — let's start building some stuff!
 
-## Agenda:
+## Table of Contents
+* [Agenda and Objectives](#agenda-and-objectives)
+* [HTML](#html)
+    * [Thinking in HTML - Everything is a box!](#thinking-in-html---everything-is-a-box)
+    * [Semantic HTML](#semantic-html) 
+    * [Code Along](code-a-long---our-landing-page-mockup)
+* [CSS](#css)
+* [Vocabulary](#vocabulary)
+
+## Agenda and Objectives:
 * **0:00 - 0:05** | Introduction ([Slides](https://docs.google.com/presentation/d/1bJ7hDGK7EENUmRqG_3TAU4pPyejzcN5Er1e-Ucrf2h4/edit#slide=id.g14977507604_0_9))
 * **0:05 - 0:15** | Everything is a box
 * **0:15 - 0:30** | Semantic HTML
 * **0:30 - 0:60** | Tribute Page (CSS if time)
 
-## Objectives
-Fellows will...
+Fellows will be able to...
 * Structure HTML using HTML5 semantic tags
 * Understand the difference between semantic and non-semantic HTML and CSS
 * Be able to articulate the benefits of writing semantic code.
 * Open, edit, and preview and HTML file their browsers
 
-## Thinking in HTML - Everything is a box!
+## HTML
+
+### Thinking in HTML - Everything is a box!
 * HTML and CSS are languages that we can write in files, just like JavaScript. If you open those files in a browser, it will render that code **visually**! 
 * We can open up [any webpage](https://www.w3schools.com/html/html5_semantic_elements.asp) and right-click and "Inspect" to see the HTML and CSS that powers them.
 * All of the content that you see is either text (`<p>` or `<h1>`), an image (`<img>`), or a link to another page (`<a>`).
@@ -23,7 +33,7 @@ Fellows will...
 
 ![A screenshot of a website with the inspect tool opened up. You can see HTML](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/html-inspect-screenshot.png?raw=true)
 
-## Semantic HTML
+### Semantic HTML
 * https://www.reddit.com/ --> Right click and "Inspect"
 * HTML5 (the most current version) added Semantic Tags.
 * Semantic Tags are more _expressive_ divisions. They are still boxes but they convey additional meaning.  
@@ -40,13 +50,13 @@ Fellows will...
   
 ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/div-boxes.gif?raw=true)
 
-## Lecture: Code-a-Long - Our Landing Page Mockup
+### Code-a-Long - Our Landing Page Mockup
 * We will recreate [our Tribute Page](https://codepen.io/freeCodeCamp/full/zNqgVx) together! But we can make some fun styling changes along the way!
 * We will download the [Page Ruler Chrome Extension](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) to get precise pixel measurements.
 * We will use the following elements in our page:
 * We will also download the [Eye Dropper Chrome Extension](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) to find exact colors.
 
-### Our Process
+#### Our Process
 0. Open up https://codepen.io/freeCodeCamp/full/zNqgVx. Without inspecting the HTML, try to visually identify each of the elements listed in the structure below. What boxes can you imagine?
 1. Create a file called `index.html` to write your HTML. 
 2. Use semantic elements to create a structure. Then, you can fill in the content elements (text, pictures, links). We will use this structure:
