@@ -70,12 +70,7 @@ Fellows will...
         * `a`
 3. Be mindful of spacing and indentation!
 4. Code a little, test a little. Use the "Preview" button to see your rendered HTML. Then pop it out into a new window.
-5. Style the page
-  * Set the background color of the `body`
-  * Set width of `main`
-  * Set `section` and `article` to `display: inline-block`
-  * Set `section` and `article` to `max-height: fill-available`
-  * Set background colors
+5. Style the page. Use the eye dropper and ruler extensions to your advantage!
 
 ## CSS
 **CSS** is the language used to add style (color, font, spacing) to the elements of a website. CSS is typically written in `.css` files and referenced by `.html` files using the `<link>` tag. 
