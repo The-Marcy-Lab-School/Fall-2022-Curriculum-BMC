@@ -37,5 +37,6 @@ Fellows will be able to answer the questions...
 3. Documentation: [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats) on MDN
 
 ## Optional Learning
+* The Box Model [Test Yourself](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks) 
 * CSS Tricks: [Box Sizing](https://css-tricks.com/box-sizing/) (Includeds a recommended `box-sizing` reset rule)
 ___
