@@ -131,7 +131,9 @@ div {
 * As a left or right `margin` on a block element, it tells the browser to push the element all the way to the right or left.
   * You can center a `block` element by setting right and left `margin` to `auto`.
 * As a top or bottom `margin`, `auto` is equal to 0.
-* Helpful diagram illustrating difference between `width: auto` and `width: 100` [here](http://d3jtzah944tvom.cloudfront.net/202/images/lesson_2/measurement-units-02.png)
+* Helpful diagram illustrating difference between `width: auto` and `width: 100` 
+
+![](http://d3jtzah944tvom.cloudfront.net/202/images/lesson_2/measurement-units-02.png)
 
 # Images
 
