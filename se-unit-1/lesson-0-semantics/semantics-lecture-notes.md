@@ -101,6 +101,7 @@ Fellows will be able to...
 3. Be mindful of spacing and indentation!
 4. Code a little, test a little. Use the "Preview" button to see your rendered HTML. Then pop it out into a new window.
 5. Style the page. Use the eye dropper and ruler extensions to your advantage!
+6. Create a repo and push your website to it!
 
 ## CSS
 **CSS** is the language used to add style (color, font, spacing) to the elements of a website. CSS is typically written in `.css` files and referenced by `.html` files using the `<link>` tag. 
