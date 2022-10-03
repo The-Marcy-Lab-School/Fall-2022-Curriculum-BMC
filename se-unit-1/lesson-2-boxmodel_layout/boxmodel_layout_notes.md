@@ -28,10 +28,10 @@
 
 ## The Box Model
 
-* *block* elements occupy any available width, regardless of their content, and begin on a new line
-* *inline* elements occupy only the width their content requires and line up on the same line, one after the other.
-* Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 * According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
+
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/box-model.png?raw=true)
+
 * Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
 
     ```CSS
@@ -44,17 +44,12 @@
     }	
     ```
 
+* The `width` and `height` define how much horizontal and vertical space it needs for the content area of the box, which may or may not include the padding and borders. In most cases, the browser can determine the width and height automatically.
+* The `margin` property allows us to set the amount of space that surrounds an element. Margins for an element fall outside of any border and are completely transparent in color.
+* The `padding` property is very similar to the margin property; however, it falls inside of an element’s border, should an element have a border. The padding property is used to provide spacing directly within an element.
+* The `border` is a boundary that surrounds the padding.
 * According to the box model, the total width of an element can be calculated using the following formula:
-  `margin-right + border-right + padding-right + width + padding-left + border-left + margin-left`
-
-* The *margin* property allows us to set the amount of space that surrounds an element. Margins for an element fall outside of any border and are completely transparent in color.
-* The *padding* property is very similar to the margin property; however, it falls inside of an element’s border, should an element have a border. The padding property is used to provide spacing directly within an element.
-
-* The width and height define how much horizontal and vertical space it needs for the content area of the box, which may or may not include the padding and borders. In most cases, the browser can determine the width and height automatically.
-* The padding is an area that surrounds the content area of the box and separates the content from its border. It is typically opaque and hides anything that it overlays.
-* The border is a boundary that surrounds the padding.
-* The margin is a transparent area that lies outside the border and supplies separation between elements.
-* The display property determines how the browser lays out an element relative to its neighbors.
+  `(margin-right + border-right + padding-right) + width + (padding-left + border-left + margin-left)`
 
 ### Border Box
 ```css
@@ -66,6 +61,9 @@ div {
 
 # The Visual Formatting Model
 * The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
+* *block* elements occupy any available width, regardless of their content, and begin on a new line
+* *inline* elements occupy only the width their content requires and line up on the same line, one after the other.
+* Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
