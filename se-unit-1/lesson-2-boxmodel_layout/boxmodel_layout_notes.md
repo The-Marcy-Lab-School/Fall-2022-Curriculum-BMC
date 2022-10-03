@@ -65,7 +65,7 @@ div {
 * the border-box value alters the box model so that any border or padding property values are included within the width and height of an element. When using the border-box value, if an element has a width of 400 pixels, a padding of 20 pixels around every side, and a border of 10 pixels around every side, the actual width will remain 400 pixels.
 
 # The Visual Formatting Model
-* The `display` property has alomst thirty values, but `block`, `inline-block`, and `inline` are most used.
+* The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
 
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
