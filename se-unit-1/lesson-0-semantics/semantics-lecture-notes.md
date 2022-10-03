@@ -82,7 +82,7 @@ Fellows will be able to...
       * `section`
         * `h2`
         * `ul`
-          * A bunch of `li` elements. (**be sure to target juice with an `id`**)
+          * A bunch of `li` elements. 
       * `blockquote`
         * `p`
         * `cite`
