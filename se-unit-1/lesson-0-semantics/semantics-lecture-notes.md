@@ -25,6 +25,15 @@ Fellows will be able to...
 
 ## HTML
 
+### The Basics
+
+* **HTML elements** are created using **tags**: `<opening>content to be shown</closing>`
+* Some HTML elements have self-closing tags: `<img />`
+* HTML tags can have **attributes** that add necessary information about an element.
+    * Ex: The `src` attribute in `<img src="url" />` tells the browser which image to display.
+    * Ex: The `href` attribute in `<a href="url">Click me</a>` tells tells the browser where to direct users who click on the link.
+    * Some attributes are not required (`class` and `id`) but add in useful information.
+
 ```html
 <div class='container'>
    <h1>This is a header</h1>
