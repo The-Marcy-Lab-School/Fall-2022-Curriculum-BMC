@@ -28,7 +28,7 @@ Fellows will be able to...
 ### The Basics
 
 * **HTML elements** are created using **tags**: `<opening>content to be shown</closing>`
-* Some HTML elements have self-closing tags: `<img />`
+* Some HTML elements have **self-closing tags**: `<img />`
 * HTML tags can have **attributes** that add necessary information about an element.
     * Ex: The `src` attribute in `<img src="url" />` tells the browser which image to display.
     * Ex: The `href` attribute in `<a href="url">Click me</a>` tells tells the browser where to direct users who click on the link.
@@ -151,7 +151,7 @@ HTML is the language used to create the **structure** and **content** of a websi
 #### HTML Tags
 HTML tags are pieces of HTML code that create either structure or content on a website. They all have a name and are written using angle brackets (`<>`). 
 
-Most HTML tags have an _opening_ and a _closing_ tag with content or other HTML tags nested inside. For example, a paragraph tag looks like this:
+Most HTML tags have an _opening_ and a _closing_ tag with content or other HTML tags nested inside. For example, a paragraph element with text content looks like this:
 
 ```html
 <p>This is shown as text</p>
@@ -162,6 +162,8 @@ Some HTML tags are _self closing_, meaning they don't require a closing tag. In 
 ```html
 <img src="url-to-img.jpg"/>
 ```
+
+In the example above, `src` is an example of an **attribute**. Attributes provide additional, and often necessary, information about the tag. They are written inside the opening tag like this `attribute="value"` with values written inside quotes.
 
 #### Elements
 
