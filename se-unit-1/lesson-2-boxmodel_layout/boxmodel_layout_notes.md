@@ -93,21 +93,25 @@ html {
 
 > [Live Code](https://jsbin.com/dekenikuqa/2/edit?html,css,output)
 
+> [w3schools code example](https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1)
+
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
 * If a page contains 3 block elements directly inside the `body` and nothing else, then all three elements will display one above the other like a stack of blocks.
 * `block` elements use the box properties (width, height, margin, padding, border) to determine size of the element.
-* Though a block element takes up an entire row, its width is not altered to do so. If a `div` is 500px in a 900px `section`, the remaining 400px will remain empty.
+* Though a block element "takes up" an entire row, its width is not altered to do so. If a `div` is 500px in a 900px `section`, the remaining 400px will remain empty.
 * Most elements are block by default!
+
+**When to use `display:block`**: Any time that you want to have an element on its own line.
 
 ## Inline elements
 * Inline elements provide some semantic meaning to content (`span`, `b`, `strong`, `em`,*`img`* etc)
-* inline elements handle the dimension properties (width, height, padding, border, and margin) differently from the way block elements treat them.
-* Browsers handle left and right margins and padding for inline elements in the same way as for block elements, but they process other box model properties differently.
 * For inline elements, browsers:
   * ignore the width and height properties (except with the img element), but instead use values computed from the element content.
   * ignore top and bottom margins.
-  * padding and borders may extend into rows above and below but will not interfere or shift them but overlap them. See [example](http://d3jtzah944tvom.cloudfront.net/202/images/lesson_2/the-visual-formatting-model-01.png)
+  * padding and borders may extend into rows above and below but will not interfere or shift them but overlap them.
+ 
+**When to use `display:inline`**: For inserting an element within an existing line of text content. Typically, this is done with `span`, `b`/`strong`, and `i`/`em` which are all `display:inline` by default.
 
 ## Inline-Block elements
 * `inline-block` elements act just like `block` elements except they do *not* take up the entire row by default. Thus, you can place `inline-block` elements side-by-side.
@@ -115,12 +119,14 @@ html {
 * Note: *`img` elements are NOT `inline-block`. They are `inline` by default.*
 * Browsers use the `vertical-align` property to perform vertical alignment for adjacent `inline-block` elements.
 
+**When to use `display:inline-block`**: Buttons in a navigation bar!
+
 ## Margin collapse
 * Top and bottom margins "collapse" between `block` elements, meaning if you position two adjacent `block`s one above the other, the margin between them isn't thesum of the top and bottom margins. Instead, the margin _collapses_ to the larger of the two.
 * Margin collapse only happens with top and bottom, not left and right margins.
 
 # Dimensions
-* `px`, `rem`, `%` called measurement units
+* `px`, `rem`, `%` are called "measurement units"
 
 ## Absolute Units
 *  CSS distinguishes between a physical pixel (also device pixel or display pixel) and what we call the *CSS reference pixel* (or CSS pixel or reference pixel).
