@@ -1,5 +1,12 @@
 # Boxmodel and Layout Foundations Notes
 
+## Agenda and Overview
+
+* **0:00 - 0:05** | Introduction / The why
+* **0:05 - 0:25** | CSS review / Box Model
+* **0:25 - 0:35** | Visual formatting Model / Block, Inline, and Inline-Block elements
+* **0:35 - 0:60** | Box Sizing / Dimensions / Images / Float / Position
+
 ## Intro to CSS
 
 * Called _cascade_ because all styles cascade from the top of a stylesheet to the bottom, allowing different styles to be added or overwritten.
@@ -64,6 +71,26 @@ div {
 * *block* elements occupy any available width, regardless of their content, and begin on a new line
 * *inline* elements occupy only the width their content requires and line up on the same line, one after the other.
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
+
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/display-block-inline.png?raw=true)
+
+<details><summary>See Code</summary>
+ 
+ 
+```html
+<p>This is display: block and unsized</p>
+<p class='sized'>This is display: block. It is sized</p>
+<p class='inline sized'>This is inline</p>
+<p class='inline'>Width/height have no effect</p>
+```
+ 
+```css
+body { padding: 10px; }
+p { border: 1px solid black; }
+.sized { width: 50%; height: 30px; }
+.inline { display: inline; } 
+``` 
+</details>
 
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
