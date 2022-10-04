@@ -9,6 +9,8 @@
 
 ## The Why...
 
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/div-boxes.gif?raw=true)
+
 Yesterday we talked about how we need to start thinking about the structure of what we are working on. 
 1. Visualizing the boxes is the first part
 2. Structuring the order of the boxes in HTML is the second part
@@ -49,11 +51,11 @@ Yesterday we talked about how we need to start thinking about the structure of w
 
     ```CSS
     div {
-      border: 6px solid #949599;
+      border: 6px solid black;
       height: 100px;
       margin: 20px;
       padding: 20px;
-      width: 400px;
+      width: 200px;
     }	
     ```
 
@@ -64,17 +66,24 @@ Yesterday we talked about how we need to start thinking about the structure of w
 * According to the box model, the total width of an element can be calculated using the following formula:
   `(margin-right + border-right + padding-right) + width + (padding-left + border-left + margin-left)`
 
-### Border Box
+### Box Sizing
+* The `box-sizing` property can have two values: `content-box` and `border-box`.
+* The `content-box` setting is default in all modern browsers. This is the standard box model. Padding and border are not included in element height or width
+* With `border-box`, width and height are calculated inclusive of padding and border.
+* The `border-box` setting is "best" since it simplifies the math a front-end developer must do. For example, if we have a box with a width of 50% and padding of 12px; border-box ensures that it's precisely 50% of the container width, not 50% plus 24-pixels.
 
-[w3schools](https://www.w3schools.com/css/css3_box-sizing.asp) has a great explanation / demo!
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/border-box-2.png?raw=true)
 
-```css
-div {
+* The code below can be used to set `border-box` everywhere.
+```CSS
+html {
     box-sizing: border-box;
 }
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
 ```
-* the `border-box` value alters the box model so that any border or padding property values are included within the width and height of an element. 
-* When using the `border-box` value, if an element has a `width` of 400 pixels, a `padding` of 20 pixels around every side, and a `border` of 10 pixels around every side, the actual width will remain 400 pixels.
 
 # The Visual Formatting Model
 * The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
@@ -118,23 +127,6 @@ p { border: 1px solid black; }
 * `inline-block` elements observe the `width` and `height` properties. Padding, margin, and boder all work as they do with `block` elements.
 * Note: *`img` elements are NOT `inline-block`. They are `inline` by default.*
 * Browsers use the `vertical-align` property to perform vertical alignment for adjacent `inline-block` elements.
-
-
-## Box Sizing
-* The `box-sizing` property can have two values: `content-box` and `border-box`.
-* The `content-box` setting is default in all modern browsers. This is the standard box model. Padding and border are not included in element height or width
-* With `border-box`, width and height are calculated inclusive of padding and border.
-* The `border-box` setting is "best" since it simplifies the math a front-end developer must do. For example, if we have a box with a width of 50% and padding of 12px; border-box ensures that it's precisely 50% of the container width, not 50% plus 24-pixels.
-* The code below can be used to set `border-box` everywhere.
-  ```CSS
-    html {
-        box-sizing: border-box;
-    }
-
-    *, *::before, *::after {
-        box-sizing: inherit;
-    }
-  ```
 
 # Margins and Padding
 
