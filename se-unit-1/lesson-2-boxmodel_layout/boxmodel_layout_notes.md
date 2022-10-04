@@ -3,9 +3,9 @@
 ## Agenda and Overview
 
 * **0:00 - 0:05** | Introduction / The why
-* **0:05 - 0:25** | CSS review / Box Model
-* **0:25 - 0:35** | Visual formatting Model / Block, Inline, and Inline-Block elements
-* **0:35 - 0:60** | Box Sizing / Dimensions / Images / Float / Position
+* **0:05 - 0:20** | CSS review + specificity
+* **0:20 - 0:40** | Box Model + Box Sizing
+* **0:40 - 0:60** | Visual formatting Model / Block, Inline, and Inline-Block elements
 
 ## The Why...
 
