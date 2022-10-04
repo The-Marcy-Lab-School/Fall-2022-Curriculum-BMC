@@ -91,18 +91,7 @@ html {
 
 ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/display-example.png?raw=true)
 
-```html
-<p>This is display: block and unsized</p>
-<p class='sized'>This is display: block. It is sized</p>
-<p class='inline sized'>This is inline</p>
-<p class='inline'>Width/height have no effect</p>
-```
- 
-```css
-p { border: 1px solid black; }
-.sized { width: 50%; height: 30px; }
-.inline { display: inline; } 
-```
+> [Live Code](https://jsbin.com/dekenikuqa/2/edit?html,css,output)
 
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
