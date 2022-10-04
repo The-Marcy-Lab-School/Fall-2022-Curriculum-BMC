@@ -7,31 +7,38 @@
 * **0:25 - 0:35** | Visual formatting Model / Block, Inline, and Inline-Block elements
 * **0:35 - 0:60** | Box Sizing / Dimensions / Images / Float / Position
 
-## Intro to CSS
+## The Why...
+
+Yesterday we talked about how we need to start thinking about the structure of what we are working on. 
+1. Visualizing the boxes is the first part
+2. Structuring the order of the boxes in HTML is the second part
+3. Understanding how you will arrange them on your page using CSS is the final part.
+
+## CSS
 
 * Called _cascade_ because all styles cascade from the top of a stylesheet to the bottom, allowing different styles to be added or overwritten.
   * The _cascade_ works inside individual selectors as well.
    ```CSS
+    p {
+        background: red;
+    }
     p {	
         background: orange;
         background: green;
     }
    ```
-   In this example, since the green background declaration comes after the orange, it will override it.
+   > In this example, the second set of `p` rules override the first. Inside the second set, since the green background declaration comes after the orange, it will override it.
 
-* The type selector has the lowest specificity weight and holds a point value of 0-0-1. The class selector has a medium specificity weight and holds a point value of 0-1-0. Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0. Specificity points are calculated using three columns. The first column counts ID selectors, the second column counts class selectors, and the third column counts type selectors. 
+* Selectors have **specificity weights** that determine which styles are applied when there is a conflict. Specificity point values can be visualized using three columns. 
+    * The type selector has the lowest specificity weight and holds a point value of 0-0-1. 
+    * The class selector has a medium specificity weight and holds a point value of 0-1-0. 
+    * Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0. The first column counts ID selectors, the second column counts class selectors, and the third column counts type selectors. 
 * The higher the specificity weight of a selector, the more superiority the selector is given when a styling conflict occurs.
+    * Example:
 
-* When selectors are combined they should be read from right to left. The selector farthest to the right, directly before the opening curly bracket, is known as the _key selector_. Any selector to the left of the key selector will serve as a _prequalifier_.
-  * Example:
-    ```CSS
-    .hotdog p {
-        background: brown;
-    }	
-    .hotdog p.mustard {
-        background: yellow;
-    }
-    ```
+    ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/css-specificity.png?raw=true)
+    > [Live code](https://jsbin.com/negufugite/1/edit?html,css,output)
+    
 
 ## The Box Model
 
