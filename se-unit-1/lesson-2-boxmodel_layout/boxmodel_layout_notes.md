@@ -32,9 +32,8 @@ Yesterday we talked about how we need to start thinking about the structure of w
 * Selectors have **specificity weights** that determine which styles are applied when there is a conflict. Specificity point values can be visualized using three columns. 
     * The type selector has the lowest specificity weight and holds a point value of 0-0-1. 
     * The class selector has a medium specificity weight and holds a point value of 0-1-0. 
-    * Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0. The first column counts ID selectors, the second column counts class selectors, and the third column counts type selectors. 
+    * Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0.
 * The higher the specificity weight of a selector, the more superiority the selector is given when a styling conflict occurs.
-    * Example:
 
     ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/css-specificity.png?raw=true)
     > [Live code](https://jsbin.com/negufugite/1/edit?html,css,output)
@@ -66,12 +65,16 @@ Yesterday we talked about how we need to start thinking about the structure of w
   `(margin-right + border-right + padding-right) + width + (padding-left + border-left + margin-left)`
 
 ### Border Box
+
+[w3schools](https://www.w3schools.com/css/css3_box-sizing.asp) has a great explanation / demo!
+
 ```css
 div {
     box-sizing: border-box;
 }
 ```
-* the border-box value alters the box model so that any border or padding property values are included within the width and height of an element. When using the border-box value, if an element has a width of 400 pixels, a padding of 20 pixels around every side, and a border of 10 pixels around every side, the actual width will remain 400 pixels.
+* the `border-box` value alters the box model so that any border or padding property values are included within the width and height of an element. 
+* When using the `border-box` value, if an element has a `width` of 400 pixels, a `padding` of 20 pixels around every side, and a `border` of 10 pixels around every side, the actual width will remain 400 pixels.
 
 # The Visual Formatting Model
 * The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
@@ -81,9 +84,6 @@ div {
 
 ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/display-block-inline.png?raw=true)
 
-<details><summary>See Code</summary>
- 
- 
 ```html
 <p>This is display: block and unsized</p>
 <p class='sized'>This is display: block. It is sized</p>
@@ -92,12 +92,10 @@ div {
 ```
  
 ```css
-body { padding: 10px; }
 p { border: 1px solid black; }
 .sized { width: 50%; height: 30px; }
 .inline { display: inline; } 
-``` 
-</details>
+```
 
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
