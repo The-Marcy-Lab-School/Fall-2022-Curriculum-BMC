@@ -20,6 +20,10 @@
 
 ### Unit 1 - HTML & CSS (3 weeks + Project week)
 
+Download the following chrome extentions tools to help you create and re-create webpages:
+1. [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) used to get the exact color of certain pixels.
+2. [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) used to get the exact pixel dimensions for something.
+
 * **10/3/22** - HTML Semantics & CSS | [Intro Slides](https://docs.google.com/presentation/d/1bJ7hDGK7EENUmRqG_3TAU4pPyejzcN5Er1e-Ucrf2h4) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/semantics-lecture-notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/play/A6_n-nW0CoSpuIggAISwuJ2s3OIzr_4Q9sCFEnOIAvpoBWK45zQFzudSJzMyzxwq4EZOy3Y56OSK8vxi.c9hGBQUDL0MuAumw?continueMode=true) | [Lab Review Recording (Finishing Tribute Page)](https://us02web.zoom.us/rec/play/m-4QN9qFLswoQm230wITeLDOSFakDUIgu-S_C9XPjRociUcXBzC4ROJDZZzE25KcyGAHXLUL0ypQx4q1.tOZb5aNtfb6lvE-X?continueMode=true)
 * **10/4/22** - Box Model Layout | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/boxmodel_layout_notes.md) | Lecture Recording (coming soon...)
 
