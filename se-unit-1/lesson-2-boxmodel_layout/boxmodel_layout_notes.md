@@ -51,11 +51,11 @@ Yesterday we talked about how we need to start thinking about the structure of w
 
     ```CSS
     div {
-      border: 6px solid black;
-      height: 100px;
-      margin: 20px;
-      padding: 20px;
       width: 200px;
+      height: 100px;
+      padding: 20px;
+      border: 6px solid black;
+      margin: 20px;
     }	
     ```
 
