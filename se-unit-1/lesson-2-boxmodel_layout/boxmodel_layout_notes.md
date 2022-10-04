@@ -128,8 +128,6 @@ p { border: 1px solid black; }
 * Note: *`img` elements are NOT `inline-block`. They are `inline` by default.*
 * Browsers use the `vertical-align` property to perform vertical alignment for adjacent `inline-block` elements.
 
-# Margins and Padding
-
 ## Margin collapse
 * Top and bottom margins "collapse" between `block` elements, meaning if you position two adjacent `block`s one above the other, the margin between them isn't thesum of the top and bottom margins. Instead, the margin _collapses_ to the larger of the two.
 * Margin collapse only happens with top and bottom, not left and right margins.
