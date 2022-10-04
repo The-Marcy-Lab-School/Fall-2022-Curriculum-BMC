@@ -37,7 +37,7 @@ Yesterday we talked about how we need to start thinking about the structure of w
     * Lastly, the ID selector has a high specificity weight and holds a point value of 1-0-0.
 * The higher the specificity weight of a selector, the more superiority the selector is given when a styling conflict occurs.
 
-    ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/css-specificity.png?raw=true)
+    ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/css-specificity.png?raw=true)
     > [Live code](https://jsbin.com/negufugite/1/edit?html,css,output)
     
 
@@ -45,7 +45,7 @@ Yesterday we talked about how we need to start thinking about the structure of w
 
 * According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/box-model.png?raw=true)
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/box-model.png?raw=true)
 
 * Each part of the box model corresponds to a CSS property: width, height, padding, border, and margin.
 
@@ -72,7 +72,7 @@ Yesterday we talked about how we need to start thinking about the structure of w
 * With `border-box`, width and height are calculated inclusive of padding and border.
 * The `border-box` setting is "best" since it simplifies the math a front-end developer must do. For example, if we have a box with a width of 50% and padding of 12px; border-box ensures that it's precisely 50% of the container width, not 50% plus 24-pixels.
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/border-box-2.png?raw=true)
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/border-box-2.png?raw=true)
 
 * The code below can be used to set `border-box` everywhere.
 ```CSS
@@ -91,7 +91,7 @@ html {
 * *inline* elements occupy only the width their content requires and line up on the same line, one after the other.
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/display-block-inline.png?raw=true)
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/display-block-inline.png?raw=true)
 
 ```html
 <p>This is display: block and unsized</p>
