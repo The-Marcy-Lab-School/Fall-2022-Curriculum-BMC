@@ -1,6 +1,3 @@
-# Unit 1 Lesson 1 Lecture: Floats
-## Tuesday, September 17, 2019
-
 # Objectives
 Fellows will...
 * Understand the intended purpose of the CSS `float` property.
