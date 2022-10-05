@@ -27,18 +27,24 @@ Fellows will be able to answer the questions...
 * Why would we use a _clearfix_ and what are the two ways we are likely to see it implemented?
 
 ## Learning Assignments
+
+We'll go over this material over two days so on day 1 do the following:
 1. The *Lessons* in [Codecademy Learn CSS](https://www.codecademy.com/learn/learn-css) (Quizes and Projects are optional) 
    * Only the following sections:
        * The Box Model
        * Display and Positioning
        * Colors
        * Typography
-2. Watch this video on [The Box Model](https://www.youtube.com/watch?v=rIO5326FgPE&ab_channel=WebDevSimplified)
-3. Watch this video on [Floats](https://www.youtube.com/watch?v=xIJvkm-CgFQ&ab_channel=BroCode)
+2. Read about CSS Tricks: [Box Sizing](https://css-tricks.com/box-sizing/) (Includeds a recommended `box-sizing` reset rule)
+
+Then, on day 2 do the following:
+3. Watch this SUPER quick video (~3 min) on [Floats](https://www.youtube.com/watch?v=xIJvkm-CgFQ&ab_channel=BroCode) and then check out [this longer video(~18 min)](https://www.youtube.com/watch?v=LrdkRMZhgZg&ab_channel=KevinPowell)
+4. Watch this quick video (~5 min) on [centering divs on a page](https://www.youtube.com/watch?v=ULVu2VNM_54&ab_channel=KevinPowell) to learn about `margin: auto`.
 
 ## Optional Learning
+* Watch this video on [The Box Model](https://www.youtube.com/watch?v=rIO5326FgPE&ab_channel=WebDevSimplified)
 * Documentation: [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) on MDN
 * Documentation: [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats) on MDN
 * The Box Model [Test Yourself](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks) 
-* CSS Tricks: [Box Sizing](https://css-tricks.com/box-sizing/) (Includeds a recommended `box-sizing` reset rule)
+
 ___
