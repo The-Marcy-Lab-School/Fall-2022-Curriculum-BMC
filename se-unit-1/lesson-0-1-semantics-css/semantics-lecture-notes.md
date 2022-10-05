@@ -50,7 +50,7 @@ Fellows will be able to...
 * All of the content that you see is either text (`<p>` or `<h1>`), an image (`<img>`), or a link to another page (`<a>`).
 * All content in HTML is inside an invisible box (or nested inside many boxes)! Originally, all of these boxes were created using "divisions" (`<div>`).\
 
-![A screenshot of a website with the inspect tool opened up. You can see HTML](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/html-inspect-screenshot.png?raw=true)
+![A screenshot of a website with the inspect tool opened up. You can see HTML](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-1-semantics-css/images/html-inspect-screenshot.png?raw=true)
 
 ### Semantic HTML
 * https://www.reddit.com/ --> Right click and "Inspect"
@@ -69,7 +69,7 @@ Fellows will be able to...
 
 ### Code-a-Long - Our Landing Page Mockup
 
-<img src="https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-semantics/images/div-boxes.gif?raw=true" alt="drawing" width="600"/>
+<img src="https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-1-semantics-css/images/div-boxes.gif?raw=true" alt="drawing" width="600"/>
 
 * We will recreate [our Tribute Page](https://codepen.io/freeCodeCamp/full/zNqgVx) together! But we can make some fun styling changes along the way!
 * We will download the [Page Ruler Chrome Extension](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) to get precise pixel measurements.
