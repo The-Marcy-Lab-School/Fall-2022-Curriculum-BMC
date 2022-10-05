@@ -135,12 +135,6 @@ html {
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
     * [Block and Inline Element Defaults](https://www.w3schools.com/html/html_blocks.asp)
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/display-example.png?raw=true)
-
-> [Live Code](https://jsbin.com/dekenikuqa/2/edit?html,css,output)
-
-> [w3schools code example](https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1)
-
 ## Block elements
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
 * If a page contains 3 block elements directly inside the `body` and nothing else, then all three elements will display one above the other like a stack of blocks.
@@ -167,22 +161,28 @@ html {
 
 **When to use `display:inline-block`**: Buttons in a navigation bar!
 
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/display-example.png?raw=true)
+
+> [Live Code](https://jsbin.com/dekenikuqa/2/edit?html,css,output)
+
+> [w3schools code example](https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1)
+
 ## Margin collapse
 * Top and bottom margins "collapse" between `block` elements, meaning if you position two adjacent `block`s one above the other, the margin between them isn't thesum of the top and bottom margins. Instead, the margin _collapses_ to the larger of the two.
 * Margin collapse only happens with top and bottom, not left and right margins.
 
 # Dimensions
-* `px`, `rem`, `%` are called "measurement units"
+* `px`, `rem`, `em` and `%` are called "measurement units"
+* `px` is an "Absolute Unit" 
 
-## Absolute Units
-*  CSS distinguishes between a physical pixel (also device pixel or display pixel) and what we call the *CSS reference pixel* (or CSS pixel or reference pixel).
-*  The size of a reference pixel is the size of a pixel on a display that has 96 pixels per inch. 
+> 💡 Fun Fact! CSS distinguishes between a physical pixel (also device pixel or display pixel) and what we call the *CSS reference pixel* (or CSS pixel or reference pixel).The size of a reference pixel is the size of a pixel on a display that has 96 pixels per inch. 
 
-## Relative Units
-## Ems and Rems
-* Ems and rems are proportional to the calculated and root font sizes, respectively. The calculated font size is the height of the current font in pixels. 
-* The root font size is the height of the base font for the document: the font size designated for the html element. 
-* If the calculated font size is 20 pixels and the root font size is 16 pixels, then 1.5em is 30px (20 * 1.5), while 1.5rem is 24px (16 * 1.5).
+* `rem`, `em`, `%` are "Relative Units"
+
+* `em`s are proportional to the calculated font size of the parent element
+    * If a parent element has a `font-size: 16px` then `2em` is equivalent to `32px`.
+* `rem`s are proportional to the root font size set on the `html` element.
+    * If the `html` element has a `font-size: 12px` then `2rem` is equivalent to `24px`.
 * You may find it easier to work with rems instead of ems since rems are consistent. Once you've set the root font size for a document, `1.5rem` means the same thing everywhere in that document. This relationship isn't true for ems; they compound.
 
 ## Auto
@@ -194,17 +194,15 @@ html {
 
 ![](http://d3jtzah944tvom.cloudfront.net/202/images/lesson_2/measurement-units-02.png)
 
+> Imagine that the light blue box (the "container") is 100px wide. A `width: auto` property will fit the entire child element inside the parent div. A `width: 100%` property will set the content size to be the same as the parent (`100px`). With `box-sizing: content-box` this means that the internal content will be `100px` wide and padding/border/margin will extend outside of the parent. With `box-sizing: border-box`, the entire element will be `100px` wide, but will still extend outside of the parent due to `margin-left`.
+
 # Images
 
-## JPG
-* The jpg format uses a _lossy_ form of compression, in other words, it trades off image quality for file size.
-* If you edit a jpg, the resulting file has less detail than the original. If you edit again it loses even more detail.
-* You can set loss levels when saving a jpeg.
-* In general, jpgs don't work well for CSS backgroung images.
-
-## PNG
-* PNGs use compression but it is non-lossy. Lack of lossiness means larger file size.
-* pngs are ideal for images that need their details.
+## JPG vs. PNGs
+* The `.jpg` format uses a _lossy_ form of compression, in other words, it trades off image quality for file size.
+    * In general, `.jpg` files don't work well for CSS background images.
+* The `.png` format uses compression but it is non-lossy. Lack of lossiness means larger file size.
+    * `.png` files are ideal for images that need their details.
 
 ## The img element
 * `<img>` is a self-closing tag. It has two attributes: `src` and `alt`
