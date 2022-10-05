@@ -33,10 +33,12 @@ Fellows will be able to answer the questions...
        * Display and Positioning
        * Colors
        * Typography
-2. Documentation: [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) on MDN
-3. Documentation: [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats) on MDN
+2. Watch this video on [The Box Model](https://www.youtube.com/watch?v=rIO5326FgPE&ab_channel=WebDevSimplified)
+3. Watch this video on [Floats](https://www.youtube.com/watch?v=xIJvkm-CgFQ&ab_channel=BroCode)
 
 ## Optional Learning
+* Documentation: [The Box Model](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/The_box_model) on MDN
+* Documentation: [Floats](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Floats) on MDN
 * The Box Model [Test Yourself](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Box_Model_Tasks) 
 * CSS Tricks: [Box Sizing](https://css-tricks.com/box-sizing/) (Includeds a recommended `box-sizing` reset rule)
 ___
