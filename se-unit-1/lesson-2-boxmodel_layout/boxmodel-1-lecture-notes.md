@@ -1,5 +1,16 @@
 # Boxmodel and Layout Foundations Notes
 
+## Table of Contents
+* [Agenda and Overview](#agenda-and-overview)
+* [The Why](#the-why)
+* [CSS](#css)
+* [The Box Model](#the-box-model)
+    * [Box Sizing](#box-sizing)
+* [The Display Property](#the-display-property)
+    * [Block](#block)
+    * [Inline](#inline)
+    * [Inline-Block](#inline---block)
+
 ## Agenda and Overview
 
 * **0:00 - 0:05** | Introduction / The why
@@ -85,7 +96,7 @@ html {
 }
 ```
 
-# The Visual Formatting Model
+# The Display Property
 * The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 
@@ -95,7 +106,7 @@ html {
 
 > [w3schools code example](https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1)
 
-## Block elements
+## Block
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
 * If a page contains 3 block elements directly inside the `body` and nothing else, then all three elements will display one above the other like a stack of blocks.
 * `block` elements use the box properties (width, height, margin, padding, border) to determine size of the element.
@@ -104,7 +115,7 @@ html {
 
 **When to use `display:block`**: Any time that you want to have an element on its own line.
 
-## Inline elements
+## Inline
 * Inline elements provide some semantic meaning to content (`span`, `b`, `strong`, `em`,*`img`* etc)
 * For inline elements, browsers:
   * ignore the width and height properties (except with the img element), but instead use values computed from the element content.
@@ -113,7 +124,7 @@ html {
  
 **When to use `display:inline`**: For inserting an element within an existing line of text content. Typically, this is done with `span`, `b`/`strong`, and `i`/`em` which are all `display:inline` by default.
 
-## Inline-Block elements
+## Inline-Block
 * `inline-block` elements act just like `block` elements except they do *not* take up the entire row by default. Thus, you can place `inline-block` elements side-by-side.
 * `inline-block` elements observe the `width` and `height` properties. Padding, margin, and boder all work as they do with `block` elements.
 * Note: *`img` elements are NOT `inline-block`. They are `inline` by default.*

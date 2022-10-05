@@ -2,6 +2,14 @@
 
 Open up Cloud9 before we get started!
 
+## Table of Contents
+* [Agenda and Overview](#agenda-and-overview)
+* [Box Model and Display Review](#box-model-and-display-review)
+* [Dimensions](#dimensions)
+* [Images](#images)
+* [Floats](#floats)
+* [Positioning](#positioning)
+
 ## Agenda and Overview
 
 * **0:00 - 0:30** | Box Model + Display Review
@@ -9,7 +17,7 @@ Open up Cloud9 before we get started!
 * **0:40 - 0:50** | Floats
 * **0:50 - 0:60** | Position
 
-## Box Model + Display Review
+## Box Model and Display Review
 
 ### Code Along Setup
 

@@ -7,7 +7,7 @@ You know how to manage coding projects using the CLI, Git, and Github — let's 
 * [HTML](#html)
     * [Thinking in HTML - Everything is a box!](#thinking-in-html---everything-is-a-box)
     * [Semantic HTML](#semantic-html) 
-    * [Code Along](code-a-long---our-landing-page-mockup)
+    * [Code Along](#code-a-long---our-landing-page-mockup)
 * [CSS](#css)
 * [Vocabulary](#vocabulary)
 
