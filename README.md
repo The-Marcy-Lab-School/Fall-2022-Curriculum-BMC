@@ -28,7 +28,7 @@ Download the following chrome extentions tools to help you create and re-create 
 * **10/4/22 - Box Model Layout** | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/0-boxmodel-display-lecture-notes.md) | [Lecture Recording (CSS Review, Box Model, & Display)](https://drive.google.com/file/d/1xBHSo090OKsH-INUwftGLbys-NGz121x/view?usp=sharing)
 * **10/5/22 - Box Model Review** | [Box Model Review + Floats Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/1-boxmodel-review-floats-margin-auto-lecture-notes.md) | [Lecture Recording (Box Model Review)](https://drive.google.com/file/d/13_paINYjUPX3zMpVjSpOCGSVMacrK3fG/view?usp=sharing) | [Centering a div and using floats to create a grid recording](https://drive.google.com/file/d/1Zgz1iyo0bJanVCaiIvFP7VAc51aTkFWc/view?usp=sharing) | [Lab Review Example Solution](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-2-boxmodel_layout/example-floats) 
 * **10/6/22 - Positioning & Review** | [Positioning Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/2-positioning-lecture-notes.md) | [Lecture Recording](https://drive.google.com/file/d/18rgwF8GOaI6Qztuny7_YlIysMvLqyxw-/view?usp=sharing)
-* **10/7/22 - Tables & Lists** 
+* **10/7/22 - Tables & Lists** | [Table Code Along Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-3-tables_lists/tables-code-along-lecture-notes.md)
 
 ### Unit 2 - JavaScript
 ### Unit 3 - Functional Programming (Higher Order Functions)
