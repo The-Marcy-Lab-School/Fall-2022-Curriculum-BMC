@@ -270,12 +270,14 @@ These are called "offset properties" — they shift an element a specified dista
 
 You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use positive or negative values.
 
-### `position: static`
+> 💡 Check out this [Awesome Demo](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+
+### Static
 * The default. statically positioned items are part of the page flow. 
 * They appear in the same order they appear in the markup. 
 * **The offset properties do not affect static elements.**
 
-### `position: relative`
+### Relative
 * Relative positioning moves an element to a new position relative to where the browser would otherwise put it. 
 
 ```css
@@ -290,7 +292,7 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
 * *Relative positioning does not remove an item from the document flow.* 
   * The browser positions the next element as though the repositioned element still occupied its pre-offset location.
 
-### `position: absolute`
+### Absolute
 * Absolute positioning causes the browser to move the element to a new position within a container element.
 * By default, the container is the nearest ancestor element that has a `relative`, `absolute`, or `sticky` position. If none exists, the `<body>` element is used as the reference.
 
@@ -307,10 +309,37 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
 
 * *Absolute positioning removes elements from the normal document flow.* No matter where you position it, the browser won't treat that space as occupied space.
 
-### `position: fixed`
+### Fixed
 * Fixed positioning sets an element to a fixed position within the browser window (a.k.a. the "viewport"). 
 * Similar to `position: absolute:` however the "parent" element is always the viewport
 * The element does not move if the user scrolls the page. (Think navigation bar at the top of a page.)
 * Fixed positioning removes element from the normal document flow.
 
-### `position: sticky`
+### Sticky
+* Sticky positioning behaves like `position: relative` until it "sticks" to a certain position within its parent. Then, it behaves like `position: fixed`.
+
+```css
+.box {
+    position: sticky;
+    top: 10px;
+}
+```
+> In this example, once the box's `top` position reaches `10px` below the top of its parent, it will "stick" in place and behave like a fixed element and other content will flow underneath.
+
+### Z-index
+
+The `z-index` property determines that order that positioned elements stack on top of each other.
+
+* Elements with higher `z-index` values will be placed on top of elements with lower `z-index` values:
+* `z-index` values are just numbers without any units.
+
+```css
+.box1 { z-index: 3 }
+.box2 { z-index: 2 }
+.box3 { z-index: 1 }
+```
+> In this example, the element with class `box1` will be in front of `box2` which is in front of `box3`. 
+
+![]()
+
+> Note that `z-index` values do not have to be sequential — there can be gaps. This is a good idea to give yourself some flexibility.
