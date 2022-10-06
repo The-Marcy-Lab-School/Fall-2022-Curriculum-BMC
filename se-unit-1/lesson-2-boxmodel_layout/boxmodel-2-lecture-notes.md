@@ -250,23 +250,67 @@ html {
 * _* Remember that the offset is always inward when working with positive offset values. Negative offsets shift elements in the opposite direction.*_
 
 ## The `position` property
+
+### Offset Properties
+
+Positioning always utilizes the four CSS properties `top`, `bottom`, `left`, and `right`. 
+
+These are called "offset properties" — they shift an element a specified distance from their original position. It is easiest to think of these properties as "Distance _inward_ from the specified side". 
+
+<img src="https://docs.google.com/drawings/d/e/2PACX-1vSYLzZv9pmKiok87Gs9_dsYUc94wbSOa48Tl1MHsgQKrNAjlCOU-YjOq9X4aqdRi8QOIdeoYZOwuQj9/pub?w=344&amp;h=352">
+
+```css
+.box {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+``` 
+> In this example, we are shifting the box element `100px` inward (down) from the top and `100px` inward (right) from the left.
+
+You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use positive or negative values.
+
 ### `position: static`
 * The default. statically positioned items are part of the page flow. 
 * They appear in the same order they appear in the markup. 
-* The offset properties do not affect static elements.
+* **The offset properties do not affect static elements.**
 
 ### `position: relative`
 * Relative positioning moves an element to a new position relative to where the browser would otherwise put it. 
-* For example, if you include `left: 50px` and `bottom: 100px` with `position: relative`, the browser will shift the element 50px inward from the left edge and 100px upward from the bottom edge from where the browser would place it otherwise.
+
+```css
+.box {
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+```
+> This example will move the box `100px` downward from the top and `100px` inward from the left (`100px` to the right) from where the broswer would place it otherwise.
+
 * *Relative positioning does not remove an item from the document flow.* 
-  * The browser positions the next element as though the previous one still occupied its pre-offset location.
+  * The browser positions the next element as though the repositioned element still occupied its pre-offset location.
 
 ### `position: absolute`
 * Absolute positioning causes the browser to move the element to a new position within a container element.
-* By default, the container is the nearest ancestor element that has a `relative`, `absolute`, or `sticky` position
-* If no ancestor container is present, `body` is used.
+* By default, the container is the nearest ancestor element that has a `relative`, `absolute`, or `sticky` position. If none exists, the `<body>` element is used as the reference.
+
+```css
+.parent {
+    position: relative;
+}
+.box {
+    position: absolute;
+    top: -100px;
+}
+```
+> This example will move the box `100px` upward from where it was originally placed within its parent.
+
 * *Absolute positioning removes elements from the normal document flow.* No matter where you position it, the browser won't treat that space as occupied space.
 
 ### `position: fixed`
-* Fixed positioningsets an element to a fixed position within the window. 
+* Fixed positioning sets an element to a fixed position within the browser window (a.k.a. the "viewport"). 
+* Similar to `position: absolute:` however the "parent" element is always the viewport
 * The element does not move if the user scrolls the page. (Think navigation bar at the top of a page.)
+* Fixed positioning removes element from the normal document flow.
+
+### `position: sticky`
