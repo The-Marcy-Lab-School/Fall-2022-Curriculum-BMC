@@ -340,6 +340,6 @@ The `z-index` property determines that order that positioned elements stack on t
 ```
 > In this example, the element with class `box1` will be in front of `box2` which is in front of `box3`. 
 
-![]()
+<img src="https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/z-index.png?raw=true" width="500px" />
 
 > Note that `z-index` values do not have to be sequential — there can be gaps. This is a good idea to give yourself some flexibility.
