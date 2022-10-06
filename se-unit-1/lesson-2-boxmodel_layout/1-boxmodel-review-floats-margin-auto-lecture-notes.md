@@ -8,7 +8,6 @@ Open up Cloud9 before we get started!
 * [Dimensions](#dimensions)
 * [Images](#images)
 * [Floats](#floats)
-* [Positioning](#positioning)
 
 ## Agenda and Overview
 
