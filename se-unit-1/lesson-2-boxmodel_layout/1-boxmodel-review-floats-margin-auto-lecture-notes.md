@@ -216,9 +216,17 @@ html {
 * `<img>` is a self-closing tag. It has two attributes: `src` and `alt`
 
 # Floats
+
+```css
+.floated-img {
+    float: left;
+}
+```
+
 * Elements float within their immediate container, which puts a limit on how far the browser can move the floated element. 
-  * If you float two elements in a row in the same direction, their vertical edges (counting their margins) will touch, providing they fit in the same row.
+  * If you float two elements in a row in the same direction, their vertical edges (left/right sides) including their margins will touch, providing they fit in the same row.
   * Any whitespace (other than margins and padding) that would otherwise appear between the elements will collapse.
+* Other elements will appear below the floated element **except for text**.
 
 ## Contain Floats
 * The browser removes floats from the normal document flow, and that means the container no longer contains the floated items. 
