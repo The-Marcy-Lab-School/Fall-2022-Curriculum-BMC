@@ -1,4 +1,15 @@
 # Unit 1 Lesson 3 - Tables
+
+[Spreadsheet to recreate](https://docs.google.com/spreadsheets/d/1MJ6bAkZamUeOTdQvEkqUzWp_6Ms2kNq26785hhpqx0Y/edit#gid=0)
+
+## Table Elements
+
+* `<table>` — container of a table
+* `<tr>` - a table row
+* `<td>` - table data values
+* `<thead>` - typically contains the first row
+* `<tbody>` - contains every other row
+
 ## Code-a-long Guide
 
 1. Adjust width and height of rows and columns.
