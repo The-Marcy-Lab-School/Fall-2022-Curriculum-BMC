@@ -5,17 +5,17 @@
 ### Our Process
 1. Structure page with HTML. We will use:
   * `body`
+    * `header`
+        * `h1` and `h3`
     * `main`
-      * `header`
-          * `h1` and `h3`
-      * `section`
-        * `ul`
-          * `li` **be sure to target juice with an `id`**
-      * `article`
-        * `p`
-        * `p`
-        * `figure`
-          * `figcaption`
+        * `aside`
+            * `ul`
+            * `li` **be sure to target juice with an `id`**
+        * `article`
+            * `p`
+            * `p`
+            * `figure`
+              * `figcaption`
 
 2. Style the page
   * Set the background colore of the `body`

@@ -18,7 +18,7 @@ header {
     margin: auto;
     height: 200px;
     width: 1000px;
-    background-color: #E3170A;
+    background-color: coral;
     text-align: center;
     padding: 70px;
     border: 2px solid black;
@@ -71,7 +71,7 @@ aside{
 footer {
     clear: both;
     height: 100px;
-    background-color: grey;
+    background-color: lightgrey;
     text-align: center;
     padding: 30px 0px;
 }
