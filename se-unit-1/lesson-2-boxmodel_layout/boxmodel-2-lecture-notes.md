@@ -316,7 +316,9 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
 * Fixed positioning removes element from the normal document flow.
 
 ### Sticky
-* Sticky positioning behaves like `position: relative` until it "sticks" to a certain position within its parent. Then, it behaves like `position: fixed`.
+* Elements with sticky positioning are weird... They behave like `position: relative` until they "stick" to a certain position within its _nearest scrolling ancestor_. Then, it behaves like `position: fixed`, but only as long as the parent element is visible.
+
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/position-sticky.gif?raw=true)
 
 ```css
 .box {
@@ -324,7 +326,7 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
     top: 10px;
 }
 ```
-> In this example, once the box's `top` position reaches `10px` below the top of its parent, it will "stick" in place and behave like a fixed element and other content will flow underneath.
+> In this example, once the box's `top` position reaches `10px` below the top of the nearest scrolling ancestor, it will "stick" in place and behave like a fixed element and other content will flow underneath.
 
 ### Z-index
 
