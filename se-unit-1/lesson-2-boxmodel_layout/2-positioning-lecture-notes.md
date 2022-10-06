@@ -1,17 +1,10 @@
-# Positioning
+# Unit 1 - Box Model Positioning
+
 ## Offset Properties
-* `top`, `bottom`, `left`, `right`
-* Each offset measures the inward distance from the side of the container named by the offset property. 
-* For instance, `bottom: 50px` indicates a position 50px inward from (above) the bottom edge of the container. 
-* _* Remember that the offset is always inward when working with positive offset values. Negative offsets shift elements in the opposite direction.*_
 
-## The `position` property
+Positioning utilizes the four **offset properties**: `top`, `bottom`, `left`, and `right`.
 
-### Offset Properties
-
-Positioning always utilizes the four CSS properties `top`, `bottom`, `left`, and `right`. 
-
-These are called "offset properties" — they shift an element a specified distance from their original position. It is easiest to think of these properties as "Distance _inward_ from the specified side". 
+These properties shift an element a specified distance from their original position. It is easiest to think of these properties as "Distance _inward_ from the specified side". 
 
 <img src="https://docs.google.com/drawings/d/e/2PACX-1vSYLzZv9pmKiok87Gs9_dsYUc94wbSOa48Tl1MHsgQKrNAjlCOU-YjOq9X4aqdRi8QOIdeoYZOwuQj9/pub?w=344&amp;h=352">
 
@@ -22,11 +15,13 @@ These are called "offset properties" — they shift an element a specified dista
     left: 100px;
 }
 ``` 
-> In this example, we are shifting the box element `100px` inward (down) from the top and `100px` inward (right) from the left.
+> In this example, we are shifting the box element `100px` inward from the top (down) and `100px` inward from the left (right). This position is _relative_ to wherever it started.
 
 You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use positive or negative values.
 
-> 💡 Check out this [Awesome Demo](https://developer.mozilla.org/en-US/docs/Web/CSS/position)
+## Position Properties
+
+💡 Check out this [Awesome Demo](https://developer.mozilla.org/en-US/docs/Web/CSS/position) to see all of the position properties in action.
 
 ### Static
 * The default. statically positioned items are part of the page flow. 
@@ -74,7 +69,7 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
 ### Sticky
 * Elements with sticky positioning are weird... They behave like `position: relative` until they "stick" to a certain position within its _nearest scrolling ancestor_. Then, it behaves like `position: fixed`, but only as long as the parent element is visible.
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/position-sticky.gif?raw=true)
+<iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@BenSpector/PositionSticky?embed=true"></iframe>
 
 ```css
 .box {
@@ -82,9 +77,9 @@ You can use any unit of measurement (`px`, `em`, `rem`, `%`) and you can use pos
     top: 10px;
 }
 ```
-> In this example, once the box's `top` position reaches `10px` below the top of the nearest scrolling ancestor, it will "stick" in place and behave like a fixed element and other content will flow underneath.
+> In this example, once the box's `top` position reaches `10px` below the top of the nearest scrolling ancestor (the `<body>` in this case), it will "stick" in place and behave like a fixed element and other content will flow underneath.
 
-### Z-index
+## Z-index
 
 The `z-index` property determines that order that positioned elements stack on top of each other.
 
