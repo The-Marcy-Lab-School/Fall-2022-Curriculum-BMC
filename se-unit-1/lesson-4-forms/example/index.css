@@ -1,0 +1,66 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: #f0f0f0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+header, main, footer {
+    background: darkblue;
+    color: white;
+    width: 80%;
+    margin: auto;
+    max-width: 900px;
+    min-width: 625px;
+}
+
+header {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+header p {
+    font-style: italic;
+    font-size: 0.8rem;
+}
+
+label {
+    display: block;
+    padding: 10px 0px;
+    font-weight: bold;
+}
+
+form {
+    padding: 10px;
+}
+
+textarea {
+    display: block;
+    height: 2rem;
+    width: 75%;
+}
+
+select {
+    display: block;
+}
+
+[type="submit"] {
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 20px;
+    height: 40px;
+    background-color: #37af66;
+    border-radius: 5px;
+}
+
+fieldset{
+    margin: 10px;
+}

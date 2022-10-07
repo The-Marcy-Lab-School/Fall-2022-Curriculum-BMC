@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Your Friends!</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1>Super Smash Bros Melee Form</h1>
+        <p>What are your preferences and abilities for the greatest fighter of them all? </p>
+    </header>
+    <main>
+        <form action="#">
+            <fieldset>
+                <legend>Contact Info</legend>
+                <label for="name">Name</label>
+                <input type="text" name="name" placeholder="Johnn Smashseeds">
+                
+                <label for="email">Email</label>
+                <input type="email" name="email-address" placeholder="name@mail.com">
+            </fieldset>
+            
+            <fieldset>
+                <legend>Game Play</legend>
+                <label for="s-tier">Which characters do you like to play?</label>
+                <textarea name="s-tier" placeholder="Add your answer here"></textarea>
+            
+                <label for="technique">Which of the following techniques can you perform? (Check all that apply)</label>
+                <input type="checkbox" name="technique" value="DI"> DI </input> 
+                <input type="checkbox" name="technique" value="Wave Dash"> Wave Dash </input>
+                <input type="checkbox" name="technique" value="L-Cancel"> L-Cancel </input>
+                <input type="checkbox" name="technique" value="Dash Dance"> Dash Dance </input>
+            </fieldset>
+            
+            <fieldset>
+                <legend>Setup</legend>
+                <label for="stage">Which of the following is the best stage?</label>
+                <input type="radio" name="stage" value="Hyrule Temple"> Hyrule Temple</input>
+                <input type="radio" name="stage" value="Final Destination"> Final Destination</input>
+                <input type="radio" name="stage" value="Fountain of Dreams"> Fountain of Dreams</input>
+                
+                <label for="stocks">How many stocks should you play with?</label>
+                <select name="stocks" required>
+                    <option value="3" selected>3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </fieldset>
+            
+            <input type="submit" name="submit" value="Submit">
+
+        </form>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+
+<!-- 
+text
+textarea
+select
+checkbox
+radio
+ -->
