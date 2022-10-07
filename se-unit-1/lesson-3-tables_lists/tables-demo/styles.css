@@ -29,6 +29,10 @@ col:nth-child(5){
   color: white;
 }
 
+[foo="bar"] {
+  background-color: deeppink;  
+}
+
 th[scope="row"] {
   background-color: #e9e9e9;
 }

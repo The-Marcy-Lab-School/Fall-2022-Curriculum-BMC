@@ -1,7 +1,5 @@
 # Unit 1 Lesson 3 - Tables
 
-[Spreadsheet to recreate](https://docs.google.com/spreadsheets/d/1MJ6bAkZamUeOTdQvEkqUzWp_6Ms2kNq26785hhpqx0Y/edit#gid=0)
-
 ## Table Elements
 
 * `<table>` — container of a table
@@ -12,50 +10,96 @@
 
 ## Code-a-long Guide
 
-1. Adjust width and height of rows and columns.
-  ```css
-  td {
-    width: 100px;
-  }
+In this code along, we'll use HTML tables and CSS to recreate [this spreadsheet](https://docs.google.com/spreadsheets/d/1MJ6bAkZamUeOTdQvEkqUzWp_6Ms2kNq26785hhpqx0Y/edit#gid=0). 
 
-  tr {
+1. Every table begins with the `<table>` element which we can fill with table rows (`<tr>`) and table data (`<td>`).
+
+```html
+<table>
+  <tr>
+    <td>Data A1</td>
+    <td>Data B1</td>
+  </tr>
+  <tr>
+    <td>Data A2</td>
+    <td>Data B2</td>
+  </tr>
+</table>
+```
+
+
+2. Adjust `width` and `height` of rows and columns.
+  ```css
+  tr { /* Set the height of rows*/
     height: 100px;
+  }
+  
+  td { /* Set the width of columns */
+    width: 100px;
   }
   ```
 
-2a. Which tables elements can have a border? What about padding and margin in our table cells?
+3. Which tables elements can have a border? What about padding and margin in our table cells?
 
-2b. Add and collapse borders by targeting table and all of it's descendants.
+  Add and collapse borders by targeting table and all of it's descendants.
+
   ```css
   table, table * {
     border: 1px solid black;
     border-collapse: collapse;
   }
   ```
-The default `border-collapse` property is `seperate` and has some thin white space seperating each cell. The `border-spacing` property determines how much space separtes each cell.
+  The default `border-collapse` property is `seperate` and has some thin white space seperating each cell. The `border-spacing` property determines how much space separtes each cell.
 
-3a. Play around with text alignment by targeting the `text-align` property of the `td` element.
+4. Play around with text alignment by targeting the `text-align` property of the `td` element.
   ```css
   td {
     text-align: center;
   }
   ```
   
-3b. Play around with background colors.
+  Play around with background colors.
+
   ```css
   table {
     background-color: gray;
   }
   ```
+  
+5. We can use table headers (`<th>`) and separate the first first row from the rest using `<thead>` and `<tbody>`. Your table structure will typically look like this (look familiar?):
 
-4. Add `scope` attributes to `<th>`s and then target those attributes for styling using an attribute selector.
+  ```html
+  <table>
+    <thead></thead>
+    <tbody></tbody>
+  </table>
+  ```
+
+6. Add `scope` attributes to `<th>`s and then target those attributes for styling using an attribute selector.
+  ```html
+  <th scope="row">1st Period</th>
+  ```
   ```css
-    th[scope="row"] {
+  th[scope="row"] {
     background-color: #0b0775;
     color: #ffffff;
   }
   ```
-5. Add `<colgroup>` elements and demonstrate how that facilitates styling targeted at table _columns_.
+
+  > This will target `th` elements with a `scope="row"` attribute. 
+  
+  ```html
+  <th foo="bar">Some text</th>
+  ```
+  ```css
+  [foo="bar"] {
+    background: deeppink;
+  }
+  ```
+
+  > Note: We can make up our own attributes and target them on their own.
+
+7. Add `<colgroup>` elements and demonstrate how that facilitates styling targeted at table _columns_.
   ```html
    <colgroup>
       <col>
@@ -69,19 +113,19 @@ The default `border-collapse` property is `seperate` and has some thin white spa
     </colgroup>
   ```
 
-6. Add an ID to a `<col>` and target it for styling that way.
+8. Add an ID to a `<col>` and target it for styling that way.
 
-7. Use the `:nth-child` **pseudo-class** to target another column.
+9. Use the `:nth-child` **pseudo-class** ([docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes)) to target another column.
   ```css
-    col:nth-child(3) {
+  col:nth-child(3) {
     background-color: #e9e9e9;
     width: 200px;
   }
   ```
 
-8. Mark up the table with `<thead>`, `<tbody>`, `<tfoot>`. Talk over the accessibility benefits.
+10. Mark up the table with `<thead>`, `<tbody>`, `<tfoot>`. Talk over the accessibility benefits.
 
-9. Demonstrate`colspan` attribute.
+11. Demonstrate`colspan` attribute.
   ```html
    <tfoot>
       <tr>
@@ -90,14 +134,14 @@ The default `border-collapse` property is `seperate` and has some thin white spa
    </tfoot>
   ```
 
-10. Target the `<tfoot>` element to give the footer a common background color.
+12. Target the `<tfoot>` element to give the footer a common background color.
   ```css
   tfoot {
     background-color: #e9e9e9;
   }
   ```
 
-11. Demonstrate`rowspan` attribute.
+13. Demonstrate`rowspan` attribute.
   ```html
   <th rowspan="2" scope="row">3rd Period</th>
   ```
