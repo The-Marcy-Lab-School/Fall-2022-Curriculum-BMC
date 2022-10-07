@@ -7,6 +7,9 @@
 * `<td>` - table data values
 * `<thead>` - typically contains the first row
 * `<tbody>` - contains every other row
+* `<tfoot>` - contains a footer row
+
+![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-3-tables_lists/unit-1-table-diagram.png?raw=true)
 
 ## Code-a-long Guide
 
