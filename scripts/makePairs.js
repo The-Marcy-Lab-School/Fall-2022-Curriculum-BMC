@@ -11,14 +11,31 @@ process.argv contains the arguments passed to the command line
 const groupSize = process.argv[2];
 
 let roster = [
- 'Amanda','Arly', 'Casterly','Staceyann',
-'Chuka',      'Clifford',  'Daniel',
-'Destiny',    'Duojay',    'Ethan',
-'Fabrizio',   'Gabriel',
-'Jacqueline', 'Jahshiek',  'Julian',
-'Kristen',    'Luis',      'Natalie',
-'Nayan',      'Nicolas',   'SJ',
-'Shaina',  'Trevon', 'Vinny', 'Hamood'
+ 'Amanda',
+ 'Arly', 
+ 'Casterly',
+ 'Staceyann',
+'Chuka',      
+'Clifford',  
+'Daniel',
+'Destiny',    
+'Duojay',    
+'Ethan',
+'Fabrizio',   
+'Gabriel',
+'Jacqueline', 
+'Jahshiek',  
+'Julian',
+'Kristen',    
+'Luis',      
+'Natalie',
+'Nayan',      
+'Nicolas',   
+'SJ',
+'Shaina',  
+'Trevon', 
+'Vinny', 
+'Hamood'
 ]
 
 // made some manual pairs because of office hours
