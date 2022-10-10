@@ -1,5 +1,10 @@
 # Unit 1 Lesson 4: HTML Forms - Lecture Notes
 
+While you wait, open up Cloud9 and do the following:
+* `cd` into your `unit-1` directory.
+* Create an `index.html` and `index.css` file.
+* Use the HTML5 snippet and link your HTML and CSS files.
+
 ## Agenda
 
 * **0:00-0:10** - Intro [Slides](https://docs.google.com/presentation/d/1n866k4TfpurI_w2Tea3B0Al4f1ScIFsACvpg5QtoTfE/edit#slide=id.g164868a7e6d_0_231)
@@ -51,6 +56,7 @@ Forms are wrapped in a `<form>` tag. This tag _typically_ contains two attribute
 Forms, by default, are relatively unstructured. We can use semantic elements such as `<fieldset>`, `<legend>`, and even `<section>`, `<ul>`, and `<li>` to structure our form.
 
 ## Code-a-long
+
 1. `<form>`
 2. `<input type="text" name="name">`
 3. `<input type="date" name="birthday">`
