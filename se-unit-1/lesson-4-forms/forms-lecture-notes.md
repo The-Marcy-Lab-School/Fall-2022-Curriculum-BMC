@@ -2,9 +2,9 @@
 
 ## Agenda
 
-**0:00-0:10**: Intro [Slides](https://docs.google.com/presentation/d/1n866k4TfpurI_w2Tea3B0Al4f1ScIFsACvpg5QtoTfE/edit#slide=id.g164868a7e6d_0_231)
-**0:10-0:20**: The What and the Why
-**0:20-0:60**: Code Along
+* **0:00-0:10** - Intro [Slides](https://docs.google.com/presentation/d/1n866k4TfpurI_w2Tea3B0Al4f1ScIFsACvpg5QtoTfE/edit#slide=id.g164868a7e6d_0_231)
+* **0:10-0:20** - The What and the Why
+* **0:20-0:60** - Code Along
 
 ### The What and the Why
 
