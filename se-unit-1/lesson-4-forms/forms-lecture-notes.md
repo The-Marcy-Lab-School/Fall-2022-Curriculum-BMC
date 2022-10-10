@@ -50,16 +50,18 @@ Forms, by default, are relatively unstructured. We can use semantic elements suc
 2. `<input type="text" name="name">`
 3. `<input type="date" name="birthday">`
 4. `<label for="name">Name</label>`
-5. `<textarea name="">`
+5. `<fieldset>` and `<legend>`
+6. `<textarea name="">`
     * The `rows` and `cols` attributes are alternatives to `width`/`height`
     * The `placeholder` attribute
     * CSS: `resize: none`
-6. `<input type="checkbox">`
-7. `<input type="radio">`
+7. `<input type="checkbox">`
+    * One `<label>` per checkbox is typical.
+8. `<input type="radio">`
+    * One `<label>` per radio option is typical.
     * The `checked` attribute
-8. `<select name="">` and `<option value="">`
+9. `<select name="">` and `<option value="">`
     * The `selected` attribute 
-9. *New* `<fieldset>` and `<legend>`
 
 Finally...
 10. `<input type="submit" value="Fire Away!" />`
