@@ -2,6 +2,7 @@
 
 While you wait, open up Cloud9 and do the following:
 * `cd` into your `unit-1` directory.
+* Create a new directory called `form-example` and `cd` into it.
 * Create an `index.html` and `index.css` file.
 * Use the HTML5 snippet and link your HTML and CSS files.
 
