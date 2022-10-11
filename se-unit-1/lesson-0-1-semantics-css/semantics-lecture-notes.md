@@ -28,9 +28,9 @@ Fellows will be able to...
 ### The Basics
 
 * **HTML elements** are created using **tags**: `<opening>content to be shown</closing>`
-* Some HTML elements have **self-closing tags**: `<img />`
+* Some HTML elements have **self-closing tags**: `<img>`
 * HTML tags can have **attributes** that add necessary information about an element.
-    * Ex: The `src` attribute in `<img src="url" />` tells the browser which image to display.
+    * Ex: The `src` attribute in `<img src="url">` tells the browser which image to display.
     * Ex: The `href` attribute in `<a href="url">Click me</a>` tells tells the browser where to direct users who click on the link.
     * Some attributes are not required (`class` and `id`) but add in useful information.
 
@@ -38,7 +38,7 @@ Fellows will be able to...
 <div class='container'>
    <h1>This is a header</h1>
    <p>This is some text</p>
-   <img alt="a picture of a cat" src="some-cat-photo.jpg"/>
+   <img alt="a picture of a cat" src="some-cat-photo.jpg">
    <a href="https://www.marcylabschool.org/">Marcy Lab School</a>
    <p id="last-paragraph"></p>
 </div>
@@ -69,7 +69,7 @@ Fellows will be able to...
 
 ### Code-a-Long - Our Landing Page Mockup
 
-<img src="https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-1-semantics-css/images/div-boxes.gif?raw=true" alt="drawing" width="600"/>
+<img src="https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-1-semantics-css/images/div-boxes.gif?raw=true" alt="drawing" width="600">
 
 * We will recreate [our Tribute Page](https://codepen.io/freeCodeCamp/full/zNqgVx) together! But we can make some fun styling changes along the way!
 * We will download the [Page Ruler Chrome Extension](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) to get precise pixel measurements.
@@ -158,10 +158,10 @@ Most HTML tags have an _opening_ and a _closing_ tag with content or other HTML 
 <p>This is shown as text</p>
 ```
 
-Some HTML tags are _self closing_, meaning they don't require a closing tag. In this case, `/>` is used instead of `>`. For example, an image can be created like this:
+Some HTML tags are _self closing_, meaning they don't require a closing tag. For example, an image can be created like this:
 
 ```html
-<img src="url-to-img.jpg"/>
+<img src="url-to-img.jpg">
 ```
 
 In the example above, `src` is an example of an **attribute**. Attributes provide additional, and often necessary, information about the tag. They are written inside the opening tag like this `attribute="value"` with values written inside quotes.

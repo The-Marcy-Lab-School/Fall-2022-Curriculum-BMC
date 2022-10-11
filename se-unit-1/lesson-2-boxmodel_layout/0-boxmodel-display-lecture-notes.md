@@ -73,6 +73,8 @@ According to the box model concept, every element on a page (every `<p>`, `<img>
       margin: 20px;
     }	
     ```
+    
+    ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/box-model-rendered.png?raw=true)
 
 * The `width` and `height` define how much horizontal and vertical space it needs for the content area of the box, which may or may not include the padding and borders. In most cases, the browser can determine the width and height automatically.
 * The `margin` property allows us to set the amount of space that surrounds an element. Margins for an element fall outside of any border and are completely transparent in color.
