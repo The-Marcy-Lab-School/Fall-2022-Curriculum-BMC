@@ -6,6 +6,9 @@
 * main axis
 * cross axis
 
+
+## The What & The Why
+
 * Flexbox aims to provide a more efficient way to lay out, align and distribute space among items in a container, even when their size is unknown and/or dynamic.
 * The main idea behind the flex layout is to give the container the ability to alter its items' width/height (and order) to best fill the available space (mostly to accommodate to all kind of display devices and screen sizes).
 * A flex container expands items to fill available free space or shrinks them to prevent overflow.
@@ -57,18 +60,39 @@
   ```
 
 ## Flex Item Properties
-* `order`
-  By default, flex items are laid out in source order. The `order` property can be used to override the default position of a particular flex item.
-  ```css
-  .item {
-    order: <integer>; /* default is 0 */
-  }
-  ```
+
 * `flex-grow`
   Determines the extent to which a flex item can grow to fill unused space in a flex-container.
   ```css
   .item {
     flex-grow: <number>; /* default 0 */
+  }
+  ```
+* `flex-shrink`
+  Determines the extent to which a flex item will shrink when the flex container becomes too small to hold the flex items.
+  ```css
+  .item {
+    flex-shrink: <number>; /* default 0 */
+  }
+  ```
+* `flex-basis`
+  Determines the initial size of a flex item (if there is space).
+  ```css
+  .item {
+    flex-basis: <number>; /* default auto */
+  }
+  ```
+* `flex` This do-it-all property can simultaneously set the `flex-grow`, `flex-shrink`, and `flex-basis` properties, in that order.
+  ```css
+  .item {
+    flex: <number> <number> <width>; /* */
+  }
+  ```
+* `order`
+  By default, flex items are laid out in source order. The `order` property can be used to override the default position of a particular flex item.
+  ```css
+  .item {
+    order: <integer>; /* default is 0 */
   }
   ```
 * `align-self`
