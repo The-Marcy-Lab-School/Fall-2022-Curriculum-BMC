@@ -54,7 +54,11 @@ Yesterday we talked about how we need to start thinking about the structure of w
 
 ## The Box Model
 
-* According to the box model concept, every element on a page is a rectangular box and may have width, height, padding, borders, and margins.
+According to the box model concept, every element on a page (every `<p>`, `<img>` and `<div>`) is a rectangular box that has a width and a height. This is known as the **content box**. In addition, every content box can have 
+
+* **padding**: the space around the content box.
+* **border**: a layer outside of the padding.
+* **margin**: the space outside of the border and between other elements. 
 
 ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/box-model.png?raw=true)
 
