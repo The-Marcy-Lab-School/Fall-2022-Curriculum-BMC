@@ -36,6 +36,7 @@ Download the following chrome extensions tools to help you create and re-create 
 #### Week 2
 
 * **10/11/22 - Forms** | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-4-forms/forms-lecture-notes.md)
+* **10/12/22 - Flexbox** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_231)
 
 ### Unit 2 - JavaScript
 ### Unit 3 - Functional Programming (Higher Order Functions)
