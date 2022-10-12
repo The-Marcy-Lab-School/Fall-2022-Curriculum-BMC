@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-width: 240px;
+}
+
+body > * {
+    width: 80%;
+    margin: auto;
+}
+
+.image-banner {
+    background: grey;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    padding: 0px 2px;
+}
+
+.image-banner {
+    background: grey;
+    padding: 20px 0px;
+    width: 100%;
+}
+
+section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+article {
+    padding: 0 5%;
+    flex: 1;
+    min-width: 220px;
+}
+
+article:nth-of-type(2) {
+    flex: 3;
+}
