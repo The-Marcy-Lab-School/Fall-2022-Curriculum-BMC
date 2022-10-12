@@ -10,6 +10,11 @@ process.argv contains the arguments passed to the command line
 */
 const groupSize = process.argv[2];
 
+if (!groupSize) {
+  console.log("You need a group size. Try node makePairs 2")
+  process.exit(1);
+}
+
 let roster = [
  'Amanda',
  'Arly', 
