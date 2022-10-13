@@ -35,8 +35,11 @@ Download the following chrome extensions tools to help you create and re-create 
 
 #### Week 2
 
+[CSS Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
 * **10/11/22 - Forms** | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-4-forms/forms-lecture-notes.md) | [Form Example](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-4-forms/example) | [Lecture Recording](https://drive.google.com/file/d/1WkDiTKQjuC5kYjupjg6tM-0gKvJtodXJ/view?usp=sharing)
-* **10/12/22 - Flexbox** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_231) | [Lecture Recording](https://us02web.zoom.us/rec/share/f5z1Ar7-QcZpcIZiQOeA8IPHyK8xQsii5u-uBqy98yHwGhaGV8_SUXXVOvgLjA9Z.lxsnLkz0xndQpqHG?startTime=1665586976000) | [CSS Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) | [Flexbox Lab Code](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-5-flexbox/flexbox-lab)
+* **10/12/22 - Flexbox** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_231) | [Lecture Recording](https://us02web.zoom.us/rec/share/f5z1Ar7-QcZpcIZiQOeA8IPHyK8xQsii5u-uBqy98yHwGhaGV8_SUXXVOvgLjA9Z.lxsnLkz0xndQpqHG?startTime=1665586976000) | [Flexbox Lab Review Code](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-5-flexbox/flexbox-lab) | [Flexbox Lab Review Recording](https://us02web.zoom.us/rec/share/-xiIjMkRPUJiErSzyQ5fqkiLp3GxxQGcuDm8IFeYPGGGdZfVPbuHZLU1h9ZeCUsn.0bEHgqUgu1KQTiZM)
+* **10/13/22 - Flexbox pt. 2** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_236)
 
 ### Unit 2 - JavaScript
 ### Unit 3 - Functional Programming (Higher Order Functions)
