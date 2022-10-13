@@ -37,3 +37,6 @@
 ## Practice
 * Complete all levels of [Flexbox Froggy](https://flexboxfroggy.com/)
 
+## Extend your learning
+* [Flexbox is more complicated than you might think](https://css-tricks.com/equal-columns-with-flexbox-its-more-complicated-than-you-might-think/) — this article dives a little deeper into how `flex-grow`, `flex-shrink`, and `flex-basis` interact with each other and how to address a common issue (getting perfectly equal sized columns). It also begins to explain the differences between grid and flexbox and where flexbox is best used.
+
