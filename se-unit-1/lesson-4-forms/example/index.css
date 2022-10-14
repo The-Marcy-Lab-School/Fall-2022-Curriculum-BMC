@@ -50,7 +50,7 @@ select {
     display: block;
 }
 
-[type="submit"] {
+[name="submit"] { /* Attribute Selector*/
     text-align: center;
     width: 80%;
     margin-left: 10%;
