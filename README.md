@@ -42,6 +42,14 @@ Download the following chrome extensions tools to help you create and re-create 
 * **10/13/22 - Flexbox pt. 2** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_236) | [Lecture Recording](https://us02web.zoom.us/rec/share/lPnPkaOiQwtXQsuZ2zhVlivAOayWoOOvDW_16Ir0vEpq3AC1rXP9yRqbddE1intd.zyqlOZNRZDP_7YiG?startTime=1665680574000)
 * **10/14/22 - Form + Flexbox Review** | [Lecture Recording](https://us02web.zoom.us/rec/share/I8WVw_AoNtnA5KjNga_eLPNqCjuTgjQ538Z02gcf2-SSuVSlbOW5gvmQQVnj2Cer.E_VT_n3L5yXlGJa6)
 
+#### Week 3
+
+* **10/17/22 - Grid** |
+* **10/17/22 - Grid pt. 2** |
+* **10/17/22 - Responsive Design** |
+* **10/17/22 - Responsive Design pt. 2** |
+* **10/17/22 - Review** |
+
 ### Unit 2 - JavaScript
 ### Unit 3 - Functional Programming (Higher Order Functions)
 ### Unit 4 - Object-Oriented Programming (Classes)
