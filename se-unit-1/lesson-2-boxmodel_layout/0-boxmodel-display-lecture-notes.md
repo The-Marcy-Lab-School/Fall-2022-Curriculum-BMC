@@ -85,8 +85,8 @@ According to the box model concept, every element on a page (every `<p>`, `<img>
 
 ### Box Sizing
 * The `box-sizing` property can have two values: `content-box` and `border-box`.
-* The `content-box` setting is default in all modern browsers. This is the standard box model. Padding and border are not included in element height or width
-* With `border-box`, width and height are calculated inclusive of padding and border.
+* The `content-box` setting is default in all modern browsers. The `width` and `height` properties define the size of the inside-most "content box". Padding and border are added to an element's total height or width.
+* With `border-box`, `width` and `height` define the size of the "border box". Any border and padding will push the content box inward.
 * The `border-box` setting is "best" since it simplifies the math a front-end developer must do. For example, if we have a box with a width of 50% and padding of 12px; border-box ensures that it's precisely 50% of the container width, not 50% plus 24-pixels.
 
 ![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/border-box-2.png?raw=true)
