@@ -106,11 +106,7 @@ html {
 * The `display` property has almost thirty values, but `block`, `inline-block`, and `inline` are most used.
 * Every element has a default display property value; however, as with all other property values, that value may be overwritten. `<p>`, for example is `display: block` by default.
 
-![](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/images/display-example.png?raw=true)
-
-> [Live Code](https://jsbin.com/dekenikuqa/2/edit?html,css,output)
-
-> [w3schools code example](https://www.w3schools.com/css/tryit.asp?filename=trycss_inline-block_span1)
+> [Live Code](https://jsbin.com/ropeyon/2/edit?html,css,output)
 
 ## Block
 * _block elements_ (headings, paragraphs, sections, tables, forms, etc) by default occupy all horizontal space available within its container, with nothing to its left or right.
