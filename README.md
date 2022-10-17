@@ -44,7 +44,10 @@ Download the following chrome extensions tools to help you create and re-create 
 
 #### Week 3
 
-* **10/17/22 - Grid** |
+[CSS Tricks Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+[What is the difference between flexbox and grid?](https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/)
+
+* **10/17/22 - Grid** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p)
 * **10/17/22 - Grid pt. 2** |
 * **10/17/22 - Responsive Design** |
 * **10/17/22 - Responsive Design pt. 2** |
