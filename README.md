@@ -48,9 +48,9 @@ Download the following chrome extensions tools to help you create and re-create 
 [What is the difference between flexbox and grid?](https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/)
 
 * **10/17/22 - Grid** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p) | [Lecutre Recording](https://us02web.zoom.us/rec/share/DRYfuKSd_pR8taQWugyL5UmV6JFZPiUUZ0V8oSywdwzJ6A6idXYN4C_8zLj_EtJu.1ADY0IAPomR1fOGQ?startTime=1666019166000)
-* **10/17/22 - Grid pt. 2** |
-* **10/17/22 - Responsive Design** |
-* **10/17/22 - Responsive Design pt. 2** |
+* **10/17/22 - Grid (cont.) + Intro to Responsive Design** | [Lecture Slides](https://docs.google.com/presentation/d/1HNIt6lcGDV09b8Hjj5LUliDamls1jbIRc1jdnHpEXkA/edit#slide=id.p)
+* **10/17/22 - Responsive Design (cont.) ** |
+* **10/17/22 - Responsive Design pt. 2** | 
 * **10/17/22 - Review** |
 
 
