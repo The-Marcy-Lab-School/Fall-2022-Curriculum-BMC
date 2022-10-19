@@ -43,9 +43,8 @@
 * [CSS Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [CSS Tricks Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
 * [What is the difference between flexbox and grid?](https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/)
-* [CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/#introduction)
-* [Organizing CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-* [Debugging CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+* [Josh Comeau's CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/#introduction) | [Normalize.css](https://github.com/necolas/normalize.css/) | [CSS Remedy](https://github.com/jensimmons/cssremedy)
+* Mozilla Tips for [Organizing CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing) and [Debugging CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 
 ### Week 1
 
