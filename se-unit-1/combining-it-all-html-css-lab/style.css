@@ -1,0 +1,77 @@
+/* --------------- */
+/* utility classes */
+/* --------------- */
+.flex-container {
+  display: flex;
+}
+
+.flex-centered {
+  justify-content: center;
+  /* position along main */
+  align-items: center;
+  /* position along cross */
+}
+
+/* --------------- */
+/* -----Header---- */
+/* --------------- */
+header {
+  background: lavender;
+  width: 100%;
+  padding: 1rem;
+}
+
+header h1 {
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  padding: 0 1rem;
+}
+
+/* --------------- */
+/* -----Main------ */
+/* --------------- */
+main h1 {
+  padding: 1rem 0;
+}
+
+img {
+  padding: 1em;
+  margin: 0 auto;
+}
+
+.gallery {
+  flex-direction: column;
+  /* Changes the main axis */
+  gap: 1rem;
+}
+.img-container {
+  background: black;
+  width: 200px;
+  height: 200px;
+  border: 1px solid white;
+}
+
+/* --------------- */
+/* -Media-Queries- */
+/* --------------- */
+@media (min-width: 576px) {
+  header h1 {
+    display: initial;
+  }
+
+  header.flex-container {
+    justify-content: space-between;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .gallery .img-container {
+    justify-self: center;
+  }
+}
