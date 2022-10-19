@@ -1,16 +1,31 @@
 # Curriculum Resources
 
+**Table of Contents**
+* [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
+* [Unit 1 - HTML & CSS](#unit-1---html--css)
+* [Unit 2 - JavaScript](#unit-2---javascript)
+* [Unit 3 - Functional Programming (Higher Order Functions)](#unit-3---functional-programming-higher-order-functions)
+* [Unit 4 - Object-Oriented Programming (Classes)](#unit-4---object-oriented-programming-classes)
+* [Unit 5 - The Document Object Model (DOM)](#unit-5---the-document-object-model-dom)
+* [Unit 6 - Asynchronous JavaScript](#unit-6---asynchronous-javascript)
+* [Unit 7 - Server-side Web Development with Node.js](#unit-7---server-side-web-development-with-nodejs)
+* [Unit 8 - React](#unit-8---react)
+* [Unit 9 - Capstone](#unit-9---capstone)
+
+## Orientation Week
+
 **Important Links to Bookmark**
 * Canvas: https://canvas.instructure.com/
 * Github: https://github.com/
 * Cloud9: https://us-east-2.console.aws.amazon.com/cloud9/home
 
-## Orientation Week
+**Slides**
 * [Technical Overview Slides](https://docs.google.com/presentation/d/13HRR6Ci6mXC9f-9iRoGux8rwjgYqMDtRl4VxE2IoXGU/edit)
 * [AWS + Github Setup Slides](https://docs.google.com/presentation/d/1fbZzi6A6T5BanwcNPXKVdG7spu8u__1pMLtdTnnIqHY/edit?usp=sharing) 
 * [AWS + Github Setup Instructions in Github](https://github.com/The-Marcy-Lab-School/aws-cloud9-environment-setup)
 
-### Unit 0 - Command Line, Git, Github (1 week)
+## Unit 0 - Command Line, Git, Github
+
 * **9/26/22 - Intro to Command Line Interfaces** | [Slides](https://docs.google.com/presentation/d/1xjI9hbHflDj0PqeFQMWetBVPa35nwsfcjI1yt9YpBcU/edit#slide=id.g158fbd3a59f_0_0) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-0/lesson_0_cli/cli_lecture_notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/cahmE2fvX0ip9oLrdTCBrPWl6o8fVEHXDKUzq15_Ieb7fboK3ZJGqysrldRf1rrc.TXTMuKktY8CcD7Z2?startTime=1664204552000)
 * **9/26/22 - CLI Practice** | [Lab Review Recording](https://us02web.zoom.us/rec/share/fZFB7Ad_JUGPnCKYhOHquhrUkqZ3YCFBQ0xVQFCgTqYj-Drk4AT1gVa__HBBSM-m.Zp_rZQXR4rAwzmLO?startTime=1664220679000)
 * **9/27/22 - Intro to Git & Github** | [Slides](https://docs.google.com/presentation/d/1429MO_xa7tRQdj28RaKALmT8FRRfF5MYQkui0OQgrtg/edit#slide=id.g158fbd3a59f_0_97) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-0/lesson_1_git/git_lecture_notes.md) | [Lecture Recording](https://drive.google.com/file/d/1mwb_utrbMSZr7xI2Ur3NUscvYm5Tr72O/view?usp=sharing) | [Lecture Recording pt.2](https://drive.google.com/file/d/1-TJJptvVPIWAV8cKtRMnHLZXL5KbNnTT/view?usp=sharing) | Updating Lecture Links Demo ([Using the CLI](https://drive.google.com/file/d/1Zo9f9dzjTNGElyik3PeMxyBqX7UeEMSk/view?usp=sharing)) ([Using Github](https://drive.google.com/file/d/15SsA5UjUQ98I6Z4bbdptgMEqPcm1NsrM/view?usp=sharing))
@@ -18,14 +33,21 @@
 * **9/29/22 - Pair Programming** | [Ben + Carmen Lab Demo Recording](https://drive.google.com/file/d/1IdMwe-p-REr3fKTve8g1cevWGy9cf9JJ/view?usp=sharing)
 * **9/30/22 - Review** | [Slides](https://docs.google.com/presentation/d/10tIKIoLKCF5UEh3Do8nSmdK_ELzA8R_Q8mJhaynApnY/edit#slide=id.g158fbd3a59f_0_0) | [Lecture Recording](https://us02web.zoom.us/rec/share/Zd4-FA8GX3OvmoYpSME5tCl8rlMse8mHucwtHU3c_hFGcMqbUpq5o3SO0WiathSk.xBfXljAhcJTm5-Kx)
 
-### Unit 1 - HTML & CSS (3 weeks + Project week)
+## Unit 1 - HTML & CSS
 
-Download the following chrome extensions tools to help you create and re-create webpages:
+**Download the following chrome extensions tools**
 1. [Eye Dropper](https://chrome.google.com/webstore/detail/eye-dropper/hmdcmlfkchdmnmnmheododdhjedfccka) | used to get the exact color of certain pixels.
 2. [Page Ruler](https://chrome.google.com/webstore/detail/page-ruler/jcbmcnpepaddcedmjdcmhbekjhbfnlff/related?hl=en) | used to get the exact pixel dimensions for something.
 
+**Additional Resources**
+* [CSS Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+* [CSS Tricks Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
+* [What is the difference between flexbox and grid?](https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/)
+* [CSS Reset](https://www.joshwcomeau.com/css/custom-css-reset/#introduction)
+* [Organizing CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
+* [Debugging CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
 
-#### Week 1
+### Week 1
 
 * **10/3/22 - HTML Semantics & CSS** | [Intro Slides](https://docs.google.com/presentation/d/1bJ7hDGK7EENUmRqG_3TAU4pPyejzcN5Er1e-Ucrf2h4) | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-0-1-semantics-css/semantics-lecture-notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/play/A6_n-nW0CoSpuIggAISwuJ2s3OIzr_4Q9sCFEnOIAvpoBWK45zQFzudSJzMyzxwq4EZOy3Y56OSK8vxi.c9hGBQUDL0MuAumw?continueMode=true) | [Lab Review Recording (Finishing Tribute Page)](https://us02web.zoom.us/rec/play/m-4QN9qFLswoQm230wITeLDOSFakDUIgu-S_C9XPjRociUcXBzC4ROJDZZzE25KcyGAHXLUL0ypQx4q1.tOZb5aNtfb6lvE-X?continueMode=true)
 * **10/4/22 - Box Model Layout** | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/0-boxmodel-display-lecture-notes.md) | [Lecture Recording (CSS Review, Box Model, & Display)](https://drive.google.com/file/d/1xBHSo090OKsH-INUwftGLbys-NGz121x/view?usp=sharing)
@@ -33,19 +55,14 @@ Download the following chrome extensions tools to help you create and re-create 
 * **10/6/22 - Positioning & Review** | [Positioning Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-2-boxmodel_layout/2-positioning-lecture-notes.md) | [Lecture Recording](https://drive.google.com/file/d/18rgwF8GOaI6Qztuny7_YlIysMvLqyxw-/view?usp=sharing)
 * **10/7/22 - Tables & Lists** | [Table Code Along Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-3-tables_lists/tables-code-along-lecture-notes.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/6WSVjJKwTS2Qlle-UQ1m0EkTxjGK_yV5paKZiMVYeI5gwAJgi2iziDtKw3d7IGYG.bgxC3Q6Hrtem66aO) | [Table Example Solution](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-3-tables_lists/tables-demo) 
 
-#### Week 2
-
-[CSS Tricks Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+### Week 2
 
 * **10/11/22 - Forms** | [Lecture Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-1/lesson-4-forms/forms-lecture-notes.md) | [Form Example](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-4-forms/example) | [Lecture Recording](https://drive.google.com/file/d/1WkDiTKQjuC5kYjupjg6tM-0gKvJtodXJ/view?usp=sharing)
 * **10/12/22 - Flexbox** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_231) | [Lecture Recording](https://us02web.zoom.us/rec/share/f5z1Ar7-QcZpcIZiQOeA8IPHyK8xQsii5u-uBqy98yHwGhaGV8_SUXXVOvgLjA9Z.lxsnLkz0xndQpqHG?startTime=1665586976000) | [Flexbox Lab Review Code](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/lesson-5-flexbox/flexbox-lab) | [Flexbox Lab Review Recording](https://us02web.zoom.us/rec/share/-xiIjMkRPUJiErSzyQ5fqkiLp3GxxQGcuDm8IFeYPGGGdZfVPbuHZLU1h9ZeCUsn.0bEHgqUgu1KQTiZM)
 * **10/13/22 - Flexbox pt. 2** | [Lecture Slides](https://docs.google.com/presentation/d/1qsBheWY-OuyJg16TV8w2UTR6U18xNV4F_CZFddWLYkY/edit#slide=id.g164868a7e6d_0_236) | [Lecture Recording](https://us02web.zoom.us/rec/share/lPnPkaOiQwtXQsuZ2zhVlivAOayWoOOvDW_16Ir0vEpq3AC1rXP9yRqbddE1intd.zyqlOZNRZDP_7YiG?startTime=1665680574000)
 * **10/14/22 - Form + Flexbox Review** | [Lecture Recording](https://us02web.zoom.us/rec/share/I8WVw_AoNtnA5KjNga_eLPNqCjuTgjQ538Z02gcf2-SSuVSlbOW5gvmQQVnj2Cer.E_VT_n3L5yXlGJa6)
 
-#### Week 3
-
-[CSS Tricks Grid Guide](https://css-tricks.com/snippets/css/complete-guide-grid/)
-[What is the difference between flexbox and grid?](https://css-tricks.com/quick-whats-the-difference-between-flexbox-and-grid/)
+### Week 3
 
 * **10/17/22 - Grid** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p) | [Lecture Recording](https://us02web.zoom.us/rec/share/DRYfuKSd_pR8taQWugyL5UmV6JFZPiUUZ0V8oSywdwzJ6A6idXYN4C_8zLj_EtJu.1ADY0IAPomR1fOGQ?startTime=1666019166000)
 * **10/18/22 - Grid (cont.)** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p) | [Lecture Recording](https://drive.google.com/file/d/1zq0vfYwXsq68kdbCAYbhS4eWbKJ_bzAM/view?usp=sharing)
@@ -53,17 +70,11 @@ Download the following chrome extensions tools to help you create and re-create 
 * **10/20/22 - Responsive Design pt. 2** | 
 * **10/21/22 - Review** |
 
-
-#### Project Week
-
-[Organizing CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Organizing)
-[Debugging CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Debugging_CSS)
-
-### Unit 2 - JavaScript
-### Unit 3 - Functional Programming (Higher Order Functions)
-### Unit 4 - Object-Oriented Programming (Classes)
-### Unit 5 - The Document Object Model (DOM)
-### Unit 6 - Asynchronous JavaScript
-### Unit 7 - Server-side Web Development with Node.js
-### Unit 8 - React
-### Unit 9 - Capstone
+## Unit 2 - JavaScript
+## Unit 3 - Functional Programming (Higher Order Functions)
+## Unit 4 - Object-Oriented Programming (Classes)
+## Unit 5 - The Document Object Model (DOM)
+## Unit 6 - Asynchronous JavaScript
+## Unit 7 - Server-side Web Development with Node.js
+## Unit 8 - React
+## Unit 9 - Capstone
