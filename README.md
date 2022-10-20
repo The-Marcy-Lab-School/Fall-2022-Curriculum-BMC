@@ -66,7 +66,7 @@
 * **10/17/22 - Grid** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p) | [Lecture Recording](https://us02web.zoom.us/rec/share/DRYfuKSd_pR8taQWugyL5UmV6JFZPiUUZ0V8oSywdwzJ6A6idXYN4C_8zLj_EtJu.1ADY0IAPomR1fOGQ?startTime=1666019166000)
 * **10/18/22 - Grid (cont.)** | [Lecture Slides](https://docs.google.com/presentation/d/1q8Tot4gVA033-dfyfljYSBccY4LzWGcy5fMaWS2sX1w/edit#slide=id.p) | [Lecture Recording](https://drive.google.com/file/d/1zq0vfYwXsq68kdbCAYbhS4eWbKJ_bzAM/view?usp=sharing)
 * **10/19/22 - Responsive Design** | [Lecture Slides](https://docs.google.com/presentation/d/1HNIt6lcGDV09b8Hjj5LUliDamls1jbIRc1jdnHpEXkA/edit#slide=id.p) | [Lecture Recording](https://us02web.zoom.us/rec/share/z7jnVg_cjDFSGTOOKgbMAOFimDyxVbyRX2jj_X_qyCGaWKXgKbM6S4mPLmtAEuiK.8hJ0vZ6yhBT1qmir) | [Combining it all lab review recording](https://us02web.zoom.us/rec/share/eGKP9MM_UWAyjZWoyZgdn1V3J2QeHpTxnCt_Fb7fVrXVT8YzQiMFfv8G2zqDIDr6.LqEGTGQqYIC8eLDC) | [Combining It All Code](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-1/combining-it-all-html-css-lab)
-* **10/20/22 - Responsive Design pt. 2** | 
+* **10/20/22 - Flex / Grid / Responsive Revew + Bootstrap Intro** | [Lecture Recording](https://us02web.zoom.us/rec/share/dhX-RD3qJa-y6Iz1CXts0m6YoQZahZhuPSzcc6Xq6kyxb95ugL3HVutwug5Vtsnt.CBmsAM9-rcweE0gt?startTime=1666285325000)
 * **10/21/22 - Review** |
 
 ## Unit 2 - JavaScript
