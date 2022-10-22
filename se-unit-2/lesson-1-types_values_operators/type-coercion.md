@@ -1,7 +1,66 @@
 # Type Conversion and Coercion in JavaScript
 
 ## Type Conversions
-There are times when we may want to convert a value into value of a different type. For example, you may ask the user for their age in your application. If you use the `prompt()` method, you will receive this input as a string. However, if you want to perform a mathematical operation on this value, you need a number. Let's discuss ways that we can _convert_ between types in JavaScript.
+You are writing a simple application that asks the user for 2 numbers and then prints their sum. It looks like this:
+
+```js
+let num1 = prompt("choose your first number");
+let num2 = prompt("choose your first number");
+let sum = num1 + num2;
+
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+```
+
+There's a problem though, when the user enters `2` and `3`, they are told the sum is `23`. Huh?!
+
+The `prompt` function returns a string. So, when we write `num1 + num2` we are concatenating those two strings, not performing addition on their values! **We need to convert the type of `num1` and `num2` from strings to numbers**.
+
+---
+
+**💻 Practice:** Fix [the program](https://replit.com/@BenSpector/string-to-number#index.js) using one of the String to Number conversion techniques below.
+
+---
+
+### Converting Strings to Numbers
+There are 4 ways we can convert strings to numbers.
+1. The `Number()` function:
+   ```javascript
+   Number("85"); // 85
+   Number("0.99"); // 0.99
+   Number("-919"); // -919
+   Number("93cd"); // NaN
+   ```
+
+2. The `parseInt()` function can be used to convert a string into an number in the form of an integer. Note: The `parseInt()` function takes a second argument which represents the _base value_ of the number to be parsed. It is important to note that this base value does 
+**not** always default to `10` so, generally, it's best to specify. More about `parseInt()` [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
+   ```javascript
+   parseInt("1001", 10); // 1001
+   parseInt("1001", 2); // 9 (8 + 1)
+   parseInt("0.39", 10); // 0
+   parseInt("2.999", 10); // 2
+   parseInt("-919", 10); // -919
+   parseInt("eleven", 10); // NaN
+   ```
+   > Notice, that `parseInt()` always returns and integer. If passed a decimal (or _float_), this function will ignore the decimal places and return the signed (positive or negative) integer.
+
+3. The `parseFloat()` function will return a _float_ or a number with a decimal if one is present; otherwise, it will return an integer. Like `parseInt()`, `parseFloat()` takes an optional second argument `radix` which represents the numerical base of the number to be parsed.
+   ```javascript
+   parseFloat("85", 10); // 85
+   parseFloat("85.0", 10); // 85
+   parseFloat("85.1", 10); // 85.1
+   parseFloat("-85.1", 10); // -85.1
+   parseFloat("eleven.1", 10); // NaN
+   ``` 
+**Note:** For all three of these functions, if the string cannot be converted to a number, the function returns `NaN`.
+
+4. The _unary plus operator_, `+`, works just like the `Number` function:
+   ```javascript
+   +"85"; // 85
+   +"0.99"; // 0.99
+   +"-919"; // -919
+   +"93cd"; // NaN
+   +"5" + +"10" // 15
+   ```
 
 ### Converting Numbers to Strings
 We have two options at our disposal to convert numbers to strings.
@@ -19,87 +78,62 @@ We have two options at our disposal to convert numbers to strings.
    String(-125.97); // "-125.97"
    ```
 
-### Converting Strings to Numbers
-We can convert strings to numbers using the following:
-1. The `Number()` function:
-   ```javascript
-   Number("85"); // 85
-   Number("0.99"); // 0.99
-   Number("-919"); // -919
-   Number("93cd"); // NaN
-   ```
+### Truthy vs. Falsey — Converting to Boolean Values
+We can convert values to Booleans using the `Boolean` function:
 
-2. The `parseInt()` function can be used to convert a string into an number in the form of an integer. Note: The `parseInt()` function takes a second argument which represents the _base value_ of the number to be parsed. It is important to note that this base value does 
-**not** always default to 10 so, generally, it's best to specify. More about `parseInt()` [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/parseInt)
-   ```javascript
-   parseInt("85", 10); // 85
-   parseInt("0.39", 10); // 0
-   parseInt("2.999", 10); // 2
-   parseInt("-919", 10); // -919
-   parseInt("eleven", 10); // NaN
-   ```
-   Notice, that `parseInt()` always returns and integer. If passed a decimal (or _float_), this function will ignore the decimal places and return the signed (positive or negative) integer.
-
-3. The `parseFloat()` function will return a _float_ or a number with a decimal if one is present; otherwise, it will return an integer. Like `parseInt()`, `parseFloat()` takes an optional second argument `radix` which represents the numerical base of the number to be parsed.
-   ```javascript
-   parseFloat("85", 10); // 85
-   parseFloat("85.0", 10); // 85
-   parseFloat("85.1", 10); // 85.1
-   parseFloat("-85.1", 10); // -85.1
-   parseFloat("eleven.1", 10); // NaN
-   ``` 
-**Note:** For all three of these functions, if the string cannot be converted to a number, the function returns `NaN`.
-
-4. The _unary plus operator_, `+`, works just like the `Number` function:
-   ```javascript
-   +("85"); // 85
-   +("0.99"); // 0.99
-   +("-919"); // -919
-   +("93cd"); // NaN
-   ```
-
-### Converting to Boolean Values
-Any value in JavaScript can be converted to a boolean value. In the programming world, you will often hear people refer to certain values as _truthy_ or _falsy_. These are just cute names that we use to describe values that _evaluate to_ `true` or `false`, respectively. Generally speaking, most values in a language will evaluate to `true` while a fewer number of select values will evaluate to `false`. In JavaScript, there are **six falsy values**. These values evaluate `false` while every other value evaluates to `true`.
-  1. `false`
-  2. `0`
-  3. Any empty string (`""`, `''`, or ````)
-  4. `null`
-  5. `undefined`
-  6. `NaN`
-
-Since every JavaScript value can be evaluated to a boolean value, we can use any value in a conditional statement:
 ```javascript
-let foo = 0;
+// The six falsey values
+Boolean(null); // false
+Boolean(""); // false (same with any other empty string)
+Boolean(0); // false
+Boolean(undefined); // false
+Boolean(NaN); // false 
+Boolean(false); // false 
 
-if (foo) {
-  console.log("foo!");
-} else {
-  console.log("bar");
-}
-
-// -> "bar"
+// Everything else is truthy
+Boolean(true); // true
+Boolean({}); // true
+Boolean([]); // true
+Boolean(99.99); // true
+Boolean("reuben"); // true
+Boolean("null"); // true
 ```
 
-However, there may be times when you want to explicitly convert a value to a boolean value. There are two primary ways we can do this:
-1. We can use the `Boolean` function:
-   ```javascript
-   Boolean(null); // false
-   Boolean("null"); // true
-   Boolean("reuben"); // true
-   Boolean(99.99); // true
-   Boolean(0); // false
-   Boolean(undefined); // false
-   Boolean(""); // false
-   Boolean(NaN); // false 
-   ```
+In the programming world, you will often hear people refer to certain values as _truthy_ or _falsy_. These are just cute names that we use to describe values that _evaluate to_ `true` or `false` when _coerced_ (made to change). 
 
-2. We can use `!!`. But hear me out to learn why this works...
+Boolean coercion most commonly occurs when we write `if` statements. If a non-boolean value is provided as the condition of an `if` statement, the JavaScript interpreter will automatically coerce the value. 
+
+```js
+if ("" || 0 || null || undefined || NaN) {
+    console.log("Will this print?")   
+} else {
+    console.log("Nope!")
+}
+```
+
+In this example, we use automatic coercion to let us check to see if the `name` variable holds an empty string before deciding what to print:
+
+```js
+let name = prompt("what is your name?");
+
+if (name) { // Instead of if (name !== "")
+    console.log(`Hello ${name}`);
+} else {
+    console.log(`No name was provided`)
+}
+```
+
+As we learned, the `prompt` function returns a string. However, `if` statements expect a Boolean value, so it converts `name` from a String to a Boolean. If the string is empty, it will not greet the user. 
+
+#### A Weird (But Quick) Boolean Conversion Approach
+
+We can use `!!value`. Hear me out to learn why this works...
 `!` used as an operator is called _the logical NOT_. It returns the opposite boolean value as it's operand. Example:
   ```javascript
   !true; // false
   !false; // true
   ```
-  However, if it's operand isn't a boolean value, it implicitly converts (or _coerces_) it into a boolean value first and _then_ returns the opposite value.
+  However, if its operand isn't a boolean value, it implicitly converts (or _coerces_) it into a boolean value first and _then_ returns the opposite value.
   ```javascript
   !("test"); // false... because "test" is truthy and the `!` returns the opposite
   !(0); // true
@@ -119,16 +153,21 @@ However, there may be times when you want to explicitly convert a value to a boo
   !!foo; // false;
   ```
 
-## Type Coercion
-One of the most controversial features of JavaScript is _type coercion_. In other programming languages, attempting to perform operations on incompatible data types will raise an error. JavaScript on the otherhand is lenient. The language will make an assumption based on a predefined set of rules to determine how it could implicitly change (or _coerce_) the data type into one that the operation can be performed on. Though, you may be thinking, "Oh how nice of you, JavaScript. Thanks for letting me be lazy with my types 💪🏽", it actually can turn out to be a major headache when type coercion leaves you with unexpected results. For example:
+## The Rules of Automatic Type Coercion
+One of the most controversial features of JavaScript is _type coercion_. 
+
+In other programming languages, attempting to perform operations on incompatible data types will raise an error. Instead, JavaScript will try to make it work. But this can give us some unexpected results:
+
 ```javascript
 > "100" + 1 // "1001"
 > ba" + + "Marcy Lab School" + "a" // "baNaNa"
 > true + 100 // 101
 ```
-Want to see more JS silliness, check out this ridiculously funny [lightning talk video](https://archive.org/details/wat_destroyallsoftware).
 
-The good news is that, as odd as JavaScript type coercion may be, you can understand most (but, unfortunately, not all) of its oddities by remembering few important rules. Let's learn more about them below:
+The language will make an assumption based on a **predefined set of rules** to determine how it could _coerce_ (force to change) the data type into one that the operation can be performed on. 
+
+> Want to see more JS silliness? Check out this funny [lightning talk video](https://www.destroyallsoftware.com/talks/wat).
+
 #### **Rule 0** - Number Conversion Rules of Thumb:
 * If it looks like a number, it gets cast as a number.
   ```javascript

@@ -13,5 +13,5 @@
 ___
 
 ### Optional Learning
-* Podcast: [Command Line Heros - Creating JavaScript](https://www.youtube.com/watch?v=8OKp3zQsDdE)
+* Podcast: [Command Line Heroes - Creating JavaScript](https://www.youtube.com/watch?v=8OKp3zQsDdE)
 
