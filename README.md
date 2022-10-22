@@ -70,6 +70,11 @@
 * **10/21/22 - Review** | [Kahoot Review Recording](https://us02web.zoom.us/rec/share/66pXgNCEt3rxUJiTcPg_tt2IxpHmhzxhaAIp9huVuIi-FBsvl1zMokYIEQKnQXXS._srfVBLBz06J9E5b?startTime=1666361248000)
 
 ## Unit 2 - JavaScript
+
+[Eloquent JavaScript](https://eloquentjavascript.net/)
+
+### Week 1
+
 ## Unit 3 - Functional Programming (Higher Order Functions)
 ## Unit 4 - Object-Oriented Programming (Classes)
 ## Unit 5 - The Document Object Model (DOM)
