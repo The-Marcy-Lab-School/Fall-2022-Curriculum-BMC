@@ -75,6 +75,12 @@
 
 ### Week 1
 
+* **10/31/22 — Project Presentations** |
+* **11/1/22 — Data Types & Type Coercion** |
+* **11/2/22 — Variables & Control Flow** |
+* **11/3/22 — Loops** |
+* **11/4/22 — Review** |
+
 ## Unit 3 - Functional Programming (Higher Order Functions)
 ## Unit 4 - Object-Oriented Programming (Classes)
 ## Unit 5 - The Document Object Model (DOM)
