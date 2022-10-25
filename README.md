@@ -72,7 +72,7 @@
 ### Project Week
 
 * **10/24/22 - Project Week Kickoff** | [Kickoff Slides](https://us02web.zoom.us/rec/share/iO_k236XAwvZX4oUwDeFqPvQk4NZDOlRWXGajJnuLInfJAVgQJv6Qfv0V5OyJRKR.nJ7uikaA1BQaw6hH?startTime=1666618510000) | [Proposals & Wireframes Presentations](https://us02web.zoom.us/rec/share/NfkdSUTTG9Xy9cq-EUVDjMXlkf9ofZzhP1fHUkmUSaUfsBoGO-Sjz-QXqENsLMyt.WWrXltZh6itkVKXk?startTime=1666641261000)
-* **10/25/22 - Day 2 | [Bootstrap Demo Recording](https://zoom.us/rec/play/T64AagI-q-MTtbjvl6X6T63etDL3-cUl1k1DOUYU6rbY4Xl7sxpmolk[…]4q5ds4ov4a.fsTWPI5_KOiIy91k?autoplay=true&startTime=1666721154000)
+* **10/25/22 - Day 2** | [Bootstrap Demo Recording](https://zoom.us/rec/play/T64AagI-q-MTtbjvl6X6T63etDL3-cUl1k1DOUYU6rbY4Xl7sxpmolk[…]4q5ds4ov4a.fsTWPI5_KOiIy91k?autoplay=true&startTime=1666721154000)
 
 ## Unit 2 - JavaScript
 
