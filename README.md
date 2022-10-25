@@ -69,6 +69,10 @@
 * **10/20/22 - Flex / Grid / Responsive Revew + Bootstrap Intro** | [Lecture Recording](https://us02web.zoom.us/rec/share/dhX-RD3qJa-y6Iz1CXts0m6YoQZahZhuPSzcc6Xq6kyxb95ugL3HVutwug5Vtsnt.CBmsAM9-rcweE0gt?startTime=1666285325000)
 * **10/21/22 - Review** | [Kahoot Review Recording](https://us02web.zoom.us/rec/share/66pXgNCEt3rxUJiTcPg_tt2IxpHmhzxhaAIp9huVuIi-FBsvl1zMokYIEQKnQXXS._srfVBLBz06J9E5b?startTime=1666361248000)
 
+### Project Week
+
+* **10/24/22 - Project Week Kickoff** | [Kickoff Slides](https://us02web.zoom.us/rec/share/iO_k236XAwvZX4oUwDeFqPvQk4NZDOlRWXGajJnuLInfJAVgQJv6Qfv0V5OyJRKR.nJ7uikaA1BQaw6hH?startTime=1666618510000) | [Proposals & Wireframes Presentations](https://us02web.zoom.us/rec/share/NfkdSUTTG9Xy9cq-EUVDjMXlkf9ofZzhP1fHUkmUSaUfsBoGO-Sjz-QXqENsLMyt.WWrXltZh6itkVKXk?startTime=1666641261000)
+
 ## Unit 2 - JavaScript
 
 [Eloquent JavaScript](https://eloquentjavascript.net/)
