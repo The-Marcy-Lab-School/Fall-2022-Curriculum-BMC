@@ -1,4 +1,6 @@
-# How To Use JavaScript in the Browser
+# What is JavaScript
+
+## How we write and run JavaScript for the browser
 
 JavaScript can be executed in the browser or in the Command Line with `node`. We will be focusing on using JavaScript in the browser for a few reasons:
 
@@ -34,3 +36,16 @@ Next, there are two ways to run JavaScript with an HTML file:
 ```js
 console.log("Hello from script.js")
 ```
+
+To see the `console.log` statements, simply preview the `index.html` page and inspect. Then, click on the "Console" tab.
+
+## Using the DevTools
+
+You should be comfortable using the following tools in the "Sources" tab of the Chrome devtools.
+
+First, select the `script.js` file from the File navigator on the left
+
+* the `debugger` keyword
+* step over
+* step in
+* step out
