@@ -73,6 +73,7 @@
 
 * **10/24/22 - Project Week Kickoff** | [Kickoff Slides](https://us02web.zoom.us/rec/share/iO_k236XAwvZX4oUwDeFqPvQk4NZDOlRWXGajJnuLInfJAVgQJv6Qfv0V5OyJRKR.nJ7uikaA1BQaw6hH?startTime=1666618510000) | [Proposals & Wireframes Presentations](https://us02web.zoom.us/rec/share/NfkdSUTTG9Xy9cq-EUVDjMXlkf9ofZzhP1fHUkmUSaUfsBoGO-Sjz-QXqENsLMyt.WWrXltZh6itkVKXk?startTime=1666641261000)
 * **10/25/22 - Day 2** | [Bootstrap Demo Recording](https://us02web.zoom.us/rec/share/Iq3RqXh6bTLXglkH2w_gCqRllStyYe5SsSfXymDTmrF9Xw1i_2jAwaBdzybxofjX.jBz0QA4BeRI8YYMJ?startTime=1666721154000)
+* **10/31/22 — Project Presentations** |
 
 ## Unit 2 - JavaScript
 
@@ -80,8 +81,7 @@
 
 ### Week 1
 
-* **10/31/22 — Project Presentations** |
-* **11/1/22 — Data Types & Type Coercion** |
+* **11/1/22 — Data Types & Type Coercion** | [JS in the Browser Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-0-what_is_javascript/javascript-in-html.md) | [Data & Type Coercion Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-1-types_values_operators/type-coercion.md)
 * **11/2/22 — Variables & Control Flow** |
 * **11/3/22 — Loops** |
 * **11/4/22 — Review** |
