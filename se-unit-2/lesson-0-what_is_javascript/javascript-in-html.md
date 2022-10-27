@@ -13,8 +13,8 @@ First, we create the necessary files:
 
 Next, there are two ways to run JavaScript with an HTML file:
 
-1. We can either embed JavaScript directly into the HTML file by putting JavaScript code inside of `<script></script>` tags.  
-2. Or, the more common (and better) approach is to link to a separate file.
+1. We can put JavaScript code inside of `<script></script>` tags in an HTML file.  
+2. Or, the more common (and better) approach is to link to a separate JavaScript (`.js`) file.
 
 ```html
 <!DOCTYPE html>
@@ -28,24 +28,41 @@ Next, there are two ways to run JavaScript with an HTML file:
         <script>
             console.log("this is embedded javascript")
         </script>
-        <script src="script.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
 ```
 
 ```js
-console.log("Hello from script.js")
+// index.js
+console.log("Hello from index.js")
 ```
 
 To see the `console.log` statements, simply preview the `index.html` page and inspect. Then, click on the "Console" tab.
 
 ## Using the DevTools
 
-You should be comfortable using the following tools in the "Sources" tab of the Chrome devtools.
+Chrome's devtools gives us deep insight into how our program runs. It can be a great tool for **learning** and for **debugging**.
 
-First, select the `script.js` file from the File navigator on the left
-
+You should be comfortable using the following tools from the "Sources" tab of the Chrome devtools.
 * the `debugger` keyword
-* step over
-* step in
-* step out
+* Debugger Controls
+    * Resume execution
+    * Step over
+    * Step in
+    * Step out
+
+### Debugger
+
+Insert the `debugger` keyword anywhere in your JavaScript code to cause the browser's devtools to pause execution.
+
+```js
+let num1 = prompt("choose your first number");
+let num2 = prompt("choose your first number");
+
+debugger; // let's look at the values returned from the prompts!
+
+let sum = num1 + num2;
+
+console.log(`The sum of ${num1} and ${num2} is ${sum}`);
+```
