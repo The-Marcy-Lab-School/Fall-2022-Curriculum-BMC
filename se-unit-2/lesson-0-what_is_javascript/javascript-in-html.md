@@ -28,14 +28,14 @@ Next, there are two ways to run JavaScript with an HTML file:
         <script>
             console.log("this is embedded javascript")
         </script>
-        <script src="index.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
 ```
 
 ```js
-// index.js
-console.log("Hello from index.js")
+// script.js
+console.log("Hello from script.js")
 ```
 
 To see the `console.log` statements, simply preview the `index.html` page and inspect. Then, click on the "Console" tab.
