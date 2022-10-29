@@ -1,13 +1,11 @@
 console.clear();
 
 /* 
-Entry point from HTML into JavaScript
-document methods to get access to HTML from JavaScript
-
-JS:
-- variables
+- Entry point from HTML into JavaScript: submitTurn()
+- document.getElementById to access HTML from JavaScript
+- Global Variable Initialization
 - DOM interaction functions
-- game logic functions
+- Game Logic functions
 
 */
 
@@ -22,13 +20,13 @@ let board = [
     [null, null, null],
 ];
 let turn = 0;
-let gameOver = false;
+let weHaveAWinner = false;
 
 // DOM Elements
 const rowInput = document.getElementById("row");
 const columnInput = document.getElementById("column");
-const enterElement = document.getElementById("enter");
-const restartElement = document.getElementById("restart");
+const enterButtonElement = document.getElementById("enter");
+const restartButtonElement = document.getElementById("restart");
 const outcomeElement = document.getElementById("outcome");
 
 ////////////////////////////////////////////////////////////
@@ -38,23 +36,40 @@ const outcomeElement = document.getElementById("outcome");
 function submitTurn() {
     // Get inputs and place the piece
     const { row, column } = getRowColumnFromInput()
-    
+
     // Attempt to place the piece
-    const successfulPlacement = placePiece(board, row, column);
-    if (successfulPlacement) {
-        // Re-render the board
-        renderBoard();
-        
-        // Increment the turn
-        turn++;
-        
-        // Check if the game is over
-        gameOver = checkGameOver(board);
-        
-        if (gameOver || turn === 9) {
-            renderResult(gameOver, turn);
-        }
+    if (placePiece(board, row, column) === null) {
+        return;   
     }
+    // Re-render the board
+    renderBoard(board);
+
+    // Increment the turn
+    turn++;
+
+    // Check if the game is over
+    weHaveAWinner = checkGameOver(board);
+
+    if (weHaveAWinner || turn === 9) {
+        renderResult(weHaveAWinner, turn);
+    }
+}
+
+function restart() {
+    // Reset Variables
+    weHaveAWinner = false;
+    turn = 0;
+    board = [
+        [null, null, null],
+        [null, null, null],
+        [null, null, null],
+    ];
+
+    // Reset DOM elements
+    renderBoard();
+    outcomeElement.innerHTML = "";
+    enterButtonElement.style.display = "block";
+    restartButtonElement.style.display = "none";
 }
 
 ////////////////////////////////////////////////////////////
@@ -69,11 +84,11 @@ function getRowColumnFromInput() {
     // Reset the input elements
     rowInput.value = '';
     columnInput.value = '';
-    
+
     return { row, column };
 }
 
-function renderBoard() {
+function renderBoard(board) {
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 3; c++) {
             const boardValue = board[r][c];
@@ -83,25 +98,10 @@ function renderBoard() {
     }
 }
 
-function renderResult(gameOver, turn) {
-    outcomeElement.innerHTML = getResult(gameOver, turn);
-    enterElement.style.display = "none";
-    enterElement.style.display = "none";
-    restartElement.style.display = "block";
-}
-
-function restart() {
-    gameOver = false;
-    turn = 0;
-    board = [
-        [null, null, null],
-        [null, null, null],
-        [null, null, null],
-    ];
-    renderBoard();
-    outcomeElement.innerHTML = "";
-    enterElement.style.display = "block";
-    restartElement.style.display = "none";
+function renderResult(weHaveAWinner, turn) {
+    outcomeElement.innerHTML = getResult(weHaveAWinner, turn);
+    enterButtonElement.style.display = "none";
+    restartButtonElement.style.display = "block";
 }
 
 ////////////////////////////////////////////////////////////
@@ -110,14 +110,13 @@ function restart() {
 
 function placePiece(board, row, column) {
     // Exit early if input is invalid or the space is taken
-    if (row < 0 || row > 2 || column < 0 || column > 2 ||board[row][column] !== null) {
-        alert("Invalid Input");
-        return false;
+    if (row < 0 || row > 2 || column < 0 || column > 2 || board[row][column] !== null) {
+        return null;
     }
 
     // Insert turn into board
     board[row][column] = turn % 2 === 0 ? 'X' : '0';
-    return true;
+    return board;
 }
 
 function checkGameOver(board) {
@@ -157,14 +156,91 @@ function checkGameOver(board) {
     return Object.values(checks).includes(true);
 }
 
-function getResult(gameOver, turn) {
-    if (!gameOver) {
+function getResult(weHaveAWinner, turn) {
+    if (!weHaveAWinner) {
         return "It's a tie!";
     }
 
-    const winner = turn % 2 === 0 
-        ? 'O' 
-        : 'X';
+    const winner = turn % 2 === 0 ?
+        'O' :
+        'X';
 
     return `Player ${winner} wins!`;
 }
+
+
+/* TESTS */
+/* 
+console.log(getResult(false, 9)) // Should be a tie
+console.log(getResult(true, 9)) // X Wins
+console.log(getResult(true, 4)) // O Wins
+
+const testBoard = [
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+]
+console.log(placePiece(testBoard, 2, 2));
+console.log(placePiece(testBoard, 2, 2));
+console.log(placePiece(testBoard, 4, 4));
+
+console.log(placePiece([
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+], 2, 2));
+
+console.log(checkGameOver([
+    [null, 'X', null],
+    [null, 'X', null],
+    [null, 'X', null]
+]))
+
+console.log(checkGameOver([
+    ['X', null, null],
+    ['X', null, null],
+    ['X', null, null]
+]))
+
+console.log(checkGameOver([
+    ['X', null, null],
+    ['X', null, null],
+    ['X', null, null]
+]))
+
+console.log(checkGameOver([
+    ['X', 'X', 'X'],
+    [null, null, null],
+    [null, null, null]
+]))
+
+console.log(checkGameOver([
+    [null, null, null],
+    ['X', 'X', 'X'],
+    [null, null, null]
+]))
+
+console.log(checkGameOver([
+    [null, null, null],
+    [null, null, null],
+    ['X', 'X', 'X']
+]))
+
+console.log(checkGameOver([
+    ['X', null, null],
+    [null, 'X', null],
+    [null, null, 'X']
+]))
+
+console.log(checkGameOver([
+    [null, null, 'X'],
+    [null, 'X', null],
+    ['X', null, null]
+]))
+
+console.log(checkGameOver([
+    [null, null, null],
+    [null, null, null],
+    [null, null, null],
+]))
+*/
