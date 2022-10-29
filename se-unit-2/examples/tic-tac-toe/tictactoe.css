@@ -4,6 +4,7 @@
 }
 
 body {
+    font-family: helvetica, sans-serif;
     background-color: #172A3A;
     display: flex;
     align-items: center;
