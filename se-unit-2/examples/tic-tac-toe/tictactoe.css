@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    background-color: #172A3A;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    background-color: #74B3CE;
+    color: #172A3A;
+    width: 50%;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border-radius: 10px;
+}
+
+h1, h3 {
+    margin: 1rem 0;
+    color: #3b05d3;
+}
+
+.input-container {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+input {
+    flex-basis: 0;
+    flex: 1;
+    max-width: 3.8em;
+}
+
+th, td {
+    text-align: center;
+    min-width: 20px;
+}

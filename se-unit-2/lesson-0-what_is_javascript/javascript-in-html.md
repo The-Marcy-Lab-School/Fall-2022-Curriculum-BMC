@@ -30,7 +30,7 @@ Next, there are two ways to run JavaScript with an HTML file:
         </script>
         <script src="script.js"></script>
     </body>
-</html>
+</html
 ```
 
 ```js
