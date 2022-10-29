@@ -5,7 +5,7 @@
 
 body {
     font-family: helvetica, sans-serif;
-    background-color: #172A3A;
+    background-color: #74B3CE;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13,8 +13,8 @@ body {
 }
 
 main {
-    background-color: #74B3CE;
-    color: #172A3A;
+    background-color: #172A3A;
+    color: #09BC8A;
     width: 50%;
     min-width: 200px;
     display: flex;
@@ -26,7 +26,6 @@ main {
 
 h1, h3 {
     margin: 1rem 0;
-    color: #3b05d3;
 }
 
 #restart {
