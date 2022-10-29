@@ -29,6 +29,10 @@ h1, h3 {
     color: #3b05d3;
 }
 
+#restart {
+    display: none;
+}
+
 .input-container {
     display: flex;
     gap: 1em;
