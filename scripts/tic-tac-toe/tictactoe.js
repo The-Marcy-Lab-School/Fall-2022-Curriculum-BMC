@@ -28,15 +28,17 @@ const rowInput = document.getElementById("input-row");
 const columnInput = document.getElementById("input-column");
 const enterButtonElement = document.getElementById("button-enter");
 const restartButtonElement = document.getElementById("button-restart");
-const outcomeElement = document.getElementById("header-outcome");
+const infoElement = document.getElementById("header-info");
 
 ////////////////////////////////////////////////////////////
 // Entry Point /////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
 function submitTurn(row, column) {
+    if (weHaveAWinner) { return; } // if the game is currently in an "over" state, do nothing
+
     // if the row/column weren't passed to the function, get them from the input
-    if (!row || !column) {
+    if (row === undefined || column === undefined) {
         // Get row and column from the input fields
         const valuesFromInputs = getValuesFromInput()
         if (valuesFromInputs) {
@@ -57,10 +59,12 @@ function submitTurn(row, column) {
     placePiece(board, row, column)
 
     // Re-render the board
-    renderBoard(board);
+    renderBoard(board, turn);
 
     // Increment the turn
     turn++;
+    
+    // infoElement.innerHTML = `Turn: ${turn % 2 === 0 ? 'X' : 'O'}`
 
     // Check if the game is over
     weHaveAWinner = checkGameOver(board);
@@ -82,7 +86,7 @@ function restart() {
 
     // Reset DOM elements
     renderBoard(board);
-    outcomeElement.innerHTML = "";
+    infoElement.innerHTML = "Turn: X";
     enterButtonElement.style.display = "block";
     restartButtonElement.style.display = "none";
 }
@@ -102,7 +106,7 @@ function getValuesFromInput() {
     return { row, column };
 }
 
-function renderBoard(board) {
+function renderBoard(board, turn) {
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 3; c++) {
             const boardValue = board[r][c];
@@ -113,7 +117,7 @@ function renderBoard(board) {
 }
 
 function renderResult(weHaveAWinner, turn) {
-    outcomeElement.innerHTML = getResult(weHaveAWinner, turn);
+    infoElement.innerHTML = getResult(weHaveAWinner, turn);
     enterButtonElement.style.display = "none";
     restartButtonElement.style.display = "block";
 }
