@@ -17,7 +17,7 @@
     <div class="input-container">
       <input id="input-row" placeholder="row" />
       <input id="input-column" placeholder="column" />
-      <button onclick="submitTurn()" id="button-enter">Enter</button>
+      <button onclick="takeSpotByInput()" id="button-enter">Enter</button>
       <button onclick="restart()" id="button-restart">Restart</button>
     </div>
   
@@ -31,24 +31,24 @@
           <th></th>
         </tr>
         <tr>
-          <th id="th-row-1">1</th>
-          <td><button onclick="takeSpot(this)" id="1-1">-</button></td>
-          <td><button onclick="takeSpot(this)" id="1-2">-</button></td>
-          <td><button onclick="takeSpot(this)" id="1-3">-</button></td>
+          <th>1</th>
+          <td><button onclick="takeSpotByButton(this)" id="1-1">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="1-2">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="1-3">-</button></td>
           <th>1</th>
         </tr>
         <tr>
-          <th id="th-row-2">2</th>
-          <td><button onclick="takeSpot(this)" id="2-1">-</button></td>
-          <td><button onclick="takeSpot(this)" id="2-2">-</button></td>
-          <td><button onclick="takeSpot(this)" id="2-3">-</button></td>
+          <th>2</th>
+          <td><button onclick="takeSpotByButton(this)" id="2-1">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="2-2">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="2-3">-</button></td>
           <th>2</th>
         </tr>
         <tr>
-          <th id="th-row-3">3</th>
-          <td><button onclick="takeSpot(this)" id="3-1">-</button></td>
-          <td><button onclick="takeSpot(this)" id="3-2">-</button></td>
-          <td><button onclick="takeSpot(this)" id="3-3">-</button></td>
+          <th>3</th>
+          <td><button onclick="takeSpotByButton(this)" id="3-1">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="3-2">-</button></td>
+          <td><button onclick="takeSpotByButton(this)" id="3-3">-</button></td>
           <th>3</th>
         </tr>
         <tr>
@@ -65,17 +65,27 @@
       Turn: X
     </h1>
   </main>
+  
   <script src="tictactoe.js"></script>
-
   <script>
-    function takeSpot(element) {
+    function takeSpotByButton(element) {
       const rcString = element.id;
       let [row, col] = rcString.split('-').map(loc => Number(loc) - 1);
       
       submitTurn(row, col);
-      // const target = event.target;
-      // console.log(target)
+    }
 
+    function takeSpotByInput(element) {
+      // Extract input values and convert values
+      if (rowInput.value && columnInput.value) {
+        let row = Number(rowInput.value)-1;
+        let col = Number(columnInput.value)-1;
+        submitTurn(row, col)
+        
+        // Reset the input elements
+        rowInput.value = '';
+        columnInput.value = '';
+      }
     }
   </script>
 
