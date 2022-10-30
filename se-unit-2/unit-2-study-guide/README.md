@@ -29,7 +29,7 @@ var name;
 3: name = 'tim';
 4:
 ```
-And so `console.log` prints `undefined` becuase the *assignment* isn't hoised, only the *declaration*. This is dumb. It doesn't do what you think, but it also doesn't crash. This is why people never use `var` in 2020 and use `let` or `const` instead. We want bugs to be predictable so we can find them in development.
+And so `console.log` prints `undefined` becuase the *assignment* isn't hoised, only the *declaration*. This is dumb. It doesn't do what you think, but it also doesn't crash. This is why people never use `var` and use `let` or `const` instead. We want bugs to be predictable so we can find them in development.
 
 ## Function Declarations
 ```javascript
@@ -57,7 +57,7 @@ This code runs fine because the entire function is hoisted, so by line 1 it is a
 3: function sayHi() {
 4:   console.log(`Hi ${name}!`);
 5: }
-6: let name = 'bob';
+6: let name = 'bob'; // notice the let declaration
 ```
 
 ```js
@@ -67,10 +67,10 @@ This code runs fine because the entire function is hoisted, so by line 1 it is a
 3: function sayHi() {
 4:   console.log(`Hi ${person}!`);
 5: }
-6: var person = 'bob';
+6: var person = 'bob'; // now declared with var
 ```
 ## Function Expressions
-Also important to note, that `function declarations` are "fully" hoisted but `function expressions` are not. They only have their declaration hoisted, just like variables. This breaks things in most cases:
+Also important to note, that **function declarations** are "fully" hoisted but **function expressions** are not. They only have their declaration hoisted, just like variables. This breaks things in most cases:
 
 ```js
 1: sayHi();
@@ -130,9 +130,9 @@ function doIt() {
 doIt();
 console.log(x)
 ```
-By moving the declaration of the variable to the top scope, we can log it properly. And the lower, function scoped `x`'s can find the variable they refer to by reaching up to the top scope.
+By moving the declaration of the variable to the global scope, from the function `doIt()` can reach up to the higher scope and modify `x` _and_ we can log `x` from the global scope.
 
-The same principle is required for `let` as well, since it IS block scoped:
+The same principle is required for `let` when we want to assign a variable inside of a block and use it outside of the block:
 
 ```js
 // BREAKS
@@ -268,15 +268,7 @@ When your function has no side effects, it is said to be a "pure" function. All 
 NOTE: sometimes you DO want to mutate an object, and that's fine! Just know what you are doing, and do it on purpose.
 
 # Lexical Scope
-There are 2 types of scope,
-1. Static (or Lexical) Scope
-2. Dynamic Scope
-
-Both scopes refer to how a language can look for a variable value in higher scopes, but the difference is *when* the language looks for the value.
-
-**Lexical Scope** assigns variable values based off how your code is written (lexical relating to the word textual). **Dynamic scope** assigns variables by looking where a piece code is *executed*. Lexical is also called Static because you can determine definitions by simply reading, while dynamic code *requires* the code to actually run.
-
-Take the following example:
+Consider the following example:
 
 ```js
 function logX() {
@@ -293,21 +285,39 @@ if (Math.random() > .5) {
 }
 ```
 
-Which `x` value will be logged, 1, 2, or 3? Well, Lexical Scoping is straightforward. Ask yourself, when you wrote `logX`, is there an `x` defined in the local function scope? No? Ok, check the scope above for an `x` declaration. Did you find one? Yes, `const x = 1`. Then that's the `x` that `logX` will ***always*** refer to. No matter what the random number evaluates to, `logX` does not care about any other `const x` assignments in the `if...else` blocks. It already found the value and called it a day. Lexical is determined at the time of *writing* the code.
+Which `x` value will be logged, 1, 2, or 3? 
 
-That might be confusing without contrast, so let's look at Dynmaic Scope to clear it up. **REMEMBER THAT JS IS NOT DYNAMICALLY SCOPED**. With languages that are dynamically scoped (like BASH), programs must be run to determine assignments. That's becuase those languages look for values based on where the code is **executed**. So, if our random number was .6, then the `x` in `logX` would reach up from where it is called, not where it was defined. Meaning it would find `const x = 2`. But if our random number was something like .2, then reaching up would result in `const x = 3`. This is why you could never determine what the value is, becuase the program could go different ways every time it's run.
+Ask yourself, when you wrote `logX`, is there an `x` defined in the local function scope? No? Ok, check the scope above for an `x` declaration. Did you find one? Yes, `const x = 1`. Then that's the `x` that `logX` will ***always*** refer to. 
+
+This kind of scope, where we resolve the existence of duplicate variable names by looking for the closest variable in the _written code_, is called **Lexical Scope** (or _Static Scope_).
+
+> "Lexical" means "relating to the words or vocabulary of a language".
+
+### Dynamic Scope
+
+Some other languages use another scope strategy called **Dynamic Scope**. Whereas Lexical Scope finds the closest variable values based on how your code is written, dynamic scope assigns variables by looking for variable values where a piece code is *executed*.
+
+In the example above, the invocation of `logX()` would look for a value `x` closest to where the function was _called_, NOT where it was defined.
+
+So, if the random number was `.6`, then the closest `x` would be `2`. If the random number was `.2`, then the closest `x` would be `3`.
+
+With a dynamically scoped language, it can be harder to know what the value of a variable will be if it is defined outside of a function. As a result, they typically try to keep variables defined as locally as possible.
+
+### Why JavaScript is Lexically Scoped
 
 JS, like most modern languages, is NOT Dynmically Scoped because it renders unpredictable results. By being Lexically Scoped it makes problems like the one below simple:
 
 ```js
-let name = 'Laisha';
-
-function greet() {
-  let name = `Paul`;
-  console.log(`Hi ${name}!`);
-}
-
-greet();
-console.log(`Hello ${name}!`);
+1: let name = 'Laisha';
+2: 
+3: function greet() {
+4:   let name = `Paul`;
+5:   console.log(`Hi ${name}!`);
+6: }
+7: 
+8: greet();
+9: console.log(`Hello ${name}!`);
 ```
-To determine what prints what, you just ask yourself, where is the nearest `name` defined when the code was *written*. on line 5, the nearest name is on line 4, so that's the one. And the final log, the nearest `name` is actually defined on line 1. That's because you can never reach *down* into a scope for a definition, you can only look in your current scope and above. By default, that leaves the only name in our current scope as the one defined on line 1.
+To determine what prints what, you just ask yourself, where is the nearest `name` defined when the code was *written*? 
+- On line 5, the nearest `name` is defined on line 4, so that's the one the function will use. 
+- The final log, the nearest `name` is actually defined on line 1. That's because you can never reach *down* into a scope for a definition, you can only look in your current scope and above. By default, that leaves the only `name` in our current scope as the one defined on line 1.
