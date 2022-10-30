@@ -13,6 +13,14 @@ console.log(`The sum of ${num1} and ${num2} is ${sum}`);
 
 There's a problem though, when the user enters `2` and `3`, they are told the sum is `23`. Huh?!
 
+Let's use the `typeof` operator to see the type of the value returned by `prompt()`
+
+
+```js
+const num = prompt("choose a number");
+console.log(typeof num); // String
+```
+
 The `prompt` function returns a string. So, when we write `num1 + num2` we are concatenating those two strings, not performing addition on their values! **We need to convert the type of `num1` and `num2` from strings to numbers**.
 
 ---
@@ -153,7 +161,7 @@ We can use `!!value`. Hear me out to learn why this works...
   !!foo; // false;
   ```
 
-## The Rules of Automatic Type Coercion
+### The Rules of Automatic Type Coercion
 One of the most controversial features of JavaScript is _type coercion_. 
 
 In other programming languages, attempting to perform operations on incompatible data types will raise an error. Instead, JavaScript will try to make it work. But this can give us some unexpected results:
@@ -269,7 +277,7 @@ There are two operators that we can use to test for equality in JavaScript:
    Number.isNaN(Math.sqrt(-1)); // true
    ```
 
-## The Moral of the Story: Be Explicit
+### The Moral of the Story: Be Explicit
 As you can see, implicit type coercions in JavaScript are tricky! I want you to know these rules because they will certainly come in handy when debugging in the future. Bugs resulting from incorrect types or type coercions are very common. They are so common, in fact, that people have written entirely new _flavors_ of JavaScript that _force_ you to be explicit about the types that you use. [TypeScript](https://www.youtube.com/watch?v=D6or2gdrHRE) is one of the fastest growing languages in the world for a reason!
 
 While we won't be learning TypeScript, there are two things that you can do to save yourself (and your teammates!) some type headaches:
@@ -278,5 +286,63 @@ While we won't be learning TypeScript, there are two things that you can do to s
 
 In short, don't try to be cute 🙅🏿‍♂️. Instead, be clear and explicit. 
 
+## Logical Operators
+
+### And
+
+`&&` is the AND operator. It returns `true` if both operands evaluate to `true`.
+
+```js
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+```
+
+### Or
+
+`||` is the OR operator. It returns `true` if either of its operands evaluate to `true`.
+
+```js
+console.log(true && true); // true
+console.log(true && false); // true
+console.log(false && true); // true
+console.log(false && false); // false
+```
+
+#### Short Circuiting (Be cautious of this)
+
+**Using the `&&` operator**: If the first operand is `false`, it won't evaluate the second operand to save time, since the operator already knows that both sides can't be `true`. This is useful for concisely writing conditional logic. For example, The two pieces of code below produce the same result.
+
+```js
+const condition = true;
+if (condition) {
+    console.log("It was true!"); // Prints "It was true!"
+}
+
+condition && console.log("It was true!"); // Prints "It was true!"
+```
+
+If `condition` were `false`, then the `if` statement would be skipped. Similarly, the `&&` operator will _short circuit_, meaning it won't execute the `console.log` statement since it knows that both sides can't be `true`.
+
+**When the `||` operator** is used with non-Boolean values, instead of returning `true`, it will return the first _truthy_ value. 
+
+```js
+console.log('a' || 'b'); // 'a'
+console.log(3 || true); // 3
+console.log(0 || 'hi'); // 'hi'
+console.log(undefined || 'Boo!'); // 'Boo!'
+```
+
+This can be useful if we want to set a default value. Imagine we have a function that might return a value, or it might return `undefined`. We want to store the result in a variable `result` if the function returns a value, but if it returns `undefined` we can set a default of `'banana!'`.
+
+```js
+const result = inconsistentFunction() || 'banana!';
+```
 
 
+* If `inconsistentFunction()` returns `undefined`, the `||` operator will return the first truthy value, in this case the string `'banana!'`. 
+
+### Not
+
+The `!` operator returns the opposite boolean value 
