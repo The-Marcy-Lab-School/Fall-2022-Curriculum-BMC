@@ -23,24 +23,39 @@ let turn = 0;
 let weHaveAWinner = false;
 
 // DOM Elements
-const rowInput = document.getElementById("row");
-const columnInput = document.getElementById("column");
-const enterButtonElement = document.getElementById("enter");
-const restartButtonElement = document.getElementById("restart");
-const outcomeElement = document.getElementById("outcome");
+
+const rowInput = document.getElementById("input-row");
+const columnInput = document.getElementById("input-column");
+const enterButtonElement = document.getElementById("button-enter");
+const restartButtonElement = document.getElementById("button-restart");
+const outcomeElement = document.getElementById("header-outcome");
 
 ////////////////////////////////////////////////////////////
 // Entry Point /////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
-function submitTurn() {
-    // Get inputs and place the piece
-    const { row, column } = getRowColumnFromInput()
+function submitTurn(row, column) {
+    // if the row/column weren't passed to the function, get them from the input
+    if (!row || !column) {
+        // Get row and column from the input fields
+        const valuesFromInputs = getValuesFromInput()
+        if (valuesFromInputs) {
+            row = valuesFromInputs.row;
+            column = valuesFromInputs.column;
+        } else {
+            console.log(`invalid input ${row}, ${column}`);
+            return;
+        }
+
+    }
 
     // Attempt to place the piece
-    if (placePiece(board, row, column) === null) {
+    if (!isAvailableSpot(board, row, column)) {
         return;   
     }
+
+    placePiece(board, row, column)
+
     // Re-render the board
     renderBoard(board);
 
@@ -66,7 +81,7 @@ function restart() {
     ];
 
     // Reset DOM elements
-    renderBoard();
+    renderBoard(board);
     outcomeElement.innerHTML = "";
     enterButtonElement.style.display = "block";
     restartButtonElement.style.display = "none";
@@ -76,15 +91,14 @@ function restart() {
 // DOM HELPERS /////////////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
-function getRowColumnFromInput() {
+function getValuesFromInput() {
     // Extract input values and convert values
-    let row = Number(rowInput.value) - 1;
-    let column = Number(columnInput.value) - 1;
+    let row = rowInput.value ? Number(rowInput.value)-1 : null;
+    let column = columnInput.value ? Number(columnInput.value)-1 : null;
 
     // Reset the input elements
     rowInput.value = '';
     columnInput.value = '';
-
     return { row, column };
 }
 
@@ -92,7 +106,7 @@ function renderBoard(board) {
     for (let r = 0; r < 3; r++) {
         for (let c = 0; c < 3; c++) {
             const boardValue = board[r][c];
-            let tableItem = document.getElementById(`${r+1}${c+1}`)
+            let tableItem = document.getElementById(`${r+1}-${c+1}`)
             tableItem.innerHTML = boardValue ? boardValue : '-';
         }
     }
@@ -108,12 +122,16 @@ function renderResult(weHaveAWinner, turn) {
 // GAME LOGIC HELPERS //////////////////////////////////////
 ////////////////////////////////////////////////////////////
 
-function placePiece(board, row, column) {
+function isAvailableSpot(board, row, column) {
     // Exit early if input is invalid or the space is taken
     if (row < 0 || row > 2 || column < 0 || column > 2 || board[row][column] !== null) {
-        return null;
+        return false;
     }
+    return true;
+}
 
+
+function placePiece(board, row, column) {
     // Insert turn into board
     board[row][column] = turn % 2 === 0 ? 'X' : '0';
     return board;

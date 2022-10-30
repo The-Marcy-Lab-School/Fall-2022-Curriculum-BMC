@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-}
-
 body {
     font-family: helvetica, sans-serif;
     background-color: #74B3CE;
@@ -10,14 +5,16 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
+    font-size: calc(1em + .3vh);
 }
 
 main {
     background-color: #172A3A;
     color: #09BC8A;
     
-    width: 50%;
-    min-width: 200px;
+    /* width: 60%; */
+    min-width: 330px;
+    min-height: 400px;
     padding: 1em;
     border-radius: 10px;
     
@@ -43,11 +40,15 @@ input {
     max-width: 3.8em;
 }
 
-#restart {
+#button-restart {
     display: none;
 }
 
 th, td {
     text-align: center;
-    min-width: 20px;
+    min-width: 40px;
+}
+
+#table-board button {
+    width: 100%;
 }
