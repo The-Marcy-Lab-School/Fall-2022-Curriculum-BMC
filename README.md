@@ -74,7 +74,7 @@
 * **10/24/22** | [Kickoff Slides](https://us02web.zoom.us/rec/share/iO_k236XAwvZX4oUwDeFqPvQk4NZDOlRWXGajJnuLInfJAVgQJv6Qfv0V5OyJRKR.nJ7uikaA1BQaw6hH?startTime=1666618510000) | [Proposals & Wireframes Presentations](https://us02web.zoom.us/rec/share/NfkdSUTTG9Xy9cq-EUVDjMXlkf9ofZzhP1fHUkmUSaUfsBoGO-Sjz-QXqENsLMyt.WWrXltZh6itkVKXk?startTime=1666641261000)
 * **10/25/22** | [Bootstrap Demo Recording](https://us02web.zoom.us/rec/share/Iq3RqXh6bTLXglkH2w_gCqRllStyYe5SsSfXymDTmrF9Xw1i_2jAwaBdzybxofjX.jBz0QA4BeRI8YYMJ?startTime=1666721154000)
 * **10/27/22** | [Github Pages Demo](https://us02web.zoom.us/rec/share/NDEg7UJyvITjBDzuGXVGNEHjDTjzgBU147MqDRqdKFY1Tzf8D0jBzUqO1x44K-lx.gfQFYEkU9j5mzdAp)
-* **10/31/22** | Project Presentations
+* **10/31/22** | [Project Presentations (Part 1)](https://us02web.zoom.us/rec/share/8VT_hJpmmnrnA5-vpOShRLykrIqzo89awl7wL9YjihCLh0pTrPPqkEdmQkfc_mI9.9Pr87tRHGydYep5m) | [Project Presentations (Part 2)](https://us02web.zoom.us/rec/share/WKjfnyGMzm-xemDVqyj-bu3jskBXczYwM4CW28aW37514FPf1oDoul5NNcEzieHA.gXSiQagqzPzvfB0t)
 
 ## Unit 2 - JavaScript
 
