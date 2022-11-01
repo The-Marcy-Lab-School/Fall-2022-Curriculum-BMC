@@ -82,7 +82,7 @@
 
 ### Week 1
 
-* **11/1/22 — Data Types & Type Coercion** | [JS in the Browser Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-0-what_is_javascript/javascript-in-html.md) | [Data & Type Coercion Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-1-types_values_operators/type-coercion.md)
+* **11/1/22 — Data Types & Type Coercion** | [JS in the Browser Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-0-what_is_javascript/javascript-in-html.md) | [Data & Type Coercion Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-2/lesson-1-types_values_operators/type-coercion.md) | [Problem Set 2.1](https://github.com/The-Marcy-Lab-School/problem-set-2_1/blob/main/short-response.md)
 * **11/2/22 — Variables & Control Flow** | 
 * **11/3/22 — Loops** |
 * **11/4/22 — Review** |
