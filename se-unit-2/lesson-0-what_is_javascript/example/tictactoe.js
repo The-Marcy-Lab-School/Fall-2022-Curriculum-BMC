@@ -1,4 +1,6 @@
-/* Global Variable Initialization */
+////////////////////////////////////////////////////////////
+// VARIABLE INITIALIZATION//////////////////////////////////
+////////////////////////////////////////////////////////////
 const board = [
     ["-", "-", "-"],
     ["-", "-", "-"],
@@ -7,13 +9,12 @@ const board = [
 let turn = 0;
 let weHaveAWinner = false;
 
-/* Core Game Logic */
+////////////////////////////////////////////////////////////
+// ENTRY POINT /////////////////////////////////////////////
+////////////////////////////////////////////////////////////
 function startTurn() {
     console.clear();
-    
-    // Announce Turn
     printTable(board);
-    console.log('\n');
 
     // Get row / column
     const row = Number(prompt("Enter a row — 1 | 2 | 3")) - 1;
@@ -23,8 +24,11 @@ function startTurn() {
     submitTurn(board, row, column);
 }
 
+/* These two functions could easily be combined, however 
+it is nice to separate the "getting the inputs" part of the
+logic from the "handling the inputs" part of the logic */
 
-function submitTurn(board, row, column) {
+function submitTurn(row, column) {
     if (weHaveAWinner) { return; } // the game is currently in an "over" state, do nothing
 
     // Check if the row/column spot is available. If not, exit early
@@ -126,6 +130,7 @@ function printTable(table) {
     console.log(`1 `, ...table[0]);
     console.log(`2 `, ...table[1]);
     console.log(`3 `, ...table[2]);
+    console.log('\n');
 }
 
 
