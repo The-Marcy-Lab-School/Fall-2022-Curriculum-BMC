@@ -1,5 +1,5 @@
 // Main Program Logic
-function run() {
+function runAdder() {
     // Get User Input
     const num1 = prompt("choose a number");
     const num2 = prompt("choose another number!");
@@ -10,6 +10,8 @@ function run() {
     // Show the user the result
     alert(`Your sum is ${mySum}!`);
 }
+
+
 
 // Helper Functions
 function sum(a, b) {
