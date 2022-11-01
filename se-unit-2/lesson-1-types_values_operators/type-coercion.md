@@ -1,5 +1,24 @@
 # Type Conversion and Coercion in JavaScript
 
+**Table of Contents**
+- [Type Conversions](#type-conversions)
+   - [Converting Strings to Numbers](#converting-strings-to-numbers)
+   - [Converting Numbers to Strings](#converting-numbers-to-strings)
+   - [Truthy and Falsey — Converting to Boolean Values](#truthy-and-falsey-converting-to-boolean-values)
+      - [A Weird (But Quick) Boolean Conversion Approach](#a-weird-but-quick-boolean-conversion-approach)
+   - [The Rules of Automatic Type Coercion](#the-rules-of-automatic-type-coercion)
+      - [Rule 0](#rule-0)
+      - [Rule 1:](#rule-1)
+      - [Rule 2:](#rule-2)
+      - [Rule 3:](#rule-3)
+   - [Equality Operators](#equality-operators)
+      - [The Moral of the Story: Be Explicit](#the-moral-of-the-story-be-explicit)
+   - [Logical Operators](#logical-operators)
+      - [And](#and)
+      - [Or](#or)
+      - [Short Circuiting (Be cautious of this)](#short-circuiting-be-cautious-of-this)
+      - [Not](#not)
+
 ## Type Conversions
 You are writing a simple application that asks the user for 2 numbers and then prints their sum. It looks like this:
 
@@ -30,6 +49,7 @@ The `prompt` function returns a string. So, when we write `num1 + num2` we are c
 ---
 
 ### Converting Strings to Numbers
+
 There are 4 ways we can convert strings to numbers.
 1. The `Number()` function:
    ```javascript
@@ -86,7 +106,7 @@ We have two options at our disposal to convert numbers to strings.
    String(-125.97); // "-125.97"
    ```
 
-### Truthy vs. Falsey — Converting to Boolean Values
+### Truthy and Falsey — Converting to Boolean Values
 We can convert values to Booleans using the `Boolean` function:
 
 ```javascript
@@ -119,7 +139,7 @@ if ("" || 0 || null || undefined || NaN) {
 }
 ```
 
-In this example, we use automatic coercion to let us check to see if the `name` variable holds an empty string before deciding what to print:
+In this example, we use automatic coercion to let us check to see if the `name` variable holds a falsey value before printing the name.
 
 ```js
 let name = prompt("what is your name?");
@@ -132,6 +152,27 @@ if (name) { // Instead of if (name !== "")
 ```
 
 As we learned, the `prompt` function returns a string. However, `if` statements expect a Boolean value, so it converts `name` from a String to a Boolean. If the string is empty, it will not greet the user. 
+
+**Caution!** Beware of using this approach too liberally. Without care, you can run into unexpected behavior:
+
+```js
+function getArrayValueAtIndex(array, index) {
+   if (!array || !index) {
+      return "Missing arguments"
+   }
+
+   return array[index];
+}
+
+const fruits = ['apples', 'banana', 'cherry'];
+const result1 = getArrayValueAtIndex(fruits, 2); // 'cherry'
+const result2 = getArrayValueAtIndex(fruits, 0); // 'apple'... right?
+
+console.log(result1, result2); // "cherry", "Missing arguments" 
+
+```
+
+
 
 #### A Weird (But Quick) Boolean Conversion Approach
 
@@ -176,7 +217,9 @@ The language will make an assumption based on a **predefined set of rules** to d
 
 > Want to see more JS silliness? Check out this funny [lightning talk video](https://www.destroyallsoftware.com/talks/wat).
 
-#### **Rule 0** - Number Conversion Rules of Thumb:
+#### Rule 0
+
+Number Conversion Rules of Thumb:
 * If it looks like a number, it gets cast as a number.
   ```javascript
   Number('5'); // 5
@@ -193,7 +236,7 @@ The language will make an assumption based on a **predefined set of rules** to d
   ```
 * Everything else (including `undefined`) convert to `NaN`.
 
-#### **Rule 1:** 
+#### Rule 1:
 When using the binary plus `+` operator, if one or more arguments is a string, both arguments will be converted to strings and concatenated together. Otherwise, both arguments will be coerced into numbers and added using addition operator.
 ```javascript
 'abc' + 123 // "abc123"
@@ -205,7 +248,7 @@ false + 50 // 50
 undefined + true // NaN
 ```
 
-#### **Rule 2:**
+#### Rule 2:
 When using any other arithmetic operator (`-`, `/`, `%`, `*`), both arguments are coerced to numbers and the operator is applied.
 ```javascript
 '50' - '1' // 49
@@ -216,7 +259,7 @@ When using any other arithmetic operator (`-`, `/`, `%`, `*`), both arguments ar
 100 * "5" // 500
 ``` 
 
-#### **Rule 3:**
+#### Rule 3:
 Object coercion is weird and doesn't play nicely across browsers. We will go more in depth on object coercion later in the course but, for now, it's important to know that **objects are often (but not always) converted to strings**. You will often see objects converted to strings in the form of `[object Object]`. Arrays converted to strings return a comma-separated list of elements, by default.
 ```javascript
 42 + {} // "42[object Object]"
