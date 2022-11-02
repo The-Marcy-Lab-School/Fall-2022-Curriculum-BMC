@@ -4,25 +4,17 @@ Agenda:
 - Fellows pair up and discuss questions
 - Come back together
 
-Notes:
-- The purpose of variables
-    - to make data more readable
-    - to reuse data
-    - to track a value
-- constant variables 
-- 
-
 Questions:
 - How does having the MAX_FLIPS and TARGET_FLIPS constants benefit our program?
 - Why is it that runCoinToss() and howManyFlipsTo500() can both
 have variables called numHeads?
 - In howManyFlipsTo500(), what does 'break' do? 
-- In howManyFlipsTo500ForLoop(), what is the error?
+- In howManyFlipsTo500ForLoop(), what is the error? How can you fix it?
 */
 
 
-const MAX_FLIPS = 1000;
-const TARGET_HEADS = 500;
+const MAX_FLIPS = 10;
+const TARGET_HEADS = 5;
 
 /////////////////////////////
 // Helper Function
@@ -71,6 +63,7 @@ function howManyFlipsTo500() {
     let flips = 0;
     
     while (numHeads < TARGET_HEADS) {
+        
         const result = flipCoin();
         if (result === "Heads") {
             numHeads++;
