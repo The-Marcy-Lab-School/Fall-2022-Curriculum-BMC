@@ -78,7 +78,10 @@
 
 ## Unit 2 - JavaScript
 
-[Eloquent JavaScript](https://eloquentjavascript.net/)
+**Additional Resources** 
+
+- [Eloquent JavaScript](https://eloquentjavascript.net/)
+- [Mike Cronin's Unit 2 Study Guide](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-2/unit-2-study-guide)
 
 ### Week 1
 
