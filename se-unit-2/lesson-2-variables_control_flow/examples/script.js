@@ -1,12 +1,23 @@
-/* 
+/*
+Agenda:
+- Walk through the code, looking at each function using the debugger
+- Fellows pair up and discuss questions
+- Come back together
+
+Notes:
+- The purpose of variables
+    - to make data more readable
+    - to reuse data
+    - to track a value
+- constant variables 
+- 
+
 Questions:
-- How does having the MAX_FLIPS constant benefit our program?
+- How does having the MAX_FLIPS and TARGET_FLIPS constants benefit our program?
 - Why is it that runCoinToss() and howManyFlipsTo500() can both
 have variables called numHeads?
-- What does 'break' do?
-- What would it look like to write howManyFlipsTo500() using a for loop?
-
-
+- In howManyFlipsTo500(), what does 'break' do? 
+- In howManyFlipsTo500ForLoop(), what is the error?
 */
 
 
@@ -19,7 +30,9 @@ const TARGET_HEADS = 500;
 
 /* This function will randomly return "Heads" or "Tails" */
 function flipCoin() {
-    if (Math.random() > 0.5) {
+    const randomDecimalBetween0And1 = Math.random();
+    
+    if (randomDecimalBetween0And1 > 0.5) {
         return "Heads";
     } else {
         return "Tails";
