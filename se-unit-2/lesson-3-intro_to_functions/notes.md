@@ -62,7 +62,17 @@ const mahaba = ['ben', 'carmen', 'motun]
 
 ### What does hoisting mean and how does it impact the way that we write our JavaScript programs?
 
+Hoisting is a behavior of JavaScript where **Function Declarations** are pulled to the top of their respective scope. This means that we can call functions _before_ we declare them. 
 
+This code will work:
+
+```js
+sayHello("Ben"); // prints "Hello Ben"
+
+function sayHello(name) {
+    console.log(`Hello ${name}`);   
+}
+```
 
 ### How does JavaScript handle extra arguments during function invocation? What about missing arguments?
 
