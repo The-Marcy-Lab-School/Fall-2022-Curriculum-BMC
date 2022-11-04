@@ -82,6 +82,7 @@
 
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
 - [Mike Cronin's Unit 2 Study Guide](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/tree/main/se-unit-2/unit-2-study-guide)
+- [Unit 2 Practice Assessment](https://github.com/The-Marcy-Lab-School/unit-2-practice-assessment/blob/master/README.md)
 - [Hoisting, Visualized](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
 
 ### Week 1
