@@ -1,6 +1,13 @@
 # Review
 
-For each of the following:
+Instructions:
+
+1. Create a new folder in `unit-2` called `review-week-1`
+2. Create an `index.html` file and a `review.js` file. Link them!
+3. Add a `console.log("review!")` to `review.js`
+4. Preview your code in the browser with Dev Tools open
+
+Then, for each of the following problems:
 1. predict what will happen. 
 2. Then, run the code!
 3. Did you prediction match reality?
