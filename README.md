@@ -97,9 +97,8 @@
 
 ### Week 2
 
-* **11/7/22 — [Scope](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-4-scope)** | [Slides](https://docs.google.com/presentation/d/1aXaU5SoQ0Ak49AonnPxHnU6BTKYGc9TF8HINudVMqlk/edit#slide=id.p) | [Code](./se-unit-2/lesson-4-scope/example/)
-* **11/8/22 — [Arrays](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-5-arrays) (pt. 1)** | [Slides](https://docs.google.com/presentation/d/1j9g9nRhQ70asRW3FIR5M-oAV59PjmKFNTiGAkVNOW64/edit#slide=id.p)
-* **11/9/22 — Arrays (cont.)** |
+* **11/7/22 — [Scope](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-4-scope)** | [Slides](https://docs.google.com/presentation/d/1aXaU5SoQ0Ak49AonnPxHnU6BTKYGc9TF8HINudVMqlk/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-4-scope/example/)
+* **11/8/22 — [Arrays](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-5-arrays)** | [Slides](https://docs.google.com/presentation/d/1j9g9nRhQ70asRW3FIR5M-oAV59PjmKFNTiGAkVNOW64/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-5-arrays/examples/)
 * **11/10/22 — [Objects](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-6-objects)** |
 
 
