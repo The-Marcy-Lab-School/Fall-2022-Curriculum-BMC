@@ -1,3 +1,4 @@
+
 function scopeExample1() {
     let x = 10;
     console.log(x);
@@ -39,7 +40,20 @@ function parameterScope() {
 }
 
 
-function callStackExample() {
+function callStackExample1() {
+    function foo() {
+        return bar("foo")
+    }
+
+    function bar(input) {
+        return input + "bar!!!";
+    }
+
+    console.log(foo());
+}
+
+
+function callStackExample2() {
     function add(a, b) {
         return a + b;
     }
