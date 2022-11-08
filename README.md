@@ -97,7 +97,7 @@
 
 ### Week 2
 
-* **11/7/22 — [Scope](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-4-scope)** | [Slides](https://docs.google.com/presentation/d/1aXaU5SoQ0Ak49AonnPxHnU6BTKYGc9TF8HINudVMqlk/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-4-scope/example/) | [Recording](https://us02web.zoom.us/rec/share/mEUkywjAl9k_XGHWq91tT_Kzpglu5z_wvShlBOHOiZX7oz4nrCURI9BcL1e1-tUi.lIER2UR0k7N9qvqo)
+* **11/7/22 — [Scope](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-4-scope)** | [Slides](https://docs.google.com/presentation/d/1aXaU5SoQ0Ak49AonnPxHnU6BTKYGc9TF8HINudVMqlk/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-4-scope/example/) | [Recording](https://us02web.zoom.us/rec/share/mEUkywjAl9k_XGHWq91tT_Kzpglu5z_wvShlBOHOiZX7oz4nrCURI9BcL1e1-tUi.lIER2UR0k7N9qvqo) | [Call Stack + Array Basics Recording](https://us02web.zoom.us/rec/share/p0QVPYUETMbjCf1Mnm5HXlyPYoUvCQZ4cJHLWmNXqRD0xNCRyDdK5gcQ9HSTZzYm.Y3W55qiokAgBki3y)
 * **11/8/22 — [Arrays](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-5-arrays)** | [Slides](https://docs.google.com/presentation/d/1j9g9nRhQ70asRW3FIR5M-oAV59PjmKFNTiGAkVNOW64/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-5-arrays/examples/)
 * **11/10/22 — [Objects](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-6-objects)** |
 
