@@ -83,9 +83,13 @@
 **Additional Resources** 
 
 - [Eloquent JavaScript](https://eloquentjavascript.net/)
-- [Mike Cronin's Unit 2 Study Guide](./se-unit-2/unit-2-study-guide)
-- [Unit 2 Practice Assessment](https://github.com/The-Marcy-Lab-School/unit-2-practice-assessment/blob/master/README.md)
 - [Hoisting, Visualized](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
+
+Unit 2 Assessment Resources:
+- [Ben's JavaScript Basics](./se-unit-2/unit-2-study-guide/basics-of-javascript.md)
+- [Mike Cronin's Unit 2 Study Guide](./se-unit-2/unit-2-study-guide)
+- [Strategies for Exam Questions](./se-unit-2/unit-2-study-guide/strategies-for-exam-questions.md)
+- [Unit 2 Practice Assessment](https://github.com/The-Marcy-Lab-School/unit-2-practice-assessment/blob/master/README.md)
 
 ### Week 1
 
