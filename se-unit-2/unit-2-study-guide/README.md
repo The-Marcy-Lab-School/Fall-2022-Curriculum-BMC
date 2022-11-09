@@ -1,35 +1,38 @@
 # unit-2-study-guide
 
-# Declaration Types
+# Variable Declaration Types
 | Declaration | hoisting | scope              | reassignment |
 |-------------|----------|--------------------|--------------|
 | `var`       | yes      | function or global | yes          |
 | `let`       | no\*     | block              | yes          |
 | `const`     | no\*     | block              | no           |
 
-\* technically `let` and `const` are hoisted but not initialized, so everyone says they just aren't hoisted
+\* technically `let` and `const` are hoisted but not initialized, AND if you try to reference them before they are declared, an error will be thrown... so everyone says they just aren't hoisted
 
 # What gets hoisted
-The *declaration* is what gets hoisted, which means different things for functions and variables.
+`var` and `function` *declarations* get hoisted, which means different things for functions and variables.
 
 ## Variables
 ```js
 // What is written
-1: console.log(name)
-2:
-3: var name = 'tim';
-4:
+1: console.log(name); // prints undefined
+2: var name = 'tim';
+3: console.log(name); // prints "tim"
 ```
 
 ```js
 // JS essentially "hoists" things above even line 1
 var name;
-1: console.log(name)
-2:
-3: name = 'tim';
+1: console.log(name); // prints undefined
+2: name = 'tim';
+3: console.log(name); // prints "tim"
 4:
 ```
-And so `console.log` prints `undefined` becuase the *assignment* isn't hoised, only the *declaration*. This is dumb. It doesn't do what you think, but it also doesn't crash. This is why people never use `var` and use `let` or `const` instead. We want bugs to be predictable so we can find them in development.
+And so `console.log` prints `undefined` becuase the *assignment* isn't hoised, only the *declaration*. This is dumb. Why? Because `name` will be `undefined` in one place and `"tim"` in another even though there is only one assignment (`=`). It doesn't do what you think, but it also doesn't crash. 
+
+This is why people never use `var` and use `let` or `const` instead. `let` and `const` will throw an error if you try referencing them before they are declared. 
+
+Wait... errors are better? **Yes! We want to be notified unexpected behavior like this so we can find bugs in development quicker.**
 
 ## Function Declarations
 ```javascript
@@ -182,9 +185,9 @@ console.log(x)
 - Primitives data types pass only their value, they are not related to anything when used in assignments:
 
 ```js
-let a = 1
-let b = a
-a += 1
+let a = 1 // assign the value 1 to a
+let b = a // assign the value held by a (1) to b
+a += 1    // increment a
 
 // a is now 2
 // b is still 1
@@ -202,27 +205,31 @@ Which makes it immediately clear that `a` and `b` aren't actually related in any
 Unlike primitives, which are defined as a simple value and call it a day, reference types actually only save a "pointer" or "reference" to an object stored elsewhere in memory. This means assignments actually DO link to each other:
 
 ```js
-let car1 = { type: 'suv' };
-let car2 = car1;
-car1.type = 'hybrid';
+let car1 = { type: 'suv' }; // assign a reference address (#93fa57) for the object to car1
+let car2 = car1;            // assign the value held by car1 (the reference address #93fa57)
+car1.type = 'hybrid';       // modify the object at referencea address #93fa57
 
-console.log(car1.type);
-console.log(car2.type);
-// both log 'hybrid'
+console.log(car1);     // prints { type: 'hybrid' }
+console.log(car2);     // prints { type: 'hybrid' }
 ```
-Both variables are pointing to the same object, a change in one means a change in both. If you want to "clone" an object, that is make an unrelated copy, you do things like use the spread operator:
+
+> The address #93fa57 is just an example. JavaScript doesn't necessarily use hexcode to represent its references.
+
+Both variables are referencing the same object, a change in one means a change in both. If you want to "clone" an object, that is make an unrelated copy, you do things like use the spread operator:
 
 ```js
-let car1 = { type: 'suv' };
-let car2 = { ...car1 };
-car1.type = 'hybrid';
+let car1 = { type: 'suv' }; // assign a reference address (#93fa57) for the object to car1
+let car2 = { ...car1 };     // create a separate object that has the same values as car1 and assign its reference address (#8f2b36) to car2
+car1.type = 'hybrid';       // mutate the object stored at reference address #93fa57
 
 console.log(car1.type); // hybrid
 console.log(car2.type); // suv
 ```
 
-# Side Effects
-A side effect is what happens when a function alters something that isn't its return value. Here is an example where we want to congratulate a person on aging one year:
+# Pure Functions vs. Functions with Side Effects
+A **"pure"** function is one that will return the same value every time if you call it with the same arguments. 
+
+Here is an example of an "impure" function where we want to congratulate a person on aging one year:
 
 ```js
 const sayHappyBirthday = function(person) {
@@ -231,20 +238,21 @@ const sayHappyBirthday = function(person) {
 }
 
 const tom = { name: 'tom', age: 20 };
-console.log(sayHappyBirtday(tom));
+console.log(sayHappyBirtday(tom)); // Congrats on turning 21 tom!"
 ```
-While we do properly print `Congrats on turning 21, tom!`, that isn't *all* we're doing. No, we are permanently *mutating* tom's age, which is possible because we *passed by reference* the "tom" object. A dead giveaway that you have a side effect is that given the same arguments, the function will behave differently. In this case, if we call it again, the return value changes:
+
+Note that this function is permanently *mutating* tom's age, which is possible because we *passed by reference* the `tom` object. A dead giveaway that you DON'T have a pure function is that given the same arguments, the function will behave differently. In this case, if we call it again, the return value changes:
 
 ```js
 const tom = { name: 'tom', age: 20 };
 console.log(sayHappyBirtday(tom));
-// congrats on turning 21, tom!
+// Congrats on turning 21, tom!
 console.log(sayHappyBirtday(tom));
-// congrats on turning 22, tom!
+// Congrats on turning 22, tom!
 console.log(sayHappyBirtday(tom));
-// congrats on turning 23, tom!
+// Congrats on turning 23, tom!
 console.log(sayHappyBirtday(tom));
-// congrats on turning 24, tom!
+// Congrats on turning 24, tom!
 ```
 One of the easiest ways to avoid mutations is instead of passing by reference with an object, you simply pass by value with the individual pieces of primitive data:
 
@@ -261,9 +269,7 @@ console.log(sayHappyBirthday(tom.age, tom.name));
 console.log(sayHappyBirthday(tom.age, tom.name));
 // all print 'congrats on turning 21, tom!'
 ```
-By passing in the primitive age value *instead* of the object itself, when we reassign it with the ++ operator, nothing is actually changed on our original object. Remember, when we pass by value, nothing is actually linked. (by the way, it would be best in this case to simply ADD to the value instead of reassigning it, this was just a silly example)
-
-When your function has no side effects, it is said to be a "pure" function. All that matters are the arguments that are passed in, and the return value is always predictable.
+By passing in the primitive age value *instead* of the object itself, the variables `oldAge` and `name` are assigned copies of the primitive values, _not_ references. So, when we reassign `oldAge` with the `++` operator, nothing is actually changed on our original object. Remember, when we pass by value, nothing is actually linked. (by the way, it would be best in this case to simply ADD to the value instead of reassigning it, this was just a silly example)
 
 NOTE: sometimes you DO want to mutate an object, and that's fine! Just know what you are doing, and do it on purpose.
 

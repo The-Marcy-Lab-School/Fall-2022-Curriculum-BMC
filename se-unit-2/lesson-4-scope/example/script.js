@@ -39,17 +39,20 @@ function parameterScope() {
     console.log(greet("Sammy"));
 }
 
-
+/*
+Stack: Last In-First Out
+*/
 function callStackExample1() {
     function foo() {
+        console.log("foo starting!") // 1
         return bar("foo")
     }
 
     function bar(input) {
+        console.log("bar starting!") // 2
         return input + "bar!!!";
     }
-
-    console.log(foo());
+    console.log(foo()); // 3
 }
 
 
@@ -75,3 +78,19 @@ function callStackExample2() {
     console.log(convertCelsiusToFahrenheit(100)); // 212
     console.log(convertCelsiusToFahrenheit(0)); // 32
 }
+
+
+/*
+
+// How to overflow the call stack 
+
+function chicken() {
+    egg();
+}
+
+function egg() {
+    chicken();
+}
+
+chicken();
+*/
