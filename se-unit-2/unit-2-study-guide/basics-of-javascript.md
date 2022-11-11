@@ -27,6 +27,8 @@ All of the following are considered expressions:
 true && false;  // evaluates to false
 8 * "hello";    // evaluates to NaN
 null;           // evaluates to null
+undefined;      // evaluates to undefined
+"8"             // evaluates to "8"
 Math.max(3,5)   // evaluates to 5
 console.log()   // evaluates to undefined
 ```
