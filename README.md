@@ -86,7 +86,7 @@
 - [Hoisting, Visualized](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
 
 Unit 2 Assessment Resources:
-- [Ben's JavaScript Basics](./se-unit-2/unit-2-study-guide/basics-of-javascript.md)
+- [Ben's JavaScript Basics](./se-unit-2/unit-2-study-guide/basics-of-javascript.md) | [Recording](https://us02web.zoom.us/rec/play/WW9ruolbRxflsD7rlIT1u7LtSJ-ES_XXdPTZtixhPYQmIKJw_-lHiSxDgBaMsRXc_jaNXzMT9JH5R7l2.-oWrOFXxC2wAN0po)
 - [Mike Cronin's Unit 2 Study Guide](./se-unit-2/unit-2-study-guide)
 - [Strategies for Exam Questions](./se-unit-2/unit-2-study-guide/strategies-for-exam-questions.md)
 - [Unit 2 Practice Assessment](https://github.com/The-Marcy-Lab-School/unit-2-practice-assessment/blob/master/README.md)
@@ -97,13 +97,13 @@ Unit 2 Assessment Resources:
 * **11/1/22 — [Data Types & Type Coercion](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-1-types_values_operators)** | [Data & Type Coercion Notes](./se-unit-2/lesson-1-types_values_operators/type-coercion.md) | [Problem Set 2.1](https://github.com/The-Marcy-Lab-School/problem-set-2_1/blob/main/short-response.md) | [Data Types & Coercion Recording](https://us02web.zoom.us/rec/share/wmTtrecXUgta1JaN63TYFQRal2FB3KkUw5z8ueEmpcM7IzYb09OR-4CNiWCukWL2.J2H4B2k9g8uZDPBW)
 * **11/2/22 — [Variables & Control Flow](./se-unit-2/lesson-2-variables_control_flow)** | [Coin Flip Example](./se-unit-2/lesson-2-variables_control_flow/examples/script.js) | [Lecture Recording](https://us02web.zoom.us/rec/share/9XFxLQYWk0XdKQ--nFALT0q9q5aHFxI71uq1X3alZ1CA253QAGrXuas5usNK84vb.3zqSF1j5sAJAFWyE)
 * **11/3/22 — [Functions](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-3-intro_to_functions)** | [Lecture Recording](https://us02web.zoom.us/rec/share/aBc5PAb_Enk1xH9yVHBEeFgkV_Xhem0mhJZlm5wIT1gsVE248cNYPurBOLd8fbyx.ZxaQLX8OhB2ir8vp) | [Notes](./se-unit-2/lesson-3-intro_to_functions/notes.md)
-* **11/4/22 — Review** | [Review Problems](./se-unit-2/week-1-review/review.md) | [Review Code](./se-unit-2/week-1-review/review.js) | [Review Recording](https://us02web.zoom.us/rec/share/4yxBDr1iHTQKKDjXp5yN_O7Pyfsh5G3ji5Th41G7xddO-1kpd__1a5qq7PpJDNIJ.E05QKWRpTezTHiB5?startTime=1667569977000)
+* **11/4/22 — Review** | [Review Problems](./se-unit-2/week-1-review/review.md) | [Review Code](./se-unit-2/week-1-review/review.js) | [Review Recording](https://us02web.zoom.us/rec/share/4yxBDr1iHTQKKDjXp5yN_O7Pyfsh5G3ji5Th41G7xddO-1kpd__1a5qq7PpJDNIJ.E05QKWRpTezTHiB5)
 
 ### Week 2
 
 * **11/7/22 — [Scope](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-4-scope)** | [Slides](https://docs.google.com/presentation/d/1aXaU5SoQ0Ak49AonnPxHnU6BTKYGc9TF8HINudVMqlk/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-4-scope/example/) | [Recording](https://us02web.zoom.us/rec/share/mEUkywjAl9k_XGHWq91tT_Kzpglu5z_wvShlBOHOiZX7oz4nrCURI9BcL1e1-tUi.lIER2UR0k7N9qvqo) | [Call Stack + Array Basics Recording](https://us02web.zoom.us/rec/share/p0QVPYUETMbjCf1Mnm5HXlyPYoUvCQZ4cJHLWmNXqRD0xNCRyDdK5gcQ9HSTZzYm.Y3W55qiokAgBki3y)
 * **11/8/22 — [Arrays](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-5-arrays)** | [Slides](https://docs.google.com/presentation/d/1j9g9nRhQ70asRW3FIR5M-oAV59PjmKFNTiGAkVNOW64/edit#slide=id.p) | [Code Example](./se-unit-2/lesson-5-arrays/examples/) | [Recording](https://us02web.zoom.us/rec/share/TF5nnTT3eElipCa68_dJIrIoJL-ph6RbJolNNQfea1FCyOn-KePQ8Vg6uoXMM83B.Wyishgs-7w5155jS)
-* **11/9/22 - Copy by Reference, Spread, and Rest** | [Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q) | [Destructuring Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q?startTime=1668018420000)
+* **11/9/22 - Copy by Reference, Spread, and Rest** | [Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q) | [Destructuring Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q)
 * **11/10/22 — [Objects](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-6-objects)** | [Slides](https://docs.google.com/presentation/d/1qnnqIeF67p7jMJm_KZNLnJFBp3X64RMpSTfw2F-uU_E/edit#slide=id.g1877ddb0a56_0_24) | [Recording](https://us02web.zoom.us/rec/share/Wk9VnILuJ0xb8fjDa-69H4D3OzbQQb5CLxRW5T0yjFuq3xLh4R2gITFN8EqhQDwo.tavFskNPVHD51PSi)
 
 
