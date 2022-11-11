@@ -37,6 +37,8 @@ All of the following are considered expressions:
 true && false;  // evaluates to false
 8 * "hello";    // evaluates to NaN
 null;           // evaluates to null
+undefined;      // evaluates to undefined
+"8"             // evaluates to "8"
 true ? 'a' : 'b'// evaluates to 'a'
 Math.max(3,5)   // evaluates to 5
 console.log()   // evaluates to undefined
@@ -350,8 +352,6 @@ if (thirdFlip === "Heads") {
 
 console.log(numHeads);
 ```
-
-
 
 ## Function Parameters and Arguments
 
