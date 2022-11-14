@@ -106,6 +106,9 @@ Unit 2 Assessment Resources:
 * **11/9/22 - Copy by Reference, Spread, and Rest** | [Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q) | [Destructuring Recording](https://us02web.zoom.us/rec/share/XcYYURMnFy-e6XbKoc6cpBRnKaIDwn56FHOd_jOItY8tmA_PhvXg6fUijGg1Fzw.aA6z1zS3t_cZxG4q)
 * **11/10/22 — [Objects](https://github.com/The-Marcy-Lab-School/se-unit-2/tree/main/lesson-6-objects)** | [Slides](https://docs.google.com/presentation/d/1qnnqIeF67p7jMJm_KZNLnJFBp3X64RMpSTfw2F-uU_E/edit#slide=id.g1877ddb0a56_0_24) | [Recording](https://us02web.zoom.us/rec/share/Wk9VnILuJ0xb8fjDa-69H4D3OzbQQb5CLxRW5T0yjFuq3xLh4R2gITFN8EqhQDwo.tavFskNPVHD51PSi)
 
+### Week 3
+* **11/14/22 - Objects (pt. 2)** | [Recording](https://us02web.zoom.us/rec/share/M9UM_KzSXWMgIHVPpQLTjY5zfPAiMz-6uWxJkF4NlK4mMkIFoRQXzZsQ-yMIOnJ3.qhRreiyDoaX3rbr6) | [Practice Assessment Review Recording](https://us02web.zoom.us/rec/share/vAwepDxcSJsZ6Wm4xGc4E-MXQxa1KNWY3TkZMWXpvRJEHDnQ3cFQaXMdiYCenVYS.cD59EKmSe5dIw5q7)
+
 
 ## Unit 3 - Functional Programming (Higher Order Functions)
 ## Unit 4 - Object-Oriented Programming (Classes)
