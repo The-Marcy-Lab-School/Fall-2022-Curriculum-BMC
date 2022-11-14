@@ -6,6 +6,7 @@
 - [Variables](#variables)
 - [console.log()](#console-log())
 - [Conditional Statements](#conditional-statements)
+    - [Control Flow](#control-flow)
     - [If Statements](#if-statements)
     - [Else Statements](#else-statements)
     - [Else If Statements](#else-if-statements)
@@ -58,9 +59,9 @@ Ultimately, a program is a series of statements written in a particular order to
 
 ## Variables
 
-Variables are used to "store" expressions and give them a name. All of the expressions above can be stored in a variable. Declaring a variable turns the variable _name_ into an expression!
+Variables are used to "store" expressions and give them a name. All of the expressions above can be stored in a variable. 
 
-The variable name is an expression? Yes! When we reference that variable name, it evaluates to (or "returns") the value it holds.
+Declaring a variable turns the variable _name_ into an expression! The variable name is an expression? Yes! When we reference that variable name, it evaluates to (or "returns") the value it holds.
 
 ```js
 const sum = 5 + 5;
@@ -134,15 +135,38 @@ Take a look at [my snake game](https://benspector3.github.io/snake/) ([index.js 
 
 ## Conditional Statements
 
-### If Statements
+### Control Flow
 
-If statements enable us to change up the "control flow" of our program. Control flow refers to the order in which statements are executed. Typically, every statement is executed one at a time, top-to-bottom:
+**Control flow** refers to the order in which statements are executed. Typically, every statement is executed one at a time, top-to-bottom:
 
 ```js
 console.log('a'); // prints a
 console.log('b'); // prints b
 console.log('c'); // prints c
 ```
+
+Conditional statements alter the "control flow" of our program. They allow us to execute a statement only IF the right conditions are met:
+
+```js
+// These two lines always get executed
+let weather = 'rainy';
+console.log('The forecast today is ' + weather);
+
+// This conditional statement will only execute one of the following statements
+if (weather === 'rainy') {
+    console.log('Remember your umbrella!');
+} else if (weather === 'sunny') {
+    console.log('Remember your sunscreen!');
+} else if (weather === 'snowy') {
+    console.log('Remember your scarf!');
+}
+
+// This is always executed.
+console.log("Have a great day!");
+
+```
+
+### If Statements
 
 `if` statements change the control flow by making some statements execute only IF a certain **boolean expression** evaluates to `true`.
 
@@ -239,6 +263,7 @@ console.log("This always happens last");
 ```
 
 Note: often `else if` and `else` statements will begin after (and on the same line) as the closing `}` of the previous conditional statement.
+
 ## Functions
 
 Functions encapsulate a series of statements and give that code a name. 
@@ -258,13 +283,18 @@ functionName() // this invokes a function called functionName
 For example, the following statements will simulate flipping a coin and print the result to the console:
 
 ```js
-let flipResult = undefined; // we don't know what this will be yet!
+// Create a variable to hold the result
+let flipResult = undefined;
+
+// Get the random result
 const randomNumBetween0and1 = Math.random();
 if (randomNumBetween0and1 > 0.5) {
     flipResult = 'Heads';
 } else {
     flipResult = 'Tails';
 }
+
+// print the result
 console.log(flipResult); // prints either 'Heads' or 'Tails'
 ```
 
@@ -288,7 +318,7 @@ flipCoin(); // invoke the function again
 
 This code uses the `function` keyword to declare new function called `flipCoin` that takes no _parameters_ and has a code block `{}` containing all of the code from the prior example. 
 
-We invoke a function by writing the function's name and adding parentheses after `()`. Each time we invoke a function, every line of code in that function will be executed.
+We **invoke** a function by writing the function's name and adding parentheses after `()`. Each time we invoke a function, every line of code in that function will be executed.
 
 > Note that all code inside the function's `{}` are indented. This improves readability.
 
@@ -301,8 +331,7 @@ All function invocations evaluate to `undefined` unless specified with the `retu
 ```js
 function flipCoin() {
     let flipResult = undefined;
-    const randomNumBetween0and1 = Math.random();
-    if (randomNumBetween0and1 > 0.5) {
+    if (Math.random() > 0.5) {
         flipResult = 'Heads';
     } else {
         flipResult = 'Tails';
@@ -324,8 +353,7 @@ We can count the number of heads like so:
 ```js
 function flipCoin() {
     let flipResult = undefined;
-    const randomNumBetween0and1 = Math.random();
-    if (randomNumBetween0and1 > 0.5) {
+    if (Math.random() > 0.5) {
         flipResult = 'Heads';
     } else {
         flipResult = 'Tails';
@@ -455,7 +483,7 @@ Note the three steps that are essential to making the `while` loop run exactly 1
 These three steps are so commonly used that a different loop was created to condense the syntax: the `for` loop:
 
 ```js
-for (start; boolean expression; increment) {
+for (start; booleanExpression; increment) {
     // do something
 }
 ```
