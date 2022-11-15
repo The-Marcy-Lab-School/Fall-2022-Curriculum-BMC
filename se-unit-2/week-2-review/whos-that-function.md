@@ -8,7 +8,7 @@ Answers:
 * `slice` — returns a portion of an `array`, specified by a `start` and `end` index.
 * `concat` — receives 2 `array`  and concatenates them into a new array which is returned.
 * `push` — adds one or more `...values` to the end of an `array` and returns the new length of the array.
-* `unshift` - adds one or more values to the beginning of an array and returns the new length of the array.
+* `unshift` - adds one `value` to the beginning of an `array` and returns the new length of the array.
 * `pop` — removes and returns the last value of an `array`.
 
 #### Function 1
@@ -29,9 +29,9 @@ It's `Array.prototype.push`! This function adds `value` to the end of `array`, i
 ```js
 let pets = ['dog', 'cat', 'parrot'];
 
-push(pets, 'cat'); // returns 4
+push(pets, 'cat', 'lizard'); // returns 5
 
-console.log(pets); //> ['dog', 'cat', 'parrot', 'cat']
+console.log(pets); //> ['dog', 'cat', 'parrot', 'cat', 'lizard']
 ```
 
 </details>
@@ -97,7 +97,7 @@ console.log(pets); // => logs ['dog', 'cat']
 function x(array, start = 0, end = array.length) {
     let toReturn = [];
     for (let i = start; i < end; i++) {
-        toReturn.push(array[i]);
+        toReturn[toReturn.length] = array[i];
     }
     return toReturn;
 }
@@ -123,19 +123,13 @@ const petsCopy = slice(pets); // ['dog', 'cat', 'parrot', 'lizard']
 #### Function 5
 
 ```js
-function x(array, ...values) {
-    const joinedLength = array.length + values.length;
-    const offset = values.length;
-
-    for (let i = joinedLength - 1; i >= offset; i--) {
-        array[i] = array[i-offset];
+function x(array, value) {
+    for (let i = array.length; i >= 1; i--) {
+        array[i] = array[i-1];
     }
+    array[0] = value;
 
-    for (let i = values.length - 1; i >= 0; i--) {
-        array[i] = values[i];
-    }
-
-    return joinedLength;
+    return array.length;
 }
 ```
 
@@ -145,8 +139,8 @@ It's `Array.prototype.unshift`!
 
 ```js
 array = [1,2,3,4,5]
-console.log(unshift(array, 'a', 'b')) // 7
-console.log(array); // ['a', 'b', 1,2,3,4,5]
+console.log(unshift(array, 'a')) // 6
+console.log(array); // ['a', 1, 2, 3, 4, 5]
 ```
 
 </details>
