@@ -86,10 +86,11 @@
 - [Hoisting, Visualized](https://dev.to/lydiahallie/javascript-visualized-hoisting-478h)
 
 Unit 2 Assessment Resources:
-- [Ben's JavaScript Basics](./se-unit-2/unit-2-study-guide/basics-of-javascript.md) | [Recording](https://us02web.zoom.us/rec/play/WW9ruolbRxflsD7rlIT1u7LtSJ-ES_XXdPTZtixhPYQmIKJw_-lHiSxDgBaMsRXc_jaNXzMT9JH5R7l2.-oWrOFXxC2wAN0po)
-- [Mike Cronin's Unit 2 Study Guide](./se-unit-2/unit-2-study-guide)
-- [Strategies for Exam Questions](./se-unit-2/unit-2-study-guide/strategies-for-exam-questions.md)
+- [Ben's JavaScript Basics](./se-unit-2/week-2-review/basics-of-javascript.md) | [Recording](https://us02web.zoom.us/rec/play/WW9ruolbRxflsD7rlIT1u7LtSJ-ES_XXdPTZtixhPYQmIKJw_-lHiSxDgBaMsRXc_jaNXzMT9JH5R7l2.-oWrOFXxC2wAN0po)
+- [Mike Cronin's Unit 2 Study Guide](./se-unit-2/week-2-review/README.md)
+- [Strategies for Exam Questions](./se-unit-2/week-2-review/strategies-for-exam-questions.md)
 - [Unit 2 Practice Assessment](https://github.com/The-Marcy-Lab-School/unit-2-practice-assessment/blob/master/README.md)
+- [Who's That Function?!](./se-unit-2/week-2-review/whos-that-function.md)
 
 ### Week 1
 
