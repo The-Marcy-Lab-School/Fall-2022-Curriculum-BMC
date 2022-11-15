@@ -1,0 +1,95 @@
+function characterGenerator(name) {
+    const character = {
+        name: name,
+        strength: getAbilityScore(), // randomly generated
+        dexterity: getAbilityScore(), // randomly generated
+        constitution: getAbilityScore(), // randomly generated
+        intelligence: getAbilityScore(), // randomly generated
+        wisdom: getAbilityScore(), // randomly generated
+        charisma: getAbilityScore(), // randomly generated
+        hitpoints: 0
+    };
+    const constitutionModifier = Math.floor((character.constitution - 10) / 2)
+    character.hitpoints = 10 + constitutionModifier
+
+    return character;
+}
+
+characterGenerator("Elminster");
+characterGenerator("Kubo");
+
+/* 
+1 + Math.floor(Math.random() * 6) => 1-6
+Math.ceil(Math.random() * 6) => 1-6
+
+*/
+
+// Helper Function
+function getAbilityScore() {
+    let sum = 0;
+    // roll 4 6-sided dice
+
+    /*
+    let smallest = Infinity;
+    for (let i = 0; i < 4; i++) {
+        let roll = Math.ceil(Math.random() * 6);
+        sum += roll;
+        if (roll < smallest) {
+            smallest = roll;
+        }
+    }
+    sum -= smallest;
+    */
+
+    let roll1 = Math.ceil(Math.random() * 6)
+    let roll2 = Math.ceil(Math.random() * 6)
+    let roll3 = Math.ceil(Math.random() * 6)
+    let roll4 = Math.ceil(Math.random() * 6)
+    
+    // identify the smallest value  
+    
+    let smallest = Math.min(roll1, roll2, roll3, roll4);
+    
+    // let smallest = roll1;
+    // if (roll2 < smallest) {
+    //     smallest = roll2;
+    // }
+    // if (roll3 < smallest) {
+    //     smallest = roll3;
+    // }
+    // if (roll4 < smallest) {
+    //     smallest = roll4;
+    // }
+
+    // sum the rest and return
+    sum = roll1 + roll2 + roll3 + roll4 - smallest;
+    return sum;
+}
+
+/*
+{
+  name: "Elminster",
+  strength: 10, // randomly generated
+  dexterity: 8, // randomly generated
+  constitution: 12, // randomly generated
+  intelligence: 14, // randomly generated
+  wisdom: 12, // randomly generated
+  charisma: 18, // randomly generated
+  
+  // hitpoints = 10 + ((constitution - 10) / 2)
+  hitpoints: 11 // 10 + ((12-10)/2)
+}
+
+*/
+
+function getSmallest(...numbers) {
+    let smallestFoundSoFar = Infinity;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] < smallestFoundSoFar) {
+            smallestFoundSoFar = numbers[i]
+        }
+    }
+
+    return smallestFoundSoFar;
+}

@@ -109,7 +109,8 @@ Unit 2 Assessment Resources:
 
 ### Week 3
 * **11/14/22 - Objects (pt. 2)** | [Recording](https://us02web.zoom.us/rec/share/M9UM_KzSXWMgIHVPpQLTjY5zfPAiMz-6uWxJkF4NlK4mMkIFoRQXzZsQ-yMIOnJ3.qhRreiyDoaX3rbr6) | [Practice Assessment Review Recording](https://us02web.zoom.us/rec/share/vAwepDxcSJsZ6Wm4xGc4E-MXQxa1KNWY3TkZMWXpvRJEHDnQ3cFQaXMdiYCenVYS.cD59EKmSe5dIw5q7)
-
+* [`wordToDigit` Review](https://us02web.zoom.us/rec/share/HvkELZSCjmFd_hbnY1h_9xdnftER97AeRASD-vP-YCeWRSNyWoOIbyDcmVNBxgFh.3o3C_YCMpEoY6jk6)
+* [`characterGenerator` Review](https://us02web.zoom.us/rec/share/gRH5eUY2kmZDJjRghVaW50oySFUkBIdWzoOeWRII6LHrmYlfXiC_K1yERwXSwtDC.NCJirgdW3ANENmI1)
 
 ## Unit 3 - Functional Programming (Higher Order Functions)
 ## Unit 4 - Object-Oriented Programming (Classes)
