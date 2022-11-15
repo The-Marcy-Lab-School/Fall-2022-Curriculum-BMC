@@ -1,7 +1,11 @@
 # Unit 2 Essentials Vocabulary
 
+**Programmer's Mindset:** There is a solution out there. I just need to find it.
+
+> How can I...
+
 **Table of Contents**:
-- [Expressions](#expressions)
+- [Expressions are values](#expressions-are-values)
 - [Statements](#statements)
 - [Variables](#variables)
 - [console.log()](#console-log())
@@ -24,7 +28,7 @@
     - [Mutability of Arrays and Objects](#mutability-of-arrays-and-objects)
 - [Iteration](#iteration)
 
-## Expressions
+## Expressions are values
 
 Expressions are any piece of code that **returns** or **evaluates to** a data value (a string, number, boolean, `null`, `undefined`, BigInt, Symbol, object, or function).
 
