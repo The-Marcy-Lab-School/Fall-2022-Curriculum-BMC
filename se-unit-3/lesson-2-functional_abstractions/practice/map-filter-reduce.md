@@ -1,5 +1,4 @@
-# Unit 3 - Lesson 0 Practice 1 - Iteration, Transformation, Selecting, Reducing
-## Functional Abstraction with Higher-Order Array Methods
+# Unit 3 - Functional Abstraction with Higher-Order Array Methods
 
 ### Iteration: `Array.prototype.forEach`
 1. Declare a constant variable, `fellows`, and initialize it with an array consisting of the names of all of the Fellows in your cohort. Then use the `Array.prototype.forEach()` method to log all of those names to the console.

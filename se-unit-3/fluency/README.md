@@ -1,4 +1,4 @@
-# Fluency Practice
+# High-Order Array Methods Practice
 
 1. Write a function that takes a string and returns the string reversed.
 2. Write a function that takes an array of numbers and returns a new array containing only the even numbers in the original array.
@@ -17,7 +17,7 @@
 7. Write a function that takes an array of numbers and determines whether all numbers are even.
 8. Write a function that takes an array of strings and returns an array with only the words that contain vowels.
 
-# More Fluency Practice
+# More Practice
 
 1. Write a function that takes an array of numbers and returns a new array containing only the perfect squares:
 ```js

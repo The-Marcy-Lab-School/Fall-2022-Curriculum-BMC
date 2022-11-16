@@ -1,5 +1,4 @@
-# Unit 3 - Lesson 0 Practice 2 - Interrogation and Sort
-## Functional Abstraction with Higher-Order Array Methods
+# Unit 3 - Functional Abstraction with Higher-Order Array Methods
 
 ### Interrogation: `Array.prototype.every` and `Array.prototype.some`
 1. Write a function that checks whether all elements of an array are Numbers.
