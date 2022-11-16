@@ -1,6 +1,8 @@
 # Unit 3 - Lesson 1 Practice
 ## Regular Expressions
 
+1. Write a function, `isConsonant`, to test if a character is a consonant (make sure to check for numbers too!).
+
 1. Write a function, `isCapitalized`, to test the first character of a string is uppercase or not.
 
 2. Write a JavaScript function, `countVowels`, to count the number of vowels in a given string.
