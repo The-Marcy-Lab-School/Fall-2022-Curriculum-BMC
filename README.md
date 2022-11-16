@@ -1,6 +1,7 @@
 # Curriculum Resources
 
-* [Current Week](#week-2-1)
+* [Current Unit](#unit-3-functional-programming-higher-order-functions)
+* [Current Week](#week-1-2)
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
@@ -113,6 +114,21 @@ Unit 2 Assessment Resources:
 * [`characterGenerator` Review](https://us02web.zoom.us/rec/share/gRH5eUY2kmZDJjRghVaW50oySFUkBIdWzoOeWRII6LHrmYlfXiC_K1yERwXSwtDC.NCJirgdW3ANENmI1)
 
 ## Unit 3 - Functional Programming (Higher Order Functions)
+
+### Week 1
+
+* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | Slides | [Practice](./se-unit-3/lesson-0-PEDAC/practice/)
+* **[11/30/22 - String Processing](./se-unit-3/lesson-1-string_processing/)** | Slides |
+* **[11/31/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | Slides | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
+* **12/1/22 - Review** | 
+
+### Week 2
+
+* **[12/5/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | Slides | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
+* **[12/6/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | 
+* **12/7/22 - Review** | 
+
+
 ## Unit 4 - Object-Oriented Programming (Classes)
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
