@@ -1,7 +1,6 @@
 # Curriculum Resources
 
-* [Current Unit](#unit-3-functional-programming-higher-order-functions)
-* [Current Week](#week-1-2)
+* [Current Unit](#unit-2---javascript)
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
