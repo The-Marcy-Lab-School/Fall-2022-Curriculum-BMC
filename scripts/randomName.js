@@ -13,15 +13,8 @@ const roster = [
 // console.log(roster.sort())
 // Originally, the list wasn't alphabetized but I added the code above and copied the output from executing the file. Now I have a nicely formatted and alphabetized list. Neat!
 
-function getRandomName() {
-    const numStudents = roster.length; // get number of students
-    const index = Math.floor(Math.random() * numStudents); // get a random index, rounded down
-    const name = roster[index]; // get the  name at that index
-    return name; // return both the name and the index
-}
 
-
-// Invoke the function and store the result. It is printed below.
+// Invoke the getRandomName function and store the result. It is printed below.
 const name = getRandomName();
 
 // Check if the "-v" flag was provided. If so, run the 
@@ -55,6 +48,20 @@ console.log(`YOUR WINNER IS: ${name}`);
 
 
 /// HELPERS
+function getRandomName() {
+    const numStudents = roster.length; // get number of students
+    const index = Math.floor(Math.random() * numStudents); // get a random index, rounded down
+    const name = roster[index]; // get the  name at that index
+    return name; // return the name
+}
+
+/* 
+This helper function finds the key (a name) with the largest value (how many
+times they were "chosen" randomly) and returns an object with the count and name.
+
+Example Input: { "ben" : 5, "motun": 10, "carmen": 7 }
+      Returns: { largestCount: 10, largestKey: "motun" }
+*/
 function largest(object) {
     let largestCount = 0;
     let largestKey = '';
@@ -66,9 +73,16 @@ function largest(object) {
         }
     })
 
-    return {largestCount, largestKey}
+    return { largestCount, largestKey }
 }
 
+/* 
+This helper function finds the key (a name) with the smallest value (how many
+times they were "chosen" randomly) and returns an object with the count and name.
+
+Example Input: { "ben" : 5, "motun": 10, "carmen": 7 }
+      Returns: { smallestCount: 5, smallestKey: "ben" }
+*/
 function smallest(object) {
     let smallestCount = Infinity;
     let smallestKey = '';
