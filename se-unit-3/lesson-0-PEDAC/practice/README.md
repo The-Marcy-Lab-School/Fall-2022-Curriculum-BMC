@@ -13,8 +13,8 @@ Write a program that cleans up user-entered phone numbers so that they can be se
 
 ## Examples
 ```js
-cleanNumbers('919-621-9388');  // '9196219388'
-cleanNumbers('919-621-');      // '0000000000'
+cleanNumbers('919-621-9388')   // '9196219388'
+cleanNumbers('919-621-')       // '0000000000'
 cleanNumbers('1-347-382-4493') // '3473824493'
 cleanNumbers('2-347-382-4493') // '0000000000'
 cleanNumbers('919-621-938845') // '0000000000'
