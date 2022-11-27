@@ -121,8 +121,7 @@ Unit 2 Assessment Resources:
 ### Week 1
 
 * **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/)
-* **[11/30/22 - String Processing](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) |
-* **[11/31/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
+* **[11/30/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
 * **12/1/22 - Review** | 
 
 ### Week 2
