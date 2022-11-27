@@ -1,12 +1,12 @@
 # Curriculum Resources
 
-* [Current Unit](#unit-2---javascript)
+* [Current Unit](#unit-3---structured-problem-solving)
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
 * [Unit 1 - HTML & CSS](#unit-1---html--css)
 * [Unit 2 - JavaScript](#unit-2---javascript)
-* [Unit 3 - Functional Programming (Higher Order Functions)](#unit-3---functional-programming-higher-order-functions)
+* [Unit 3 - Structured Problem Solving](#unit-3---structured-problem-solving)
 * [Unit 4 - Object-Oriented Programming (Classes)](#unit-4---object-oriented-programming-classes)
 * [Unit 5 - The Document Object Model (DOM)](#unit-5---the-document-object-model-dom)
 * [Unit 6 - Asynchronous JavaScript](#unit-6---asynchronous-javascript)
@@ -112,13 +112,17 @@ Unit 2 Assessment Resources:
 * [`wordToDigit` Review](https://us02web.zoom.us/rec/share/HvkELZSCjmFd_hbnY1h_9xdnftER97AeRASD-vP-YCeWRSNyWoOIbyDcmVNBxgFh.3o3C_YCMpEoY6jk6)
 * [`characterGenerator` Review](https://us02web.zoom.us/rec/share/gRH5eUY2kmZDJjRghVaW50oySFUkBIdWzoOeWRII6LHrmYlfXiC_K1yERwXSwtDC.NCJirgdW3ANENmI1)
 
-## Unit 3 - Functional Programming (Higher Order Functions)
+## Unit 3 - Structured Problem Solving
+
+**Additional Resources**
+* [Regexr](https://regexr.com/)
+* [Regex Info](https://www.regular-expressions.info/)
 
 ### Week 1
 
-* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | Slides | [Practice](./se-unit-3/lesson-0-PEDAC/practice/)
-* **[11/30/22 - String Processing](./se-unit-3/lesson-1-string_processing/)** | Slides |
-* **[11/31/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | Slides | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
+* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/)
+* **[11/30/22 - String Processing](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) |
+* **[11/31/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
 * **12/1/22 - Review** | 
 
 ### Week 2
