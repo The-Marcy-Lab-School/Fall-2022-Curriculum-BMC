@@ -26,9 +26,10 @@ let nonAlphaRegex = /[^a-z]/i;
 console.log('non-alpha', nonAlphaRegex.test("hello 123 abc"));
 
 // Did the user enter a valid integer?
-let integerRegex = /\D/g;
-console.log('valid integer', !integerRegex.test(1.5))
-console.log('valid integer', !integerRegex.test(1))
+let integerRegex = /^\d+$/;
+console.log('valid integer', integerRegex.test('1.5'))
+console.log('valid integer', integerRegex.test('1'))
+console.log('valid integer', integerRegex.test('hello1'))
 
 // Are there any whitespace characters in the string?
 console.log('any whitespaces', /\s/g.test('hello there'))
