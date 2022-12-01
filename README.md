@@ -122,6 +122,7 @@ Unit 2 Assessment Resources:
 
 * **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/) | [Recording](https://us02web.zoom.us/rec/share/-EeXi0O0LI-WJiqoRSCIb6rd7z5TKM2llC8ZzQUnrqroxCHuLaDUBznsn4cWKved.FpyGO01MIXv_F8RE) | [Lab Review Recording](https://us02web.zoom.us/rec/share/UBPt_wX9aGH9jrijGui-RKDdVt-THrYddmWsuk8kHNbvr44293d_9EeHH-HNVHm2.vd5ijM70FbPj-m5X)
 * **[11/30/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Examples](./se-unit-3/lesson-1-string_processing/regex-examples.js) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
+* **[12/1/22 - Regex Day 2]** | [Lecture Recording](https://us02web.zoom.us/rec/share/Ai4ninvP8HPzgk5vKqDKKaEyUC9TkFL25RWwcZA0dK7vTTP3ElQxkVF9Zq5YgMI6.icI6rRuyRQf9bhDp)
 * **12/1/22 - Review** | 
 
 ### Week 2
