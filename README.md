@@ -120,10 +120,10 @@ Unit 2 Assessment Resources:
 
 ### Week 1
 
-* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/) | [Recording](https://us02web.zoom.us/rec/share/-EeXi0O0LI-WJiqoRSCIb6rd7z5TKM2llC8ZzQUnrqroxCHuLaDUBznsn4cWKved.FpyGO01MIXv_F8RE) | [Lab Review Recording](https://us02web.zoom.us/rec/share/UBPt_wX9aGH9jrijGui-RKDdVt-THrYddmWsuk8kHNbvr44293d_9EeHH-HNVHm2.vd5ijM70FbPj-m5X)
+* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/) | [Recording](https://us02web.zoom.us/rec/share/-EeXi0O0LI-WJiqoRSCIb6rd7z5TKM2llC8ZzQUnrqroxCHuLaDUBznsn4cWKved.FpyGO01MIXv_F8RE) | [Lab Review Recording](https://us02web.zoom.us/rec/share/UBPt_wX9aGH9jrijGui-RKDdVt-THrYddmWsuk8kHNbvr44293d_9EeHH-HNVHm2.vd5ijM70FbPj-m5X) | [Phone Number Solution](./se-unit-3/lesson-0-PEDAC/practice/phone-number.js) | [Longest String Solution](./se-unit-3/lesson-0-PEDAC/practice/longest-string.js)
 * **[11/30/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Examples](./se-unit-3/lesson-1-string_processing/regex-examples.js) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
-* **[12/1/22 - Regex Day 2]** | [Lecture Recording](https://us02web.zoom.us/rec/share/Ai4ninvP8HPzgk5vKqDKKaEyUC9TkFL25RWwcZA0dK7vTTP3ElQxkVF9Zq5YgMI6.icI6rRuyRQf9bhDp)
-* **12/1/22 - Review** | 
+* **12/1/22 - Regex Day 2** | [Lecture Recording](https://us02web.zoom.us/rec/share/Ai4ninvP8HPzgk5vKqDKKaEyUC9TkFL25RWwcZA0dK7vTTP3ElQxkVF9Zq5YgMI6.icI6rRuyRQf9bhDp)
+* **12/1/22 - Review** | [Recording](https://us02web.zoom.us/rec/share/Oah6p4QO3L7Elc9rcUZ5SqJGM7pmH-PZoBfPkKFx3_wAwno1gEgs6QV9BKlw0hkT.lzoF0qmSOkQG1dX9) | [Practice Solutions](./se-unit-3/lesson-1-string_processing/practice/practice.js)
 
 ### Week 2
 
