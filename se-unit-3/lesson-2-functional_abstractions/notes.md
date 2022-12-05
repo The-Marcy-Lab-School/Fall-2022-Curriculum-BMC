@@ -199,7 +199,12 @@ function forEach(array, action) {
     }
 }
 
-forEach(['a', 'b', 'c'], console.log);
+function sayHello(name){
+    console.log(`Hello ${name}!`);
+}
+let names = ['ben', 'carmen', 'motun']
+
+forEach(names, sayHello);
 ```
 
 </details>

@@ -127,7 +127,7 @@ Unit 2 Assessment Resources:
 
 ### Week 2
 
-* **[12/5/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | Slides | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
+* **[12/5/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md) | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
 * **[12/6/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | 
 * **12/7/22 - Review** | 
 
