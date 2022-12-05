@@ -213,8 +213,8 @@ forEach(names, sayHello);
 
 # Functional Programming Day 2
 
-* What is abstraction?
-* Abstractions hide details so we can think at a higher level
+**Abstractions hide details so we can think at a higher level**
+
 * How have we abstracted over data?
 
 What does this code do?
