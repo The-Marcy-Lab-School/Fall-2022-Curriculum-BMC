@@ -199,12 +199,19 @@ function forEach(array, action) {
     }
 }
 
+let names = ['ben', 'carmen', 'motun']
+
 function sayHello(name){
     console.log(`Hello ${name}!`);
 }
-let names = ['ben', 'carmen', 'motun']
 
+// For each element in names, invoke sayHello()
 forEach(names, sayHello);
+
+// For each element in names, invoke the arrow function
+forEach(names, name => {
+    console.log(`Goodbye ${name}`);
+});
 ```
 
 </details>
@@ -215,24 +222,266 @@ forEach(names, sayHello);
 
 **Abstractions hide details so we can think at a higher level**
 
-* How have we abstracted over data?
-
 What does this code do?
 ```js
-console.log(Math.floor(Math.random() * 6));
-console.log(Math.floor(Math.random() * 6));
-console.log(Math.floor(Math.random() * 6));
+console.log(Math.ceil(Math.random() * 6));
+console.log(Math.ceil(Math.random() * 6));
+console.log(Math.ceil(Math.random() * 6));
 ```
 
 We can abstract this by writing a function `rollDice()`
 
 ```js
-function rollDice() {
-    console.log(Math.floor(Math.random() * 6));
+function rollDice(sides) {
+    console.log(Math.ceil(Math.random() * sides));
 }
 
-rollDice();
-rollDice();
-rollDice();
+rollDice(6);
+rollDice(12);
+rollDice(20);
 ```
 
+<details><summary>**Q: So, how do we abstract over data?**</summary>
+
+We write functions! Parameters let us work with abstract data values.
+
+</details>
+
+## Arrow Functions
+
+#### Function Definitions/Declarations
+```js
+function add(a, b) {
+    let sum = a + b;
+    return sum;
+}
+```
+
+#### Function Expression
+```js
+const add = function(a, b) {
+    let sum = a + b;
+    return sum;
+}
+```
+
+#### Arrow Function
+```js
+const add = (a, b) => {
+    let sum = a + b;
+    return sum;
+}
+```
+
+**If the arrow function has only 1 parameter**, the parentheses around the parameter can be left out.
+```js
+const double = num => {
+    let twice = num * 2;
+    return twice;
+}
+```
+
+**If the arrow function's body only has one line**, the `{}` can be left out. The arrow function will return whatever the expression evaluates to (the `return` keyword can also be left out).
+```js
+const double = num => num * 2;
+```
+
+## Higher-Order Array Methods
+
+**Vocab**
+
+* callback function — A function provided to a higher order function to be executed by the higher order function.
+
+### For Each
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
+The `forEach()` method executes a provided function once for each array element.
+
+* Example 1: Print `Hello [Name]!` for each value in an array of names
+    ```js
+    const names = ['ben', 'carmen', 'motun'];
+    
+    // Print a greeting using a for loop
+    for (let i = 0; i < names.length; i++) {
+        let name = names[i];
+        console.log(`hello ${name}`);  
+    }
+    
+    // Print a greeting using forEach and an arrow function expression
+    const sayHello = name => console.log(`hello ${name}`);
+    names.forEach(sayHello);
+    
+    // Or just pass the arrow function directly to forEach
+    names.forEach( name => console.log(`hello ${name}`) )
+    ```
+
+* Example 2: Double the values in an array and put them into another array
+
+    ```js
+    // Double the values in numbers
+    const numbers = [10, 20, 30];
+    const doubleArray = [];
+    numbers.forEach( number => doubleArray.push(number * 2) );
+    console.log(doubleArray);
+    // [20, 40, 60]
+    ```
+
+> Note: `Array.prototype.forEach` returns `undefined`
+
+### Map
+
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map):
+The `map()` method **creates a new array** populated with the results of calling a provided function on every element in the calling array.
+
+* Example 1: Double the values in an array and put them into another array
+
+    ```js
+    // Double the values in numbers
+    const numbers = [10, 20, 30];
+    const doubleArray = numbers.map(num => num * 2);
+    console.log(doubleArray); // => [20, 40, 60]
+    ```
+    
+* Example 2: Get an array containing the length of every word in the array:
+
+    ```js
+    const names = ['ben', 'carmen', 'motun'];
+    const nameLengths = names.map(word => word.length);
+    console.log(nameLengths); // => [3, 6, 5]
+    ```
+    
+* Example 3: Extract the `email` property from an array of objects
+
+    ```js
+    const users = [
+        { name: "Ben", email: "ben@marcylabschool.org" },
+        { name: "Carmen", email: "carmen@marcylabschool.org" },
+        { name: "Motun", email: "motun@marcylabschool.org" },
+    ];
+    const emails = users.map(user => user.email);
+    console.log(emails); 
+    // [
+    //   "ben@marcylabschool.org",
+    //   "carmen@marcylabschool.org",
+    //   "motun@marcylabschool.org",
+    // ]
+    ```
+    
+<details><summary>**Q: How can we implement the `map` function? It should take in an `array` and a `callback`**</summary>
+
+```js
+function map(arr, callback) {
+  const toReturn = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    const result = callback(arr[i]);
+    toReturn.push(result);
+  }
+  
+  return toReturn;
+}
+const nums = [1,2,3];
+const doubled = map(nums, num => num * 2);
+```
+
+</details>
+
+### Filter
+[MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter):
+The `filter()` method creates a **shallow copy** of a portion of a given array, filtered down to just the elements from the given array that pass the test implemented by the provided function.
+
+* Example 1: Keep only the even values
+
+    ```js
+    let numbers = [1,2,3,4,5,6];
+    let evens = numbers.filter(num => num % 2 === 0);
+    console.log(evens); // => [2, 4, 6]
+    ```
+    
+* Example 2: Keep only users who are NOT admins and who are at least 18
+
+    ```js
+    const users = [
+        { username: "soccerKid123", isAdmin: false, age: 20 },
+        { username: "iHeartPonies", isAdmin: false, age: 16 },
+        { username: "skaterboi666", isAdmin: false, age: 19 },
+        { username: "mrRobot", isAdmin: true, age: 25 },
+    ];
+    
+    const selectedUsers = users.filter(user => !user.isAdmin && user.age >= 18)
+    console.log(selectedUsers); 
+    // [
+    //   { username: "soccerKid123", isAdmin: false, age: 20 },
+    //   { username: "skaterboi666", isAdmin: false, age: 19 }
+    // ]
+    ```
+    
+<details><summary>**Q: How can we implement the `filter` function? It should take in an `array` and a `test` callback**</summary>
+
+```js
+function map(arr, test) {
+  const toReturn = [];
+  
+  for (let i = 0; i < arr.length; i++) {
+    const result = test(arr[i]);
+    if (result) {
+        toReturn.push(result);
+    }
+  }
+  
+  return toReturn;
+}
+const nums = [1,2,3,4];
+const evens = map(nums, num => num % 2 === 0);
+```
+
+</details>
+    
+### Other higher order methods
+* [Reduce](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+* [Some](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some)
+* [Every](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every)
+* [Sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
+## Composability
+
+The functions `map()` and `filter()` both return arrays. As a result, we can chain them together to _compose_ elegant one-line code.
+
+* Example 1: Double the even values in an array
+    ```js
+    const nums = [1,2,3,4,5];
+    // one at a time
+    const evens = nums.filter(num => num % 2 === 0); // [2, 4]
+    const doubledEvens = evens.map(num => num * 2); // [4, 8]
+    
+    // in one line
+    const doubledEvens = nums.filter(num => num % 2 === 0).map(num => num * 2);
+    // [4, 8]
+    
+    ```
+ 
+* Example 2: Get the usernames of users who are admins
+    ```js
+    const users = [
+        { username: "soccerKid123", isAdmin: false, age: 20 },
+        { username: "iHeartPonies", isAdmin: false, age: 16 },
+        { username: "skaterboi666", isAdmin: true, age: 19 },
+        { username: "mrRobot", isAdmin: true, age: 25 },
+    ];
+    
+    // one at a time
+    const admins = users.filter(user => user.isAdmin)
+    const adminUsernames = admins.map(user => user.username);
+    
+    // in one line
+    const adminUsernames = users.filter(u => u.isAdmin).map(u => u.username);
+    
+    console.log(adminUsernames); // => ["skaterboi666", "mrRobot"]
+    ```
+
+
+<details><summary>**Q: So, how do we abstract over actions?**</summary>
+
+We write **higher-order** functions! Callback functions as parameters let us work with abstract _actions_.
+
+</details>
