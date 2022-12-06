@@ -128,7 +128,7 @@ Unit 2 Assessment Resources:
 ### Week 2
 
 * **[12/5/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md)  | [Lecture Recording](https://us02web.zoom.us/rec/share/kJ2ulKCvnpxNDloTQzhjsAPFRX39QRtxZKRJy1-X1JiYtT32e7I2okvCYqN95_yU.xX0cF8cUtNNQ0zH3) | [Technical Writing Exercise](https://docs.google.com/presentation/d/1oKBqwEm_bkHjHi7MYTjFEyXcNePxpMkdu8FD36wCKiQ/edit?usp=sharing) | [Lab Review: forEach and technical writing recording](https://zoom.us/rec/play/4rWYwKWWqbuanL5yrBy9YHLW8pBQ6ZD7kIRB86dFQEh7RC1MooM6izxDLrWRRFdxETq4GteedMG41zOC.nY7nCPYTKVlfc36j?autoplay=true)
-* **[12/6/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
+* **[12/6/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md#functional-programming-day-2) | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
 * **12/7/22 - Review** | 
 
 
