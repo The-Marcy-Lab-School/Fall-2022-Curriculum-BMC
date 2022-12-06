@@ -195,7 +195,8 @@ The function should invoke `action` once per value in the `array` with each valu
 ```js
 function forEach(array, action) {
     for (let i = 0; i < array.length; i++) {
-        action(array[i])
+        // pass in the element, its index, and the entire array
+        action(array[i], i, array);
     }
 }
 
