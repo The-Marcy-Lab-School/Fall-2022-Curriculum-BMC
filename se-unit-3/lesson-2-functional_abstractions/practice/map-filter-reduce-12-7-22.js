@@ -21,26 +21,28 @@ with three arguments: element, index, array
 */
 
 // Convert these for loops to forEach
-for (let i = 0; i < fellows.length; i++) {
-    // set currentFellow to the current element in fellows
-    const currentFellow = fellows[i];
-    // console.log(currentFellow);
-}
+
+// for (let i = 0; i < fellows.length; i++) {
+//     // set currentFellow to the current element in fellows
+//     const currentFellow = fellows[i];
+//     console.log(currentFellow);
+// }
 
 /* 
-When converting a for loop to forEach
+When converting a for loop to forEach:
 * what is the array i'm iterating over
 * what can i call each value of the array?
 * what do I do with each value?
 */
 fellows.forEach(fellow => {
-  // console.log(fellow);
+  console.log(fellow);
 });
 
 
 
 const madFellows = [];
 
+// Each of the following approaches does the same thing. How are they similar/different?
 // 1: normal for loop
 // for (let i = 0; i < fellows.length; i++) {
 //     madFellows.push(fellows[i].toUpperCase() + "!!!");
@@ -63,10 +65,12 @@ fellows.forEach(currentFellow => {
   madFellows.push(currentFellow.toUpperCase() + "!!!");
 });
 
-// console.log('madFellows:', madFellows);
+console.log('madFellows:', madFellows);
+
+
+
 
 const cFellows = [];
-
 // for (let i = 0; i < fellows.length; i++) {
 //   // how to check if fellows[i] has a "c"
 //   // - includes, regex.test()
@@ -75,7 +79,6 @@ const cFellows = [];
 //     cFellows.push(fellows[i])
 //   }
 // }
-
 fellows.forEach(fellow => {
   if (fellow.toLowerCase().includes("c")) {
     cFellows.push(fellow)
@@ -83,6 +86,8 @@ fellows.forEach(fellow => {
 })
 
 // console.log(cFellows)
+
+
 
 
 function headAss(string) {
