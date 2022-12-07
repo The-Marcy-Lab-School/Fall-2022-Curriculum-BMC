@@ -11,7 +11,7 @@
       ```javascript
       headAss('abcdef');  // "AbCdEf"
       headAss('Abc+def'); // "AbC+DeF"
-      headAss('Omar Apollo is better than Frank Ocean'); // "Omar aPoLlO Is bEtTeR ThAn fRaNk oCeAn"
+      headAss('Omar Apollo is better than Frank Ocean'); // "OmAr aPoLlO Is bEtTeR ThAn fRaNk oCeAn"
       ```
       
 ### Transformation: `Array.prototype.map`

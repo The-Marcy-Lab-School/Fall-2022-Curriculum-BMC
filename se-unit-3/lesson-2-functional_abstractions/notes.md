@@ -188,7 +188,12 @@ repeat3Times(sayGoodbye, "carmen");
 
 Write a function called `forEach` that takes in an `array` and an `action` (a function).
 
-The function should invoke `action` once per value in the `array` with each value of the `array` as an argument.
+The function should invoke `action` once per value in the `array` with three arguments:
+* the current element of the `array`
+* the index of the current element
+* the entire `array` itself
+
+By passing in all three of these values to the `action` function, the `action` function has full access to all of the data you would normally have access to in a `for` loop iteration.
 
 <details><summary>solution</summary>
 
@@ -298,6 +303,8 @@ const double = num => num * 2;
 [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach):
 The `forEach()` method executes a provided function once for each array element.
 
+> Note: Every array higher-order method will invoke the callback function with three arguments: `element, index, array`.
+
 * Example 1: Print `Hello [Name]!` for each value in an array of names
     ```js
     const names = ['ben', 'carmen', 'motun'];
@@ -308,8 +315,11 @@ The `forEach()` method executes a provided function once for each array element.
         console.log(`hello ${name}`);  
     }
     
-    // Print a greeting using forEach and an arrow function expression
-    const sayHello = name => console.log(`hello ${name}`);
+    // Print a greeting using forEach and a function
+    // Note: the function will be given each element, its index, and the array,
+    //  but it doesn't have to use all of those values. Often, only the element 
+    //  is needed and the other parameters can be left out.
+    const sayHello = (name, i, array) => console.log(`hello ${name}`);
     names.forEach(sayHello);
     
     // Or just pass the arrow function directly to forEach
@@ -322,7 +332,9 @@ The `forEach()` method executes a provided function once for each array element.
     // Double the values in numbers
     const numbers = [10, 20, 30];
     const doubleArray = [];
+    
     numbers.forEach( number => doubleArray.push(number * 2) );
+    
     console.log(doubleArray);
     // [20, 40, 60]
     ```
@@ -339,8 +351,13 @@ The `map()` method **creates a new array** populated with the results of calling
     ```js
     // Double the values in numbers
     const numbers = [10, 20, 30];
-    const doubleArray = numbers.map(num => num * 2);
-    console.log(doubleArray); // => [20, 40, 60]
+    
+    function transform(num, i, array) {
+        return num * 2;
+    }
+    
+    console.log(numbers.map(transform)); // => [20, 40, 60]
+    console.log(numbers.map(num => num * 2)); // => [20, 40, 60]
     ```
     
 * Example 2: Get an array containing the length of every word in the array:
@@ -486,3 +503,4 @@ The functions `map()` and `filter()` both return arrays. As a result, we can cha
 We write **higher-order** functions! Callback functions as parameters let us work with abstract _actions_.
 
 </details>
+
