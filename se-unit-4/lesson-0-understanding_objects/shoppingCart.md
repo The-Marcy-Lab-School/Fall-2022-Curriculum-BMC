@@ -24,7 +24,7 @@ Do the following in a blank JavaScript file.
 ## Notes
 * **Encapsulation** is the idea that data (properties) and behavior (methods) are bundled together. The behavior interacts with the data in a _fixed_ and _predictable_ interface.
 Some people refer to it as “data hiding”
-* This `cart` example demonstrates **encapsulation** because the data for the `cart` and the methods that interact with that data are all bundled in one object.
+* This `cart` example demonstrates **encapsulation** because the cart's data and the methods that interact with that data are all bundled in one object.
 * A **factory function** is a function that creates an object with a particular set of properties and methods.
 * We can create multiple **instances** of the shopping cart object by invoking the factory function. Each instance will have the same properties and methods.
 * Benefits:
