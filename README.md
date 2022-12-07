@@ -7,7 +7,7 @@
 * [Unit 1 - HTML & CSS](#unit-1---html--css)
 * [Unit 2 - JavaScript](#unit-2---javascript)
 * [Unit 3 - Structured Problem Solving](#unit-3---structured-problem-solving)
-* [Unit 4 - Object-Oriented Programming (Classes)](#unit-4---object-oriented-programming-classes)
+* [Unit 4 - Object-Oriented Programming](#unit-4---object-oriented-programming)
 * [Unit 5 - The Document Object Model (DOM)](#unit-5---the-document-object-model-dom)
 * [Unit 6 - Asynchronous JavaScript](#unit-6---asynchronous-javascript)
 * [Unit 7 - Server-side Web Development with Node.js](#unit-7---server-side-web-development-with-nodejs)
@@ -120,19 +120,28 @@ Unit 2 Assessment Resources:
 
 ### Week 1
 
-* **[11/28/22 - PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/) | [Recording](https://us02web.zoom.us/rec/share/-EeXi0O0LI-WJiqoRSCIb6rd7z5TKM2llC8ZzQUnrqroxCHuLaDUBznsn4cWKved.FpyGO01MIXv_F8RE) | [Lab Review Recording](https://us02web.zoom.us/rec/share/UBPt_wX9aGH9jrijGui-RKDdVt-THrYddmWsuk8kHNbvr44293d_9EeHH-HNVHm2.vd5ijM70FbPj-m5X) | [Phone Number Solution](./se-unit-3/lesson-0-PEDAC/practice/phone-number.js) | [Longest String Solution](./se-unit-3/lesson-0-PEDAC/practice/longest-string.js)
-* **[11/30/22 - Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Examples](./se-unit-3/lesson-1-string_processing/regex-examples.js) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
+* **11/28/22 - [PEDAC](./se-unit-3/lesson-0-PEDAC/)** | [Slides](https://docs.google.com/presentation/d/1Sljy5gxvmmH40RBJxrvJnLjB5_IFHp-pjX2cyG905Kc/) | [Practice](./se-unit-3/lesson-0-PEDAC/practice/) | [Recording](https://us02web.zoom.us/rec/share/-EeXi0O0LI-WJiqoRSCIb6rd7z5TKM2llC8ZzQUnrqroxCHuLaDUBznsn4cWKved.FpyGO01MIXv_F8RE) | [Lab Review Recording](https://us02web.zoom.us/rec/share/UBPt_wX9aGH9jrijGui-RKDdVt-THrYddmWsuk8kHNbvr44293d_9EeHH-HNVHm2.vd5ijM70FbPj-m5X) | [Phone Number Solution](./se-unit-3/lesson-0-PEDAC/practice/phone-number.js) | [Longest String Solution](./se-unit-3/lesson-0-PEDAC/practice/longest-string.js)
+* **11/30/22 - [Regex](./se-unit-3/lesson-1-string_processing/)** | [Slides](https://docs.google.com/presentation/d/1REj3mi5Aw7W_gI2GJwD6g_Y7ebrliteF8wJC3CjHYjQ) | [Examples](./se-unit-3/lesson-1-string_processing/regex-examples.js) | [Practice](./se-unit-3/lesson-1-string_processing/practice/)
 * **12/1/22 - Regex Day 2** | [Lecture Recording](https://us02web.zoom.us/rec/share/Ai4ninvP8HPzgk5vKqDKKaEyUC9TkFL25RWwcZA0dK7vTTP3ElQxkVF9Zq5YgMI6.icI6rRuyRQf9bhDp)
 * **12/1/22 - Review** | [Recording](https://us02web.zoom.us/rec/share/Oah6p4QO3L7Elc9rcUZ5SqJGM7pmH-PZoBfPkKFx3_wAwno1gEgs6QV9BKlw0hkT.lzoF0qmSOkQG1dX9) | [Practice Solutions](./se-unit-3/lesson-1-string_processing/practice/practice.js)
 
 ### Week 2
 
-* **[12/5/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md)  | [Lecture Recording](https://us02web.zoom.us/rec/share/kJ2ulKCvnpxNDloTQzhjsAPFRX39QRtxZKRJy1-X1JiYtT32e7I2okvCYqN95_yU.xX0cF8cUtNNQ0zH3) | [Technical Writing Exercise](https://docs.google.com/presentation/d/1oKBqwEm_bkHjHi7MYTjFEyXcNePxpMkdu8FD36wCKiQ/edit?usp=sharing) | [Lab Review: forEach and technical writing recording](https://zoom.us/rec/play/4rWYwKWWqbuanL5yrBy9YHLW8pBQ6ZD7kIRB86dFQEh7RC1MooM6izxDLrWRRFdxETq4GteedMG41zOC.nY7nCPYTKVlfc36j?autoplay=true)
-* **[12/6/22 - Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md#functional-programming-day-2) | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/)
+* **12/5/22 - [Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md)  | [Lecture Recording](https://us02web.zoom.us/rec/share/kJ2ulKCvnpxNDloTQzhjsAPFRX39QRtxZKRJy1-X1JiYtT32e7I2okvCYqN95_yU.xX0cF8cUtNNQ0zH3) | [Technical Writing Exercise](https://docs.google.com/presentation/d/1oKBqwEm_bkHjHi7MYTjFEyXcNePxpMkdu8FD36wCKiQ/edit?usp=sharing) | [Lab Review: forEach and technical writing recording](https://zoom.us/rec/play/4rWYwKWWqbuanL5yrBy9YHLW8pBQ6ZD7kIRB86dFQEh7RC1MooM6izxDLrWRRFdxETq4GteedMG41zOC.nY7nCPYTKVlfc36j?autoplay=true)
+* **12/6/22 - [Functional Abstraction](./se-unit-3/lesson-2-functional_abstractions/)** | [Notes](./se-unit-3/lesson-2-functional_abstractions/notes.md#functional-programming-day-2) | [Practice](./se-unit-3/lesson-2-functional_abstractions/practice/) | [Lecture Recording](https://us02web.zoom.us/rec/share/df-wa_fiizLj75oXD9f8mOfzX3Cl_kn_-ctKn6x2Qh7dkKkcbA0s58yh92bIBzj0.FIUlA8x0Qk8AVQaw)
 * **12/7/22 - Review** | [Scripts Example](https://jsbin.com/xilurev/2/edit?js,console)
 
+## Unit 4 - Object-Oriented Programming
 
-## Unit 4 - Object-Oriented Programming (Classes)
+### Week 1
+
+* **12/8/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** | [Shopping Cart Practice](se-unit-4/lesson-0-understanding_objects/shoppingCart.md) | [Shopping Cart Solution](se-unit-4/lesson-0-understanding_objects/shoppingCartSolution.js)
+* **12/9/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** 
+
+### Week 2
+
+* **12/9/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** 
+
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
 ## Unit 7 - Server-side Web Development with Node.js
