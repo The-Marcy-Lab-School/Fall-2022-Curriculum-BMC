@@ -40,4 +40,4 @@ console.log(cart.getTotal());
 
 cart.removeItem("dates")
 cart.removeMostExpensiveItem()
-console.log(cart.items);
+console.log(cart);
