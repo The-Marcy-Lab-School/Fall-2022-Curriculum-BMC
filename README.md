@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-* [Current Unit](#unit-3---structured-problem-solving)
+* [Current Unit](#unit-4---object-oriented-programming)
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
