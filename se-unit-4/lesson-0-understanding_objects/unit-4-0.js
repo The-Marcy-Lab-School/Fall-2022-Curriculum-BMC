@@ -13,7 +13,9 @@ Vocab:
 
 
 
-
+////////////////////////////////////////////
+///////////    EXAMPLE 1     ///////////////
+////////////////////////////////////////////
 
 // Factory Function
 // A function that returns an object with particular set of properties and methods
@@ -42,6 +44,12 @@ marcyLabSchool.getDirection() // this refers to marcyLabSchool
 // We can change the values of the object and our methods will work with the updated value!
 gravesendPizza.name = gravesendPizza.name.toUpperCase()
 gravesendPizza.getDirection() 
+
+
+////////////////////////////////////////////
+///////////    EXAMPLE 2     ///////////////
+////////////////////////////////////////////
+
 
 // Instead of creating these objects manually with custom code for the greet method...
 
