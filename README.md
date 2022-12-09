@@ -136,7 +136,7 @@ Unit 2 Assessment Resources:
 ### Week 1
 
 * **12/8/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** | [Notes](./se-unit-4/lesson-0-understanding_objects/unit-4-0.js) | [Lecture Recording](https://us02web.zoom.us/rec/share/DP8UcjWIlaL9SklbcM9fyFW_Qq1u1O-17vUTLW9Cc1G4ysLOc0My1EkhO7_vSUIH.PnVGAspkfH2CtbZA)
-* **12/9/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** | [Shopping Cart Practice](se-unit-4/lesson-0-understanding_objects/shoppingCart.md) ([Solution](se-unit-4/lesson-0-understanding_objects/shoppingCartSolution.js)) |
+* **12/9/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** | [Shopping Cart Practice](se-unit-4/lesson-0-understanding_objects/shoppingCart.md) ([Solution](se-unit-4/lesson-0-understanding_objects/shoppingCartSolution.js)) | [Lecture Recording](https://us02web.zoom.us/rec/share/5MAs0wr-z9d1BYBcLitMw9g0SgWJHEQPU5050jwB6FF-nk0v4G-pEJeyLBsP_og9.rOuUpsgSEksDvzEI)
 
 ### Week 2
 
