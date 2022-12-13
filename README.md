@@ -140,7 +140,8 @@ Unit 2 Assessment Resources:
 
 ### Week 2
 
-* **12/9/22 - [Execution Context](./se-unit-4/lesson-1-execution_context)** | [unit-4-1.js](./se-unit-4/lesson-1-execution_context/unit-4-1.js) | [Lecture Recording](https://us02web.zoom.us/rec/share/jtVPc40ZGlxED8fXgx7YYQJwUvXa3QM6ZsfQzEh_AiCGpQ2zUyX8Pxq3KTFJN3oM.PYTfXCw3LIsnoHCI) | [Practice](./se-unit-4/lesson-1-execution_context/practice/README.md) ([solution](./se-unit-4/lesson-1-execution_context/practice/solutions.md))
+* **12/12/22 - [Execution Context](./se-unit-4/lesson-1-execution_context)** | [Notes](./se-unit-4/lesson-1-execution_context/unit-4-1.js) | [Lecture Recording](https://us02web.zoom.us/rec/share/jtVPc40ZGlxED8fXgx7YYQJwUvXa3QM6ZsfQzEh_AiCGpQ2zUyX8Pxq3KTFJN3oM.PYTfXCw3LIsnoHCI) | [Practice](./se-unit-4/lesson-1-execution_context/practice/README.md) ([solution](./se-unit-4/lesson-1-execution_context/practice/solutions.md))
+* **12/13/22 - [Closures](/se-unit-4/lesson-2-closures/README.md)** | [Notes](./se-unit-4/lesson-2-closures/unit-4-2.md)
 
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
