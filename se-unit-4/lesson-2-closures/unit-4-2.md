@@ -9,7 +9,7 @@ One of the core tenets of Object Oriented programming is **encapsulation**:
     - getter methods return state values (or copies of state values if they are arrays/objects)
     - setter methods update state values
 
-
+## Privacy 
 Back in the day, to indicate a value in an object was "private" (and shouldn't be changed), we put a `_` in front of the property name:
 ```js
 function makeVault(code) {

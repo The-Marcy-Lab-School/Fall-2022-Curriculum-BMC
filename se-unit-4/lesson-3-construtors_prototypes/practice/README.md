@@ -9,7 +9,7 @@
       ```javascript
       function Dog() {
         this.bark = function() {
-          console.log("Roof Roof!");
+          console.log("Woof Woof!");
         };
       }
 
