@@ -13,6 +13,14 @@ function makeCart(shopper) {
                 const after = this.items.slice(indexToRemove + 1);
                 this.items = [...before, ...after];
             }
+            
+            /* Or, implemented using splice and forEach
+            this.items.forEach((item, i) => {
+                if (item.itemName === itemName) {
+                    this.items.splice(i, 1);
+                }
+            });
+            */
         },
         getTotal() {
             return this.items.reduce((total, item) => total + item.price, 0)
