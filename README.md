@@ -143,7 +143,7 @@ Unit 2 Assessment Resources:
 * **12/12/22 - [Execution Context](./se-unit-4/lesson-1-execution_context)** | [Notes](./se-unit-4/lesson-1-execution_context/unit-4-1.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/jtVPc40ZGlxED8fXgx7YYQJwUvXa3QM6ZsfQzEh_AiCGpQ2zUyX8Pxq3KTFJN3oM.PYTfXCw3LIsnoHCI) | [Practice](./se-unit-4/lesson-1-execution_context/practice/README.md) ([solution](./se-unit-4/lesson-1-execution_context/practice/solutions.md)) | [Lab Review](https://us02web.zoom.us/rec/share/6H19hbqvFUfUZfrs_fBoiXH-QlHEoW9k64FXwr6wcKWzdeOSWRTR0Vq-rOPUsOZL.P4tMpv-cRqZ1P0Vq)
 * **12/13/22 - [Closures](/se-unit-4/lesson-2-closures/README.md)** | [Notes](./se-unit-4/lesson-2-closures/unit-4-2.md) | [Practice](./se-unit-4/lesson-2-closures/practice/README.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/_er-QiCa9vIlY74jjfu7NDQsTeOOZie9Oi5-RLeS4LP1Ng8zUWtvJ6DPh9u51Q33.6liW9eh_7Pxx3EDg)
 * **12/14/22 - Review** | 
-* **12/15/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [Notes](./se-unit-4/lesson-3-construtors_prototypes/unit-4-3.md) |
+* **12/15/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [Notes](./se-unit-4/lesson-3-construtors_prototypes/unit-4-3.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/Ucuu5nqNsOeDz3pK4JrCszqwVPmsZ_cM1LQfM6QJG5x11FS4Z1F9x6KbY6Lt98jf.AiwkOu7EU4z7DUPx)
 * **12/16/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [`__proto__` and `prototype`](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript)
 
 ## Unit 5 - The Document Object Model (DOM)
