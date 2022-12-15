@@ -1,8 +1,8 @@
 function makeCart(shopper) {
     return {
-        shopper,
+        shopper, // shorthand for shopper: shopper,
         items: [],
-        addItem(itemName, price) {
+        addItem(itemName, price) { // shorthand for addItem: function(itemName, price)
             this.items.push({itemName, price});
             return `${itemName} added to the cart`
         },
