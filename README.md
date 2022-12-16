@@ -148,6 +148,21 @@ Unit 2 Assessment Resources:
 
 Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/nufehaf/2/edit?js,console)
 
+### Week 3
+
+* **1/9/23 - Classes**
+* **1/10/23 - Classes**
+* **1/11/23 - Inheritance**
+* **1/12/23 - OO Design**
+* **1/13/23 - OO Design**
+
+### Week 4
+
+* **1/17/23 - OO Design**
+* **1/18/23 - Review**
+* **1/19/23 - Unit 4 Assessment**
+* **1/20/23 - Review**
+
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
 ## Unit 7 - Server-side Web Development with Node.js
