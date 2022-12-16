@@ -144,7 +144,7 @@ Unit 2 Assessment Resources:
 * **12/13/22 - [Closures](/se-unit-4/lesson-2-closures/README.md)** | [Notes](./se-unit-4/lesson-2-closures/unit-4-2.md) | [Practice](./se-unit-4/lesson-2-closures/practice/README.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/_er-QiCa9vIlY74jjfu7NDQsTeOOZie9Oi5-RLeS4LP1Ng8zUWtvJ6DPh9u51Q33.6liW9eh_7Pxx3EDg)
 * **12/14/22 - Review** | 
 * **12/15/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [Notes](./se-unit-4/lesson-3-construtors_prototypes/unit-4-3.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/Ucuu5nqNsOeDz3pK4JrCszqwVPmsZ_cM1LQfM6QJG5x11FS4Z1F9x6KbY6Lt98jf.AiwkOu7EU4z7DUPx)
-* **12/16/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [`__proto__` and `prototype`](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript)
+* **12/16/22 - [Constructors & Prototypes](./se-unit-4/lesson-3-construtors_prototypes/README.md)** | [`__proto__` and `prototype`](https://stackoverflow.com/questions/9959727/proto-vs-prototype-in-javascript) | [Lecture Recording](https://us02web.zoom.us/rec/share/_GcIISVsaF5gh3um6iJEQlDDaSNwyvK27ELOQ7lHjPTng6iZuE_JGEfXq-6M3IfL.NfDmGEJuWpGdQ2PX) | [Car and RaceCar Class Preview Example](https://jsbin.com/nufehaf/2/edit?js,console)
 
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
