@@ -109,14 +109,14 @@ let nums = [1, 2, 3];       // Array literal [1, 2, 3]
 let user = { id: 123 };     // Object literal { id: 123 }
 ```
 
-Each of these types also has a corresponding constructor function that we could use:
+Each of these data types also has a corresponding constructor function that we could use:
 
 ```js
-let age = new Number(27);               // Number constructor
-let name = new String("ben")            // String constructor
-let isInstructor = new Boolean(true);   // Boolean constructor
-let nums = new Array(1, 2, 3);          // Array constructor
-let user = new Object();                // Object constructor
+let age = new Number(27);               // an instance of the Number constructor
+let name = new String("ben")            // an instance of the String constructor
+let isInstructor = new Boolean(true);   // an instance of the Boolean constructor
+let nums = new Array(1, 2, 3);          // an instance of the Array constructor
+let user = new Object();                // an instance of the Object constructor
 user.id = 123;
 ```
 
