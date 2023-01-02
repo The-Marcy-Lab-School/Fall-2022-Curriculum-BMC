@@ -145,7 +145,7 @@ The array `letters` has its own properties `0: 'a'`, `1: 'b'`, `2: 'c'` and it _
 console.log(Array.prototype);
 ```
 
-A **prototype** is an "ancestral" object from which properties and methods are inherited. Every constructor has a `Constructor.prototype` property storing this object (like `Array.prototype` or `String.prototype`).
+A **prototype** is an "ancestral" object from which properties and methods are inherited. Every constructor has a `Constructor.prototype` property storing this object (like `Array.prototype` amd `String.prototype` and our own constructors, `Car.prototype` and `NumberHolder.prototype`).
 
 ### Proto and Protoype properties
 
