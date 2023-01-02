@@ -147,6 +147,14 @@ console.log(Array.prototype);
 
 A **prototype** is an "ancestral" object from which properties and methods are inherited. Every constructor has a `Constructor.prototype` property storing this object (like `Array.prototype` amd `String.prototype` and our own constructors, `Car.prototype` and `NumberHolder.prototype`).
 
+Go ahead, print out the prototype object of any constructor function you know (or one you've created) to see what that object looks like!
+
+```js
+console.log(Object.prototype);
+console.log(Car.prototype);
+console.log(NumberHolder.prototype);
+```
+
 ### Proto and Protoype properties
 
 Key Terms:
