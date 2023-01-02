@@ -81,19 +81,21 @@ console.log(myCar);
 
 #### The `new` keyword
 
-```js
-function Obj(value) {
-    this.value = value;
-}
-
-const myObj = new Obj(5);
-```
-
 The `new` keyword does a lot for us:
 * It creates a new empty object
 * It sets `this` within the constructor to point to the new object
 * It returns the new object from the constructor function
 
+```js
+function NumberHolder(num) {
+    this.num = num;
+}
+
+const myObj = new NumberHolder(5);
+//=> myObj ≈ { num: 5 }
+```
+
+Here, `myObj` is assigned an object with a property `num` assigned the value `5`. This object was created and returned by the `NumberHolder` constructor. `myObj` is an instance of the `NumberHolder` constructor.
 
 ### String, Number, Boolean, Array, and Object constructors
 
