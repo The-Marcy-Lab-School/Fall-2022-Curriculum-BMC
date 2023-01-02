@@ -29,7 +29,7 @@ Factory functions and constructor functions are basically the same, but there ar
 
 ### Factory Functions vs. Constructors
 
-Factory functions take parameters and return an object that has properties and methods.
+Factory functions have parameters and return an object that has properties and methods.
 ```js
 function makeCar(make, model) {
     return {
