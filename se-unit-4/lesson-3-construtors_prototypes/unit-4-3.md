@@ -71,7 +71,7 @@ console.log(myCar);
 
 <details><summary>Answer</summary>
 
-* The `Car` constructor function uses `PascalCase` (the first character of every word is capatlized)
+* The `Car` constructor function's name uses `PascalCase` (the first character of every word is capatlized)
 * The `Car` constructor doesn't need to return anything.
 * `new` operator is used.
 
