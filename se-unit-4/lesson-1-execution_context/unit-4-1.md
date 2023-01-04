@@ -4,29 +4,61 @@ The **execution context** is WHERE code is executed.
 
 The execution context is represented by an object: `this`
 
-## globalThis, window, and this
+The value of `this` is the closest "parent object". 
+
+When `this` is referenced inside of a method of an object, `this` points to the object being called on.
 
 ```js
-console.log('this:', this);
-console.log('globalThis:', globalThis);
-console.log('window:', window);
+const obj = {
+    fizz: function() {
+        console.log(this);
+    }
+}
+obj.fizz(); // this refers to the `obj` object
 ```
 
-The `window` object is the execution context in the global scope. It contains useful methods like `setTimeout`
+When `this` is referenced in the global scope and within global functions, `this` points to the global context object:
 
 ```js
-function greet() { console.log("Hello World!") }
-window.setTimeout(greet, 2000);
-setTimeout(greet, 2000); // we don't need the window.
+console.log(this) // this refers to the global context object
 
-// What's going on...
-function setTimeout(callback, delay) {
-    // wait for the delay
-    callback();
+function foo() {
+    console.log(this); 
+}
+foo(); // this refers to the global context object
+```
+
+What's going on? What is this global context object anyway?
+
+## window, global, and globalThis
+
+In the global context, `this` refers to the `window` object in the browser and the `global` object in Node.js
+
+`globalThis` is another global variable that always points to the global context variable (`window` or `global`)
+
+```js
+console.log('window:', window); // An object in the browser, reference error in Node.js
+console.log('global:', global); // An object in Node.js, reference error in the browser
+console.log('globalThis:', globalThis); // globalThis points to the `window` in the browser and `global` in Node.js
+console.log('this:', this); // points to the same thing as globalThis
+```
+
+The `window` object is the execution context in the global scope of a browser. It contains values like `window.screenX` and `window.screenY` and useful methods like `setTimeout`
+
+```js
+console.log(window.screenX);
+
+// the `window.` part is "implied" when we reference global variables
+console.log(screenY);
+
+window.setTimeout(greet, 2000); // Invokes `greet` after 2000ms (2 seconds)
+
+function greet() { 
+    console.log("Hello World!") 
 }
 ```
 
-## Declaring global functions and variables
+## Declaring global variables
 
 A variable declared globally with `var` or without a keyword is added to the global `window` object (in a browser). This is BAD! We want to avoid "polluting" the global window object.
 
@@ -43,7 +75,7 @@ console.log(window.w, window.x, window.y, window.z)
 
 <details><summary>Answer</summary>
     
-```
+```js
 10
 10
 undefined
@@ -51,27 +83,38 @@ undefined
 ```
 
 `w` and `x` are added to the global `window` object while `y` and `z` are not. `window.y` and `window.z` return `undefined` (instead of throwing an error) because we are accessing properties of an object.
-    
-</details>
 
-Adding the string `"use strict"` to the top of your file prevents this functionality (an error is thrown: `w is not defined`)
+
+</details>
+<br>
+
+> Note: Adding the string `"use strict"` to the top of your file turns on strict mode which prevents you from being able to declare variables without a keyword (an error is thrown: `w is not defined`)
+
+## Declaring Global Functions
 
 A function declared globally is also added to the global `window` object (in a browser).
 
 ```js
+w = 10;         // added to the window
+var x = 20;     // added to the window
+let y = 30;     // not added to the window (this is good)
+const z = 40;   // not added to the window (this is good)
+
 function printNumbers() {
-    console.log(this);
+    // `this` refers to the `window` object
     console.log(this.w, this.x, this.y, this.z);
 }
 
-// printNumbers is technically window.printNumbers and `this` refers to the window
-printNumbers();
-window.printNumbers();
+// printNumbers is technically window.printNumbers
+printNumbers();         // 10 20 undefined undefined
+window.printNumbers();  // 10 20 undefined undefined
 ```
+
+This example illuminates why `this` refers to the global `window` object when referenced inside of a global function. _Technically_ we are invoking the global function as a method of the `window` object and when `this` is referenced inside a method it points to the object the method is called on!
 
 ## Use `call` to indirectly invoke a function and explicity set `this`
 
-We can use `Function.prototype.call` to invoke a function on any object as if it were that object's method. 
+We can use `Function.prototype.call` to invoke a function on any object as if it were that object's method. The syntax looks like this:
 
 ```js
 myFunction.call(thisValue, arguments);
@@ -102,7 +145,7 @@ greet.call(bensCat, "Prrr");
 greet.call(bensDog, "Woof");
 
 
-/* What will these print? */
+/* Bonus Q: What will these print? */
 // greet("Hello");
 // window.greet("Hello");
 ```
@@ -157,7 +200,46 @@ let person = {
 
 ## Arrow Functions ([W3Schools](https://www.w3schools.com/js/js_arrow_function.asp#:~:text=what%20about))
 
-In regular functions the `this` keyword represents the object that called the function.
+In regular functions the `this` keyword points to the object that called the function. With arrow functions, `this` behaves differently. Most often, it points to the global `window` object. If an arrow function is defined inside of a "normal function", `this` will point to the `this` value of that function.
+
+```js
+const obj = {
+  normalFunc: function() {
+    console.log(this) // obj
+  },
+  arrow: () => {
+    console.log(this) // global window
+  },
+  
+  
+  innerObj: {
+    normalFunc: function() {
+      console.log(this) // innerObj
+    },
+    arrow: () => {
+      console.log(this) // still the global window
+    },
+  },
+  
+  foo() {
+    let innerArrow = () => console.log(this);
+    innerArrow(); // obj
+  }
+
+}
+
+obj.normalFunc();
+obj.arrow();
+
+obj.innerObj.normalFunc();
+obj.innerObj.arrow();
+
+obj.foo();
+```
+
+To summarize, `this` in arrow functions points to the `this` object of where the arrow function is defined.
+
+This most often becomes relevant when we start using arrow functions as callbacks within methods:
 
 ```js
 const obj = {
@@ -173,7 +255,7 @@ const obj = {
   }
 };
 
-obj.waitThenPrintNum(); // logs "NaN", because the property "count" is not in the window scope.
+obj.waitThenPrintNum(); // logs "NaN", because the property "count" is not in the window object.
 ```
 
 With arrow functions the `this` keyword always represents the object that defined the arrow function.
@@ -183,7 +265,7 @@ const obj = {
   count: 10,
   waitThenPrintNum() {
     
-    // obj.waitThenPrintNum is what defines the arrow function
+    // obj.waitThenPrintNum is what defines the arrow function so `this` points to `obj`
     window.setTimeout(() => {
       this.count++;
       console.log(this.count);
