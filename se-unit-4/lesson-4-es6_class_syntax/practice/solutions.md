@@ -147,14 +147,14 @@
 
   In each class you should then include the `walkableMixin` like this:
 
-      ```
-      class Person {
-        constructor(name) {
-          this.name = name;
-          Object.assign(this, walkableMixin);
-        }
-      }
-      ```
+  ```js
+  class Person {
+    constructor(name) {
+      this.name = name;
+      Object.assign(this, walkableMixin);
+    }
+  }
+  ```
 
   Though we could have created a relationship of inheritance between all three of these classes, intuitively, we know that this would be a stretch given the potential differences in properties and behaviors of `Person`s, `Cat`s, and `Cheetah`s. Instead, this relationship with walking is best described as a `can-do` relationship and thus, a mixin is the best way to go.
 

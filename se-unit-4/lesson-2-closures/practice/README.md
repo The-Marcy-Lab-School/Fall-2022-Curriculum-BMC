@@ -6,7 +6,7 @@
 
 2. Create a function, `makeCounter`, that returns a function that increments and logs a number starting at 0.
 
-3. What happens if calculateSum() is invoked multiple times? Does the initialValue change each time? Why or why not?
+3. What happens if `calculateSum()` is invoked multiple times? Does the initialValue change each time? Why or why not?
 
       ```javascript
       const sum = () => {
@@ -38,17 +38,16 @@
 
 6. Create a `makeCounterLogger` function that takes a number as an argument and returns a function. When we invoke the returned function with a second number, it should count up or down from the first number to the second number, logging each number to the console:
 
-      ```javascript
-      > let countlog = makeCounterLogger(5);
-      > countlog(8);
-      5
-      6
-      7
-      8
-      > countlog(2);
-      5
-      4
-      3
-      2
-      ```
-
+```javascript
+let countlog = makeCounterLogger(5);
+countlog(8);
+// 5
+// 6
+// 7
+// 8
+countlog(2);
+// 5
+// 4
+// 3
+// 2
+```

@@ -42,10 +42,10 @@
 
   `Cat` constructor should take 3 arguments, `name`, `age` and `status`. Cats should always have leg count of `4` and a `species` of cat. Also, the `introduce` method should be identical to the original except, after the phrase there should be a single space and words `Meow meow!`
 
-      ```javascript
-      let cat = new Cat("Pepe", 2, "happy");
-      cat.introduce(); // "Hello, my name is Pepe and I am 2 years old. Meow meow!"
-      ```
+  ```javascript
+  let cat = new Cat("Pepe", 2, "happy");
+  cat.introduce(); // "Hello, my name is Pepe and I am 2 years old. Meow meow!"
+  ```
 
   `Dog` constructor should take 4 arguments, `name`, `age`, `status`, and `master`. Dogs should always have leg count of `4` and a species of `dog`. Dogs have identical `introduce` method as any other animal, but they have their own method called `greetMaster`, which accepts no arguments and returns `Hello (master's name)! Woof, woof!`. 
 
@@ -137,16 +137,16 @@
 
   You need to modify the code so that this works:
 
-      ```javascript
-      let mike = new Person("Mike");
-      mike.walk(); // "Mike strolls forward"
+  ```javascript
+  let mike = new Person("Mike");
+  mike.walk(); // "Mike strolls forward"
 
-      let kitty = new Cat("Kitty");
-      kitty.walk(); // "Kitty saunters forward"
+  let kitty = new Cat("Kitty");
+  kitty.walk(); // "Kitty saunters forward"
 
-      let flash = new Cheetah("Flash");
-      flash.walk(); // "Flash runs forward"
-      ```
+  let flash = new Cheetah("Flash");
+  flash.walk(); // "Flash runs forward"
+  ```
 
   You are only allowed to write one new method to do this
 
@@ -198,45 +198,45 @@
 
 7. The following class is incomplete. The purpose of the class is to construct boxed banners.
 
-      ```javascript
-      class Banner {
-        constructor(message) {
-        }
+```javascript
+class Banner {
+  constructor(message) {
+  }
 
-        displayBanner() {
-          console.log([this.horizontalRule(), this.emptyLine(), this.messageLine(), this.emptyLine(), this.horizontalRule()].join("\n"));
-        }
+  displayBanner() {
+    console.log([this.horizontalRule(), this.emptyLine(), this.messageLine(), this.emptyLine(), this.horizontalRule()].join("\n"));
+  }
 
-        horizontalRule() {}
+  horizontalRule() {}
 
-        emptyLine() {}
+  emptyLine() {}
 
-        messageLine() {
-          return `| ${this.message} |`
-        }
-      }
-      ```
+  messageLine() {
+    return `| ${this.message} |`
+  }
+}
+```
   Complete this class so that the test cases shown below work as intended. You are free to add any properties you need. You may assume that the input will always fit in your terminal window.
 
       Test Cases:
-      ```javascript
-      let banner1 = new Banner('To boldly go where no one has gone before.');
-      banner1.displayBanner();
-      +--------------------------------------------+
-      |                                            |
-      | To boldly go where no one has gone before. |
-      |                                            |
-      +--------------------------------------------+
+  ```javascript
+  let banner1 = new Banner('To boldly go where no one has gone before.');
+  banner1.displayBanner();
+  +--------------------------------------------+
+  |                                            |
+  | To boldly go where no one has gone before. |
+  |                                            |
+  +--------------------------------------------+
 
 
-      let banner2 = new Banner('');
-      banner2.displayBanner();
-      +--+
-      |  |
-      |  |
-      |  |
-      +--+
-      ```
+  let banner2 = new Banner('');
+  banner2.displayBanner();
+  +--+
+  |  |
+  |  |
+  |  |
+  +--+
+  ```
 
 8. A _circular queue_ is a collection of objects stored in a buffer that is treated as though it is connected end-to-end in a circle. When an object is added to this circular queue, it is added to the position that immediately follows the most recently added object, while removing an object always removes the object that has been in the queue the longest.
 

@@ -6,17 +6,17 @@
 
 2. What will the following code produce? Why? How do we fix it?
 
-      ```javascript
-      function Dog() {
-        this.bark = function() {
-          console.log("Woof Woof!");
-        };
-      }
+```javascript
+function Dog() {
+  this.bark = function() {
+    console.log("Woof Woof!");
+  };
+}
 
-      const juanPablo = Dog();
+const juanPablo = Dog();
 
-      juanPablo.bark(); // ?
-      ```
+juanPablo.bark(); // ?
+```
 
 3. What is the `__proto__` property?
 
@@ -25,6 +25,7 @@
 5. In the pseudo-classical object creation pattern, why do we add methods to the constructor function's prototype instead of defining them directly within the body of the function?
 
 6. What does the following code produce? Why? How do we fix it?
+
       ```javascript
       const RECTANGLE = {
         area: function() {

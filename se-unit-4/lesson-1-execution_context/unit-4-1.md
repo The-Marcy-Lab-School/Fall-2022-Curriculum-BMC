@@ -255,15 +255,19 @@ const obj = {
   }
 };
 
-obj.waitThenPrintNum(); // logs "NaN", because the property "count" is not in the window object.
+obj.waitThenPrintNum(); // Should print 11 but instead logs "NaN", because the property "count" is not in the window object.
 ```
 
-With arrow functions the `this` keyword always represents the object that defined the arrow function.
+In this example, the normal function is being invoked by `window.setTimeout` so `window` is the closest parent object. As a result, `this` points to the `window` object and `window.count` is `undefined`.
+
+This is the perfect time to use an arrow function as a callback. With an arrow function, `this` will point to whatever the `this` value is for the context where the arrow function was defined.
 
 ```js
 const obj = {
   count: 10,
   waitThenPrintNum() {
+
+    console.log(this); // prints the `obj` object
     
     // obj.waitThenPrintNum is what defines the arrow function so `this` points to `obj`
     window.setTimeout(() => {
@@ -274,5 +278,7 @@ const obj = {
   }
 };
 
-obj.waitThenPrintNum(); // prints 11
+obj.waitThenPrintNum(); // prints 11 after 3000ms (3 seconds)
 ```
+
+In this version of the code, the arrow function is defined within the function `waitThenPrintNum` whose `this` value is `obj`. Therefore, the value of `this` within the arrow function will also be `obj` and `this.count` points to `obj.count`.

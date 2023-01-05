@@ -131,58 +131,58 @@
   Note also that we placed the `getPerimeter` method on the object assigned to the prototype property of the `Triangle` function so that all `Triangle` instances can share this method (behavior).
 
 9. 
-      ```javascript
-      function User(first, last){
-        if (!(this instanceof User)) {
-          return new User(first, last);
-        }
+  ```javascript
+  function User(first, last){
+    if (!(this instanceof User)) {
+      return new User(first, last);
+    }
 
-        this.name = first + ' ' + last;
-      }
+    this.name = first + ' ' + last;
+  }
 
-      const name = 'Jane Doe';
-      const user = User('John', 'Doe');
+  const name = 'Jane Doe';
+  const user = User('John', 'Doe');
 
-      console.log(name);        // => Jane Doe
-      console.log(user.name);   // => John Doe
-      ```
+  console.log(name);        // => Jane Doe
+  console.log(user.name);   // => John Doe
+  ```
 
   Constructor functions built this way are called **"scope-safe constructors"**. Most of JavaScript's built-in constructors, such as `Object`, `Regex` and `Array`, are scope-safe.
 
-      ```javascript
-      new Object();          // Object {}
-      Object();              // Object {}
-      new Array(1, 2, 3);    // [1, 2, 3]
-      Array(1, 2, 3);        // [1, 2, 3]
-      ```
+  ```javascript
+  new Object();          // Object {}
+  Object();              // Object {}
+  new Array(1, 2, 3);    // [1, 2, 3]
+  Array(1, 2, 3);        // [1, 2, 3]
+  ```
 
 10.
-      ```javascript
-      function SavingsAccount() {
-        this.balance = 0;
-      }
+  ```javascript
+  function SavingsAccount() {
+    this.balance = 0;
+  }
 
-      SavingsAccount.prototype.showBalance = function() {
-        return this.balance; 
-      };
+  SavingsAccount.prototype.showBalance = function() {
+    return this.balance; 
+  };
 
-      SavingsAccount.prototype.depositFunds = function(funds) {
-        if (funds <= 0) {
-          console.log('Please include a deposit amount that is greater than 0.')
-          return this.balance;
-        }
+  SavingsAccount.prototype.depositFunds = function(funds) {
+    if (funds <= 0) {
+      console.log('Please include a deposit amount that is greater than 0.')
+      return this.balance;
+    }
 
-        this.balance += funds;
-        return this.balance;
-      }
+    this.balance += funds;
+    return this.balance;
+  }
 
-      SavingsAccount.prototype.withdrawFunds = function(funds) {
-        if (funds > this.balance) {
-          console.log('Insufficient Funds');
-          return this.balance;
-        }
+  SavingsAccount.prototype.withdrawFunds = function(funds) {
+    if (funds > this.balance) {
+      console.log('Insufficient Funds');
+      return this.balance;
+    }
 
-        this.balance -= funds;
-        return this.balance;
-      }
-      ```
+    this.balance -= funds;
+    return this.balance;
+  }
+  ```
