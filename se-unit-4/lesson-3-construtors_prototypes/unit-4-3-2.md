@@ -1,5 +1,16 @@
 # Pseudoclassical Object Creation Pattern
 
+Essential Question: What are the benefits of using constructors vs. factory functions?
+
+<details><summary>Ben's Answer</summary>
+
+* Instances of the constructor function are directly tied to the prototype that they descend from — each object created by a constructor function has its internal `[[Prototype]]` property automatically assigned to the constructor's prototype (`Car.prototype`). 
+* We can use the `instanceof` property to confirm that this link exists
+* We can achieve prototypal inheritance
+
+</details>
+<br>
+
 ### Constructors vs. Factory Functions
 
 There is no prototype setting with factory functions so instances created from the factory function aren't truly instances of that factory.
@@ -182,9 +193,7 @@ In reverse, we say that `Car` is a **superclass** of `RaceCar`
 <br>
 
 ### Benefits of the constructor function pattern compared to Factory Functions:
-* Slightly less code
-* Each object created by a constructor function has its internal `[[Prototype]]` property automatically assigned to the constructor's prototype (`Car.prototype`). 
-* Instances of the constructor function are directly tied to the prototype that they descend from
+* Instances of the constructor function are directly tied to the prototype that they descend from — each object created by a constructor function has its internal `[[Prototype]]` property automatically assigned to the constructor's prototype (`Car.prototype`). 
 * We can use the `instanceof` property to confirm that this link exists
 * We can achieve prototypal inheritance
 
@@ -213,7 +222,7 @@ function makeUser(username) {
 
 Refactor the factory function above to be a constructor function called `User`.
 
-The methods `login` and `logout` should be declared on the constructor's `prototype` as inherited methods (not as own properties)
+The methods `login` and `logout` should be declared on the constructor's `prototype` as inherited methods (not as own properties) following the pseudoclassical object creation pattern.
 
 Then, declare two instances of `User` and demonstrate the usage of their properties/methods.
 
