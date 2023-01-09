@@ -34,9 +34,21 @@ Car.prototype.makeSound = function() { // inherited method
 
 const dailyDriver = new Car("Chevy", "Cobalt");
 dailyDriver.makeSound(); // Chevy Cobalt goes Vroom
+
+console.log(dailyDriver);
 ```
 
-Remember how prototypal inheritance works...
+### Warmup Questions
+
+1. What property of `dailyDriver` can we look at to see its inheritance?
+2. What object(s) does `dailyDriver` inherit from?
+3. What method can we use to see which properties are directly owned by `dailyDriver`? Where does that method come from?
+
+<details><summary>Ben's Answer</summary>
+
+* The internal `[[Prototype]]` property of `dailyDriver` points to `Car.prototype`
+* We say that "`dailyDriver` is a `Car`" but it is also an `Object`
+* We can use the `.hasOwnProperty` to see which properties are directly owned by the instance `dailyDriver` and which are a part of the `Car.prototype`
 
 ```js
 // these two point to the same thing
@@ -57,13 +69,29 @@ console.log("dailyDriver owns makeSound:", dailyDriver.hasOwnProperty("makeSound
 console.log("Car.prototype owns makeSound:", Car.prototype.hasOwnProperty("makeSound"));
 ```
 
+</details>
+
 ## ES6 Class Syntax
 
 In object-oriented programming, constructor functions are associated with a concept called a **class**. A **class** defines a type of object by determining:
 * How to create instances of that class through a `constructor` function
 * What instances of that class can do through _inherited methods_
 
+We can refactor the `Car` constructor function above using ES6 `class` syntax like so:
+
 ```js
+// Constructor Function
+function Car(make, model) {
+    // owned properties
+    this.make = make;
+    this.model = model;
+    this.sound = "Vroom";
+}
+Car.prototype.makeSound = function() { // inherited method
+    console.log(`${this.make} ${this.model} goes ${this.sound}`);
+}
+
+// ES6 Class Syntax
 class Car {
     constructor(make, model) {
         this.make = make;
@@ -81,14 +109,42 @@ myCar.makeSound();
 console.log(myCar);
 ```
 
+**Q: What differences do you notice? What similarities are there?**
+
+<details><summary>Ben's Answer</summary>
+
+* The `class` keyword is used to define `Car`, not the `function` keyword.
+* The `Car` class just has curly braces surrounding the `constructor` function and the `makeSound` method.
+* The `constructor` function within the `Car` class is the same as the `Car` constructor function.
+* We don't have to reference the `.prototype` to define `makeSound()`
+* When we create `myCar`, the syntax is the same.
+
+</details>
+
 ### ES6 Class Syntax Under the Hood
+
+When we use the `class` syntax, we are essentially defining a prototype object for instances of that class to inherit from. 
 
 Some key facts about `class` syntax:
 
-* The `constructor` function is required
-* instances created by
+* The syntax for definine a class is `class ClassName {}`
+* The `constructor` function is required and you _must_ use the `new` keyword to invoke it.
+* Methods (like `makeSound`) are placed on the prototype.
+* References to the name of the class `Car` will return the `constructor` function
 
 ```js
+class Car {
+    constructor(make, model) {
+        this.make = make;
+        this.model = model;
+        this.sound = "Vroom";
+    }
+    
+    makeSound() { // an inherited method
+        console.log(this.sound);
+    }
+}
+
 const myCar = new Car('Chevy', 'Cobalt');
 console.log(myCar instanceof Car);
 console.log(myCar.__proto__ === Car.prototype); 
@@ -98,6 +154,71 @@ console.log(Car.prototype); // { constructor: f, makeSound: f }
 console.log(Car === Car.prototype.constructor); // true
 ```
 
+**Question: What properties do instances of the `Car` class "own"? What is inherited?**
+
+<details><summary>Ben's Answer</summary>
+
+* `make`, `model`, and `sound` are "own" properties
+* `constructor` and `makeSound` are inherited methods from the `Car` prototype
+
+</details>
+
+### Refactor Challenge
+
+Convert the psuedoclassical object creation pattern below into ES6 class syntax
+
+```js
+function User(username) {
+  this.username = username;
+  this.isOnline = false;
+}
+User.prototype.login = function() {
+  this.isOnline = true;
+  console.log(`${this.username} has logged in!`);
+}
+User.prototype.logout = function() {
+  this.isOnline = false;
+  console.log(`${this.username} has logged out!`);
+}
+
+const userBen = new User("Ben");
+userBen.login();
+userBen.logout();
+```
+
+<details><summary>Solution</summary>
+
+```js
+class User {
+  constructor (username) {
+    this.username = username;
+    this.isOnline = false;
+  }
+  login() {
+    this.isOnline = true;
+    console.log(`${this.username} has logged in!`);
+  }
+  logout() {
+    this.isOnline = false;
+    console.log(`${this.username} has logged out!`);
+  }
+}
+
+const userBen = new User("Ben");
+userBen.login();
+userBen.logout();
+```
+
+</details>
+
+**Question: What are the benefits of ES6 `class` syntax compared to the pseudo-classical object creation pattern?**
+
+<details><summary> Ben's Answer </summary>
+
+* Cleaner syntax
+* Don't need to manually fuss with the `.prototype` property
+
+</details>
 
 ## Inheritance
 
@@ -208,4 +329,25 @@ const myCar = new Car('Chevy', 'Cobalt');
 
 const carCollection = [myOldsMobile, myRaceCar, myCar];
 carCollections.forEach(car => car.makeSound());
+```
+
+## Types of Methods
+
+### Getter
+
+### Setter
+
+### Static
+
+Static Methods are methods defined directly on the class itself and are NOT methods of instances.
+
+Some common examples include:
+
+```js
+Object.getPrototypeOf()
+Object.setPrototypeOf()
+Object.keys()
+Object.values()
+
+Math.random();
 ```

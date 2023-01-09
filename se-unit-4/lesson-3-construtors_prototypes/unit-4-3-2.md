@@ -210,7 +210,7 @@ In reverse, we say that `Car` is a **superclass** of `RaceCar`
 
 Consider the code below:
 
-**Question 1: What pattern does this demonstrate? Does this demonstrate encapsulation?**
+**Question 1: What pattern does this demonstrate?**
 
 ```js
 function makeUser(username) {
@@ -240,3 +240,46 @@ Finally, create a subclass constructor function called `Admin` that inherits met
 **Discussion Question 2: What operator can you use to check if your `Admin` instance is a descendant of `User`?**
 
 **Discussion Question 3: What is the `.__proto__` property and what is the `.prototype` property? Which objects hold those properties?**
+
+
+
+<details><summary>Ben's Solution</summary>
+
+```js
+function User(username) {
+  this.username = username;
+  this.isOnline = false;
+}
+User.prototype.login = function() {
+  this.isOnline = true;
+  console.log(`${this.username} has logged in!`);
+}
+User.prototype.logout = function() {
+  this.isOnline = false;
+  console.log(`${this.username} has logged out!`);
+}
+
+function Admin(username) {
+    this.username = username;
+    this.isOnline = false;
+}
+Admin.prototype.performSecretOperation = function() {
+    console.log("Doing secret admin stuff...");
+}
+Admin.prototype.__proto__ = User.prototype;
+
+const basicUser = new User("Ben");
+basicUser.login();
+
+const adminUser = new Admin("Reuben");
+adminUser.login();
+adminUser.performSecretOperation();
+
+console.log(adminUser instanceof User);
+console.log(adminUser instanceof Admin);
+```
+
+1. The original pattern is a factory function. 
+2. We can use the `instanceof` operator to check if `adminUser` is an `Admin` and a `User`
+3. The `__proto__` property of an object points to the `.prototype` property of the cosntrctor that was used to create the object. `__proto__` is a property of instances of a constructor while `prototype` is a property of constructor functions.
+</details>
