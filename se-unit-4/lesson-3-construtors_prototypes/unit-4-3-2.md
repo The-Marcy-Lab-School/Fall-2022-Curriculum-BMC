@@ -183,9 +183,15 @@ To describe the relationship beetween `RaceCar` and `Car`, we can say that `Race
 
 In reverse, we say that `Car` is a **superclass** of `RaceCar`
 
-<details><summary>A note on <code>Object.setPrototypeOf()</code> vs. <code>Object.create()</code></summary>
-<br>
+### Benefits of the constructor function pattern compared to Factory Functions:
+* Instances of the constructor function are directly tied to the prototype that they descend from — each object created by a constructor function has its internal `[[Prototype]]` property automatically assigned to the constructor's prototype (`Car.prototype`). 
+* We can use the `instanceof` property to confirm that this link exists
+* We can achieve prototypal inheritance
 
+<br>
+<details><summary> 💡 A note on <code>Object.setPrototypeOf()</code> vs. <code>Object.create()</code></summary>
+<br>
+ 
 > Note: There are 3 ways of setting a constructor's prototype to point to another prototype:
 > ```js
 > // These two are the same
@@ -199,12 +205,6 @@ In reverse, we say that `Car` is a **superclass** of `RaceCar`
 > The Object.create() method creates a new object with the provided object set as the new object's prototype. Using this third approach is technically the fastest operation at scale which is why you'll see it in most examples on the internet. However, it does overwrite the `RaceCar.prototype` entirely which means that the `constructor` function is also overwritten and you'll need to reset it manually. See this [stackoverflow question](https://stackoverflow.com/questions/58377377/extends-object-setprototypeof-vs-object-create) for more info.
 
 </details>
-<br>
-
-### Benefits of the constructor function pattern compared to Factory Functions:
-* Instances of the constructor function are directly tied to the prototype that they descend from — each object created by a constructor function has its internal `[[Prototype]]` property automatically assigned to the constructor's prototype (`Car.prototype`). 
-* We can use the `instanceof` property to confirm that this link exists
-* We can achieve prototypal inheritance
 
 ## Challenge
 
