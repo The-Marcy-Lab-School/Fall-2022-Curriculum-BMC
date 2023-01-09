@@ -47,9 +47,9 @@ Remember, Higher Order Functions are functions that...
 
 </details>
 
-Each time we create a function, we create a **closure**: *the set of variables created inside of a function*.
+Each time we create a function, we create a **closure**. A closure is the combination of a function bundled together (en**closed**) with references to its surrounding state. In other words, a closure gives you access to an outer function's scope from an inner function.
 
-**To use a closure**, we create variables in a function and return an _inner function_ that references those variables in the outer function's scope.
+**To use a closure**, we return an _inner function_ that references variables in the outer function's scope.
 
 ```js
 function getRandomPrinter() { // outer function
