@@ -11,26 +11,35 @@ Essential Question: What are the benefits of using constructors vs. factory func
 </details>
 <br>
 
-### Constructors vs. Factory Functions
+### Prototypes: Constructors vs. Factory Functions
 
-There is no prototype setting with factory functions so instances created from the factory function aren't truly instances of that factory.
+Every function has a `.prototype` property that is an object containing a `.constructor` property.
+
+Objects created from factory functions have no direct link that factory function's `.prototype`. They are just plain objects.
 
 ```js
-function makeSquare(sideLength) {
+function makeSquare(s) {
     return {
-        sideLength,
+        sideLength: s,
         getArea() {
-            return this.sideLength * this.sideLength
+            return this.sideLength ** 2;
         }
     }
 }
 
 const mySquare = makeSquare(4);
+
+console.log(makeSquare.prototype); // { constructor: f makeSquare(s) }
+console.log(mySquare.__proto__); // Object.prototype
+
 console.log(mySquare instanceof makeSquare); // false
-console.log(Object.getPrototypeOf(mySquare) === makeSquare.prototype); // false
 ```
 
-Let's look at our `Car` constructor example to see prototypes in action:
+Notice that `mySquare` is not an instance of `makeSquare` and instead is a direct instance of the `Object` class.
+
+If we have a constructor function and we call it with the `new` keyword, the object created by the constructor will be an **instance** of the constructor's **prototype**.
+
+Let's look at the `Car` constructor example to see prototypes in action:
 
 ```js
 function Car(make, model) {
@@ -45,14 +54,14 @@ function Car(make, model) {
 const myCar = new Car("Chevy", "Cobalt");
 
 // these are all the same object
-console.log(Object.getPrototypeOf(myCar));
-console.log(myCar.__proto__);
 console.log(Car.prototype);
+console.log(myCar.__proto__);
+console.log(Object.getPrototypeOf(myCar));
 
 console.log(myCar instanceof Car); // true
 ```
 
-`myCar` has an internal prototype (`__proto__`) property that points to the `Car.prototype` object. This connects the instance `myCar` to its constructor function `Car`.
+`myCar` has an internal `[[Prototype]]` property that is accessible via `.__proto__` or `Object.getPrototypeOf`. It points to the `Car.prototype` object. This connects the instance `myCar` to its constructor function `Car`.
 
 ### Storing Methods on the Constructor's Prototype
 
