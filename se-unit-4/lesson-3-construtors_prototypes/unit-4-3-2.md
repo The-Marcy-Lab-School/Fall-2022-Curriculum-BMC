@@ -122,11 +122,11 @@ Car.prototype.addPassenger = function(name) {
 }
 
 const myCar = new Car("Chevy", "Cobalt");
-console.log(myCar.hasOwnProperty("addPassenger"));   // false
-console.log(Car.prototype.hasOwnProperty("addPassenger"));   // true
-
 const myOtherCar = new Car("Ferrari", "Portofino");
 console.log(myCar.addPassenger === myOtherCar.addPassenger); // true
+
+console.log(myCar.hasOwnProperty("addPassenger"));   // false
+console.log(Car.prototype.hasOwnProperty("addPassenger"));   // true
 ```
 
 This approach to creating objects is called the **pseudo-classical object creation pattern**.
