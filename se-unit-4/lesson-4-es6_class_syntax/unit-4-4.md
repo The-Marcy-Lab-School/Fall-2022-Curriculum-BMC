@@ -22,51 +22,51 @@
 With **constructor functions**, we learned how to create many **instances** of a particular type of object. Each instance can be created with its own unique properties and can inherit methods from that constructors `prototype`.
 
 ```js
-function Car(make, model) {
+// Pseudo-classical object creation pattern
+function Person(name, age) {
     // owned properties
-    this.make = make;
-    this.model = model;
-    this.sound = "Vroom";
+    this.name = name;
+    this.age = age;
+    this.friends = [];
 }
-Car.prototype.makeSound = function() { // inherited method
-    console.log(`${this.make} ${this.model} goes ${this.sound}`);
+Person.prototype.makeFriend = function(friend) { // inherited method
+  this.friends.push(friend)
+  console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
 }
 
-const dailyDriver = new Car("Chevy", "Cobalt");
-dailyDriver.makeSound(); // Chevy Cobalt goes Vroom
-
-console.log(dailyDriver);
+const ben = new Person("Ben", 28);
+ben.makeFriend("Ann"); // Hi Ann, my name is Ben, nice to meet you!
 ```
 
 ### Warmup Questions
 
-1. What property of `dailyDriver` can we look at to see its inheritance?
-2. What object(s) does `dailyDriver` inherit from?
-3. What method can we use to see which properties are directly owned by `dailyDriver`? Where does that method come from?
+1. What _property_ of `ben` can we look at to see what prototype it inherits from?
+2. What object(s) does `ben` inherit from?
+3. What method can we use to see which properties are directly owned by `ben`? Where does that method come from?
 
 <details><summary>Ben's Answer</summary>
 
-* The internal `[[Prototype]]` property of `dailyDriver` points to `Car.prototype`
-* We say that "`dailyDriver` is a `Car`" but it is also an `Object`
-* We can use the `.hasOwnProperty` to see which properties are directly owned by the instance `dailyDriver` and which are a part of the `Car.prototype`
+* The internal `[[Prototype]]` property of `ben` points to `Person.prototype` (accessed via `ben.__proto__` and `Object.getPrototypeOf(ben)`)
+* We say that "`ben` is a `Person`" but it is also an `Object`
+* We can use the `.hasOwnProperty` to see which properties are directly owned by the instance `ben` and which are a part of the `Person.prototype`
 
 ```js
 // these two point to the same thing
-console.log("Car.prototype:", Car.prototype);
-console.log("dailyDriver.__proto__:", dailyDriver.__proto__);
+console.log("Person.prototype:", Person.prototype);
+console.log("ben.__proto__:", ben.__proto__);
 
 // these are true
-console.log("dailyDriver is a Car:", dailyDriver instanceof Car);
-console.log("dailyDriver is an Object:", dailyDriver instanceof Object);
+console.log("ben is a Person:", ben instanceof Person);
+console.log("ben is an Object:", ben instanceof Object);
 
 // make, model, and sound are all properties that each instance owns
-console.log("dailyDriver owns make:", dailyDriver.hasOwnProperty("make"));
-console.log("dailyDriver owns model:", dailyDriver.hasOwnProperty("model"));
-console.log("dailyDriver owns sound:", dailyDriver.hasOwnProperty("sound"));
+console.log("ben owns make:", ben.hasOwnProperty("make"));
+console.log("ben owns model:", ben.hasOwnProperty("model"));
+console.log("ben owns sound:", ben.hasOwnProperty("sound"));
 
-// makeSound is defined on the Car's prototype and is inherited
-console.log("dailyDriver owns makeSound:", dailyDriver.hasOwnProperty("makeSound"));
-console.log("Car.prototype owns makeSound:", Car.prototype.hasOwnProperty("makeSound"));
+// makeFriend is defined on the Person's prototype and is inherited
+console.log("ben owns makeFriend:", ben.hasOwnProperty("makeFriend"));
+console.log("Person.prototype owns makeFriend:", Person.prototype.hasOwnProperty("makeFriend"));
 ```
 
 </details>
@@ -77,47 +77,36 @@ In object-oriented programming, constructor functions are associated with a conc
 * How to create instances of that class through a `constructor` function
 * What instances of that class can do through _inherited methods_
 
-We can refactor the `Car` constructor function above using ES6 `class` syntax like so:
+We can refactor the `Person` constructor function above using ES6 `class` syntax like so:
 
 ```js
-// Constructor Function
-function Car(make, model) {
-    // owned properties
+// ES6 Class Syntax
+class Person {
+  constructor(name, age) {
     this.make = make;
     this.model = model;
-    this.sound = "Vroom";
-}
-Car.prototype.makeSound = function() { // inherited method
-    console.log(`${this.make} ${this.model} goes ${this.sound}`);
-}
-
-// ES6 Class Syntax
-class Car {
-    constructor(make, model) {
-        this.make = make;
-        this.model = model;
-        this.sound = "Vroom";
-    }
-    
-    makeSound() { // an inherited method
-        console.log(this.sound);
-    }
+    this.friends = [];
+  }
+  makeFriend(friend) { // inherited method
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
 }
 
-const myCar = new Car('Chevy', 'Cobalt');
-myCar.makeSound();
-console.log(myCar);
+const ben = new Person('Ben', 28);
+ben.makeFriend('Ann');
 ```
 
 **Q: What differences do you notice? What similarities are there?**
 
 <details><summary>Ben's Answer</summary>
 
-* The `class` keyword is used to define `Car`, not the `function` keyword.
-* The `Car` class just has curly braces surrounding the `constructor` function and the `makeSound` method.
-* The `constructor` function within the `Car` class is the same as the `Car` constructor function.
-* We don't have to reference the `.prototype` to define `makeSound()`
-* When we create `myCar`, the syntax is the same.
+* The `class` keyword is used to define `Person`, not the `function` keyword.
+* The `Person` class just has curly braces surrounding the `constructor` function and the `makeFriend` method.
+* The `constructor` function within the `Person` class is the same as the `Person` constructor function.
+* We don't have to reference the `.prototype` to define `makeFriend()`
+* `makeFriend()` is defined without using the `function` keyword
+* When we create the instance `ben`, the syntax is the same.
 
 </details>
 
@@ -129,37 +118,38 @@ Some key facts about `class` syntax:
 
 * The syntax for definine a class is `class ClassName {}`
 * The `constructor` function is required and you _must_ use the `new` keyword to invoke it.
-* Methods (like `makeSound`) are placed on the prototype.
-* References to the name of the class `Car` will return the `constructor` function
+* Methods (like `makeFriend`) do NOT use the `function` keyword
+* Methods (like `makeFriend`) are automatically placed on the prototype.
+* References to the name of the class `Person` will return the `constructor` function
 
 ```js
-class Car {
-    constructor(make, model) {
-        this.make = make;
-        this.model = model;
-        this.sound = "Vroom";
-    }
-    
-    makeSound() { // an inherited method
-        console.log(this.sound);
-    }
+class Person {
+  constructor(name, age) {
+    this.make = make;
+    this.model = model;
+    this.friends = [];
+  }
+  makeFriend(friend) { // inherited method
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
 }
 
-const myCar = new Car('Chevy', 'Cobalt');
-console.log(myCar instanceof Car);
-console.log(myCar.__proto__ === Car.prototype); 
+const ben = new Person('Ben', 28);
+console.log(ben instanceof Person);
+console.log(ben.__proto__ === Person.prototype); 
 
-console.log(typeof Car); // function
-console.log(Car.prototype); // { constructor: f, makeSound: f }
-console.log(Car === Car.prototype.constructor); // true
+console.log(typeof Person); // function
+console.log(Person.prototype); // { constructor: f, makeFriend: f }
+console.log(Person === Person.prototype.constructor); // true
 ```
 
-**Question: What properties do instances of the `Car` class "own"? What is inherited?**
+**Question: What properties do instances of the `Person` class "own"? What is inherited?**
 
 <details><summary>Ben's Answer</summary>
 
-* `make`, `model`, and `sound` are "own" properties
-* `constructor` and `makeSound` are inherited methods from the `Car` prototype
+* `name`, `age`, and `friends` are "own" properties
+* `constructor` and `makeFriend` are inherited methods from the `Person` prototype
 
 </details>
 
@@ -220,126 +210,11 @@ userBen.logout();
 
 </details>
 
-## Inheritance
-
-**Inheritance** is a pillar of object-oriented programming. It describes a relationship between two classes: a **subclass** that inherits methods from a **superclass**. As a result, instances of the sub-class can use methods defined in a super-class. 
-
-**Question: What are two of JavaScript's essential data types that demonstrate inheritance? Which is the subclass and which is the superclass?**
-
-<details><summary>Answer</summary>
-
-The `Array` class is a sub-class of the `Object` class which is the super-class.
-
-Every Array inherits methods from the `Array.prototype` which inherits methods from the `Object.prototype`. Therefore, all arrays can use `Object.prototype` methods like `toString()`.
-
-</details>
-<br>
-
-### Inheritance Chain
-
-Inheritance can exist in a chain in which a sub-sub-class can inherit from a sub-class which inherits from a super-class.
-
-![](./practice/diagram1.png)
-
-**Question: What is the inheritance relationship between the `Professor` class and the `Person` class? What about the `GraduateStudent` class and the `Person` class?**
-
-### Establishing Inheritance Between Custom Classes
-
-Imagine we have our `Car` class and we want to make a subclass called `RaceCar`. It will inherit the properties and methods of the superclass `Car` but we will modify the `sound` property to be a bit more exciting.
-
-To do this, we use the `extends` keyword when defining our `RaceCar` class:
-
-```js
-// First create the superclass Car
-class Car {
-  constructor(make, model) {
-    this.make = make;
-    this.model = model;
-    this.sound = "Vroom";
-  }
-  
-  makeSound() {
-    console.log(this.sound);
-  }
-}
-
-// Then extend Car to create the subclass RaceCar
-class RaceCar extends Car {
-  constructor(make, model) {
-    super(make, model);
-    this.sound = "ZOOOOOM"; // make some modifications
-  }
-}
-
-const myRaceCar = new RaceCar("Ferrari", "Portofino")
-myRaceCar.makeSound();
-console.log(myRaceCar);
-
-console.log(myRaceCar instanceof RaceCar);
-console.log(myRaceCar instanceof Car);
-```
-
-* `extends` sets `Car` as the prototype for `RaceCar`
-* `RaceCar` will inherit properties and methods 
-from `Car`
-* Instances of `RaceCar` are also instances of `Car`
-* `RaceCar` is said to be a **subclass** of `Car`. 
-* `Car` is said to be a **superclass** of `RaceCar`.
-
-## Polymorphism
-
-```js
-class Car {
-  constructor(make, model) {
-    this.make = make;
-    this.model = model;
-    this.sound = "Vroom";
-  }
-  
-  makeSound() {
-    console.log(this.sound);
-  }
-}
-
-class RaceCar extends Car {
-  constructor(make, model) {
-    super(make, model);
-    this.sound = "ZOOOOOM";
-  }
-}
-
-class OldsMobile extends Car {
-  constructor(make, model) {
-    super(make, model);
-    this.sound = "POP! putt putt putt...";
-  }
-
-  makeSound() { // method override
-    if (Math.random() > 0.5) {
-        super.makeSound(); 
-    } else {
-        console.log("POP! POP! SCREEEEEECH!");
-    }
-  }
-}
-
-const myOldsMobile = new OldsMobile("Ford", "Model T");
-const myRaceCar = new RaceCar("Ferrari", "Portofino");
-const myCar = new Car('Chevy', 'Cobalt');
-
-const carCollection = [myOldsMobile, myRaceCar, myCar];
-carCollections.forEach(car => car.makeSound());
-```
-
-## Types of Methods
-
-### Getter
-
-### Setter
+## Other types of Methods and Properties
 
 ### Static
 
-Static Methods are methods defined directly on the class itself and are NOT methods of instances.
+Static Methods are methods that are called directly on the class itself and are NOT methods of instances.
 
 Some common examples include:
 
@@ -348,6 +223,103 @@ Object.getPrototypeOf()
 Object.setPrototypeOf()
 Object.keys()
 Object.values()
-
-Math.random();
+Array.isArray()
 ```
+
+To make a method static, just add the `static` keyword in front of the method name:
+
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.friends = [];
+  }
+  
+  makeFriend(friend) { // inherited method
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
+  
+  static makeLoner(person) {
+    person.friends = [];
+  }
+}
+
+const ben = new Person("Ben", 28);
+ben.makeFriend("Maya");
+ben.makeFriend("Reuben");
+console.log(ben.friends); // ["Maya", "Reuben"]
+Person.makeLoner(ben);
+console.log(ben.friends); // []
+```
+
+### Private Properties and Methods
+
+We can add `#` infront of any property/method to make it private (usable only within the class's methods and not accessible outside).
+
+```js
+class Person {
+  
+  #friends; // declare a private "field"
+
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.#friends = []; // make the property private
+  }
+  makeFriend(friend) {
+    this.#friends.push(friend) // we can use it inside the class
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
+  doActivity(activity) {
+    console.log(`${this.name} is ${activity}`);
+  }
+}
+
+const ben = new Person("Ben", 28);
+ben.makeFriend("Maya");
+console.log(ben.#friends); // SyntaxError
+```
+
+### Getter & Setter
+
+The `get` syntax binds an object property to a function that will be called when that property is looked up. This can be useful if we want to give users access to private fields but want to control _how_ that access is given.
+
+```js
+class Person {
+  
+  #friends = []; // declare a private "field"
+
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  makeFriend(friend) {
+    this.#friends.push(friend); // we can use it inside the class
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
+  doActivity(activity) {
+    console.log(`${this.name} is ${activity}`);
+  }
+
+  get friends() {
+    return this.#friends.slice();
+  }
+}
+
+const ben = new Person("Ben", 28);
+ben.makeFriend("Maya");
+ben.makeFriend("Reuben");
+
+// our getter makes a copy
+const bensFriends = ben.friends;
+console.log(bensFriends);
+bensFriends.pop();
+console.log(bensFriends);
+
+// the original is unchanged
+console.log(ben.friends);
+```
+
+The `set` syntax binds an object property to a function to be called when there is an attempt to set that property.
