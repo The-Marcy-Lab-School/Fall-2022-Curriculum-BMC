@@ -153,7 +153,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 * **1/9/23 - Pseudoclassical Object Creation** | [Notes](./se-unit-4/lesson-3-construtors_prototypes/unit-4-3-2.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/sAeiaIFqYR5leDap4FbHGSE3Rw92czSpDYX9CdXYFSKV0Alyg674L27HAXo4Hpeq.CfsVJTHG-SWWInjd)
 * **1/9/23 - Lab Review** | [Closure Examples](./se-unit-4/lesson-2-closures/examples.js) | [Lab Review Recording](https://us02web.zoom.us/rec/share/vUuB6Aip8TCjKsMky1dopKOlP41yqH3qhOB_rZ_h4Of5jmLGLNAEYqtunugjtY-r.26qiaJhK_NXZDlRi)
-* **1/10/23 - [Classes](./se-unit-4/lesson-4-es6_class_syntax)** | [Notes](./se-unit-4/lesson-4-es6_class_syntax/unit-4-4.md)
+* **1/10/23 - [Classes](./se-unit-4/lesson-4-es6_class_syntax)** | [Notes](./se-unit-4/lesson-4-es6_class_syntax/unit-4-4.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/8PTiotx-jw5oYnSa_ERZxzkCJYmJksisP4sSA-wgWPpzP0Xqa28ndMTV6NuYAjda.lja2_f1oyhR1YAiL)
 * **1/11/23 - [Inheritance](./se-unit-4/lesson-5-inheritance/)** | [Notes](./se-unit-4/lesson-5-inheritance/unit-4-5.md)
 * **1/12/23 - [OO Design](./se-unit-4/lesson-6-oo-design/)** | 
 * **1/13/23 - OO Design Day 2** | 
