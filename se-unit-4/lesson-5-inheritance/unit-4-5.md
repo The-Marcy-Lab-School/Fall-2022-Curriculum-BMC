@@ -23,9 +23,47 @@ Inheritance can exist in a chain in which a sub-sub-class can inherit from a sub
 
 ### Establishing Inheritance Between Custom Classes
 
-Imagine we have our `Person` class and we want to make a subclass called `Programmer`. It will inherit the properties and methods of the superclass `Person` but it will have additional properties and behaviors that only instances of `Programmer` will have.
+Imagine we have our `Person` class and we want to make another called `Programmer`. It will inherit the properties and methods of the superclass `Person` but it will have additional properties and behaviors that only instances of `Programmer` will have.
 
-To do this, we use the `extends` and `super` keywords to define our `Programmer` class:
+```js
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.friends = [];
+  }
+  makeFriend(friend) {
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
+  doActivity(activity) {
+    console.log(`${this.name} is ${activity}`);
+  }
+}
+
+class Programmer {
+  constructor(name, age, language) {
+    this.name = name;
+    this.age = age;
+    this.friends = [];
+    this.favoriteLanguage = language
+  }
+  makeFriend(friend) {
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
+  doActivity(activity) {
+    console.log(`${this.name} is ${activity}`);
+  }
+  code() {
+    this.doActivity(`writing some ${this.favoriteLanguage} code.`);
+  }
+}
+```
+
+**What bad practice exists this code?**
+
+To remove the repetative code AND to establish a relationship betwen `Programmer` and `Person`, we use the `extends` and `super` keywords to define our `Programmer` class:
 
 ```js
 class Person {
