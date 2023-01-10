@@ -17,7 +17,7 @@ Every Array inherits methods from the `Array.prototype` which inherits methods f
 
 Inheritance can exist in a chain in which a sub-sub-class can inherit from a sub-class which inherits from a super-class.
 
-![](./practice/diagram1.png)
+![](./diagram1.png)
 
 **Question: What is the inheritance relationship between the `Professor` class and the `Person` class? What about the `GraduateStudent` class and the `Person` class?**
 
