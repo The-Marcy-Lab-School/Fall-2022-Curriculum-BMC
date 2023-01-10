@@ -40,14 +40,14 @@ ben.makeFriend("Ann"); // Hi Ann, my name is Ben, nice to meet you!
 
 ### Warmup Questions
 
-1. What _property_ of `ben` can we look at to see what prototype it inherits from?
-2. What object(s) does `ben` inherit from?
-3. What method can we use to see which properties are directly owned by `ben`? Where does that method come from?
+1. What object(s) does `ben` inherit from?
+2. What _property_ of `ben` can we reference to see the `Person.prototype` that it inherits from?
+3. What properties does `ben` own and which properties are inherited?
 
 <details><summary>Ben's Answer</summary>
 
-* The internal `[[Prototype]]` property of `ben` points to `Person.prototype` (accessed via `ben.__proto__` and `Object.getPrototypeOf(ben)`)
 * We say that "`ben` is a `Person`" but it is also an `Object`
+* The internal `[[Prototype]]` property of `ben` points to `Person.prototype` (accessed via `ben.__proto__` and `Object.getPrototypeOf(ben)`)
 * We can use the `.hasOwnProperty` to see which properties are directly owned by the instance `ben` and which are a part of the `Person.prototype`
 
 ```js
