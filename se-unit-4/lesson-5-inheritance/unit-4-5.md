@@ -62,14 +62,24 @@ console.log(reuben instanceof Programmer);
 console.log(reuben instanceof Person);
 ```
 
+**Question 1: What does `extends` do?**
+
+**Quesiton 2: What does `super` do?**
+
+**Question 3: What do we know about the relationship between a `Programmer` and a `Person`?**
+
+<details><summary>Ben's Answer</summary>
+
 * `extends` sets `Person.prototype` as the prototype for `Programmer.prototype`
+* `super()` calls the `Person` constructor function using its own value of `this`
+* `super.doActivity` calls the `Person`'s `doActivity` method using its own value of `this`
 * `Programmer` is said to be a **subclass** of `Person`. 
 * `Person` is said to be a **superclass** of `Programmer`.
 * `Programmer` will inherit properties and methods 
 from `Person`
 * Instances of `Programmer` are also instances of `Person`
-* `super()` calls the superclass's constructor function
-* `super.doActivity` calls the superclass's `doActivity` method
+
+</details>
 
 ## Polymorphism
 
