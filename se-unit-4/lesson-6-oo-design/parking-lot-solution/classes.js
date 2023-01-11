@@ -124,13 +124,17 @@ class Vehicle {
     this.parkInSpot(parkingSpot);
   }
 
-  parkInSpot(parkingSpot) {
-    this.parkingSpots.push(parkingSpot);
-    parkingSpot.park(this);
+  parkInSpot(spot) {
+    this.parkingSpots.push(spot);
+    spot.park(this);
+    console.log(`parking in spot ${spot.spotNumber}`)
   }
 
   leaveParkingSpot() {
-    this.parkingSpots.forEach(spot => spot.removeVehicle());
+    this.parkingSpots.forEach(spot => {
+      spot.removeVehicle()
+      console.log(`leaving spot ${spot.spotNumber}`)
+    });
     this.parkingSpots = [];
   }
 }
@@ -149,8 +153,7 @@ class Bus extends Vehicle {
   }
 
   parkInSpot(parkingSpots) {
-    this.parkingSpots.push(...parkingSpots)
-    parkingSpots.forEach(parkingSpot => parkingSpot.park(this))
+    parkingSpots.forEach(spot => super.parkInSpot(spot))
   }
 }
 

@@ -20,3 +20,10 @@ console.log(lot);
 console.log(car1);
 console.log(car2);
 console.log(bus);
+
+car2.leaveParkingSpot()
+bus.leaveParkingSpot()
+
+console.log(car2);
+console.log(bus);
+console.log(lot);
