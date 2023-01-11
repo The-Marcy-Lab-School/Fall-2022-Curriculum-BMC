@@ -322,4 +322,27 @@ console.log(bensFriends);
 console.log(ben.friends);
 ```
 
-The `set` syntax binds an object property to a function to be called when there is an attempt to set that property.
+The `set` syntax binds an object property to a function to be called when there is an attempt to set that property. Used in combination with `get`, we can create fully private properties.
+
+```js
+class Person {
+  
+  #name;
+  
+  constructor(name) {
+    this.#name = name
+  }
+  
+  set name(name) {
+    if (name === this.#name) {
+      console.log("new name must be different")
+      return;
+    }
+    this.#name = name;
+  }
+  
+  get name() {
+    return this.#name;
+  }
+}
+```
