@@ -155,7 +155,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/9/23 - Lab Review** | [Closure Examples](./se-unit-4/lesson-2-closures/examples.js) | [Lab Review Recording](https://us02web.zoom.us/rec/share/vUuB6Aip8TCjKsMky1dopKOlP41yqH3qhOB_rZ_h4Of5jmLGLNAEYqtunugjtY-r.26qiaJhK_NXZDlRi)
 * **1/10/23 - [Classes](./se-unit-4/lesson-4-es6_class_syntax)** | [Notes](./se-unit-4/lesson-4-es6_class_syntax/unit-4-4.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/8PTiotx-jw5oYnSa_ERZxzkCJYmJksisP4sSA-wgWPpzP0Xqa28ndMTV6NuYAjda.lja2_f1oyhR1YAiL)
 * **1/11/23 - [Inheritance](./se-unit-4/lesson-5-inheritance/)** | [Notes](./se-unit-4/lesson-5-inheritance/unit-4-5.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/9JHM7gfOtrkn8yFuXLdRIu824Wm_IysVmoeTdrRnORgj48bbfxOb-D2l0DiJo767.vkqmSqnlwL_IDX4y)
-* **1/12/23 - [OO Design](./se-unit-4/lesson-6-oo-design/)** | 
+* **1/12/23 - [OO Design](./se-unit-4/lesson-6-oo-design/)** | [Classes Interacting with Classes](./se-unit-4/lesson-6-oo-design/person-example) | [Neopets Example](https://gist.github.com/thuyanduong/cf516fc35ae454df76c048d7773d741e) 
 * **1/13/23 - OO Design Day 2** | 
 
 ### Week 4
