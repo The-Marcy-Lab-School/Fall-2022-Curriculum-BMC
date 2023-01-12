@@ -10,4 +10,4 @@
 Note: Some of these learning resources use JAVA in their examples. It's more important that you understand the **concepts** around Object-Oriented Design and be able to apply them to JavaScript, os any other programming language!
 
 ## Practice
-* [Build an Amazon Store](/lesson-6-oo-design/practice)
+* [Build an Amazon Store](./practice)
