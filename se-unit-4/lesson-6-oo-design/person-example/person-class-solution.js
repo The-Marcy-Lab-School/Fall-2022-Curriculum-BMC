@@ -5,9 +5,14 @@ class Person {
     this.name = name;
     this.friends = [];
   }
-  makeFriend(friend) {
-    this.friends.push(friend)
-    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  makeFriend(personObj) {
+      if (this.friends.includes(personObj)) {
+          return;
+      } else {
+        this.friends.push(personObj);
+        personObj.makeFriend(this);
+        console.log(`Hi ${personObj.name}, my name is ${this.name}, nice to meet you!`);
+      }
   }
   doActivity(activity) {
     console.log(`${this.name} is ${activity}`);
@@ -37,9 +42,13 @@ const reuben = new Programmer("Reuben", "JavaScript");
 const carmen = new ProgrammingTeacher("Carmen", "JavaScript");
 
 // Let's refactor the Person class so that we can pass in an entire person object to makeFriend
+reuben.makeFriend(ben);
+carmen.makeFriend(ben);
 
 /* 
 ben.makeFriend(reuben);
 ben.makeFriend(carmen);
 carmen.makeFriend(reuben);
 */
+
+console.log(ben);
