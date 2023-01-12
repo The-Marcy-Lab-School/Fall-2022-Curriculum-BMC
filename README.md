@@ -164,6 +164,11 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/18/23 - Review**
 * **1/19/23 - Unit 4 Assessment**
 
+<hr>
+
+**Object Oriented Programming is great but...**
+- [Use Composition Instead of Inheritance](https://www.youtube.com/watch?v=nnwD5Lwwqdo)
+
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
 ## Unit 7 - Server-side Web Development with Node.js
