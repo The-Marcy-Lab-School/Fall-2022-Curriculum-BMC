@@ -86,34 +86,29 @@ const battery = new Item("AAA Battery", .5);
 const macbookCharger = new Item("Macbook Charger", 50);
 
 class Inventory {
+    // itemQuantities is an object of objects
     constructor(itemQuantities) {
-        
+        // This will be an object of arrays
         this.items = {}
         
+        // Each key in itemQuantities is an itemName
+        // Each value is an object: { quantity, price }
         for (const itemName in itemQuantities) {
-            
+            // make an array for each itemName
             this.items[itemName] = []
             
+            // pull out the quantity and price from the value
             const { quantity, price } = itemQuantities[itemName];
-            // const itemInfo = itemQuantities[itemName];
-            // const quantity = itemInfo.quantity;
-            // const price = itemInfo.price
+            
+            // based on the quantity, make that many new Items
             for (let i = 0; i < quantity; i++) {
                 const newItem = new Item(itemName, price);
                 this.items[itemName].push(newItem)
             }
         }
-        
-        console.log(this.items)
     }
-    
-    getItem() {
-        
-    }
-    
-    returnItem() {
-        
-    }
+    getItem() {}
+    returnItem() {}
 }
 
 // Test Driven Development
@@ -125,4 +120,4 @@ const itemsToAddToInventory = {
     PS5: {quantity: 2, price: 500}
 }
 const inventory = new Inventory(itemsToAddToInventory);
-
+console.log(inventory);
