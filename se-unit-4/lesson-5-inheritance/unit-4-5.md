@@ -151,7 +151,7 @@ class ProgrammingTeacher extends Programmer {
     super(name, age, language)
   }
   teach() {
-    super.doActivity(`showing their ${this.favoriteLanguage} code to their class`);
+    this.doActivity(`showing their ${this.favoriteLanguage} code to their class`);
   }
 }
 
