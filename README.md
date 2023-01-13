@@ -165,7 +165,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/11/23 - [Inheritance](./se-unit-4/lesson-5-inheritance/)** | [Notes](./se-unit-4/lesson-5-inheritance/unit-4-5.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/9JHM7gfOtrkn8yFuXLdRIu824Wm_IysVmoeTdrRnORgj48bbfxOb-D2l0DiJo767.vkqmSqnlwL_IDX4y)
 * **1/11/23 - Lab Review** | [Lab Review Recording](https://us02web.zoom.us/rec/share/d4j2UysPmn8ozcFnQYkmkhNVzkXS6LQLhbDqX5LOaAaQm9IcQPfGE93WAhtvb35Q.sbE76DgCk-PrPz5W)
 * **1/12/23 - [OO Design](./se-unit-4/lesson-6-oo-design/)** | [Classes Interacting with Classes](./se-unit-4/lesson-6-oo-design/person-example) | [Neopets Class Practice](https://gist.github.com/thuyanduong/cf516fc35ae454df76c048d7773d741e) | [Lecture Recording](https://us02web.zoom.us/rec/share/Is4xIyKBh5u0lxaIRU_GgzYB7r3y2jTizDZUmbqU8b_WXcluSyku_WIdQOWEGWZY.AnuwZ2l0RHaPsQbo)
-* **1/13/23 - OO Design Day 2** | 
+* **1/13/23 - OO Design Day 2** | [Item/Inventory Code](./se-unit-4/lesson-6-oo-design/practice/1-13-23.js) | [Lecture Recording](https://us02web.zoom.us/rec/share/t_re0V_FAF46_g5EiTNAKlM0V-VFKdkN5H-DwzRyvM1NqvH-vpZdlaprTBBjeTQ.-Np5WC2ZK5YnKJed)
 
 ### Week 4
 
