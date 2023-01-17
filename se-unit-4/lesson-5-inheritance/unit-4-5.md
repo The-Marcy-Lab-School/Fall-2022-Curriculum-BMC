@@ -25,6 +25,7 @@ Inheritance can exist in a chain in which a sub-sub-class can inherit from a sub
 
 Imagine we have our `Person` class and we want to make another called `Programmer`. It will inherit the properties and methods of the superclass `Person` but it will have additional properties and behaviors that only instances of `Programmer` will have.
 
+**How NOT to do it**:
 ```js
 class Person {
   constructor(name, age) {
@@ -61,8 +62,9 @@ class Programmer {
 }
 ```
 
-**What bad practice exists this code?**
+Q: What bad practice exists this code?
 
+#### Extends and Super
 To remove the repetative code AND to establish a relationship betwen `Programmer` and `Person`, we use the `extends` and `super` keywords to define our `Programmer` class:
 
 ```js
@@ -116,7 +118,7 @@ Then, with a partner, discuss these questions:
 <details><summary>Ben's Answer</summary>
 
 * `extends` makes the `Programmer` inherit methods from `Person`. It sets `Person.prototype` as the prototype for `Programmer.prototype`
-* `super()` invokes the `Person` constructor function using its own value of `this`.
+* `super()` invokes the `Person` constructor function using its own value of `this`. Any properties that the `Person` constructor sets on `this` will  be set on `Programmer`.
 * `Programmer` is said to be a **subclass** of `Person`. 
 * `Person` is said to be a **superclass** of `Programmer`.
 * `Programmer` will inherit properties and methods 
