@@ -15,9 +15,8 @@
 * What are the ways in which we can examine the link between an object and its constructor?
 * What is prototypal inheritance and how does it differ from class-based inheritance seen in object-oriented languages?
 
-## Day 2
 
-### The WHY
+#### The WHY
 
 ![cookie cutters](img/cookie_cutters.png)
 
@@ -27,7 +26,7 @@ With constructor functions, we define an object blueprint and the constructor fu
 
 Factory functions and constructor functions are basically the same, but there are some technical details that distinguish them. Let's take a look.
 
-### Factory Functions vs. Constructors
+## Factory Functions vs. Constructors
 
 Factory functions have parameters and return an object that has properties and methods.
 ```js
@@ -79,7 +78,7 @@ console.log(myCar);
 
 </details>
 
-#### The `new` keyword
+### The `new` keyword
 
 The `new` keyword does a lot for us:
 * It creates a new empty object
@@ -124,7 +123,7 @@ user.id = 123;
 
 The existence of these constructor functions illuminates an interesting fact about JavaScript data values: **everything is an object**.
 
-### Prototypes
+## Prototypes
 
 Key Terms:
 
