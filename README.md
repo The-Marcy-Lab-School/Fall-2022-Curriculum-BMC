@@ -141,6 +141,12 @@ Unit 2 Assessment Resources:
 
 ## Unit 4 - Object-Oriented Programming
 
+**Additional Resources**
+* [W3 Schools - What is `this`?](https://www.w3schools.com/js/js_this.asp)
+* [MDN - What is a closure?](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)
+* [What are Factory Functions?](https://www.javascripttutorial.net/javascript-factory-functions/)
+* [Classes are great but... use Composition Instead of Inheritance](https://www.youtube.com/watch?v=nnwD5Lwwqdo)
+
 ### Week 1
 
 * **12/8/22 - [Understanding Objects](./se-unit-4/lesson-0-understanding_objects)** | [Notes](./se-unit-4/lesson-0-understanding_objects/unit-4-0.js) | [Shopping Cart Practice](se-unit-4/lesson-0-understanding_objects/shoppingCart.md) ([Solution](se-unit-4/lesson-0-understanding_objects/shoppingCartSolution.js)) | [Lecture Recording](https://us02web.zoom.us/rec/share/DP8UcjWIlaL9SklbcM9fyFW_Qq1u1O-17vUTLW9Cc1G4ysLOc0My1EkhO7_vSUIH.PnVGAspkfH2CtbZA)
@@ -172,11 +178,6 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/17/23 - OO Design Day 3**
 * **1/18/23 - Review**
 * **1/19/23 - Unit 4 Assessment**
-
-<hr>
-
-**Object Oriented Programming is great but...**
-- [Use Composition Instead of Inheritance](https://www.youtube.com/watch?v=nnwD5Lwwqdo)
 
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
