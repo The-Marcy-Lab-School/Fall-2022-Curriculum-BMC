@@ -162,16 +162,16 @@ Key Terms:
 * `instance.__proto__` (deprecated)
 * `instanceof` operator
 
-We know that the constructor `Array` has a `prototype` property containing the methods inherited by all array instances. When we print an array, we can also see this same prototype by looking at the internal `[[Prototype]]` property
+The `[[Prototype]]` property of any object points to the `prototype` object of the constructor it was created by.
 
 ```js
 const arr = [1,2,3];
 console.log(arr); // look for the [[Prototype]] property (its greyed out)
 ```
 
-In code, we can access the `prototype` that an instance inherits from using the `Object.getPrototypeOf` method. It accepts any object.
+In code, the `Object.getPrototypeOf` method is how we can reference this object directly. It accepts any object.
 
-> We can also use the deprecated `__proto__` property
+> We can also use the deprecated `obj.__proto__` property
 
 ```js
 const arr = [1,2,3];
@@ -179,7 +179,7 @@ Object.getPrototypeOf(arr)  // => Array.prototype
 arr.__proto__               // => Array.prototype, don't use this
 ```
 
-If we want to know if an object _instance_ is in fact descended from a constructor function's `prototype`, we can use the `instanceof` operator. It uses `getPrototypeOf` under the hood.
+The `instanceof` operator can tell us if an object descends from a  particular prototype.
 
 **Q: What do each of these expressions return?**
 
