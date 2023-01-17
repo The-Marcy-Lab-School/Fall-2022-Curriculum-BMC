@@ -171,6 +171,41 @@ This demonstrates polymorphism because `ben`, `reuben`, and `carmen` are all des
 
 A `Person` can come in "many forms".
 
+Let's look at another example of polymorphism. In this example, we have a `Car` class and a `RaceCar` subclass. 
+
+```js
+class Car {
+  constructor(make, model) {
+    this.make = make;
+    this.model = model;
+  }
+  
+  makeSound() {
+    console.log("Vrooom");
+  }
+}
+
+class RaceCar extends Car {
+  constructor(make, model) {
+    super(make, model);
+  }
+  
+  makeSound() {
+    console.log("ZOOOOOM!");
+  }
+}
+
+const car1 = new Car("Chevy", "Cobalt");
+const car2 = new RaceCar("Ferrari", "Portofino");
+
+car1.makeSound();
+car2.makeSound();
+```
+
+Both classes implement a method called `makeSound` but they have their own implementations. The code that calls these methods doesn't care how each class implements `makeSound()` — as long as instances of `Car` and `RaceCar` have a `makeSound` method at all, the code will work.
+
+`Car` objects can come in many forms (they look the same, but they may behave differently).
+
 ## Using Classes with Other Classes
 
 **Challenge: Refactor the `makeFriend` method so that instead of adding a friend's name, it takes in a Person object. When a person is added as a friend, both person objects should have each other as friends.**
