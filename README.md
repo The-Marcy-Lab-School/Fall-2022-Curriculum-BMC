@@ -177,7 +177,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 ### Week 4
 
 * **1/17/23 - OO Design Day 3** | [Finished Code](./se-unit-4/lesson-6-oo-design/practice/1-17-23.js) | [UML Diagram](./se-unit-4/lesson-6-oo-design/practice/UML.png) | [Lecture Recording](https://us02web.zoom.us/rec/share/uykXxUc5dpR_hXTM3nLrSCwVh-hIc7c0U1OqbZUmDM6tnCMvEJky_fxDx2xxeQt6.hQ3xY_V16WjEkij-)
-* **1/18/23 - Review** | [Review Study Notes w/ Examples and Definitions](./se-unit-4/lesson-6-oo-design/Unit-4-Assessment-Review-Notes) | [Lecture Recording pt 1 (this and classes and inheritance)](https://us02web.zoom.us/rec/share/v44m1VDQSNBb-zNASap9PNILuAy4anp_hWHtxbIBvxvGOxJRLOlLFHvbW60VjD-a.77nrJ0terHpTfkK6) | [Lecture Recording pt 2 (Polymorphism & Closure)](https://us02web.zoom.us/rec/share/3JHejMc8STwqQOlsNRMhGFZ8bW_9H338qfZPggViLOwirAuPSGi6cXi_H9i1rv5R.bLWU7GTq-WlM3ziO)
+* **1/18/23 - Review** | [Review Study Notes w/ Examples and Definitions](./se-unit-4/lesson-6-oo-design/Unit-4-Assessment-Review-Notes) | [Recording 1 (this, classes and inheritance)](https://us02web.zoom.us/rec/share/v44m1VDQSNBb-zNASap9PNILuAy4anp_hWHtxbIBvxvGOxJRLOlLFHvbW60VjD-a.77nrJ0terHpTfkK6) | [Recording 2 (Polymorphism & Closure)](https://us02web.zoom.us/rec/share/3JHejMc8STwqQOlsNRMhGFZ8bW_9H338qfZPggViLOwirAuPSGi6cXi_H9i1rv5R.bLWU7GTq-WlM3ziO)
 * **1/19/23 - Unit 4 Assessment**
 
 ## Unit 5 - The Document Object Model (DOM)
