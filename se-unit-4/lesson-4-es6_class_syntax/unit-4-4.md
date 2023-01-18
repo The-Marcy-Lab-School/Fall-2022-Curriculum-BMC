@@ -83,8 +83,8 @@ We can refactor the `Person` constructor function above using ES6 `class` syntax
 // ES6 Class Syntax
 class Person {
   constructor(name, age) {
-    this.make = make;
-    this.model = model;
+    this.name = name;
+    this.age = age;
     this.friends = [];
   }
   makeFriend(friend) { // inherited method

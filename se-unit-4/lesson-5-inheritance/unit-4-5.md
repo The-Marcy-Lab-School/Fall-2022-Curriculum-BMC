@@ -25,6 +25,7 @@ Inheritance can exist in a chain in which a sub-sub-class can inherit from a sub
 
 Imagine we have our `Person` class and we want to make another called `Programmer`. It will inherit the properties and methods of the superclass `Person` but it will have additional properties and behaviors that only instances of `Programmer` will have.
 
+**How NOT to do it**:
 ```js
 class Person {
   constructor(name, age) {
@@ -61,9 +62,10 @@ class Programmer {
 }
 ```
 
-**What bad practice exists this code?**
+Q: What bad practice exists this code?
 
-To remove the repetative code AND to establish a relationship betwen `Programmer` and `Person`, we use the `extends` and `super` keywords to define our `Programmer` class:
+#### Extends and Super
+To remove the repetitive code AND to establish a relationship betwen `Programmer` and `Person`, we use the `extends` and `super` keywords to define our `Programmer` class:
 
 ```js
 class Person {
@@ -83,8 +85,8 @@ class Person {
 
 class Programmer extends Person {
   constructor(name, age, language) {
-    super(name, age);
-    this.favoriteLanguage = language
+    super(name, age);                 // invoke the Person constructor, setting the name, age, and friends properties on `this`
+    this.favoriteLanguage = language; // add a favoriteLanguage property only for Programmers
   }
   
   // makeFriend is inherited
@@ -116,7 +118,7 @@ Then, with a partner, discuss these questions:
 <details><summary>Ben's Answer</summary>
 
 * `extends` makes the `Programmer` inherit methods from `Person`. It sets `Person.prototype` as the prototype for `Programmer.prototype`
-* `super()` invokes the `Person` constructor function using its own value of `this`.
+* `super()` invokes the `Person` constructor function using its own value of `this`. Any properties that the `Person` constructor sets on `this` will  be set on `Programmer`.
 * `Programmer` is said to be a **subclass** of `Person`. 
 * `Person` is said to be a **superclass** of `Programmer`.
 * `Programmer` will inherit properties and methods 
@@ -130,46 +132,68 @@ from `Person`
 
 Polymorphism means "many forms".
 
-Pollymorphism is a concept in object-oriented programming where multiple types of objects share "signatures" (they have the same property and method names even if their values/implementations are different).
+Polymorphism is a concept in object-oriented programming where multiple types of objects share "signatures" (they have the same property and method names even if their values/implementations are different).
 
-The impact of polymorphism is that our program can reliably use different types of objects in the same way if they all descend from the same parent class.
+The impact of polymorphism is that **our program can reliably use different types of objects in the same way** if they all descend from the same parent class.
 
 ```js
 class Person {
-  constructor(name, age) { /*...*/ }
-  makeFriend(friend) { /*...*/ }
-  doActivity(activity) { /*...*/ }
+  constructor(name) {
+    this.name = name;
+    this.friends = [];
+  }
+  makeFriend(friend) {
+    this.friends.push(friend)
+    console.log(`Hi ${friend}, my name is ${this.name}, nice to meet you!`);
+  }
 }
 
 class Programmer extends Person {
-  constructor(name, age, language) { /*...*/ }
-  code() { /*...*/ }
-}
-
-class ProgrammingTeacher extends Programmer {
-  constructor(name, age, language) {
-    super(name, age, language)
-  }
-  teach() {
-    this.doActivity(`showing their ${this.favoriteLanguage} code to their class`);
+  constructor(name, language) {
+    super(name);
+    this.favoriteLanguage = language;
   }
 }
 
-const ben = new Person("Ben", 28);
-const reuben = new Programmer("Reuben", 35, "JavaScript");
-const carmen = new ProgrammingTeacher("Carmen", 22, "JavaScript");
+class Musician extends Person {
+  constructor(name, instrument) {
+    super(name);
+    this.instrument = instrument;
+  }
+  makeFriend(friend) { // Method Override
+    super.makeFriend(friend)
+    console.log(`I can play the ${this.instrument}. Do you know any instruments?`);
+  }
+}
 
-const people = [ben, reuben, carmen];
+const carmen = new Person("Carmen");
+const reuben = new Programmer("Reuben", "JavaScript");
+const ben = new Musician("Ben", "Piano");
+const people = [carmen, reuben, ben];
 
-// Ben, reuben, and carmen are all hanging out
+// Ben, reuben, and carmen are all hanging out. 
 // Maya enters the room and wants to be friends with everyone!
 // Because everyone is a Person, we can do this:
-people.forEach(person => person.makeFriend("Maya"))
+people.forEach(person => person.makeFriend("Maya"));
+
+// Output:
+// "Hi Maya, my name is Carmen, nice to meet you!"
+// "Hi Maya, my name is Reuben, nice to meet you!"
+// "Hi Maya, my name is Ben, nice to meet you!"
+// "I can play the Piano. Do you know any instruments?"
 ```
 
-This demonstrates polymorphism because `ben`, `reuben`, and `carmen` are all descendants of `Person` which we know defines a `makeFriend` method. Even though `reuben` and `carmen` are different subtypes, we can treat them as `Person` objects as well.
+This demonstrates polymorphism because `ben`, `reuben`, and `carmen` are all descendants of `Person` which we know defines a `makeFriend` method. Even though `reuben` and `carmen` are different subtypes, we can treat them as `Person` objects as well. 
 
 A `Person` can come in "many forms".
+
+**Q: What does `super.makeFriend(friend)` do?**
+
+<details><summary>Ben's Answer</summary>
+
+  `super.makeFriend(friend)` will call the superclass's `makeFriend` method, adding the `friend` argument to the `this.friends` array and printing out the greeting message. It is common when method overriding to invoke the superclass's version of the method and then adding on additional statements to execute.
+  
+</details>
 
 Let's look at another example of polymorphism. In this example, we have a `Car` class and a `RaceCar` subclass. 
 
@@ -190,8 +214,10 @@ class RaceCar extends Car {
     super(make, model);
   }
   
-  makeSound() {
-    console.log("ZOOOOOM!");
+  makeSound() { // Method Override
+    console.log("Vah... Vah...");
+    super.makeSound();
+    console.log("WHEEEEEEE!!!!");
   }
 }
 
@@ -203,6 +229,8 @@ car2.makeSound();
 ```
 
 Both classes implement a method called `makeSound` but they have their own implementations. The code that calls these methods doesn't care how each class implements `makeSound()` — as long as instances of `Car` and `RaceCar` have a `makeSound` method at all, the code will work.
+
+The subclass `RaceCar` uses the `Car` `makeSound` method sandwiched between two of its own `console.log` statements.
 
 `Car` objects can come in many forms (they look the same, but they may behave differently).
 
