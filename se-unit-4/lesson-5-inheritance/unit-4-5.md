@@ -179,7 +179,6 @@ people.forEach(person => person.makeFriend("Maya"));
 // Output:
 // "Hi Maya, my name is Carmen, nice to meet you!"
 // "Hi Maya, my name is Reuben, nice to meet you!"
-// "Do you also know how to program in JavaScript?"
 // "Hi Maya, my name is Ben, nice to meet you!"
 // "I can play the Piano. Do you know any instruments?"
 ```
