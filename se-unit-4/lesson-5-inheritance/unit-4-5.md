@@ -153,10 +153,6 @@ class Programmer extends Person {
     super(name);
     this.favoriteLanguage = language;
   }
-  makeFriend(friend) { // Method Override
-    super.makeFriend(friend);
-    console.log(`Do you also know how to program in ${this.favoriteLanguage}?`);
-  }
 }
 
 class Musician extends Person {
