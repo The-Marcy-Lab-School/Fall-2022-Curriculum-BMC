@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-**[> Skip to current unit <](#unit-4---object-oriented-programming)**
+**[> Skip to current unit <](#unit-x---data-structures-and-algorithms)**
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
@@ -8,6 +8,7 @@
 * [Unit 2 - JavaScript](#unit-2---javascript)
 * [Unit 3 - Structured Problem Solving](#unit-3---structured-problem-solving)
 * [Unit 4 - Object-Oriented Programming](#unit-4---object-oriented-programming)
+* [Unit X - Data Structures and Algorithms](#unit-x---data-structures-and-algorithms)
 * [Unit 5 - The Document Object Model (DOM)](#unit-5---the-document-object-model-dom)
 * [Unit 6 - Asynchronous JavaScript](#unit-6---asynchronous-javascript)
 * [Unit 7 - Server-side Web Development with Node.js](#unit-7---server-side-web-development-with-nodejs)
@@ -179,6 +180,29 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/17/23 - OO Design Day 3** | [Finished Code](./se-unit-4/lesson-6-oo-design/practice/1-17-23.js) | [UML Diagram](./se-unit-4/lesson-6-oo-design/practice/UML.png) | [Lecture Recording](https://us02web.zoom.us/rec/share/uykXxUc5dpR_hXTM3nLrSCwVh-hIc7c0U1OqbZUmDM6tnCMvEJky_fxDx2xxeQt6.hQ3xY_V16WjEkij-)
 * **1/18/23 - Review** | [Review Study Notes w/ Examples and Definitions](./se-unit-4/lesson-6-oo-design/Unit-4-Assessment-Review-Notes.md) | [Recording 1 (this, classes and inheritance)](https://us02web.zoom.us/rec/share/v44m1VDQSNBb-zNASap9PNILuAy4anp_hWHtxbIBvxvGOxJRLOlLFHvbW60VjD-a.77nrJ0terHpTfkK6) | [Recording 2 (Polymorphism & Closure)](https://us02web.zoom.us/rec/share/3JHejMc8STwqQOlsNRMhGFZ8bW_9H338qfZPggViLOwirAuPSGi6cXi_H9i1rv5R.bLWU7GTq-WlM3ziO)
 * **1/19/23 - Unit 4 Assessment**
+
+## Unit X - Data Structures and Algorithms
+
+### Week 1
+* **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | Lecture Recording 
+* **1/24/23 - Linked Lists** | [Notes](./se-unit-xlesson-1-linked-lists/linked-lists.md) | Lecture Recording
+* **1/25/23 - Linked Lists** | Lecture Recording
+* **1/26/23 - Stacks and Queues** | [Notes](./se-unit-xlesson-2-stacks-queues/stacks-queues.md) | Lecture Recording
+* **1/27/23 - Stacks and Queues** | Lecture Recording
+
+### Week 2
+
+* **1/30/23 - Review** | Lecture Recording
+* **1/31/23 - Hash Maps** | [Notes](./se-unit-xlesson-3-hash-maps/hash-maps.md) | Lecture Recording
+* **2/1/23 - Recursion** | [Notes](./se-unit-xlesson-4-recursion/recursion.md) | Lecture Recording
+* **2/2/23 - Recursion** | Lecture Recording
+* **1/3/23 - Review** | Lecture Recording
+
+### Week 3
+
+* **1/6/23 - Trees** | [Notes](./se-unit-xlesson-5-trees/trees.md) | Lecture Recording
+* **1/7/23 - Trees** | Lecture Recording
+* **1/8/23 - Review** | Lecture Recording
 
 ## Unit 5 - The Document Object Model (DOM)
 ## Unit 6 - Asynchronous JavaScript
