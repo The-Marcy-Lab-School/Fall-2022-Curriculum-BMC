@@ -1,27 +1,28 @@
-# Unit 11 Lesson 5: Introduction to Trees
-
-## Key Terms
-* tree
-* node
-* edge
-* root
-* path
-* children
-* sibling
-* subtree
-* leaf node
-* level
-* height
-* binary tree
+# Lesson: Trees
 
 ## Essential Question
-* What are the three properties of a tree?
+* What are properties of a tree?
 * Where do we encounter tree data structures in computer science?
 * What data sets are best suited to be represented using a tree?
 
-## Learning Assignments
-1. **Tutorial:** Python for Data Structures, Algorithms, and Interviews - [_Section 16: Trees_](https://www.udemy.com/course/python-for-data-structures-algorithms-and-interviews/learn/lecture/3179656#overview) (thru Tree Traversals section)
-2. **Book:** Problem Solving w/ Algorithms and Data Structures in Python - _pp. 231 - 256_
+## Key Terms
+* Tree
+* Node
+* Edge
+* Root
+* Path
+* Children
+* Sibling
+* Subtree
+* Leaf node
+* Level
+* Height
+* Binary tree
+* Binary search tree
 
-## Problem Set
-* [Problem Set 11.5](https://github.com/The-Marcy-Lab-School/problem-set-11_5)
+## Learning Assignments
+1. **Tutorial:** [Tree data structure in javascript](https://learnersbucket.com/tutorials/data-structures/tree-data-structure-in-javascript/)
+2. **Codecademy:** [Pass the Technical Interview with JavaScript](https://www.codecademy.com/learn/paths/pass-the-technical-interview-with-javascript)
+   * Trees
+   * Binary Search and Search Trees
+3. **Tutorial:** [Implementation of Binary Search Tree in Javascript](https://www.geeksforgeeks.org/implementation-binary-search-tree-javascript/)
