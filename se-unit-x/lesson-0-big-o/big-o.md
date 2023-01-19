@@ -26,7 +26,7 @@ An algorithm like this one, in which the number of operations does NOT change as
 
 What about a more complicated algorithm, like determining if a value is in an array?
 
-<details><summary>**Q: How would you write such a function? How does the size of the input impact the number of operations required?**</summary>
+<details><summary><strong>Q: How would you write such a function? How does the size of the input impact the number of operations required?</strong></summary>
 
 ```js
 const letters = ['a', 'b', 'c'];
@@ -72,18 +72,18 @@ isInArray(letters, 'x');
 isInArray(letters, 'c');
 ```
 
-<details><summary>**Q1: How many iterations of the `for` loop will occur to find the letter `'a'`? What about the letter `'x'`? What about `'c'`?**</summary>
+<details><summary><strong>Q1: How many iterations of the `for` loop will occur to find the letter `'a'`? What about the letter `'x'`? What about `'c'`?</strong></summary>
 
 Finding the letter `'a'` takes one iteration. Finding `'x'` takes 3 iterations. Finding `'c'` takes 6 iterations. 
 </details>
 
-<details><summary>**Q2: What is the worst-case scenario for this kind of algorithm? What is the best-case scenario?**</summary>
+<details><summary><strong>Q2: What is the worst-case scenario for this kind of algorithm? What is the best-case scenario?</strong></summary>
 
 The best-case scenario is finding the letter at the beginning of the array. The worst-case scenario is finding the letter at the end of the array.
 
 </details>
 
-<details><summary>**Q3: How many iterations would it take in th worst-case scenario if there were 100 values in the array?**</summary>
+<details><summary><strong>Q3: How many iterations would it take in th worst-case scenario if there were 100 values in the array?</strong></summary>
 In an array of 100 values, the worst-case scenario would require 100 iterations.
 </details>
 
@@ -93,7 +93,7 @@ How can I measure the efficiency of this algorithm if the number of operations c
 
 We focus on the **worst-case runtime**.
 
-<details><summary>**Q: Why should we focus on the worst-case runtime?**</summary>
+<details><summary><strong>Q: Why should we focus on the worst-case runtime?</strong></summary>
 
 By focusing on the worst-case scenario, we can be prepared for that scenario. Maybe we are on the IT team and need to know how much computing power to provide. If we use the worst-case runtime as our benchmark, we can be prepared for anything. 
 
@@ -101,7 +101,7 @@ By focusing on the worst-case scenario, we can be prepared for that scenario. Ma
 
 The `isInArray` algorithm has a worst-case runtime equal to the number of elements in the array. If the array has 5 elements, the worst-case scenario takes 5 operations. If the array has 100 elements, the worst-case scenario takes 100 operations.
 
-<details><summary>**Q: If we have an array with `n` elements, what is the worst-case scenario number of operations?**</summary>
+<details><summary><strong>Q: If we have an array with `n` elements, what is the worst-case scenario number of operations?</strong></summary>
 
 The worst-case scenario is `n` operations! This kind of runtime, where the number of operations increases at the same rate as the size of input is called **linear runtime**.
 
