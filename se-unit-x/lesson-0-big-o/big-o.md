@@ -63,7 +63,7 @@ Notice that in `getFirstValue` the same number of operations (1) can be used reg
 
 When measuring the _efficiency_ of an algorithm, **the relationship between the size of the input and number of operations** is most important.
 
-Algorithms whose number of operations do NOT increase with larger and larger inputs are the most efficient. These algorithms, like `getFirstValue` are said to have a **constant runtime**. 
+* Algorithms whose number of operations do NOT increase with larger and larger inputs are the most efficient. These algorithms, like `getFirstValue` are said to have a **constant runtime**. 
 
 The algorithm `printArray` will perform one additional iteration for each new value in the input array. Even if the numbers are not exact, we can roughly say 
 
@@ -139,7 +139,7 @@ This has a Big-O runtime of O(n^2) because it uses nested loops!
 Consider the scenario: we have an array of letters in some random order and I want to know if a particular letter is in the array.
 
 ```js
-const letters = ['a', 'z', 'x', 'b', y', 'c'];
+const letters = ['a', 'z', 'x', 'b', 'y', 'c'];
 ```
 
 The algorithm for solving this requires us to iterate through every single value in the array, checking if each one is the letter we are looking for:
@@ -255,32 +255,13 @@ It's _very_ efficient.
 
 </details>
 
-
-<hr>
-<hr>
-<hr>
-<hr>
-
 ## Runtime Visualizations / Examples 
 
 #### Logarithmic: O(log n)
 
-These problems typically involve dividing the size of the input in half on each iteration. The most common example of this is a **binary search algorithm**. 
+These problems typically involve dividing the size of the input in half on each iteration. The most common example of this is a [**binary search algorithm**](https://www.youtube.com/watch?v=E6IOrZUpvSE). 
 
-* https://www.youtube.com/watch?v=E6IOrZUpvSE
-
-Imagine you are looking for the word "Programming" in a dictionary. We want to get to the "P" words to find it. You know the dictionary is in alphabetical order but there are thousands of pages. You wouldn't just flip through the pages from the start. That would take forever.
-
-To find the "P" words, we can use the binary search algorithm like this.
-* Go to the middle of the dictionary. You'll likely end up somewhere in the "M" range
-* "Programmer" comes after "M" so we want to now focus on the subset of the dictionary from "M-Z". Now the "problem size" is 1/2 of the original dictionary
-* Go to the middle of the subset "M-Z" and you'll get to around "S"
-* "Programmer" comes before "S" so we want to focus on the subset of the dictionary from "M-S". Now the "problem size" is 1/4 of the original dictionary
-* Go to the middle of the subset "M-S" which gets us to "P"!
-
-With a dictionary with 26 possible letters that a word can start with, we arrived at the letter "P" in only 3 repititions!
-
-### Linear: O(n)
+#### Linear: O(n)
 
 As the size of the input array grows, the runtime increases by the same amount:
 
@@ -305,11 +286,7 @@ Merge Sort Visualizations:
 
 ### Quadratic: O(n^2)
 
-As the size of the input array grows, the runtime increases by a factor of n:
-* an array of size 5 will require ~25 operations
-* an array of size 10 (+5) will require ~100 operations (+75)
-* an array of size 15 (+5) will require ~225 operations (+125)
-* an array of size 20 (+5) will require ~400 operations (+275)
+Slower sorting algorithms like **bubble sort**.
 
 https://visualgo.net/en/sorting
 
