@@ -1,52 +1,140 @@
 # Big O Notation
 
-### What is runtime?
+**Ben's Essential Questions:**
+* What is runtime analysis?
+* How do you count operations in an algorithm?
+* How do you determine the Big-O notation for an algorithm?
+* What are the 5 most important Big-O notations?
+* Why is runtime efficiency important?
 
-Runtime is a theoretical calculation of "how long" a particular algorithm takes to execute. "How long" can be measured by counting the number of operations / statements in the algorithm.
+### What is runtime analysis?
 
-For example, getting the first value of an array requires just one operation:
+Runtime analysis is a theoretical calculation of "how long" a particular algorithm takes to execute. "How long" can be measured by counting the number of operations / statements in the algorithm.
+
+For example, the algorithm for getting the first value of an array requires just one operation:
 
 ```js
-const letters = ['a', 'b', 'c'];
-const nums = [1,2,3,4,5,6,7,8,9,10,11,12,13, "..."];
-
 function getFirstValue(arr) {
     return letters[0];
 }
 
-const firstLetter = getFirstValue(letters); // 'a'
+const nums = [1,2,3];
+const letters = ['a','b','c','d','...','x','y','z'];
+
 const firstNum = getFirstValue(nums); // 1
+const firstLetter = getFirstValue(letters); // 'a'
 ```
+
+Let's look at a slightly more complex algorithm. 
+
+**Q: How many operations will `printArray` perform?**
+```js
+function printArray(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        console.log(arr[i])
+    }
+}
+
+const nums = [1,2,3];
+const letters = ['a','b','c','d','...','x','y','z'];
+
+printArray(nums);
+printArray(letters);
+```
+
+<details><summary>Ben's Answer</summary>
+
+`printArray`'s number of operations changes depending on how many values are in the array. We can break down the algorithm's operations like this:
+* We know that `let i = 0` is an operation that happens once before the loop starts
+* We know that `i < arr.length` is checked once before EVERY loop
+* We know that `console.log(arr[i])` happens once during EVERY loop
+* We know that `i++` happens once after EVERY loop.
+
+We also know that the number of loops is equal to the number of elements in the array. If we have 5 elements in the array, we will have 5 loops. If we have 100 elements in the array, we will have 100 loops. If we have `n` elements in the array, we will have `n` loops.
+
+So, we have one operation that happens once and 3 operations that happen `n` times. So, this algorithm runs `3n + 1` times! 
+</details>
+
+
 
 ### Runtime Efficiency
 
-Notice that the same number of operations (1) can be used regardless of how big the array is. This indicates that the `getFirstValue` function uses a _very_ efficient algorithm. A less efficient algorithm might take longer as the size of the input increases.
+Notice that in `getFirstValue` the same number of operations (1) can be used regardless of how big the array is. However, in `printArray`, the number of operations is dependent on the size of the array we pass in (`3n + 1`).
 
-An algorithm like this one, in which the number of operations does NOT change as the input size changes is said to have a **constant runtime**.
+When measuring the _efficiency_ of an algorithm, **the relationship between the size of the input and number of operations** is most important.
 
-What about a more complicated algorithm, like determining if a value is in an array?
+Algorithms whose number of operations do NOT increase with larger and larger inputs are the most efficient. These algorithms, like `getFirstValue` are said to have a **constant runtime**. 
 
-<details><summary><strong>Q: How would you write such a function? How does the size of the input impact the number of operations required?</strong></summary>
+The algorithm `printArray` will perform one additional iteration for each new value in the input array. Even if the numbers are not exact, we can roughly say 
 
-```js
-const letters = ['a', 'b', 'c'];
-const nums = [1,2,3,4,5,6,7,8,9,10,11,12,13, "..."];
-
-function isInArray(arr, value) {
-    for(let i = 0; i < arr.length; i++) {
-        if (arr[i] === value) {
-            return true;
-        }
-    }
-    return false;
-}
+```
+# of operations ≈≈ # of elements in the input
 ```
 
-This algorithm has **linear runtime** which means that as the input increases in size, so does the _expected_ number of operations in the _worst case scenario_.
+This kind of algorithm is said to have **linear runtime**.
+
+Algorithms with linear runtime are definitely less efficient than those with constant runtimes, but sometimes that the best we can do! In the grand scheme of things, linear runtimes are actually quite good!
+
+## Comparing Runtimes - Big-O notation
+
+When talking about runtimes, we use a notation called [**Big-O Notation**](https://simple.wikipedia.org/wiki/Big_O_notation). 
+
+When using Big-O notation, algorithms with runtimes like `3n + 1` get boiled down to the _largest term_ with _coefficients_ removed.
+
+**Q: What is the largest term in `3n + 1`? What is the coefficient?**
+
+<details><summary>Ben's Answer</summary>
+
+`3n` is the largest term and `3` is the coefficient. So, we only care about the `n`.
 
 </details>
 
-## A More Complex Algorithm
+Everything essentially boils down to seven Big-O runtimes but the five below are the ones you'll most commonly encounter.
+
+| Runtime Name 	| Big O Notation 	| How to identify                                                                                                	|
+|--------------	|----------------	|--------------------------------------------------------------------------------------------------------	|
+| Constant     	| O(1)           	| No iteration                                                                 	|
+| Logarithmic  	| O(log n)       	| The input size is divided in half on each iteration        	|
+| Linear       	| O(n)           	| An un-nested loop over elements of an array                                             	|
+| Log-Linear   	| O(n log n)     	| A O(log n) sub-algorithm is executed within a loop 	|
+| Quadratic    	| O(n^2)         	| A nested loop                                                                              	|
+
+> Other runtimes include exponential (`O(2^n)`) and factorial (`O(n!)`) but we won't cover these.
+
+These runtimes are written in order of efficiency. The chart below shows which kinds of runtimes are considered best and where we start to get concerned.
+
+![](./img/big-o-complexity-growth.jpeg)
+
+This chart shows why we focus on the largest term with coefficients removed.
+* An algorithm that has `3n + 5` operations will scale roughly at the same rate that another algorithm that has `10n + 100` operations
+* An algorithm that has `3n^2 + 5` operations will scale MUCH faster than another algorithm that has `3n + 5` operations.
+* So, we mostly care about the `n^2` vs. the `n` portions
+
+### Big-O Runtime Challenge:
+
+**Q: What is the Big-O notation for the algorithm below? How do you know?**
+
+```js
+function bubbleSort(arr) {
+    for (let i = 0; i < arr.length; i++) {
+		for (let j = i + 1; j < arr.length; j++) {
+			if (arr[j] < arr[i]) {
+				let temp = arr[i];
+        		arr[i] = arr[j];
+        		arr[j] = temp; 
+			}
+		}
+	}
+}
+```
+
+<details><summary>Ben's Answer</summary>
+
+This has a Big-O runtime of O(n^2) because it uses nested loops!
+
+</details>
+
+## Big-O is a Worst-Case Notation
 
 Consider the scenario: we have an array of letters in some random order and I want to know if a particular letter is in the array.
 
@@ -66,148 +154,120 @@ function isInArray(arr, value) {
     return false;
 }
 
-const letters = ['a', 'z', 'x', 'b', y', 'c'];
+const letters = ['a', 'z', 'x', 'b', 'y', 'c'];
 isInArray(letters, 'a');
 isInArray(letters, 'x');
 isInArray(letters, 'c');
 ```
 
-<details><summary><strong>Q1: How many iterations of the `for` loop will occur to find the letter `'a'`? What about the letter `'x'`? What about `'c'`?</strong></summary>
+<details><summary>Q1: How many iterations of the `for` loop will occur to find the letter `'a'`? What about the letter `'x'`? What about `'c'`?</summary>
 
 Finding the letter `'a'` takes one iteration. Finding `'x'` takes 3 iterations. Finding `'c'` takes 6 iterations. 
 </details>
 
-<details><summary><strong>Q2: What is the worst-case scenario for this kind of algorithm? What is the best-case scenario?</strong></summary>
+<details><summary>Q2: What is the worst-case scenario for this kind of algorithm? What is the best-case scenario?</summary>
 
 The best-case scenario is finding the letter at the beginning of the array. The worst-case scenario is finding the letter at the end of the array.
 
 </details>
 
-<details><summary><strong>Q3: How many iterations would it take in th worst-case scenario if there were 100 values in the array?</strong></summary>
+<details><summary>Q3: How many iterations would it take in th worst-case scenario if there were 100 values in the array?</summary>
 In an array of 100 values, the worst-case scenario would require 100 iterations.
 </details>
 
-### Worst-Case Runtime
-
-How can I measure the efficiency of this algorithm if the number of operations changes depending what value I happen to be looking for?
-
-We focus on the **worst-case runtime**.
-
-<details><summary><strong>Q: Why should we focus on the worst-case runtime?</strong></summary>
-
-By focusing on the worst-case scenario, we can be prepared for that scenario. Maybe we are on the IT team and need to know how much computing power to provide. If we use the worst-case runtime as our benchmark, we can be prepared for anything. 
-
-</details>
-
-The `isInArray` algorithm has a worst-case runtime equal to the number of elements in the array. If the array has 5 elements, the worst-case scenario takes 5 operations. If the array has 100 elements, the worst-case scenario takes 100 operations.
-
-<details><summary><strong>Q: If we have an array with `n` elements, what is the worst-case scenario number of operations?</strong></summary>
+<details><summary>Q4: If we have an array with `n` elements, what is the worst-case scenario number of operations?</summary>
 
 The worst-case scenario is `n` operations! This kind of runtime, where the number of operations increases at the same rate as the size of input is called **linear runtime**.
 
 </details>
 
+<details><summary>Q5: Why should we focus on the worst-case runtime?</summary>
 
-## Big O
+By focusing on the worst-case scenario, we can be prepared for that scenario. Maybe we are on the IT team and need to know how much computing power to provide. If we use the worst-case runtime as our benchmark, we can be prepared for anything. 
 
-**Big-O notation** is a short-hand notation style to help programmers (and mathematicians) indicate the runtime of an algorithm.
+</details>
 
-To figure out the Big-O notation for an algorithm, you should:
-1. Count (or calculate) the number of operations required.
-2. Keep only the _largest term_
-3. Remove any coefficients.
+## Different Algorithms, Same Problem
 
-Huh? Let's walk through it.
+**Q: Why is studying runtime efficiency important?**
 
-#### Step 1: Count the operations
+<details><summary>Ben's Answer</summary>
 
-Consider this algorithm. How many operations does it perform?
+Ideally, we want our programs to be as efficient as possible, particularly when computing resources are expensive or limited.
+
+Studying runtime efficiency helps us learn the most efficient ways to solve problems.
+
+</details>
+
+Imagine you have a sorted array of lowercase letters. You need to write an algorithm to find the index of a letter (let's say `'f'`) or return `-1` if no such letter exists. How would you write such an algorithm?
 
 ```js
-function printArray(arr) {
-    let i = 0;
-    while (i < arr.length) {
-        console.log(arr[i])
-        i++;
-    }
-}
+const letters = ['a', 'c', 'd', 'f', 'j', 'm', 'o', 'p', 'u', 'x'];
 ```
 
-Assuming we have some input `arr` with `n` elements, the algorithm will:
-* assign `i = 0` once
-* check if `i < arr.length` is true `n` times
-* print `console.log(arr[i])` `n` times
-* increment `i++` `n` times
+First, come up with an algorithm. Then peek at the two solutions below. Which is more efficient? How can you know?
 
-This means our total operations can be written as: `1 + n + n + n` operations (or `1 + 3n`). If we have an array of `10` elements, it will perform `32` operations.
-
-#### Step 2: Keep the largest term
-
-Our algorithm takes `3n + 1` operations. The largest term here is `3n` since it can grow to be quite large as our array size grows whereas `1` will always be `1` no matter the array size.
-
-#### Step 3: Remove Coefficients
-
-A **coefficient** is just the number that we multiply a variable by and we want to remove it. 
-
-So far we have a runtime of `3n` so if we remove the coefficient `3` then we just are left with a runtime of `n`. 
-
-In Big-O notation, we take the runtime and put it inside `O(runtime)` so we end up with a runtime of `O(n)`! 🎊
-
-### Big-O Runtimes to Know:
-
-Everything essentially boils down to 7 Big-O runtimes but the 5 below are the ones you'll most commonly encounter.
-
-| Runtime Name 	| Big O Notation 	| Example                                                                                                	|
-|--------------	|----------------	|--------------------------------------------------------------------------------------------------------	|
-| Constant     	| O(1)           	| Getting the first element in an array                                                                  	|
-| Logarithmic  	| O(log n)       	| Performing binary search (split the array in half, determine which half to look in, and repeat)        	|
-| Linear       	| O(n)           	| Finding a value in an array                                                                            	|
-| Log-Linear   	| O(n log n)     	| Repeatedly break an array into smaller and smaller parts, sort each part, then join them back together 	|
-| Quadratic    	| O(n^2)         	| Selection or Bubble Sort                                                                               	|
-
-Other runtimes include exponential (`O(2^n)`) and factorial (`O(n!)`) but we won't cover these.
-
-![](./img/big-o-complexity-growth.jpeg)
-
-### Big-O Runtime Challenge:
-
-What is the Big-O notation for the algorithm below?
+<details><summary>Solution 1</summary>
 
 ```js
-function bubbleSort(arr) {
+function findIndexInSortedArray(arr, target) {
     for (let i = 0; i < arr.length; i++) {
-		for (let j = i + 1; j < arr.length; j++) {
-			if (arr[j] < arr[i]) {
-				let temp = arr[i];
-        		arr[i] = arr[j];
-        		arr[j] = temp; 
-			}
-		}
-	}
+        if (arr[i] === target) {
+            return i;
+        }
+    }
+    return -1;
 }
 ```
 
-https://visualgo.net/en/sorting
+This algorithm has a **linear** runtime. How do you know that quickly? It has a for loop that runs once per item in the array.
 
-## Examples 
+It's pretty efficient.
 
-### Constant: O(1)
+</details>
 
-These operations take the same amount of time regardless of the size of the input
+<details><summary>Solution 2</summary>
 
 ```js
-function push(arr, value) {
-    arr[arr.length] = value;
-}
 
-function pop(arr) {
-    arr.length--;
+function findIndexInSortedArray(arr, target) {
+    let startI = 0;
+    let endI = arr.length - 1;
+    let midI = startI + Math.floor((endI - startI) / 2);
+    
+    while (startI !== midI && endI !== midI) {
+        if (target < arr[midI]) {
+            endI = midI;
+        } else if (target > arr[midI]) {
+            startI = midI;
+        } else { // target === arr[midI] 
+            return midI;
+        }
+        midI = startI + Math.floor((endI - startI) / 2);
+    }
+    return -1;
 }
 ```
 
-### Logarithmic: O(log n)
+This algorithm has a **logarithmic** runtime. How do you know that quickly? It divides the "problem space" in half on each iteration. 
+
+It's _very_ efficient.
+
+</details>
+
+
+<hr>
+<hr>
+<hr>
+<hr>
+
+## Runtime Visualizations / Examples 
+
+#### Logarithmic: O(log n)
 
 These problems typically involve dividing the size of the input in half on each iteration. The most common example of this is a **binary search algorithm**. 
+
+* https://www.youtube.com/watch?v=E6IOrZUpvSE
 
 Imagine you are looking for the word "Programming" in a dictionary. We want to get to the "P" words to find it. You know the dictionary is in alphabetical order but there are thousands of pages. You wouldn't just flip through the pages from the start. That would take forever.
 
@@ -235,9 +295,13 @@ function indexOf(arr, valueToFind) {
 }
 ```
 
-### Quadratic: O(n log n)
+### Linear Logarithmic: O(n log n)
 
-We need to perform some logarithmic algorithm once per element in an array.
+We need to perform some logarithmic algorithm once per element in an array. The most common example is merge sort:
+
+Merge Sort Visualizations:
+* https://www.youtube.com/watch?v=4VqmGXwpLqc&ab_channel=MichaelSambol
+* https://www.youtube.com/watch?v=ZRPoEKHXTJg&ab_channel=TimoBingmann
 
 ### Quadratic: O(n^2)
 
@@ -247,32 +311,12 @@ As the size of the input array grows, the runtime increases by a factor of n:
 * an array of size 15 (+5) will require ~225 operations (+125)
 * an array of size 20 (+5) will require ~400 operations (+275)
 
+https://visualgo.net/en/sorting
 
 ```js
-function selectionSort(arr) {
-	for (let i = 0; i < arr.length; i++) {
-		let smallestIndex = i;
-		for (let j = i + 1; j < arr.length; j++) {
-			if (arr[j] < arr[smallestIndex]) {
-				smallestIndex = j;
-			}
-		}
-		let temp = arr[i];
-		arr[i] = arr[smallestIndex];
-		arr[smallestIndex] = temp;
-	}
-}
-
-let arr = [3,9,2,6,8,5,7,1,4]
-selectionSort(arr);
-console.log(arr); // [1,2,3,4,5,6,7,8,9]
-
-
 function bubbleSort(arr) {
-    let iterations = 0;
     for (let i = 0; i < arr.length; i++) {
 		for (let j = i + 1; j < arr.length; j++) {
-		    iterations++;
 			if (arr[j] < arr[i]) {
 				let temp = arr[i];
         		arr[i] = arr[j];
@@ -280,8 +324,7 @@ function bubbleSort(arr) {
 			}
 		}
 	}
-	console.log(arr);
-	console.log(`length: ${arr.length} — iterations: ${iterations}`)
 }
 ```
+
 
