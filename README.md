@@ -190,7 +190,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * 
 
 ### Week 1
-* **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) 
+* **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
 * **1/24/23 - Linked Lists** | [Notes](./se-unit-xlesson-1-linked-lists/linked-lists.md) | Lecture Recording
 * **1/25/23 - Linked Lists** | Lecture Recording
 * **1/26/23 - Stacks and Queues** | [Notes](./se-unit-xlesson-2-stacks-queues/stacks-queues.md) | Lecture Recording
