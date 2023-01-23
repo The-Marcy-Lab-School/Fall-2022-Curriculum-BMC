@@ -88,7 +88,7 @@ For example, the algorithm for getting the first value of an array requires just
 
 ```js
 function getFirstValue(arr) {
-    return letters[0];
+    return arr[0];
 }
 
 const nums = [1,2,3];
