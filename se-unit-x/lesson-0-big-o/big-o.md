@@ -17,7 +17,7 @@ https://www.toptal.com/developers/sorting-algorithms
 
 Ideally, we want our programs to be as efficient as possible, particularly when computing resources are expensive or limited.
 
-Studying runtime efficiency helps us learn the most efficient ways to solve problems.
+Studying runtime efficiency helps us learn the most efficient ways to solve problems. It can also help us quickly identify efficient/inefficient algorithms.
 
 </details>
 
