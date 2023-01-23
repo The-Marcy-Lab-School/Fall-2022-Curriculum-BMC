@@ -7,9 +7,79 @@
 * What are the 5 most important Big-O notations?
 * Why is runtime efficiency important?
 
+https://www.toptal.com/developers/sorting-algorithms
+
+## Different Algorithms, Same Problem
+
+**Q: Why is studying runtime efficiency important?**
+
+<details><summary>Ben's Answer</summary>
+
+Ideally, we want our programs to be as efficient as possible, particularly when computing resources are expensive or limited.
+
+Studying runtime efficiency helps us learn the most efficient ways to solve problems.
+
+</details>
+
+Imagine you have a sorted array of lowercase letters. You need to write an algorithm to find the index of a letter (let's say `'f'`) or return `-1` if no such letter exists. How would you write such an algorithm?
+
+```js
+const letters = ['a', 'c', 'd', 'f', 'j', 'm', 'o', 'p', 'u', 'x'];
+```
+
+First, come up with an algorithm. Then peek at the two solutions below. Which is more efficient? How can you know?
+
+<details><summary>Solution 1</summary>
+
+```js
+function findIndexInSortedArray(arr, target) {
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            return i;
+        }
+    }
+    return -1;
+}
+```
+
+This algorithm has a **linear** runtime. How do you know that quickly? It has a for loop that runs once per item in the array.
+
+It's pretty efficient.
+
+</details>
+
+<details><summary>Solution 2</summary>
+
+```js
+
+function findIndexInSortedArray(arr, target) {
+    let startI = 0;
+    let endI = arr.length - 1;
+    let midI = startI + Math.floor((endI - startI) / 2);
+    
+    while (startI !== midI && endI !== midI) {
+        if (target < arr[midI]) {
+            endI = midI;
+        } else if (target > arr[midI]) {
+            startI = midI;
+        } else { // target === arr[midI] 
+            return midI;
+        }
+        midI = startI + Math.floor((endI - startI) / 2);
+    }
+    return -1;
+}
+```
+
+This algorithm has a **logarithmic** runtime. How do you know that quickly? It divides the "problem space" in half on each iteration. 
+
+Even though it has more code than the other solution, it's also more efficient!
+
+</details>
+
 ### What is runtime analysis?
 
-Runtime analysis is a theoretical calculation of "how long" a particular algorithm takes to execute. "How long" can be measured by counting the number of operations / statements in the algorithm.
+Runtime analysis is a theoretical calculation of "how long" a particular algorithm takes to execute. "How long" can be measured by counting the number of operations executed in the algorithm.
 
 For example, the algorithm for getting the first value of an array requires just one operation:
 
@@ -55,25 +125,13 @@ We also know that the number of loops is equal to the number of elements in the 
 So, we have one operation that happens once and 3 operations that happen `n` times. So, this algorithm runs `3n + 1` times! 
 </details>
 
+### Size of Input : Operations Ratio
 
-
-### Runtime Efficiency
+When measuring the _efficiency_ of an algorithm, **the relationship between the size of the input and number of operations** is most important. 
 
 Notice that in `getFirstValue` the same number of operations (1) can be used regardless of how big the array is. However, in `printArray`, the number of operations is dependent on the size of the array we pass in (`3n + 1`).
 
-When measuring the _efficiency_ of an algorithm, **the relationship between the size of the input and number of operations** is most important.
-
-* Algorithms whose number of operations do NOT increase with larger and larger inputs are the most efficient. These algorithms, like `getFirstValue` are said to have a **constant runtime**. 
-
-The algorithm `printArray` will perform one additional iteration for each new value in the input array. Even if the numbers are not exact, we can roughly say 
-
-```
-# of operations ≈≈ # of elements in the input
-```
-
-This kind of algorithm is said to have **linear runtime**.
-
-Algorithms with linear runtime are definitely less efficient than those with constant runtimes, but sometimes that the best we can do! In the grand scheme of things, linear runtimes are actually quite good!
+This means that `getFirstValue` is a more efficient algorithm than `printArray`. And that's okay! Some algorithms can only be so efficient. 													
 
 ## Comparing Runtimes - Big-O notation
 
@@ -184,74 +242,6 @@ The worst-case scenario is `n` operations! This kind of runtime, where the numbe
 <details><summary>Q5: Why should we focus on the worst-case runtime?</summary>
 
 By focusing on the worst-case scenario, we can be prepared for that scenario. Maybe we are on the IT team and need to know how much computing power to provide. If we use the worst-case runtime as our benchmark, we can be prepared for anything. 
-
-</details>
-
-## Different Algorithms, Same Problem
-
-**Q: Why is studying runtime efficiency important?**
-
-<details><summary>Ben's Answer</summary>
-
-Ideally, we want our programs to be as efficient as possible, particularly when computing resources are expensive or limited.
-
-Studying runtime efficiency helps us learn the most efficient ways to solve problems.
-
-</details>
-
-Imagine you have a sorted array of lowercase letters. You need to write an algorithm to find the index of a letter (let's say `'f'`) or return `-1` if no such letter exists. How would you write such an algorithm?
-
-```js
-const letters = ['a', 'c', 'd', 'f', 'j', 'm', 'o', 'p', 'u', 'x'];
-```
-
-First, come up with an algorithm. Then peek at the two solutions below. Which is more efficient? How can you know?
-
-<details><summary>Solution 1</summary>
-
-```js
-function findIndexInSortedArray(arr, target) {
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === target) {
-            return i;
-        }
-    }
-    return -1;
-}
-```
-
-This algorithm has a **linear** runtime. How do you know that quickly? It has a for loop that runs once per item in the array.
-
-It's pretty efficient.
-
-</details>
-
-<details><summary>Solution 2</summary>
-
-```js
-
-function findIndexInSortedArray(arr, target) {
-    let startI = 0;
-    let endI = arr.length - 1;
-    let midI = startI + Math.floor((endI - startI) / 2);
-    
-    while (startI !== midI && endI !== midI) {
-        if (target < arr[midI]) {
-            endI = midI;
-        } else if (target > arr[midI]) {
-            startI = midI;
-        } else { // target === arr[midI] 
-            return midI;
-        }
-        midI = startI + Math.floor((endI - startI) / 2);
-    }
-    return -1;
-}
-```
-
-This algorithm has a **logarithmic** runtime. How do you know that quickly? It divides the "problem space" in half on each iteration. 
-
-It's _very_ efficient.
 
 </details>
 
