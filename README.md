@@ -191,23 +191,23 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ### Week 1
 * **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Lecture Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
-* **1/23/23 - Lab Review** | Lab Review Recording | [Comparing two arrays example](https://jsbin.com/waguxulisa/2/edit?js,console)
-* **1/24/23 - Linked Lists** | [Notes](./se-unit-xlesson-1-linked-lists/linked-lists.md) | Lecture Recording
+* **1/23/23 - Lab Review** | [Lab Review Recording](https://us02web.zoom.us/rec/share/hnub66GUaWX-ugyaW-_ilVezum_TfSYGGrI1cf2bj6ycZPBu00UWl1ChqhDlSnzP.ln-qcZC_4EAqAHVU) | [Comparing two arrays example](https://jsbin.com/waguxulisa/2/edit?js,console)
+* **1/24/23 - Linked Lists** | [Notes](./se-unit-x/lesson-1-linked-lists/linked-lists.md) | Lecture Recording
 * **1/25/23 - Linked Lists** | Lecture Recording
-* **1/26/23 - Stacks and Queues** | [Notes](./se-unit-xlesson-2-stacks-queues/stacks-queues.md) | Lecture Recording
+* **1/26/23 - Stacks and Queues** | [Notes](./se-unit-x/lesson-2-stacks-queues/stacks-queues.md) | Lecture Recording
 * **1/27/23 - Stacks and Queues** | Lecture Recording
 
 ### Week 2
 
 * **1/30/23 - Review** | Lecture Recording
-* **1/31/23 - Hash Maps** | [Notes](./se-unit-xlesson-3-hash-maps/hash-maps.md) | Lecture Recording
-* **2/1/23 - Recursion** | [Notes](./se-unit-xlesson-4-recursion/recursion.md) | Lecture Recording
+* **1/31/23 - Hash Maps** | [Notes](./se-unit-x/lesson-3-hash-maps/hash-maps.md) | Lecture Recording
+* **2/1/23 - Recursion** | [Notes](./se-unit-x/lesson-4-recursion/recursion.md) | Lecture Recording
 * **2/2/23 - Recursion** | Lecture Recording
 * **1/3/23 - Review** | Lecture Recording
 
 ### Week 3
 
-* **1/6/23 - Trees** | [Notes](./se-unit-xlesson-5-trees/trees.md) | Lecture Recording
+* **1/6/23 - Trees** | [Notes](./se-unit-x/lesson-5-trees/trees.md) | Lecture Recording
 * **1/7/23 - Trees** | Lecture Recording
 * **1/8/23 - Review** | Lecture Recording
 
