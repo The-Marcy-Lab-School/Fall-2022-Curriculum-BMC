@@ -45,7 +45,7 @@ A node is an abstract data type that represents a single piece of information wi
 <img src="./img/doubly-linked-list.png">
 
 #### Trees
-<img src="./img/tree.png">
+<img src="./img/tree.jpeg">
 
 Nodes themselves typically do not have any methods.
 
