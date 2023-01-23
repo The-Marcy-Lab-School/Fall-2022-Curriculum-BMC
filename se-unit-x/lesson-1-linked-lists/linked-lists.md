@@ -220,7 +220,7 @@ class LinkList {
 
 ## isCyclic
 
-This is not a method of linked lists but a method whose _input_ is a linked list. It should return `true` if the linked list contains a cycle, `false` otherwise.
+This is not a method of linked lists but a method whose _input_ is the head of a linked list. It should return `true` if the linked list contains a cycle, `false` otherwise.
 
 ```js
 const list = new LinkedList();
@@ -234,9 +234,36 @@ list.head = nodeA;
 nodeA.next = nodeB;
 nodeB.next = nodeC;
 
-isCyclic(list); // false
+isCyclic(list.head); // false
 
 nodeC.next = nodeA; // a cycle!
-isCyclic(list); // true
 
+isCyclic(list.head); // true
 ```
+
+<details><summary>Solution</summary>
+
+```js
+function isCyclic(headNode) {
+
+    let nodesEncountered = []; // track nodes we've seen
+    
+    let currentNode = headNode; // track the current node in our traversal
+    
+    while(currentNode) { // eventually it will be null
+        
+        // if we've encountered it before...
+        if (nodesEncountered.includes(currentNode)) {
+            return true; // we found a cycle!
+        } 
+        
+        // otherwise...
+        nodesEncountered.push(currentNode); // add it to the encountered list
+        currentNode = currentNode.next; // traverse to the next node
+    }
+    
+    return false;
+}
+```
+
+</details>
