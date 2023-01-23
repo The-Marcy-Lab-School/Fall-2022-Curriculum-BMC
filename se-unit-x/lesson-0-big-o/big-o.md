@@ -9,6 +9,14 @@
 
 https://www.toptal.com/developers/sorting-algorithms
 
+**Agenda**
+* Intro - A look at sorting algorithms
+* Why is runtime efficiency important?
+* What is runtime analysis?
+* Big-O Notation
+* Worst-case runtime
+* Examples of Runtimes
+
 ## Different Algorithms, Same Problem
 
 **Q: Why is studying runtime efficiency important?**
@@ -72,7 +80,7 @@ Even though it has more code than the other solution, it's also more efficient!
 
 </details>
 
-### What is runtime analysis?
+## What is runtime analysis?
 
 Runtime analysis is a theoretical calculation of "how long" a particular algorithm takes to execute. "How long" can be measured by counting the number of operations executed in the algorithm.
 
@@ -120,14 +128,13 @@ We also know that the number of loops is equal to the number of elements in the 
 So, we have one operation that happens once and 3 operations that happen `n` times. So, this algorithm runs `3n + 1` times! 
 </details>
 
-### Size of Input : Operations Ratio
+### Input Size to Operations Ratio
 
 When measuring the _efficiency_ of an algorithm, **the relationship between the size of the input and number of operations** is most important. 
 
 Notice that in `getFirstValue` the same number of operations (1) can be used regardless of how big the array is. However, in `printArray`, the number of operations is dependent on the size of the array we pass in (`3n + 1`).
 
 This means that `getFirstValue` is a more efficient algorithm than `printArray`. And that's okay! Some algorithms can only be so efficient. 													
-
 ## Comparing Runtimes - Big-O notation
 
 When talking about runtimes, we use a notation called [**Big-O Notation**](https://simple.wikipedia.org/wiki/Big_O_notation). 
