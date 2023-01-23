@@ -1,6 +1,6 @@
 # Linked Lists
 
-** Essential Questions**
+**Essential Questions**
 * What is an _abstract data type_?
 * What are the tradeoffs between linked lists and arrays?
 * What are the tradeoffs between singly linked lists and doubly linked lists?
@@ -38,8 +38,13 @@ The abstract data types we will be learning in Unit X are:
 
 A node is an abstract data type that represents a single piece of information within a larger data structure. They also have one or more "pointers" to other nodes in the structure.
 
+#### Linked Lists
 <img src="./img/linked-list.png">
+
+#### Doubly Linked Lists
 <img src="./img/doubly-linked-list.png">
+
+#### Trees
 <img src="./img/tree.png">
 
 Nodes themselves typically do not have any methods.
