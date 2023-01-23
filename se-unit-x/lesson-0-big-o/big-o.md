@@ -268,7 +268,7 @@ function indexOf(arr, valueToFind) {
 }
 ```
 
-### Linear Logarithmic: O(n log n)
+#### Linear Logarithmic: O(n log n)
 
 We need to perform some logarithmic algorithm once per element in an array. The most common example is merge sort:
 
@@ -276,7 +276,7 @@ Merge Sort Visualizations:
 * https://www.youtube.com/watch?v=4VqmGXwpLqc&ab_channel=MichaelSambol
 * https://www.youtube.com/watch?v=ZRPoEKHXTJg&ab_channel=TimoBingmann
 
-### Quadratic: O(n^2)
+#### Quadratic: O(n^2)
 
 Slower sorting algorithms like **bubble sort**.
 
