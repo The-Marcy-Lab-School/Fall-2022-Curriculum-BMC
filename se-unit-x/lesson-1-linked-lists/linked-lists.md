@@ -56,6 +56,13 @@ class Node {
         this.data = data;
     }
 }
+
+const nodeA = new Node("a");
+const nodeB = new Node("b");
+
+console.log(nodeA, nodeB);
+// Node { data: "a" }
+// Node { data: "b" }
 ```
 
 ## Linked List
@@ -64,9 +71,32 @@ A linked list is the first abstract data type that uses nodes to hold its data i
 
 Each node has a `next` property (in addition to its `data` property) that points to the next node in the linked list.
 
+```js
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+const nodeA = new Node("a");
+const nodeB = new Node("b");
+const nodeC = new Node("C");
+
+nodeA.next = nodeB;
+nodeB.next = nodeC;
+
+console.log(nodeA, nodeB, nodeC);
+// Node { data: "a", next: Node }
+// Node { data: "b", next: Node }
+// Node { data: "c", next: null }
+```
+
+**Q: What is the head of the linked list? What is the tail**?
+
 <img src="./img/linked-list.png">
 
-The linked list itself holds only a reference to a `head` node. To access the rest of the nodes, we traverse the `next` properties until we reach the node we're looking for.
+The linked list itself holds only a reference to a `head` node.
 
 ```js
 class LinkedList {
@@ -82,7 +112,6 @@ class LinkedList {
 }
 ```
 
-**Let's visualize: https://visualgo.net/en/list**
 
 Common operations with linked lists include:
 * adding a new node to the head (prepend)
@@ -95,5 +124,119 @@ Some linked lists may also implement:
 * adding a new node in the middle
 * removing a node from the middle
 
+**Let's visualize: https://visualgo.net/en/list**
+
+## Prepend to head
+
+* Inputs: data to add
+* Output: the new `head` of the linked list
+* Behavior: the new node should be the new `head` of the linked list and it should point to the previous `head` of the linked list 
+
+```js
+const list = new LinkedList();
+list.prependToHead('a')
+list.prependToHead('b')
+list.prependToHead('c')
+console.log(list.head);
+console.log(list.head.next);
+console.log(list.head.next.next);
+// Node { data: 'c', next: Node }
+// Node { data: 'b', next: Node }
+// Node { data: 'a', next: null }
+```
+
+<details><summary>Solution</summary>
+
+```js
+class LinkList {
+    constructor() {
+        this.head = null;
+    }
+    prependToHead(data) {
+        const newNode = new Node(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+}
+```
+
+1. The new node is going at the beginning of the list. So it's `next` pointer should point to the existing `head` of the list. 
+2. Then, the list's `head` pointer should now point at the new node.
+3. Test:
+    - Adding to a list with multiple nodes
+    - Adding to an empty list
+    - Adding to a list with one value
+
+</details>
 
 ## Append to tail
+
+* Inputs: data to add
+* Output: the `head` of the linked list
+* Behavior: the previous tail node's `next` property should point to the new node.
+
+```js
+const list = new LinkedList();
+list.appendToTail('a')
+list.appendToTail('b')
+list.appendToTail('c')
+console.log(list.head);
+console.log(list.head.next);
+console.log(list.head.next.next);
+// Node { data: 'a', next: Node }
+// Node { data: 'b', next: Node }
+// Node { data: 'c', next: null }
+```
+
+<details><summary>Solution</summary>
+
+```js
+class LinkList {
+    constructor() {
+        this.head = null;
+    }
+    prependToHead(data) { /* ... */ }
+    
+    appendToTail(data) {
+        const newNode = new Node(data);
+        let currNode = this.head;
+        while (currNode.next !== null) {
+            currNode = currNode.next;
+        }
+        currNode.next = newNode;
+    }
+}
+```
+
+1. To put the new node at the end of the list, we need to first get to the end of the list, starting at the list's `head`. We'll use a `currNode` variable to keep track of where we are in the list.
+2. Using a `while` loop, we iterate as long as the `currNode` has a `next` node to move to.
+3. We'll reach the tail node once `currNode` has no `next` node. At this point, we set the `currNode` (which is the tail) to point to the new node.
+3. Test:
+    - Adding to a list with multiple nodes
+    - Adding to an empty list
+    - Adding to a list with one node
+
+</details>
+
+## isCyclic
+
+This is not a method of linked lists but a method whose _input_ is a linked list. It should return `true` if the linked list contains a cycle, `false` otherwise.
+
+```js
+const list = new LinkedList();
+
+const nodeA = new Node("a");
+const nodeB = new Node("b");
+const nodeC = new Node("c");
+
+list.head = nodeA;
+
+nodeA.next = nodeB;
+nodeB.next = nodeC;
+
+isCyclic(list); // false
+
+nodeC.next = nodeA; // a cycle!
+isCyclic(list); // true
+
+```
