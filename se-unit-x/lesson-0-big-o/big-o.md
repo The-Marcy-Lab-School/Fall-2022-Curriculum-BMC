@@ -51,21 +51,16 @@ It's pretty efficient.
 <details><summary>Solution 2</summary>
 
 ```js
-
 function findIndexInSortedArray(arr, target) {
-    let startI = 0;
-    let endI = arr.length - 1;
-    let midI = startI + Math.floor((endI - startI) / 2);
-    
-    while (startI !== midI && endI !== midI) {
-        if (target < arr[midI]) {
-            endI = midI;
-        } else if (target > arr[midI]) {
-            startI = midI;
-        } else { // target === arr[midI] 
-            return midI;
-        }
-        midI = startI + Math.floor((endI - startI) / 2);
+    let start = 0;
+    let end = arr.length - 1;
+ 
+    while (start <= end) {
+    	let mid = Math.floor((start + end) / 2);
+    	
+    	if (arr[mid] === target) return mid;
+    	else if (target < arr[mid]) end = mid - 1;
+    	else if (target > arr[mid]) start = mid + 1;
     }
     return -1;
 }
