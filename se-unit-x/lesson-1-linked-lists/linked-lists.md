@@ -16,12 +16,16 @@
 
 ## Abstract Data Types
 
-An **abstract data type (ADT)** is a general description about a data type: how it stores data and what operations can be performed on/with it. Abstract data types may be implemented differently in different programming languages but they will all have the same high-level interface.
+An **abstract data type (ADT)** is a general description about a data type: how it stores data and what operations can be performed on/with it. Abstract data types may be implemented differently in different programming languages but they will all have the same high-level behavior.
 
 For example, an integer is an abstract data type. 
 * **How they store data**: integers represent a single numerical value in the range `...`, -2`, `-1`, `0`, `1`, `2`, `...`. 
 * **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided. 
 * **Implementations may vary**: In Java, integers are their own data type, separate from floats (numbers that have decimal points). In JavaScript, integers and floats are all considered the same data type.
+
+In the real world, the idea of a car is similar to an abstract data type. All cars have doors, wheels, and an engine and with my driver's license, I can operate pretty much any kind of car. However, each manufacturer has a different approach to creating their cars and, under the hood (literally), they may look very different.
+
+**Q: What are some other real world analogies of abstract data types?**
 
 The abstract data types we will be learning in Unit X are:
 * Nodes
@@ -32,46 +36,38 @@ The abstract data types we will be learning in Unit X are:
 * Hash Maps
 * Trees
 
-> We wont cover graphs but those are another ADT you'll likely encounter on the internet!
+> We wont cover **graphs** but those are another ADT you'll likely encounter on the internet!
 
 ## Nodes
 
-A node is an abstract data type that represents a single piece of information within a larger data structure. They also have one or more "pointers" to other nodes in the structure.
+A node is an abstract data type that represents a single piece of information within a larger data structure. 
+
+Nodes often have one or more "pointers" to other nodes in the structure.
+
+Consider the data structures below. **What do the nodes in each structure point to?**
 
 #### Linked Lists
+
 <img src="./img/linked-list.png">
 
 #### Doubly Linked Lists
+
 <img src="./img/doubly-linked-list.png">
 
 #### Trees
 <img src="./img/tree.jpeg">
 
+
+## Making a Node Class for Linked Lists
+
 Nodes themselves typically do not have any methods.
+
+The simplest kind of node is the one used in a linked list. It holds its own data and a pointer to the `next` node in the list.
+
+<img src="./img/linked-list.png">
 
 ```js
 // depending on how the node is used, it may have a next, prev, parent, or children, property
-class Node {
-    constructor(data) {
-        this.data = data;
-    }
-}
-
-const nodeA = new Node("a");
-const nodeB = new Node("b");
-
-console.log(nodeA, nodeB);
-// Node { data: "a" }
-// Node { data: "b" }
-```
-
-## Linked List
-
-A linked list is the first abstract data type that uses nodes to hold its data in a sequential order.
-
-Each node has a `next` property (in addition to its `data` property) that points to the next node in the linked list.
-
-```js
 class Node {
     constructor(data) {
         this.data = data;
@@ -86,17 +82,15 @@ const nodeC = new Node("C");
 nodeA.next = nodeB;
 nodeB.next = nodeC;
 
-console.log(nodeA, nodeB, nodeC);
-// Node { data: "a", next: Node }
-// Node { data: "b", next: Node }
-// Node { data: "c", next: null }
+console.log(nodeA, nodeB, nodeC); // What do you expect to see?
 ```
 
 **Q: What is the head of the linked list? What is the tail**?
 
-<img src="./img/linked-list.png">
+## Making a Linked List Class
 
-The linked list itself holds only a reference to a `head` node.
+
+The linked list itself holds only a reference to a `head` node and various methods for "traversing" the list. 
 
 ```js
 class LinkedList {
@@ -112,13 +106,9 @@ class LinkedList {
 }
 ```
 
+> "Traversing" is a fancy word for "visiting the nodes in a particular order" in a data structure.
 
-Common operations with linked lists include:
-* adding a new node to the head (prepend)
-* adding a new node to the tail (append)
-* removing a node from the head
-* removing a node from the tail
-* checking if the linked list contains a value
+**Q: What is the way/what are the ways that we can traverse a linked list?**
 
 Some linked lists may also implement:
 * adding a new node in the middle
@@ -126,7 +116,7 @@ Some linked lists may also implement:
 
 **Let's visualize: https://visualgo.net/en/list**
 
-## Prepend to head
+## Algorithm: Prepend to head
 
 * Inputs: data to add
 * Output: the new `head` of the linked list
@@ -169,7 +159,7 @@ class LinkList {
 
 </details>
 
-## Append to tail
+## Algorithm: Append to tail
 
 * Inputs: data to add
 * Output: the `head` of the linked list
@@ -218,7 +208,7 @@ class LinkList {
 
 </details>
 
-## isCyclic
+## Algorithm: isCyclic
 
 This is not a method of linked lists but a method whose _input_ is the head of a linked list. It should return `true` if the linked list contains a cycle, `false` otherwise.
 
