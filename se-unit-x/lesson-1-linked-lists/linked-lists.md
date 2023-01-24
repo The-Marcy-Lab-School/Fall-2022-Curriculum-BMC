@@ -194,11 +194,16 @@ class LinkList {
     
     appendToTail(data) {
         const newNode = new Node(data);
-        let currNode = this.head;
-        while (currNode.next !== null) {
-            currNode = currNode.next;
+        if (!this.head) {
+            this.head = newNode;
+        } 
+        else {
+            let currNode = this.head;
+            while (currNode.next !== null) {
+                currNode = currNode.next;
+            }
+            currNode.next = newNode;
         }
-        currNode.next = newNode;
     }
 }
 ```
