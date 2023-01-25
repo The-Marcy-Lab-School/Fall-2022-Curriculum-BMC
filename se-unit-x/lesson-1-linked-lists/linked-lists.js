@@ -1,15 +1,15 @@
 // remove first element from array - linear:
-const arr = ['a' , 'b', 'c', 'd', 'e'];
-for (let i = 0; i < arr.length; i++) {
-  arr[i] = arr[i + 1];
+// const arr = ['a' , 'b', 'c', 'd', 'e'];
+// for (let i = 0; i < arr.length; i++) {
+//   arr[i] = arr[i + 1];
   
-}
-arr.length --;
-console.log(arr);
+// }
+// arr.length --;
+// console.log(arr);
 
 // adding to the end of an array is constant
-arr[arr.length] = 'f';
-console.log(arr);
+// arr[arr.length] = 'f';
+// console.log(arr);
 
 
 
