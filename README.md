@@ -18,9 +18,10 @@
 ## Orientation Week
 
 **Important Links to Bookmark**
-* Canvas: https://canvas.instructure.com/
-* Github: https://github.com/
-* Cloud9: https://us-east-2.console.aws.amazon.com/cloud9/home
+* **Canvas**: https://canvas.instructure.com/
+* **Github**: https://github.com/
+* **Cloud9**: https://us-east-2.console.aws.amazon.com/cloud9/home
+* **FreeCodeCamp**: https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures
 
 **Slides**
 * [Technical Overview Slides](https://docs.google.com/presentation/d/13HRR6Ci6mXC9f-9iRoGux8rwjgYqMDtRl4VxE2IoXGU/edit)
