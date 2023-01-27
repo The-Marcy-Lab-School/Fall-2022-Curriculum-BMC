@@ -24,8 +24,14 @@ class Node {
 class LinkedList {
     constructor() {
         this.head = null;
+        // Linked Lists may also have a tail pointer
     }
-    appendToTail(data) { // adding to the end is linear
+    appendToHead(data) {
+        const newNode = new Node(data);
+        newNode.next = this.head;
+        this.head = newNode;
+    }
+    appendToTail(data) { // adding to the end is linear (unless you have a tail pointer)
         debugger;
         const newNode = new Node(data);
         
@@ -45,6 +51,19 @@ class LinkedList {
             return;
         }
         this.head = this.head.next // constant
+    }
+    removeFromTail() { // removing from the tail is ALWAYS linear
+        if (this.head === null) {
+            return;
+        }
+        
+        let curr = this.head;
+        let prev = null;
+        if (curr.next) {
+            prev = curr;
+            curr = curr.next;
+        }
+        prev.next = null;
     }
 }
 

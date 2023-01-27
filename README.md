@@ -189,21 +189,24 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
     * https://www.toptal.com/developers/sorting-algorithms
     * https://visualgo.net/en/sorting
 * Big-O: [Notes](./se-unit-x/lesson-0-big-o/big-o.md)
+    * [Linear vs. Quadratic Array Example](./se-unit-x/lesson-0-big-o/big-o.js)
 * Linked Lists: [Notes](./se-unit-x/lesson-1-linked-lists/linked-lists.md) | [Slides](https://docs.google.com/presentation/d/1j9x1W14NzM-mbmk2PEm68iNT-Z5q66gNqpEnbtbdZXI/edit#slide=id.g1fec7be8d91_0_283)
+    * [Linked List & Node Implementation](./se-unit-x/lesson-1-linked-lists/linked-lists.js)
 * Stacks & Queues: [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit#slide=id.g200ccbad391_0_8)
+    * [Stack Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js)
 
 ### Week 1
 * **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
-* **1/23/23 - Lab Review** | [Recording](https://us02web.zoom.us/rec/share/hnub66GUaWX-ugyaW-_ilVezum_TfSYGGrI1cf2bj6ycZPBu00UWl1ChqhDlSnzP.ln-qcZC_4EAqAHVU) | [Comparing two arrays example](https://jsbin.com/waguxulisa/2/edit?js,console)
+* **1/23/23 - Lab Review** | [Recording](https://us02web.zoom.us/rec/share/hnub66GUaWX-ugyaW-_ilVezum_TfSYGGrI1cf2bj6ycZPBu00UWl1ChqhDlSnzP.ln-qcZC_4EAqAHVU) | [Linear vs. Quadratic Array Example](./se-unit-x/lesson-0-big-o/big-o.js)
 * **1/24/23 - Linked Lists** | [Notes](./se-unit-x/lesson-1-linked-lists/linked-lists.md) | [Recording](https://us02web.zoom.us/rec/share/sUDA6VGVYlQWNmLduNdl85qfqWeZyqr8PlEVivor-3Di_P7l5VGhzndZbyePTZen.mWU0oWNUr-ODYVMf) | [Code Examples](./se-unit-x/lesson-1-linked-lists/linked-lists.js)
 * **1/25/23 - Linked Lists** | [Recording](https://us02web.zoom.us/rec/share/uDD5Zub_a9YUBq99M4rZ3C77ocvuBM0-b6sjeMXbdLg6sJhwC176Q694Ayg6dXcm.txI7e9Q3gDGrlWrl)
 * **1/25/23 - Linked Lists Lab Review** | [Recording](https://us02web.zoom.us/rec/share/FM03cKCa7XmOK5jI-N3bt0b5Gghe8yCIGdTI8YBIzaORkuIwNWOBAo4Si4YjQzeG.Yk49ctZaqFXGYbEi) | [Linked List Algorithms Slides](https://docs.google.com/presentation/d/1j9x1W14NzM-mbmk2PEm68iNT-Z5q66gNqpEnbtbdZXI/)
 * **1/26/23 - Linked Lists** | [Recording - removeHead reverse, isCyclic](https://us02web.zoom.us/rec/share/ysO-JY5tgitoO6UQiduaSGqBOUqKCj1Btq0dozbpBIZPentqk19fS6jySdPQ33d5.-E4scv6uuyuJv6fE?startTime=1674756272000)
-* **1/27/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit#slide=id.g200ccbad391_0_66) | Recording
+* **1/27/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit#slide=id.g200ccbad391_0_66) | [Recording](https://us02web.zoom.us/rec/share/fNmdPezCJGre-glZYceSM7JzDoTxdkC5ehzgzgzBm5PX7SjcpSlU3gYXuEDIPi-2.58XAWteKhCR117pg) | [Stack Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js)
 
 ### Week 2
 
-* **1/30/23 - Stacks and Queues** | Recording
+* **1/30/23 - Stacks and Queues** | Recording | 
 * **1/31/23 - Hash Maps** | [Notes](./se-unit-x/lesson-3-hash-maps/hash-maps.md) | Recording
 * **2/1/23 - Recursion** | [Notes](./se-unit-x/lesson-4-recursion/recursion.md) | Recording
 * **2/2/23 - Recursion** | Recording
