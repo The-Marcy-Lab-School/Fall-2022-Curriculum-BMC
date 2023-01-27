@@ -184,10 +184,13 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ## Unit X - Data Structures and Algorithms
 
-**Additional Resources**
+**Resources**
 * Visualizations: 
     * https://www.toptal.com/developers/sorting-algorithms
     * https://visualgo.net/en/sorting
+* Big-O: [Notes](./se-unit-x/lesson-0-big-o/big-o.md)
+* Linked Lists: [Notes](./se-unit-x/lesson-1-linked-lists/linked-lists.md) | [Slides](https://docs.google.com/presentation/d/1j9x1W14NzM-mbmk2PEm68iNT-Z5q66gNqpEnbtbdZXI/edit#slide=id.g1fec7be8d91_0_283)
+* Stacks & Queues: [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit#slide=id.g200ccbad391_0_8)
 
 ### Week 1
 * **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
