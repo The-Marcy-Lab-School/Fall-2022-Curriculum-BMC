@@ -202,7 +202,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/25/23 - Linked Lists** | [Recording](https://us02web.zoom.us/rec/share/uDD5Zub_a9YUBq99M4rZ3C77ocvuBM0-b6sjeMXbdLg6sJhwC176Q694Ayg6dXcm.txI7e9Q3gDGrlWrl)
 * **1/25/23 - Linked Lists Lab Review** | [Recording](https://us02web.zoom.us/rec/share/FM03cKCa7XmOK5jI-N3bt0b5Gghe8yCIGdTI8YBIzaORkuIwNWOBAo4Si4YjQzeG.Yk49ctZaqFXGYbEi) | [Linked List Algorithms Slides](https://docs.google.com/presentation/d/1j9x1W14NzM-mbmk2PEm68iNT-Z5q66gNqpEnbtbdZXI/)
 * **1/26/23 - Linked Lists** | [Recording - removeHead reverse, isCyclic](https://us02web.zoom.us/rec/share/ysO-JY5tgitoO6UQiduaSGqBOUqKCj1Btq0dozbpBIZPentqk19fS6jySdPQ33d5.-E4scv6uuyuJv6fE?startTime=1674756272000)
-* **1/27/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Recording](https://us02web.zoom.us/rec/share/fNmdPezCJGre-glZYceSM7JzDoTxdkC5ehzgzgzBm5PX7SjcpSlU3gYXuEDIPi-2.58XAWteKhCR117pg) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js)
+* **1/27/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js) | [Recording](https://us02web.zoom.us/rec/share/fNmdPezCJGre-glZYceSM7JzDoTxdkC5ehzgzgzBm5PX7SjcpSlU3gYXuEDIPi-2.58XAWteKhCR117pg)
 
 ### Week 2
 
