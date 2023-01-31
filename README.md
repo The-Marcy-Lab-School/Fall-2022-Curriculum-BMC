@@ -207,7 +207,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 ### Week 2
 
 * **1/30/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js) | [Recording](https://us02web.zoom.us/rec/share/QLqHK8lauDAOr6fqMYF02BrsF4U3cqBo3dhU5BYkJh5DWfBO2qryh1ru66TgQj4n.ePibN3IdC9HREABW)
-* **1/31/23 - Hash Maps** | [Notes](./se-unit-x/lesson-3-hash-maps/hash-maps.md) | Recording
+* **1/31/23 - Hash Maps** | [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) |  [Notes](./se-unit-x/lesson-3-hash-maps/hash-maps.md) | Recording
 * **2/1/23 - Recursion** | [Notes](./se-unit-x/lesson-4-recursion/recursion.md) | Recording
 * **2/2/23 - Recursion** | Recording
 * **1/3/23 - Review** | Recording
