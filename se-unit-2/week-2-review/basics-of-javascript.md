@@ -63,9 +63,11 @@ Ultimately, a program is a series of statements written in a particular order to
 
 ## Variables
 
-Variables are used to "store" expressions and give them a name. All of the expressions above can be stored in a variable. 
+Variables are named identifiers that "point to" data values or expressions. All of the expressions above can be pointed to by a variable. When we create a variable and have it point to an expression, the result of that expression is stored in memory. 
 
-Declaring a variable turns the variable _name_ into an expression! The variable name is an expression? Yes! When we reference that variable name, it evaluates to (or "returns") the value it holds.
+We can retreive the value that a variable points to by referencing the variable's name/identifier.
+
+Declaring a variable turns the variable _name_ into an expression! The variable name is an expression? Yes! When we reference that variable name, it evaluates to (or "returns") the value it points to.
 
 ```js
 const sum = 5 + 5;
