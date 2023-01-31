@@ -23,9 +23,7 @@ names.forEach(name => {
 });
 
 console.log(hashMapArray);
-/* 
-[ <4 empty items>, true, <3 empty items>, true, true ]
-*/
+// [ <4 empty items>, true, <3 empty items>, true, true ]
 
 
 let hashKey = hashFunction('benjamin');
@@ -42,6 +40,4 @@ names.forEach(name => {
 });
 
 console.log(hashMapObject);
-/* 
-{ "benjamin": true, "maya": true, "reuben": true }
-*/
+// { "benjamin": true, "maya": true, "reuben": true }
