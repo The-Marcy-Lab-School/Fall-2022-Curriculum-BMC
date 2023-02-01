@@ -192,6 +192,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * Linked Lists: [Notes](./se-unit-x/lesson-1-linked-lists/linked-lists.md) | [Slides](https://docs.google.com/presentation/d/1j9x1W14NzM-mbmk2PEm68iNT-Z5q66gNqpEnbtbdZXI/edit#slide=id.g1fec7be8d91_0_283) | [Linked List & Node Implementation](./se-unit-x/lesson-1-linked-lists/linked-lists.js)
 * Stacks & Queues: [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js)
 * Hash Maps: [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) | [Arrays as Hash Maps Code](./se-unit-x/lesson-3-hash-maps/hash-maps.js)
+* Recursion: [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | [Code Example](./se-unit-x/lesson-4-recursion/recursion.js)
 
 ### Week 1
 * **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
@@ -206,7 +207,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 * **1/30/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js) | [Recording](https://us02web.zoom.us/rec/share/QLqHK8lauDAOr6fqMYF02BrsF4U3cqBo3dhU5BYkJh5DWfBO2qryh1ru66TgQj4n.ePibN3IdC9HREABW)
 * **1/31/23 - Hash Maps** | [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) | [Arrays as Hash Maps Code](./se-unit-x/lesson-3-hash-maps/hash-maps.js) | [Recording](https://us02web.zoom.us/rec/share/paFbyY6TZyqtScg_XVwPf22uf3MubZr2DM1c7CPL0mxn9cYfnXMsNaKt9Mui4oG-.9SzNBgLoXox5cuaS)
-* **2/1/23 - Recursion** | [Notes](./se-unit-x/lesson-4-recursion/recursion.md) | Recording
+* **2/1/23 - Recursion** | [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | Recording
 * **2/2/23 - Recursion** | Recording
 * **1/3/23 - Review** | Recording
 
