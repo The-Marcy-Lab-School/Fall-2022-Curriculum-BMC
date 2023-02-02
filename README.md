@@ -207,8 +207,8 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 * **1/30/23 - Stacks and Queues** | [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js) | [Recording](https://us02web.zoom.us/rec/share/QLqHK8lauDAOr6fqMYF02BrsF4U3cqBo3dhU5BYkJh5DWfBO2qryh1ru66TgQj4n.ePibN3IdC9HREABW)
 * **1/31/23 - Hash Maps** | [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) | [Arrays as Hash Maps Code](./se-unit-x/lesson-3-hash-maps/hash-maps.js) | [Recording](https://us02web.zoom.us/rec/share/paFbyY6TZyqtScg_XVwPf22uf3MubZr2DM1c7CPL0mxn9cYfnXMsNaKt9Mui4oG-.9SzNBgLoXox5cuaS)
-* **2/1/23 - Recursion** | [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | Recording
-* **2/2/23 - Recursion** | Recording
+* **2/1/23 - Recursion I - Intro + Triangle Sum** | [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | [Recording](https://us02web.zoom.us/rec/share/7Ivu1GNXcnXUIaRWMBAyeLcFoAtlEU5ZXjUF4UtfVFoA3c6SWuE3p9O2iTGK3rBJ.h-j_UzQHKCNgvX0x)
+* **2/2/23 - Recursion II - countDown + reverse a string ** | Recording
 * **1/3/23 - Review** | Recording
 
 ### Week 3
