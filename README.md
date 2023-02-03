@@ -209,7 +209,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/31/23 - Hash Maps** | [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) | [Arrays as Hash Maps Code](./se-unit-x/lesson-3-hash-maps/hash-maps.js) | [Recording](https://us02web.zoom.us/rec/share/paFbyY6TZyqtScg_XVwPf22uf3MubZr2DM1c7CPL0mxn9cYfnXMsNaKt9Mui4oG-.9SzNBgLoXox5cuaS)
 * **2/1/23 - Recursion I - Intro + Triangle Sum** | [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | [Recording](https://us02web.zoom.us/rec/share/7Ivu1GNXcnXUIaRWMBAyeLcFoAtlEU5ZXjUF4UtfVFoA3c6SWuE3p9O2iTGK3rBJ.h-j_UzQHKCNgvX0x)
 * **2/2/23 - Recursion II - countDown + reverse a string ** | [Recording](https://us02web.zoom.us/rec/share/7z9dRmvlTL94S_ET3yEPbGqC2cYsdDLOeMGLdadGN3OvZw1AOgTOv_6NfzkfbtDS.3ZYpV7qQVYQpQS3H)
-* **1/3/23 - Review** | Recording
+* **1/3/23 - Hash Maps Kahoot + Recursion Review** | [Recording](https://us02web.zoom.us/rec/share/Br8X4Pwd3LKQYQ1gPWS6sMkD7fgvMN8DBgtZ0CUSie8BzAKk8OYIGLFS2qSBUfs_.etCgfQ2EFnjypzMX?startTime=1675435782000) | [Better Explanation of `toStr`](https://us02web.zoom.us/rec/share/b8XBmfXvMnCU9iwgQbb4CpIT4Z6-0-bp4U-JsDkWaQ2M18x1QLfEzuSoZQZ8wytQ.wVIY4nafy0ujjKfZ?startTime=1675450466000)
 
 ### Week 3
 
