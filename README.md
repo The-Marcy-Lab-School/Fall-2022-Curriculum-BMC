@@ -214,7 +214,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ### Week 3
 
-* **1/6/23 - Intro to Trees** | [Slides](https://docs.google.com/presentation/d/1xRSC5zZbpZ0gDKUOjjb5YIKypmPCNhKkRTHorzDvxvI/) | Recording
+* **1/6/23 - Intro to Trees** | [Slides](https://docs.google.com/presentation/d/1xRSC5zZbpZ0gDKUOjjb5YIKypmPCNhKkRTHorzDvxvI/) | [Recording](https://us02web.zoom.us/rec/share/XNimTh6pisAaX_dzYVUmaDz6IvLTiH-ldKFbORVqvdM3OH51GtgtrjueKMr26yNV.Tyv3pI-_u--g3jiw)
 * **1/7/23 - Trees** | Recording
 * **1/8/23 - Review** | Recording
 
