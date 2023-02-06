@@ -193,6 +193,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * Stacks & Queues: [Slides](https://docs.google.com/presentation/d/1iLTBcKWbPQx7e0MHs-C653YOo2j1XtS-o3juVV7c-Mw/edit?usp=sharing) | [Stack & Queue Implementation](./se-unit-x/lesson-2-stacks-queues/stacks-queues.js)
 * Hash Maps: [Slides](https://docs.google.com/presentation/d/1tQAw1QZUdw9sigVozKOXXTMPbJz8Nuzmx_m0OlLBJQw/edit?usp=sharing) | [Arrays as Hash Maps Code](./se-unit-x/lesson-3-hash-maps/hash-maps.js)
 * Recursion: [Slides](https://docs.google.com/presentation/d/1oVnAPSaN1NvfMg9GimFrPJYjvp05rp-ECIDEReyg96Q/edit?usp=sharing) | [Code Example](./se-unit-x/lesson-4-recursion/recursion.js)
+* Trees: [Slides](https://docs.google.com/presentation/d/1xRSC5zZbpZ0gDKUOjjb5YIKypmPCNhKkRTHorzDvxvI/)
 
 ### Week 1
 * **1/23/23 - Big O** | [Notes](./se-unit-x/lesson-0-big-o/big-o.md) | [Recording](https://us02web.zoom.us/rec/share/Yu1om7NVuQOOaAZSFmtyqtVwS_pk7l7Fr8ZOmbm1MbZ7GgzZ4ZeKAMkvODZ6zsEf.sCVfrmWqqvaowsoS) | [Big-O Challenges](./se-unit-x/lesson-0-big-o/big-o-challenges.md)
@@ -213,7 +214,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ### Week 3
 
-* **1/6/23 - Trees** | [Notes](./se-unit-x/lesson-5-trees/trees.md) | Recording
+* **1/6/23 - Intro to Trees** | [Slides](https://docs.google.com/presentation/d/1xRSC5zZbpZ0gDKUOjjb5YIKypmPCNhKkRTHorzDvxvI/) | Recording
 * **1/7/23 - Trees** | Recording
 * **1/8/23 - Review** | Recording
 
