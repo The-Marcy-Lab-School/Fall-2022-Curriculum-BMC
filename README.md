@@ -220,6 +220,28 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **1/8/23 - Review** | Recording
 
 ## Unit 5 - The Document Object Model (DOM)
+
+**Resources**:
+* [Local setup for Mac](https://github.com/The-Marcy-Lab-School/local-environment-setup-mac)
+* [Local setup for Windows](https://github.com/The-Marcy-Lab-School/local-environment-setup-wsl)
+
+### Week 1
+* **2/10/23 - Intro to DOM** | 
+
+### Week 2
+* **2/13/23 - DOM API** |
+* **2/13/23 - Lab Review** |
+* **2/14/23 - Events** |
+* **2/15/23 - Events/Timers** |
+* **2/15/23 - Lab Review** |
+* **2/16/23 - Forms** |
+* **2/17/23 - Review** |
+
+### Week 3
+* **2/21/21 - Putting It All Together I** |
+* **2/22/21 - Putting It All Together II** |
+* **2/22/21 - Lab Review** |
+
 ## Unit 6 - Asynchronous JavaScript
 ## Unit 7 - Server-side Web Development with Node.js
 ## Unit 8 - React
