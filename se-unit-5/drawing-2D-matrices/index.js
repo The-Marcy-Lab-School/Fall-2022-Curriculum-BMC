@@ -1,24 +1,25 @@
-let $body = document.querySelector("body")
+let bodyElement = document.body;
 
 /* Step 1: rendering manually */
-let $square1 = document.createElement("div")
-let $square2 = document.createElement("div")
-let $square3 = document.createElement("div")
-let $square4 = document.createElement("div")
-$square1.style.background = 'grey';
-$square2.style.background = 'black';
-$square3.style.background = 'black';
-$square4.style.background = 'grey';
+let row1Element = document.createElement("div");
+let row2Element = document.createElement("div");
+row1Element.setAttribute("class", "row");
+row2Element.setAttribute("class", "row");
 
-let $row1 = document.createElement("div");
-let $row2 = document.createElement("div");
-$row1.setAttribute("class", "row");
-$row2.setAttribute("class", "row");
+bodyElement.append(row1Element, row2Element);
 
-$row1.append($square1, $square2);
-$row2.append($square3, $square4);
+let square1Element = document.createElement("div")
+let square2Element = document.createElement("div")
+let square3Element = document.createElement("div")
+let square4Element = document.createElement("div")
+square1Element.style.background = 'grey';
+square2Element.style.background = 'black';
+square3Element.style.background = 'black';
+square4Element.style.background = 'grey';
 
-$body.append($row1, $row2);
+row1Element.append(square1Element, square2Element);
+row2Element.append(square3Element, square4Element);
+
 
 
 /* Step 2: matrix, colors array, and iteration */
@@ -30,38 +31,36 @@ let checkerMatrix = [
 ]
 let checkerColors = ['red', 'blue']
 
-checkerMatrix.forEach(row => {
-  let $row = document.createElement("div");
-  $row.setAttribute("class", 'row');
+checkerMatrix.forEach(currRow => {
+  let rowElement = document.createElement("div");
+  rowElement.setAttribute("class", 'row');
+  bodyElement.append(rowElement);
 
-  row.forEach(val => {
-    let $square = document.createElement("div")
-    $square.style.background = checkerColors[val];
-    $row.append($square);
+  currRow.forEach(value => {
+    let squareElement = document.createElement("div")
+    squareElement.style.background = checkerColors[value];
+    rowElement.append(squareElement);
   });
-
-  $body.append($row);
-})
+});
 
 
 
 /* Step 3: Write a function to draw any matrix with colors*/
 
-function draw({matrix, colors}) { // use object destructuring parameters
+function draw(matrix, colors) {
 //   $body.innerHTML = ""; // clear the body
 
-  matrix.forEach(row => {
-    let $row = document.createElement("div");
-    $row.setAttribute("class", 'row');
-    
-    row.forEach(val => {
-      let $square = document.createElement("div")
-      $square.style.background = colors[val];
-      $row.append($square);
-    });
-    
-    $body.append($row);
-  })
+  matrix.forEach(currRow => {
+  let rowElement = document.createElement("div");
+  rowElement.setAttribute("class", 'row');
+  bodyElement.append(rowElement);
+
+  currRow.forEach(value => {
+    let squareElement = document.createElement("div")
+    squareElement.style.background = colors[value];
+    rowElement.append(squareElement);
+  });
+});
 }
 
 /* Step 4: Make some matrices! */
@@ -131,6 +130,6 @@ let mario = {
 }
 
 
-draw(apple);
-draw(pacman);
-draw(mario);
+draw(apple.matrix, apple.colors);
+draw(pacman.matrix, pacman.colors);
+draw(mario.matrix, mario.colors);
