@@ -1,23 +1,23 @@
 let $body = document.querySelector("body")
 
 /* Step 1: rendering manually */
+let $square1 = document.createElement("div")
+let $square2 = document.createElement("div")
+let $square3 = document.createElement("div")
+let $square4 = document.createElement("div")
+$square1.style.background = 'grey';
+$square2.style.background = 'black';
+$square3.style.background = 'black';
+$square4.style.background = 'grey';
+
 let $row1 = document.createElement("div");
 let $row2 = document.createElement("div");
 $row1.setAttribute("class", "row");
 $row2.setAttribute("class", "row");
 
-let $square1 = document.createElement("div")
-$square1.style.background = 'grey';
-let $square2 = document.createElement("div")
-$square2.style.background = 'black';
-
 $row1.append($square1, $square2);
-let $square3 = document.createElement("div")
-$square3.style.background = 'black';
-let $square4 = document.createElement("div")
-$square4.style.background = 'grey';
-
 $row2.append($square3, $square4);
+
 $body.append($row1, $row2);
 
 
