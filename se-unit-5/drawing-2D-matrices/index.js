@@ -1,5 +1,52 @@
 let $body = document.querySelector("body")
 
+/* Step 1: rendering manually */
+let $row1 = document.createElement("div");
+let $row2 = document.createElement("div");
+$row1.setAttribute("class", "row");
+$row2.setAttribute("class", "row");
+
+let $square1 = document.createElement("div")
+$square1.style.background = 'grey';
+let $square2 = document.createElement("div")
+$square2.style.background = 'black';
+
+$row1.append($square1, $square2);
+let $square3 = document.createElement("div")
+$square3.style.background = 'black';
+let $square4 = document.createElement("div")
+$square4.style.background = 'grey';
+
+$row2.append($square3, $square4);
+$body.append($row1, $row2);
+
+
+/* Step 2: matrix, colors array, and iteration */
+let checkerMatrix = [
+  [1, 0, 1, 0],
+  [0, 1, 0, 1],
+  [1, 0, 1, 0],
+  [0, 1, 0, 1],
+]
+let checkerColors = ['red', 'blue']
+
+checkerMatrix.forEach(row => {
+  let $row = document.createElement("div");
+  $row.setAttribute("class", 'row');
+
+  row.forEach(val => {
+    let $square = document.createElement("div")
+    $square.style.background = checkerColors[val];
+    $row.append($square);
+  });
+
+  $body.append($row);
+})
+
+
+
+/* Step 3: Write a function to draw any matrix with colors*/
+
 function draw({matrix, colors}) { // use object destructuring parameters
 //   $body.innerHTML = ""; // clear the body
 
@@ -16,6 +63,8 @@ function draw({matrix, colors}) { // use object destructuring parameters
     $body.append($row);
   })
 }
+
+/* Step 4: Make some matrices! */
 
 let apple = {
   matrix: [
@@ -41,7 +90,7 @@ let pacman = {
     [0, 0, 0, 0, 0, 1, 1, 2, 2, 2, 1, 1, 0, 0, 0, 0],
     [0, 0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0],
     [0, 0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0, 0],
-    [0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 0],
+    [0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 0],
     [0, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1, 0, 0],
     [0, 1, 2, 2, 2, 2, 2, 2, 2, 1, 1, 1, 0, 0, 0, 0],
     [0, 1, 2, 2, 2, 2, 2, 2, 1, 0, 0, 0, 0, 0, 0, 0],
