@@ -229,7 +229,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/10/23 - Intro to DOM** | 
 
 ### Week 2
-* **2/13/23 - DOM API** | [Drawing 2D Pixel Art Instructions](./se-unit-5/drawing-2D-matrices/notes.md) and  [Code](./se-unit-5/drawing-2D-matrices/index.js) |
+* **2/13/23 - DOM API** | Drawing 2D Pixel Art [Instructions](./se-unit-5/drawing-2D-matrices/notes.md) and  [Code](./se-unit-5/drawing-2D-matrices/index.js) |
 * **2/13/23 - Lab Review** |
 * **2/14/23 - Events** |
 * **2/15/23 - Events/Timers** |
