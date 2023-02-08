@@ -11,7 +11,7 @@ Did you know?
 document.querySelector('body') === document.body // true
 ```
 
-<details><summary>Stuck? Click Here</summary>
+<details><summary>💡 **Stuck?** </summary>
 
 ```js
 let bodyElement = document.body;
@@ -31,7 +31,7 @@ Next, give each of your `rowXElement`s a class property of `"row"` (the `.row` C
 
 Finally, append both of your `rowXElement`s to the `bodyElement`.
 
-<details><summary>Stuck? Click Here</summary>
+<details><summary>💡 **Stuck?** </summary>
 
 ```js
 let row1Element = document.createElement("div");
@@ -52,7 +52,7 @@ Then, Style them so that two squares have a `'grey'` background color and two of
 
 Finally, append two of the squares to the first row and append the other two to the second row. The result should be a checkerboard pattern.
 
-<details><summary>Stuck? Click Here</summary>
+<details><summary>💡 **Stuck?** </summary>
 
 ```js
 let square1Element = document.createElement("div")
@@ -89,7 +89,7 @@ Now here's where the fun happens:
         * Style the `squareElement` such that its background color is a color from `checkerColors`. The index of the color chosen should be specified by the current `value` in the `currRow` of `checkerMatrix`
         * Append `squareElement` to `rowElement`
 
-<details><summary>Stuck? Click Here</summary>
+<details><summary> 💡 **Stuck?** </summary>
 
 ```js
 let checkerMatrix = [
@@ -123,7 +123,7 @@ But, we've created an algorithm that can render a 2D matrix and a corresponding 
 
 The final step is to convert that algorithm into a `draw(matrix, colors)` function that can take in any 2D `matrix` and a corresponding `colors` array and render it as a child of our `bodyElement`.
 
-<details><summary>Stuck? Click Here</summary>
+<details><summary>💡 **Stuck?** </summary>
 
 ```js
 function draw(matrix, colors) {
@@ -205,4 +205,3 @@ let matrix3 = [
 ]
 let colorsArr3 = ['white', 'red', 'SaddleBrown', '#fabe8f', 'black', 'blue', 'yellow']
 ```
-
