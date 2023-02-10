@@ -1,14 +1,18 @@
-console.log("hello DOM!")
+const bodyElement = document.body
+const tableElement = bodyElement.children[2]
 
-document.body.style.backgroundColor = "pink";
+const tHeadElement = tableElement.children[0]
+const tBodyElement = tableElement.children[1]
 
-let tableElement = document.body.children[2];
-let tableHead = tableElement.children[0];
-let tableBody = tableElement.children[1];
-console.log(tableBody)
-tableBody.style.fontFamily  = "Times New Roman"
-tableBody.style.backgroundColor = "red"
-// tableBody.children[0].children
-tableHead.style.backgroundColor = "white"
-// debugger
-tableBody.children[0].children[0].innerText = "Lady Computer Wizard"
+//Have fun manipualting colors
+bodyElement.style.backgroundColor = "yellow"
+tHeadElement.style.backgroundColor = "pink"
+tBodyElement.style.backgroundColor = "blue"
+tBodyElement.style.color = "white"
+
+debugger
+
+tBodyElement.children[0].children[0].innerText = "Vaca Ben"
+
+
+
