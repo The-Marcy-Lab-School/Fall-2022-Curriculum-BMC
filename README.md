@@ -226,7 +226,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * [Local setup for Windows](https://github.com/The-Marcy-Lab-School/local-environment-setup-wsl)
 
 ### Week 1
-* **2/10/23 - Intro to DOM** | 
+* **2/10/23 - Intro to DOM** | [Notes](./se-unit-5/lesson-0-intro-to-dom/notes.md) | [Recording](https://us02web.zoom.us/rec/share/XrWzr-T-iemwHxP5yAHz4al9WhD7uXLlW76SdsV-84j_fm0ilURUNPEB5SDlh0MC.t5GfiMYICP-OW7Iv)
 
 ### Week 2
 * **2/13/23 - DOM API** | Drawing 2D Pixel Art [Instructions](./se-unit-5/drawing-2D-matrices/notes.md) and  [Code](./se-unit-5/drawing-2D-matrices/index.js) |
