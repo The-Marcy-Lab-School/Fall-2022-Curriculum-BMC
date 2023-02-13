@@ -3,8 +3,8 @@ let bodyElement = document.body;
 /* Step 1: rendering manually */
 let row1Element = document.createElement("div");
 let row2Element = document.createElement("div");
-row1Element.setAttribute("class", "row");
-row2Element.setAttribute("class", "row");
+row1Element.className = "row";
+row2Element.className = "row";
 
 bodyElement.append(row1Element, row2Element);
 
@@ -12,10 +12,10 @@ let square1Element = document.createElement("div")
 let square2Element = document.createElement("div")
 let square3Element = document.createElement("div")
 let square4Element = document.createElement("div")
-square1Element.style.background = 'grey';
-square2Element.style.background = 'black';
-square3Element.style.background = 'black';
-square4Element.style.background = 'grey';
+square1Element.style.backgroundColor = 'grey';
+square2Element.style.backgroundColor = 'black';
+square3Element.style.backgroundColor = 'black';
+square4Element.style.backgroundColor = 'grey';
 
 row1Element.append(square1Element, square2Element);
 row2Element.append(square3Element, square4Element);
@@ -33,12 +33,12 @@ let checkerColors = ['red', 'blue']
 
 checkerMatrix.forEach(currRow => {
   let rowElement = document.createElement("div");
-  rowElement.setAttribute("class", 'row');
+  rowElement.className = 'row';
   bodyElement.append(rowElement);
 
   currRow.forEach(value => {
     let squareElement = document.createElement("div")
-    squareElement.style.background = checkerColors[value];
+    squareElement.style.backgroundColor = checkerColors[value];
     rowElement.append(squareElement);
   });
 });
@@ -48,16 +48,16 @@ checkerMatrix.forEach(currRow => {
 /* Step 3: Write a function to draw any matrix with colors*/
 
 function draw(matrix, colors) {
-//   $body.innerHTML = ""; // clear the body
+  bodyElement.innerHTML = ""; // clear the body
 
   matrix.forEach(currRow => {
   let rowElement = document.createElement("div");
-  rowElement.setAttribute("class", 'row');
+  rowElement.className = 'row';
   bodyElement.append(rowElement);
 
   currRow.forEach(value => {
     let squareElement = document.createElement("div")
-    squareElement.style.background = colors[value];
+    squareElement.style.backgroundColor = colors[value];
     rowElement.append(squareElement);
   });
 });
