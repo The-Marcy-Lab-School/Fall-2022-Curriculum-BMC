@@ -231,7 +231,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 ### Week 2
 * **2/13/23 - DOM API** | [Recording](https://us02web.zoom.us/rec/share/xRVaygWaFXvlWRNsppfntwN4IGk75vaP7RIRFy020lVtSNA3HPixNcpJzJyXtXyo.LB4rRAW80Bl7xaWZ) | [Lecture Notes](./se-unit-5/lesson-1-dom-api/notes.md)
 * **2/13/23 - Lab Review** | Drawing 2D Pixel Art [Instructions](./se-unit-5/drawing-2D-matrices/notes.md) and  [Code](./se-unit-5/drawing-2D-matrices/index.js) | [Recording](https://us02web.zoom.us/rec/share/HjcUd7TxyBb4pm3dSVzy1PnEztuHlQKdI775NKS1t-j1cyuBKNAmX7O3-OyDGo8.pirhoVzTPOdvOB4p)
-* **2/14/23 - Events** |
+* **2/14/23 - Events** | [Lecture Notes](./se-unit-5/lesson-2-events/notes.md) | [Code](./se-unit-5/lesson-2-events)
 * **2/15/23 - Events/Timers** |
 * **2/15/23 - Lab Review** |
 * **2/16/23 - Forms** |
