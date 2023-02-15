@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-**[> Skip to current unit <](#unit-x---data-structures-and-algorithms)**
+**[> Skip to current unit <](#unit-5---the-document-object-model-dom)**
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
