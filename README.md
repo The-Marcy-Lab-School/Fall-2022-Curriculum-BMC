@@ -232,7 +232,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/13/23 - DOM API** | [Recording](https://us02web.zoom.us/rec/share/xRVaygWaFXvlWRNsppfntwN4IGk75vaP7RIRFy020lVtSNA3HPixNcpJzJyXtXyo.LB4rRAW80Bl7xaWZ) | [Lecture Notes](./se-unit-5/lesson-1-dom-api/notes.md)
 * **2/13/23 - Lab Review** | Drawing 2D Pixel Art [Instructions](./se-unit-5/drawing-2D-matrices/notes.md) and  [Code](./se-unit-5/drawing-2D-matrices/index.js) | [Recording](https://us02web.zoom.us/rec/share/HjcUd7TxyBb4pm3dSVzy1PnEztuHlQKdI775NKS1t-j1cyuBKNAmX7O3-OyDGo8.pirhoVzTPOdvOB4p)
 * **2/14/23 - Events** | [Lecture Notes](./se-unit-5/lesson-2-events/notes.md) | [Code](./se-unit-5/lesson-2-events) | [Recording](https://drive.google.com/file/d/1a7-R6FRIo-VQlKYLTAw3uo88z3fiJZB8/view?usp=share_link)
-* **2/15/23 - Events/Timers** |
+* **2/15/23 - Events/Timers** | [Recording](https://us02web.zoom.us/rec/share/U5rmmbZlHDrl6ySqtFYeEauv1IyJvoNbsHK1oM1f2yzxYjseT-HnXFn9Furad22i.TJ0_--q9ZT17F_iH) | [Bouncing Box Code](./se-unit-5/bouncing-box/)
 * **2/15/23 - Lab Review** |
 * **2/16/23 - Forms** |
 * **2/17/23 - Review** |

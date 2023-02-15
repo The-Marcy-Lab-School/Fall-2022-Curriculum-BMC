@@ -44,23 +44,32 @@ Pay close attention to the `position`, `top`, and `left` properties. These will 
 
 Preview / render your HTML file to see the box!
 
-## Step 3: JavaScript
+## Step 3: Testing JavaScript
 
-In your JavaScript file, `console.log` the value of `document.body`. The value `null` will appear in your console.
+In your JavaScript file, declare a variable called `bodyElement` and assign it the DOM `Element` associated with the `<body>`.
 
-Why? In our HTML file, we load in the JavaScript file (which executes its code) BEFORE the `<body>` element is rendered — so it doesn't exist yet!
+`console.log` the value of `bodyElement`.
+
+**Why is it `null`?**
+
+In our HTML file, we load in the JavaScript file (which executes its code) BEFORE the `<body>` element is rendered — so it doesn't exist yet!
 
 We need to ensure that our JavaScript is executed AFTER the HTML page loads. There are a couple of ways to do this:
 1. Move the `<script>` tag loading our JavaScript file to the bottom of the HTML file (after the `<body>` but before the closing `</html>` tag)
-2. Wrap our JavaScript inside a `"load"` event.
+2. Wrap our JavaScript inside a `"load"` event fired on the `window`.
+3. Use the `defer` attribute on our `<script>` tag.
 
-You can try the first approach, however, we should also demonstrate the second approach since it is more reliable. 
+The first approach works but is unreliable (you might forget to move the file). 
+
+The third approach is the simplest and most modern approach. 
+
+The second approach will show up online and is important to understand so let's look at it.
 
 Use the `addEventListener` method on the `window` object passing in two arguments:
 1. `"load"` — the event fired after the HTML content is fully loaded
 2. `(event) => {}` — the callback function to be execiuted when the page is loaded. All of our code will go inside this callback.
 
-Inside this callback, again try printing out `document.body` and you should now see the `<body>` element printed to the console!
+Inside this callback, again try printing out `bodyElement` and you should now see the `<body>` element printed to the console!
 
 All subsequent steps will involve writing code inside of this callback.
 
@@ -146,7 +155,7 @@ All DOM `Element` objects have a few useful properties:
 So, with some nice math we can write:
 
 ```js
-if ((x + boxElement.offsetWidth) > document.body.clientWidth) {
+if ((x + boxElement.offsetWidth) > bodyElement.clientWidth) {
     directionX = -1;
 }
 if (x < 0) {         // if the left edge goes past 0

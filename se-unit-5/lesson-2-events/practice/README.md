@@ -3,7 +3,7 @@
 
 0. In the context of web programming, what is an event? What are some of the different types of events that might occur in a web application?
 
-1. In your own words, describe the event loop. How does it work?
+1. What is a callback function? How/when are they executed?
 
 2. Write a function so that, when the user clicks anywhere on the page, the x and y position of the mouse are logged to the console.
 
