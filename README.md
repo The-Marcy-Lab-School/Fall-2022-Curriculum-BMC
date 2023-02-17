@@ -235,7 +235,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/15/23 - Events/Timers** | [Recording](https://us02web.zoom.us/rec/share/U5rmmbZlHDrl6ySqtFYeEauv1IyJvoNbsHK1oM1f2yzxYjseT-HnXFn9Furad22i.TJ0_--q9ZT17F_iH) | [Bouncing Box Code](./se-unit-5/bouncing-box/)
 * **2/15/23 - Lab Review** | [Recording](https://us02web.zoom.us/rec/share/_0r89CHUD29W40diEvelDG1gbJEyBlHN1Ko2nqyFVLkBHI9T8cUh768r-BZ-0-pH.J7cNLWYRL6M_2UUD)
 * **2/16/23 - Forms** |
-* **2/17/23 - Review** |
+* **2/17/23 - JS Events Assignment Review** | [Recording](https://us02web.zoom.us/rec/share/tSssLAXrZ6ZAkhyvxF6DWLmIIrd828DKcwK7OZsFz_rCiTj3I-YbAerYlxl02ssp.eeSiNYG5M69AVlTB)
 
 ### Week 3
 * **2/21/21 - Putting It All Together I** |
