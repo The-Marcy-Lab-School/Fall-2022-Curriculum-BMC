@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: grey;
+}
+
+#arena {
+    width: 1200px;
+    height: 500px;
+    background: black;
+}
+
+.paddle {
+    width: 30px;
+    height: 80px;
+    background: white;
+    position: absolute;
+}
+
+#ball {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: white;
+    position: absolute;
+}
+
+#score {
+    color: white;
+    font-size: 4em;
+    text-align: center;
+}
+
+#restart {
+    height: 3em;
+    padding: 10px;
+}

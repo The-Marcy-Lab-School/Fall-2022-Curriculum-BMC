@@ -238,9 +238,9 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/17/23 - JS Events Assignment Review** | [Recording](https://us02web.zoom.us/rec/share/tSssLAXrZ6ZAkhyvxF6DWLmIIrd828DKcwK7OZsFz_rCiTj3I-YbAerYlxl02ssp.eeSiNYG5M69AVlTB)
 
 ### Week 3
-* **2/21/21 - Putting It All Together I** |
-* **2/22/21 - Putting It All Together II** |
-* **2/22/21 - Lab Review** |
+* **2/21/21 - Pong I** | [Recording](https://us02web.zoom.us/rec/share/AAklKpXEyjo2VAvHuWKG8Qomidp17X7seHU1R-YvZR83UweouYsz7TxQUbzpzb6J.iTM2M0q1z2_tWeai)
+* **2/22/21 - Pong II** | [Recording](https://us02web.zoom.us/rec/share/qQiMDrKqrKcbLB7Nx2VXW_X4bhAeNYmsPdfJ7V6bCrSHPyqCyGbriiFcZm1dl6QN.CSbQ5gqNdLKxiatg)
+* **2/22/21 - Pong III** | [Recording](https://us02web.zoom.us/rec/share/nhgPOCvYbYmDZxZ8RdUdxs2CNYX7dE5VxwldlYBQJzla2vDsmqfAqwjDaCbO-X-R.1Cm09p854GtBPkvO)
 
 ## Unit 6 - Asynchronous JavaScript
 ## Unit 7 - Server-side Web Development with Node.js
