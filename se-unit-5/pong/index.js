@@ -254,7 +254,7 @@ function checkForScore() {
 
 // Start and End Game
 function startGame() {
-    animationInterval = setInterval(newFrame, 20);
+    animationInterval = setInterval(newFrame, 500);
 
     document.addEventListener("keydown", handleKeyDown);
     document.addEventListener("keyup", handleKeyUp);
