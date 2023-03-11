@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+  <style>
+    canvas {
+      width: 100vw;
+      height: 100vh;
+      background: teal;
+    }
+    h1 {
+      width: 100%;
+      text-align: center;
+      position: absolute;
+      top: 10%;
+      font-family: Arial;
+      color: rgb(107, 206, 150);
+      font-size: 20vw;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hurrah!</h1>  
+  
+  <script>
+    var myCanvas = document.createElement('canvas');
+    document.body.appendChild(myCanvas);
+
+    var myConfetti = confetti.create(myCanvas, {
+      resize: true,
+      useWorker: true
+    });
+    myConfetti({
+      particleCount: 100,
+      spread: 160
+    });
+  </script>
+    
+
+</body>
+</html>
