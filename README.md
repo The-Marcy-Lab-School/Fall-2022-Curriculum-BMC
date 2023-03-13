@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-**[> Skip to current unit <](#unit-5---the-document-object-model-dom)**
+**[> Skip to current unit <](#unit-6---asynchronous-javascript)**
 
 **Table of Contents**
 * [Unit 0 - Command Line, Git, Github](#unit-0---command-line-git-github)
@@ -238,9 +238,9 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/17/23 - JS Events Assignment Review** | [Recording](https://us02web.zoom.us/rec/share/tSssLAXrZ6ZAkhyvxF6DWLmIIrd828DKcwK7OZsFz_rCiTj3I-YbAerYlxl02ssp.eeSiNYG5M69AVlTB)
 
 ### Week 3
-* **2/21/21 - Pong I** | [Recording](https://us02web.zoom.us/rec/share/AAklKpXEyjo2VAvHuWKG8Qomidp17X7seHU1R-YvZR83UweouYsz7TxQUbzpzb6J.iTM2M0q1z2_tWeai)
-* **2/22/21 - Pong II** | [Recording](https://us02web.zoom.us/rec/share/qQiMDrKqrKcbLB7Nx2VXW_X4bhAeNYmsPdfJ7V6bCrSHPyqCyGbriiFcZm1dl6QN.CSbQ5gqNdLKxiatg) | [Collision Demo](https://jsbin.com/wunikijure/4/edit?html,css,js,output)
-* **2/22/21 - Pong III** | [Recording](https://us02web.zoom.us/rec/share/nhgPOCvYbYmDZxZ8RdUdxs2CNYX7dE5VxwldlYBQJzla2vDsmqfAqwjDaCbO-X-R.1Cm09p854GtBPkvO) | [Pong Solution](./se-unit-5/pong/)
+* **2/21/23 - Pong I** | [Recording](https://us02web.zoom.us/rec/share/AAklKpXEyjo2VAvHuWKG8Qomidp17X7seHU1R-YvZR83UweouYsz7TxQUbzpzb6J.iTM2M0q1z2_tWeai)
+* **2/22/23 - Pong II** | [Recording](https://us02web.zoom.us/rec/share/qQiMDrKqrKcbLB7Nx2VXW_X4bhAeNYmsPdfJ7V6bCrSHPyqCyGbriiFcZm1dl6QN.CSbQ5gqNdLKxiatg) | [Collision Demo](https://jsbin.com/wunikijure/4/edit?html,css,js,output)
+* **2/22/23 - Pong III** | [Recording](https://us02web.zoom.us/rec/share/nhgPOCvYbYmDZxZ8RdUdxs2CNYX7dE5VxwldlYBQJzla2vDsmqfAqwjDaCbO-X-R.1Cm09p854GtBPkvO) | [Pong Solution](./se-unit-5/pong/)
 
 ## Unit 6 - Asynchronous JavaScript
 
@@ -248,6 +248,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * [APIs with no Auth](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 
 ### Week 1
+* **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | Recording
 
 ### Week 2
 
