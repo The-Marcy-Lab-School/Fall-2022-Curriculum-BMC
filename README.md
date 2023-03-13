@@ -248,11 +248,20 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * [APIs with no Auth](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 
 ### Week 1
-* **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | Recording
+* **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | [Joke Fetch Example](./se-unit-6/lesson-0-intro_to_http/random-joke/) | Recording
+* **3/14/23 - Fetch & Promises I** | 
+* **3/15/23 - Fetch & Promises II** | 
+* **3/16/23 - APIs & Documentation** |
+* **3/17/23 - Async/Await** |
 
 ### Week 2
 
-### Week 3
+* **3/20/23 - Review** |
+* **3/21/23 - REST APIs (GET)** |
+* **3/22/23 - REST APIs (POST, PUT/PATCH, DELETE)** |
+* **3/23/23 - Review** | 
+
+### Week 3 - Project Week!s
 
 ## Unit 7 - Server-side Web Development with Node.js
 ## Unit 8 - React
