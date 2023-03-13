@@ -245,10 +245,11 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 ## Unit 6 - Asynchronous JavaScript
 
 **Additional Resources**
+* [Launch School Book on HTTP](https://launchschool.com/books/http/read/introduction)
 * [APIs with no Auth](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
 
 ### Week 1
-* **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | [Joke Fetch Example](./se-unit-6/lesson-0-intro_to_http/random-joke/) | [Recording](https://us02web.zoom.us/rec/share/ZMJl3GCnLrQj-9R9uxlKG7L0Nmk_DV7y-_2EgqbYfuPEjTAUHEKolADNsosk4wxp.2_fAXHTyhUexM5TF)
+* **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | [Joke Fetch Example](./se-unit-6/lesson-0-intro_to_http/random-joke/) | [Lecture Recording](https://us02web.zoom.us/rec/share/ZMJl3GCnLrQj-9R9uxlKG7L0Nmk_DV7y-_2EgqbYfuPEjTAUHEKolADNsosk4wxp.2_fAXHTyhUexM5TF) | [Cookies, Sessions, and HTTPS](https://us02web.zoom.us/rec/share/B-OK2Tjt_T2IY3aNCLT4Oy4fq_uDrI8Qyuibaa9NeWG7yCHLQRD3w9d0f7eVcnt0.sOkfBRh1B10Bg-Oc)
 * **3/14/23 - Fetch & Promises I** | 
 * **3/15/23 - Fetch & Promises II** | 
 * **3/16/23 - APIs & Documentation** |
