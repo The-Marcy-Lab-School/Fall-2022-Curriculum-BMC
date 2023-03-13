@@ -243,6 +243,16 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **2/22/21 - Pong III** | [Recording](https://us02web.zoom.us/rec/share/nhgPOCvYbYmDZxZ8RdUdxs2CNYX7dE5VxwldlYBQJzla2vDsmqfAqwjDaCbO-X-R.1Cm09p854GtBPkvO) | [Pong Solution](./se-unit-5/pong/)
 
 ## Unit 6 - Asynchronous JavaScript
+
+**Additional Resources**
+* [APIs with no Auth](https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/)
+
+### Week 1
+
+### Week 2
+
+### Week 3
+
 ## Unit 7 - Server-side Web Development with Node.js
 ## Unit 8 - React
 ## Unit 9 - Capstone
