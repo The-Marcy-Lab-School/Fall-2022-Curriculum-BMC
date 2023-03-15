@@ -251,7 +251,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 ### Week 1
 * **3/13/23 - Intro to HTTP** | [Slides](https://docs.google.com/presentation/d/15lFzYBmclDeytjK3kbbAf83zLhrLZUD5Pqc3AhzDM1g) | [Joke Fetch Example](./se-unit-6/lesson-0-intro_to_http/random-joke/) | [Lecture Recording](https://us02web.zoom.us/rec/share/ZMJl3GCnLrQj-9R9uxlKG7L0Nmk_DV7y-_2EgqbYfuPEjTAUHEKolADNsosk4wxp.2_fAXHTyhUexM5TF) | [Cookies, Sessions, and HTTPS](https://us02web.zoom.us/rec/share/B-OK2Tjt_T2IY3aNCLT4Oy4fq_uDrI8Qyuibaa9NeWG7yCHLQRD3w9d0f7eVcnt0.sOkfBRh1B10Bg-Oc)
 * **3/14/23 - Async Code & Promises** | [Notes](./se-unit-6/lesson-1-intro_to_async/lesson-1-intro-to-async.md) | [Recording](https://us02web.zoom.us/rec/share/jIuGAlYIsTtBBkHBi8gOd-uB80cneQsqgs3HeBC7AJOo9EdphP__iXbPqLJ0HGY.7rnb9KwiTCE7y8gJ)
-* **3/15/23 - Fetch** | [Notes](./se-unit-6/lesson-2-fetch_api/lesson-2-fetch_api.md)
+* **3/15/23 - Fetch** | [Notes](./se-unit-6/lesson-2-fetch_api/lesson-2-fetch_api.md) | [Recording](https://us02web.zoom.us/rec/share/8y8G9Vmva_kTtdRMwFhzAAkuD8R1lMc9a-kvdyYw4Pc7As9TN6YdmN1twdJD3R0o.1FZLv2J8pxFokEJb)
 * **3/16/23 - APIs & Documentation** |
 * **3/17/23 - Async/Await** |
 
