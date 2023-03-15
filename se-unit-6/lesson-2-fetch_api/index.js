@@ -23,7 +23,7 @@ function main() {
     latitudeEl.innerText = `Latitude: Loading...`;
     longitudeEl.innerText = `Longitude: Loading...`;
     sunriseEl.innerText = `Sunrise: Loading...`;
-    sunsetEl.innerText = `Sunrise: Loading...`;
+    sunsetEl.innerText = `Sunrset: Loading...`;
 
     // use the navigator API to get your device's current location
     if (navigator.geolocation) {
