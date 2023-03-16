@@ -35,7 +35,8 @@ function bookSearchController(){
 
   function handleSearch(e){
     e.preventDefault();
-    fetchBooks(search.value).then(books => renderBookList(books))
+    fetchBooks(search.value)
+      .then(books => renderBookList(books))
   }
 
   form.addEventListener('submit', handleSearch)

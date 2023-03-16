@@ -1,7 +1,5 @@
 # Fetch App Practice
 
-0. What is AJAX? Why is this important for building web applications? Include some examples of web applications which implement AJAX.
-
 ## Practice
 
 For the next questions, write your code in the `book-search` directory.

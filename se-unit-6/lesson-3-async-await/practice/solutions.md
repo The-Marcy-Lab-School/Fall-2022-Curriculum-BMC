@@ -1,9 +1,5 @@
 # Fetch App Practice Solutions
 
-0. What is AJAX? Why is this important for building web applications? Include some examples of web applications which implement AJAX.
-
-**Suggested Answer** AJAX stands for "Asynchronous JavaScript and XML." In the early days of the web, each request that a web browser made would cause the page to refresh. Modern web applications, however, are able to implement robust experiences without page refreshes. GMail, for example, has multiple interactions and allows you to use the app without ever needing to refresh the page.
-
 ## Practice
 
 For the next questions, write your code in the `book-search` directory.
