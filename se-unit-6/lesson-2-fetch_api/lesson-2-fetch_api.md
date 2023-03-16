@@ -109,9 +109,10 @@ fetch('https://go-apod.herokuapp.com/apod') // returns a Promise
 
 To summarize:
 * `fetch` is provided a url to fetch data from. It returns a Promise
-* When that Promise is fulfilled, the first `then` callback is executed with the response data provided as an argument. 
-* The `response` from the `fetch` call is in JSON format so we have to convert it to a plain JS object with the `.json()` method and return it in a new Promise
-* When the `then` Promise is fulfilled, the second `then` 
+* When that `fetch` Promise is fulfilled, the first `then` callback is executed. The resolved `response` from the `fetch` call is provided as an argument. 
+* The `response` from the `fetch` call is in JSON format so we have to convert it to a plain JS object with the `.json()` method. 
+* `.json()` is also an asynchronous function that returns a Promise.
+* When the `response.json()` Promise is fulfilled, the second `then` callback is executed. The resolved `data` from `response.json()` is provided as an argument and we can do whatever we need to with the data!
 
 ### Catch
 
@@ -126,3 +127,17 @@ fetch('https://go-apod.herokuapp.com/apod') // returns a Promise
     })
     .catch(error => console.log(error))
 ```
+
+
+### Eample: Manipulate the DOM with a fetch
+
+Often, we need to manipulate the DOM in response to a `fetch` call. To make a simple program that does this, we will typically follow these steps:
+
+1. Create HTML elements (give them ids)
+2. Create variables for those DOM elements in JS
+3. Fetch data
+4. convert from JSON 
+5. use the data to manipulate the DOM elements
+6. Bonus: we can make a button to fetch new data
+
+[Here is an exmaple that demonstrates this!](https://jsbin.com/casuneb/4/edit?html,js,output)
