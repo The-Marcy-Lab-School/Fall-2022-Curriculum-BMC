@@ -1,6 +1,7 @@
 const bookListEl = document.querySelector("#books");
+const topicHeaderEl = document.querySelector("#topic")
 const searchInputEl = document.querySelector("#search-input");
-const searchButtonEl = document.querySelector("#search-button");
+const searchFormEl = document.querySelector("#search-form");
 
 // async arrow function
 const fetchFrom = async (url) => {
@@ -19,18 +20,26 @@ async function findBookAbout(searchTerm) {
     const url = `https://www.googleapis.com/books/v1/volumes?q=${searchTerm}`;
 
     const data = await fetchFrom(url); // make blocking with await
+    
+    bookListEl.innerHTML = "";
     data.items.forEach(item => {
         const li = document.createElement("li")
         li.innerText = item.volumeInfo.title;
         bookListEl.append(li);
     })
-
 }
 
-searchButtonEl.addEventListener('click', (e) => {
+searchFormEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const searchTerm = searchInputEl.value;
+    topicHeaderEl.innerText = `Books about ${searchTerm}`
+    
+    // If the search term has spaces, we need to use %20 in the query string
+    searchTerm = searchTerm.replace(" ", "%20")
+
     // findBookAbout is an async function, but we don't need to
     // wait for it to resolve since it doesn't return anything
-    const searchTerm = searchInputEl.value;
     findBookAbout(searchTerm);
     searchInputEl.value = '';
 })
