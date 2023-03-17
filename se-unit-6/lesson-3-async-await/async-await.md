@@ -30,10 +30,15 @@ function findBookAbout(searchTerm) {
 findBookAbout('cheese')
 ```
 
-But, what if I told you there is a better way? One of the issues with this current approach is that writing callback functions is a bit of a pain. 
+> To generate an error response, try the url without the query parameter:
+> `https://www.googleapis.com/books/v1/volumes` 
+
+### Async/Await
+
+One of the issues with this current approach is that writing callback functions is a bit of a pain. 
 
 The `async`/`await` operators make this much cleaner. Check this out:
-* First, we have to label the `findBookAbout` as an `async` function. This alllows us to use the `await` keyword inside.
+* First, we have to label the `findBookAbout` as an `async` function. This alllows us to use the `await` keyword inside. (See what happens when you don't include it!)
 * Next, we remove the `.then` method calls and instead `await` each Promise.
 
 ```js
@@ -49,7 +54,8 @@ findBookAbout('cheese')
 ```
 
 The `await` operator is used to wait for a Promise to get its fulfilled value. This allows us to write code in a synchronous-like style.
-* In the example above, the fulfilled value is returned and stored in the variable `response`. Only after this Promise is fulfilled do we move on to the next line of code.
+* In the example above, we wait for the Promise to be fulfilled at which point we will store the resolved value in `response`. 
+* Only after this Promise is fulfilled do we move on to the next line of code.
 * Since `response.json()` also returns a Promise, we can `await` it and store the fulfilled value in `data`.
 * The `await` operator must be used inside a function that is marked as `async`. Note that the function `findBookAbout` now has the `async` keyword in front.
 
@@ -67,6 +73,8 @@ const findBookAbout = async (searchTerm) => {
 
 findBookAbout('cheese')
 ```
+ 
+**Rule of thumb:** The `async` keyword goes before the function's declaration. Since arrow functions are like function expressions, technically the function declaration begins after the `=`.
 
 ### But what about errors?
 
@@ -121,3 +129,5 @@ const findBookAbout = async (searchTerm) => {
 
 findBookAbout('cheese')
 ```
+
+Since the data that is being returned from `fetchFrom` is a Promise, we have to `await` our call to `fetchFrom`.
