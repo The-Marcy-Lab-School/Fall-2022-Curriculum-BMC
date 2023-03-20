@@ -254,11 +254,11 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * **3/14/23 - Async Code & Promises** | [Notes](./se-unit-6/lesson-1-intro_to_async/lesson-1-intro-to-async.md) | [Recording](https://us02web.zoom.us/rec/share/jIuGAlYIsTtBBkHBi8gOd-uB80cneQsqgs3HeBC7AJOo9EdphP__iXbPqLJ0HGY.7rnb9KwiTCE7y8gJ)
 * **3/15/23 - URLs, Query Params, and Fetch** | [Notes](./se-unit-6/lesson-2-fetch_api/lesson-2-fetch_api.md) | [Recording](https://us02web.zoom.us/rec/share/8y8G9Vmva_kTtdRMwFhzAAkuD8R1lMc9a-kvdyYw4Pc7As9TN6YdmN1twdJD3R0o.1FZLv2J8pxFokEJb) | [Lab Review](https://us02web.zoom.us/rec/share/uCYKWRb1pzXXU7gjhcj0z6Dqmkq18ruHFNZiJnUhLspuiFwPcZcThF5Ke0ZtIJjm.0q0x5nr78I8lFPyE)
 * **3/16/23 - APIs & Documentation** | [Notes](./se-unit-6/lesson-2-fetch_api/api-documentation.md) | [Dog API & DOM Manipulation Example](https://jsbin.com/casuneb/4/edit?html,js,output) | [Recording](https://us02web.zoom.us/rec/share/LfsP5U8jqMdlKluUOmyX1iGwBbNnc-HVfRXbooHipvLZuEx_pmHN-AAt1_yUCTK9.4iL7bd4XQkNeWldC)
-* **3/17/23 - Async/Await** | [Notes](./se-unit-6/lesson-3-async-await/async-await.md) | [Book Search HTML](./se-unit-6/lesson-3-async-await/index.html) & [JS](./se-unit-6/lesson-3-async-await/index.js)| [Recording](https://us02web.zoom.us/rec/share/cFUn3F7zMYNrulqcQGsLibY1ggNyl0FLL7aSP30sOe94HfvxRsvxyxXqjpWWmP1D.9WUmOGMdKU3WpJVn)
+* **3/17/23 - Async/Await** | [Notes](./se-unit-6/lesson-3-async-await/async-await.md) | [Book Search HTML](./se-unit-6/lesson-3-async-await/index.html) & [JS](./se-unit-6/lesson-3-async-await/index.js) | [Recording](https://us02web.zoom.us/rec/share/cFUn3F7zMYNrulqcQGsLibY1ggNyl0FLL7aSP30sOe94HfvxRsvxyxXqjpWWmP1D.9WUmOGMdKU3WpJVn)
 
 ### Week 2
 
-* **3/20/23 - Review** |
+* **3/20/23 - 6.1 Intro to Fetch Review** | [Recording](https://us02web.zoom.us/rec/share/dwMRR50RdMTI29FRemX7FdwlgjXPzfckWqs-UaPStf3huzJM4AaH_nE-DulG58zu.FSChhNzB243CqIR5)
 * **3/21/23 - REST APIs (GET)** |
 * **3/22/23 - REST APIs (POST, PUT/PATCH, DELETE)** |
 * **3/23/23 - Review** | 
