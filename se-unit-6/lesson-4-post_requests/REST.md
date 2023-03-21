@@ -1,8 +1,8 @@
-# REST
+# Representational State Transfer
 
-**Re**presentational **S**tate **T**ransfer
+[_Additional Reading_](https://www.codecademy.com/courses/learn-node-js/articles/what-is-rest)
 
-<img src='https://theapicompany.com/wp-content/uploads/2020/04/REST-and-SOAP-API-usage-in-2020.png' width='500px'>
+<img src='https://theapicompany.com/wp-content/uploads/2020/04/REST-and-SOAP-API-usage-in-2020.png'>
 
 ## What is REST?
 
