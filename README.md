@@ -260,7 +260,7 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 * **3/20/23 - 6.1 Intro to Fetch Review** | [Recording](https://us02web.zoom.us/rec/share/dwMRR50RdMTI29FRemX7FdwlgjXPzfckWqs-UaPStf3huzJM4AaH_nE-DulG58zu.FSChhNzB243CqIR5)
 * **3/21/23 - REST APIs** | [Notes](./se-unit-6/lesson-4-post_requests/REST.md) | [Recording](https://us02web.zoom.us/rec/share/tSl9cDQF8T48azXsyT_UUv8gCN0XVPFXX6Tha7Bbpl1_blhNPUxktGVA9cd4_Z3Y.zeXynYS_VgOvzXiT)
-* **3/22/23 - JSON Server Demo (HTTP Methods)** |
+* **3/22/23 - HTTP Methods, Postman, & JSON Server** | [JSON Server Project Link](https://classroom.github.com/a/PMU7Ukxy) | [Recording](https://us02web.zoom.us/rec/share/CMIJLAx2ICd3lyOgitb03cpiLcjc-1t5YMKug3SizB9sKKKXVb_JaMEVkaV9o0oKxLh.gJ3rBZWZvGI75slA)
 * **3/23/23 - Review** | 
 
 ### Week 3 - Project Week!
