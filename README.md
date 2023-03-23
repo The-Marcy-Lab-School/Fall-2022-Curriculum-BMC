@@ -17,6 +17,9 @@
 
 ## Orientation Week
 
+**Tips & Tricks to Success at Marcy**
+* [How to Boost Your Confidence as a New Programmer](https://marcylabschool.notion.site/marcylabschool/How-to-Boost-Your-Confidence-as-a-New-Programmer-3e08b5dc231444adb5770228696041ac)
+
 **Important Links to Bookmark**
 * **Canvas**: https://canvas.instructure.com/
 * **Github**: https://github.com/
