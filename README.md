@@ -270,7 +270,17 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ### Week 3 - Project Week!
 
-* [Github Projects Setup / Project Board Workshop Recording](https://us02web.zoom.us/rec/share/X7DoHlnuW2HZ44aIOUxJxh-17ynfLHmwJk98Lhh0ja_oDZ1WPjbgFlJmA2SzkQ3N.Fb7YOFRw1YPORRFQ)
+* [Unit 6 Project Week Overview](https://github.com/The-Marcy-Lab-School/unit-6-project)
+* [Unit 6 Project Week Kickoff Slides](https://docs.google.com/presentation/d/1f0ufNU__Sj97VYs8cAQzaPyqJGLDrDSTAIH4KqUXFEg/)
+* [Unit 6 Project Proposal Example](https://docs.google.com/document/d/15ZwZQe9j2FQsGwrkG80UkNa2P6PuZN1hiZexxXKnrAc/edit)
+* [Project Presentation Template](https://docs.google.com/presentation/d/1xUvLY7tsh2zKbnUuTJh7W_-jVOD1G0wwTSkF4P9g1Gc/view)
+* [How to deploy your repo](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
+
+Additional Resources:
+* [Git Workflow Best Practices](https://github.com/Itzel01/git-workshop)
+* [Github Projects Setup / Project Board](https://github.com/The-Marcy-Lab-School/unit-5-project/blob/main/scrumboard-instructions.md) | [Recording](https://us02web.zoom.us/rec/share/X7DoHlnuW2HZ44aIOUxJxh-17ynfLHmwJk98Lhh0ja_oDZ1WPjbgFlJmA2SzkQ3N.Fb7YOFRw1YPORRFQ) 
+* [Mobile Design Inspirations](https://screenlane.com/) | [Web Design Inspiration](https://www.siteinspire.com/)
+* [20 Web Design Principles to Follow](https://www.canva.com/learn/20-web-design-principles-follow/)
 
 ## Unit 7 - Server-side Web Development with Node.js
 ## Unit 8 - React
