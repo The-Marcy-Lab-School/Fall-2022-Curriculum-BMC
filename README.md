@@ -277,8 +277,9 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 * [How to deploy your repo](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
 
 Additional Resources:
-* [Git Workflow Best Practices](https://github.com/Itzel01/git-workshop)
 * [Github Projects Setup / Project Board](https://github.com/The-Marcy-Lab-School/unit-5-project/blob/main/scrumboard-instructions.md) | [Recording](https://us02web.zoom.us/rec/share/X7DoHlnuW2HZ44aIOUxJxh-17ynfLHmwJk98Lhh0ja_oDZ1WPjbgFlJmA2SzkQ3N.Fb7YOFRw1YPORRFQ) 
+* [Git Workflow Best Practices](https://github.com/Itzel01/git-workshop)
+* [Bootstrap Demo Recording](https://us02web.zoom.us/rec/play/wjfZry8ygqn6ZoA6fO5xwB29sfviPUwG_AcjiQj1b2iiCnjy5aQYmZBO-yj0QvxDNsbg2Y1HTk8pkZl7.yVr9YWxEmFdtqzod)
 * [Mobile Design Inspirations](https://screenlane.com/) | [Web Design Inspiration](https://www.siteinspire.com/)
 * [20 Web Design Principles to Follow](https://www.canva.com/learn/20-web-design-principles-follow/)
 
