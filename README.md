@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-**[> Skip to current unit <](#unit-6---asynchronous-javascript)**
+**[> Skip to current unit <](#unit-7---server-side-web-development-with-nodejs)**
 
 **Table of Contents**
 * [Orientation Week](#orientation-week)
