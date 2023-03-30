@@ -45,7 +45,9 @@ server.listen(port, host, () => {
     * Use <kbd>Ctrl+C</kbd> to end a Node process.
 
 ## Design Pattern: Routing / Route Handlers
-* Request Listener that parses the request for the URL path and then delegates to a handler for different **routes**
+* Request Listener that parses the request for the URL path and then delegates to a handler for different **routes**.
+* Pass along the `req` and `res` objects to the handlers
+
 
 ```js
 const http = require('http');
@@ -64,22 +66,6 @@ const homeHandler = (req, res) => {
     res.end();
 }
 
-const helloHandler = (req, res) => {
-    const parseQueryParams = true;
-    const baseUrl = url.parse(req.url, parseQueryParams);
-    console.log('baseUrl:', baseUrl);
-    
-    // We want the query object
-    const { query } = baseUrl;
-    console.log('query:', query);
-
-    const { name } = query;
-    const message = `Hello ${name || 'stranger'}!`;
-    res.writeHead(201);
-    res.write(message);
-    res.end();
-}
-
 const errorHandler = (req, res) => {
     // we can chain these calls together
     res.writeHead(404).end('Page does not exist');
@@ -91,11 +77,11 @@ const errorHandler = (req, res) => {
 const requestListener = (req, res) => {
     
     console.log(`incoming request at ${req.url}`);
-    // Parse the request url and parse the query params into an object
+    // Parse the request url. We're looking for the pathname
     const baseUrl = url.parse(req.url);
     console.log('baseUrl:', baseUrl);
     
-    // We want the pathname 
+    // Extract just the pathname
     const { pathname } = baseUrl;
     console.log('pathname:', pathname);
 
@@ -103,8 +89,6 @@ const requestListener = (req, res) => {
     switch(pathname) {
         case '/':
             return homeHandler(req, res);
-        case '/hello':
-            return helloHandler(req, res);
         default:
             return errorHandler(req, res);
     }
@@ -118,6 +102,44 @@ const server = http.createServer(requestListener);
 server.listen(port, host, () => { 
     console.log(`Server is running on http://${host}:${port}`);
 })
+```
+
+### Extracting Query Params
+
+`url.parse` takes in a second Boolean argument which is used to determine whether or not to parse the query parameters into an object (defaults to `false`).
+
+For example, the url `/hello?name=ben&age=28` will generate a `query` object looking like:
+
+```js
+{
+    'name': 'ben',
+    'age': '28'
+}
+```
+
+Note that all values are strings.
+
+Let's see what it looks like if we add in a handler for the `/hello` path:
+
+```js
+const helloHandler = (req, res) => {
+    const parseQueryParams = true;
+    const baseUrl = url.parse(req.url, parseQueryParams);
+    console.log('baseUrl:', baseUrl);
+    
+    // We want the query object
+    const { query } = baseUrl;
+    console.log('query:', query);
+
+    // And we want the name from the query object
+    // This is the same as baseUrl.query.name
+    const { name } = query;
+
+    const message = `Hello ${name || 'stranger'}!`;
+    res.writeHead(201);
+    res.write(message);
+    res.end();
+}
 ```
 
 ## Host & Ports
