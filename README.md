@@ -284,5 +284,11 @@ Additional Resources:
 * [20 Web Design Principles to Follow](https://www.canva.com/learn/20-web-design-principles-follow/)
 
 ## Unit 7 - Server-side Web Development with Node.js
+
+### Week 1
+
+* **4/4/23 Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md)
+* **4/5/23 Intro to HTTP Server** | [Notes](./se-unit-7/lesson-1-http/notes.md)
+
 ## Unit 8 - React
 ## Unit 9 - Capstone
