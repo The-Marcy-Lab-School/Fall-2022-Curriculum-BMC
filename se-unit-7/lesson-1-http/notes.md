@@ -134,12 +134,14 @@ Ports are the "front doors" of our application. (There are are a lot of doors!)
 
 * `:8000` is considered as a different "door" from `:5500`
 
-Which port should you use? Just pick one that isn't being used! How do you know which ones aren't being used?
-
-Here are some ones that our instructors like to use (why? personal preference!) and some standards that are used:
+Which port should you use? It doesn't really matter, but here are some ones that our instructors like to use and some standards that are used:
 * `8000` (What I use)
 * `4321` (Mike's favorite because its fun)
 * `3000` (What other people use)
 * `5500` (What other other people use)
 * `80` (Standard unencrypted HTTP port)
 * `443` (Standard encrypted HTTPS port)
+
+Just pick one that isn't being used! 
+
+> How do you know which ones aren't being used? Your computer will likely tell you if one is currently in use — just use a different one (or kill the process that is currently using that port).
