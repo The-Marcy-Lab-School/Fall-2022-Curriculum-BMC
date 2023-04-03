@@ -270,11 +270,13 @@ Looking Ahead: [Classes Preview — Car and RaceCar Example](https://jsbin.com/n
 
 ### Week 3 - Project Week!
 
+
 * [Unit 6 Project Week Overview](https://github.com/The-Marcy-Lab-School/unit-6-project)
 * [Unit 6 Project Week Kickoff Slides](https://docs.google.com/presentation/d/1f0ufNU__Sj97VYs8cAQzaPyqJGLDrDSTAIH4KqUXFEg/)
 * [Unit 6 Project Proposal Example](https://docs.google.com/document/d/15ZwZQe9j2FQsGwrkG80UkNa2P6PuZN1hiZexxXKnrAc/edit)
 * [Project Presentation Template](https://docs.google.com/presentation/d/1xUvLY7tsh2zKbnUuTJh7W_-jVOD1G0wwTSkF4P9g1Gc/view)
 * [How to deploy your repo](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-github-pages-site#creating-your-site)
+
 
 Additional Resources:
 * [Github Projects Setup / Project Board](https://github.com/The-Marcy-Lab-School/unit-5-project/blob/main/scrumboard-instructions.md) | [Recording](https://us02web.zoom.us/rec/share/X7DoHlnuW2HZ44aIOUxJxh-17ynfLHmwJk98Lhh0ja_oDZ1WPjbgFlJmA2SzkQ3N.Fb7YOFRw1YPORRFQ) 
@@ -282,6 +284,8 @@ Additional Resources:
 * [Bootstrap Demo Recording](https://us02web.zoom.us/rec/play/wjfZry8ygqn6ZoA6fO5xwB29sfviPUwG_AcjiQj1b2iiCnjy5aQYmZBO-yj0QvxDNsbg2Y1HTk8pkZl7.yVr9YWxEmFdtqzod)
 * [Mobile Design Inspirations](https://screenlane.com/) | [Web Design Inspiration](https://www.siteinspire.com/)
 * [20 Web Design Principles to Follow](https://www.canva.com/learn/20-web-design-principles-follow/)
+
+[Presentation Recording](https://us02web.zoom.us/rec/share/wYJCIidgF9kuWWJDxf2n_u5HjDFrKsvErOd_PGB1FfmvfCkoUUnqIW83jpjokg57.QElVp75IqM4Vuze5)
 
 ## Unit 7 - Server-side Web Development with Node.js
 
