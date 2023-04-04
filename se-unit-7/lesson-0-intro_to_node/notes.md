@@ -13,30 +13,48 @@
 
 ## Node
 
-Code that runs without a Browser (no UI).
+JavaScript has two **runtime environments**
+* The browser runtime environment
+* The Node runtime environment.
 
-Code that is started using the terminal.
+Node is used for:
+* Creating server-side code
+* Code that is started using the terminal.
+* Code that runs without a Browser (no UI).
+
+Suppose we had the following code in an `app.js` file:
+
+```js
+// app.js
+const rollDie = () => {
+    return Math.ceil(Math.random() * 6);
+}
+```
+
+We can run it in the Node runtime environment with the terminal command `node app.js`
 
 ## Starting a Project
+
+Node projects are often much more than just JavaScript files executed in the terminal. They can be just as complex as front-end applications which may utilize mutliple APIs and third-party services.
+
+To create a new Node project, we'll be using `npm` (Node Package Manager). A typical workflow for starting a project looks like this:
 
 1. `npm init` to create a node project and create a `package.json` file
 2. Create `app.js` as your "entry point" file
 3. Add a `"start"` script to `package.json`: `"start": "node app.js"`
 4. Run `npm start`
 
-```
-npm init
-```
-
 ## Node Package Manager
 
-`npm` is a command-line tool that lets us download **packages**
+`npm` is a command-line tool that lets us download **packages** for our Node projects.
 
 A **package** is a collection of files that we can download and import into our projects to add a specific functionality to our program.
 
 Examples of NPM packages:
 * https://www.npmjs.com/package/superheroes
 * https://www.npmjs.com/package/supervillains
+* https://www.npmjs.com/package/nodemon
+* https://www.npmjs.com/package/express
 
 #### Installing Packages
 
@@ -49,7 +67,7 @@ Examples of NPM packages:
 
 * `npm i -D package-name` uses the `-D` developer flag which installs packages as a **developer dependency**. Developer dependencies are not used in the program itself, but rather are used to aid in development.
     * Ex: `npm i -D nodemon`
-
+    * Try updating the `"start"` script in `package.json` to use `nodemon` instead of `node`. Make a change to your `.js` file and see it automatically re-run!
 
 ### Package.json
 
@@ -107,10 +125,11 @@ console.log(`${INSTRUCTOR_NAME} rolled a ${roll}`);
 
 Just like the `window` object in a browser, running Node applications have **environment variables**. 
 
-We can access default environment variables such as:
-* `process.argv`
-* `process.env`
-* `__dirname`
+One of the most important is `process.env`.
+
+```js
+console.log(process.env)
+```
 
 And we can set additional environment variables when we start our program like so:
 
@@ -127,3 +146,7 @@ const port = process.env.PORT || 8000;
 const host = process.env.HOST || '127.0.0.1'
 ```
 
+Some other important values available in the Node runtime environment:
+
+* `__dirname` (the full path to the directory holding the current file)
+* `process.argv` (arguments included when starting a Node process)
