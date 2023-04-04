@@ -150,3 +150,6 @@ Some other important values available in the Node runtime environment:
 
 * `__dirname` (the full path to the directory holding the current file)
 * `process.argv` (arguments included when starting a Node process)
+
+
+Bonus Topic: https://www.npmjs.com/package/dotenv
