@@ -291,7 +291,7 @@ Additional Resources:
 
 ### Week 1
 
-* **4/4/23 Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md)
+* **4/4/23 Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md) | [Recording pt. 1](https://us02web.zoom.us/rec/share/q-oTrYnE2uqVDR1-UcPXfyjgsslhZArmjtj7UddEJPlosCSE5OkpDXja5ePLs7LY.iPTSAoJBdh5qr0d1) + [pt. 2]() |  [Node Demo Code](./se-unit-7/lesson-0-intro_to_node/demo/)
 * **4/5/23 Intro to HTTP Server** | [Notes](./se-unit-7/lesson-1-http/notes.md)
 
 ## Unit 8 - React
