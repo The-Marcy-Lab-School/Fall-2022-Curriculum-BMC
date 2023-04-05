@@ -1,4 +1,12 @@
-# HTTP Server
+# HTTP Server + Routing
+
+## Q: What are the responsibilites of a server?
+
+- ...
+- ...
+- ...
+
+## NPM Packages
 
 `nodemon` makes `npm start` restart the server when there is a file change
 
@@ -9,7 +17,12 @@ npm i -g nodemon
 ## Built-In Packages (Don't need to install)
 
 `http` package for creating an HTTP server
-`url` package for parsing URLs
+`url` package for parsing URLs (extracting pathname and query parameters)
+
+The pattern here is:
+1. Define a listener helper function
+2. Create an HTTP server using that helper
+3. Start "listening" for incoming requests.
 
 ```js
 const http = require('http');
@@ -36,8 +49,11 @@ server.listen(port, host, () => {
 ```
 
 * Request Listener with `req` and `res` objects
+* The `req` object:
+    * `req.url` will hold the request URL. We can parse this to identify the **requested path** and any **query parameters**
+* The `res` object:
     * `res.writeHead(200, headers)` to send status code and headers.
-        * Content type is actually dynamically determined for you so you often don't need to include headers.
+        * `"Content-Type"` is automatically detected so you often don't need to include headers.
     * `res.write()` to send data. Can be called multiple times if needed.
     * `end()` to confirm all data has been sent. It MUST be called.
 * Server has to **listen** at a particular port
@@ -45,9 +61,20 @@ server.listen(port, host, () => {
     * Use <kbd>Ctrl+C</kbd> to end a Node process.
 
 ## Design Pattern: Routing / Route Handlers
-* Request Listener that parses the request for the URL path and then delegates to a handler for different **routes**.
-* Pass along the `req` and `res` objects to the handlers
 
+Our servers are expected to handle requests for multiple URL paths. For example, Instagram might have the following paths:
+* `/posts`
+* `/posts/:postId`
+* `/posts/:postId/comments/:commentId`
+* `/users/:userId`
+
+**_Routing_ is the process of taking in requests and determining the proper resource to serve in response.**
+
+![](./img/listener-handlers.png)
+
+The pattern we'll be using looks like this:
+* The request listener parses the request for the URL path and then delegates to a **handler** for different **routes**.
+* Pass along the `req` and `res` objects to the handlers.
 
 ```js
 const http = require('http');
