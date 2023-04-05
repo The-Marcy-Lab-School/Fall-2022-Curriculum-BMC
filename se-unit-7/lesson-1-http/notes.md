@@ -1,10 +1,17 @@
 # HTTP Server + Routing
 
+## Q: What are the responsibilites of a client?
+
+- Request information from a server
+- Providing information to a server (auth)
+- Reading data received from a server
+- Rendering HTML, CSS, and JS
+
 ## Q: What are the responsibilites of a server?
 
-- ...
-- ...
-- ...
+- Server needs to parse the information it receives
+- Sending data to a client (weather API)
+- Sending HTML, CSS, and JS to a client
 
 ## NPM Packages
 
