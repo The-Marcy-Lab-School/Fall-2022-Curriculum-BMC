@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <!--
+    `defer` basically means "start loading script immediately,
+    but don't run it until the dom elements are ready."
+  -->
+
+  <title>Welcome to Express!</title>
+</head>
+<body>
+  <form id="fellowForm">
+    <h1>Add A Fellow To Your List</h1>
+    <label for="fellowName">Fellow Name</label>
+    <input id="fellowName" name="fellowName" type="text">
+    <input type="submit" value="Submit">
+  </form>
+
+  <h1>Welcome to express!</h1>
+  <p>Check out our fellows:</p>
+  <ul id="fellows"></ul>
+
+
+</body>
+</html>

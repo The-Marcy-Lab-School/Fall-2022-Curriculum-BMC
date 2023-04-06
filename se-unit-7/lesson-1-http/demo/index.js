@@ -1,24 +1,24 @@
 const http = require('http');
 const url = require('url');
-const host = process.env.host || '127.0.0.1';
-const port = process.env.port || 8000;
+const host = process.env.host || '127.0.0.1'; // Use a host env variable if it is available, otherwise use 127.0.0.1
+const port = process.env.port || 8000; // Use a port env variable if it is available, otherwise use 8000
 
 const homeHandler = (req, res) => {
-    res.writeHead(200);
-    res.write("<h1>Welcome to the home page</h1>");
-    res.end();
+    res.writeHead(200); // Sets the status code of the response
+    res.write("<h1>Welcome to the home page</h1>"); // Sets the body of the response
+    res.end(); // Ends the response and sends it off to the client
 }
 
 const aboutHandler = (req, res) => {
     console.log('going to about')
 
-    const baseUrl = url.parse(req.url, true);
-    const { query } = baseUrl;
+    const baseUrl = url.parse(req.url, true); // Parses the request url AND breaks down the query params into an object
+    const { query } = baseUrl; // Extracts the query object from the baseUrl
     console.log('query:', query);
-    const name = query.name;
     
+    const name = query.name || 'no one'; // Extract the name query parameter if it exists.
     res.writeHead(200);
-    res.write(`<h1>Welcome to the about page for ${name}</h1>`);
+    res.write(`<h1>Welcome to the about page for ${name}.</h1>`);
     res.end();
 }
 

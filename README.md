@@ -293,6 +293,8 @@ Additional Resources:
 
 * **4/4/23 Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md) | [Node Demo Code](./se-unit-7/lesson-0-intro_to_node/demo/) | [Recording pt. 1](https://us02web.zoom.us/rec/share/q-oTrYnE2uqVDR1-UcPXfyjgsslhZArmjtj7UddEJPlosCSE5OkpDXja5ePLs7LY.iPTSAoJBdh5qr0d1) + [pt. 2](https://youtu.be/VtTk3gETzKI) 
 * **4/5/23 Intro to HTTP Server** | [Notes](./se-unit-7/lesson-1-http/notes.md) | [HTTP Server Demo Code](./se-unit-7/lesson-1-http/demo/) | [Recording](https://us02web.zoom.us/rec/share/m4JPJInVEGtHkebX2-upry1nxC2lW6_dsgrF07UsY_8C8obkJLwp-byjLd5NTzA.6ktNs3TxcJCH3oRg)
+* **4/6/23 Express** | [Notes](./se-unit-7/lesson-2-intro_to_express/notes.md) | [Demo Code](./se-unit-7/lesson-2-intro_to_express/demo/) | Recording
+* **4/7/23 Review** | 
 
 ## Unit 8 - React
 ## Unit 9 - Capstone
