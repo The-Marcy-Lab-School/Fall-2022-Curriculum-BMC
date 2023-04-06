@@ -112,24 +112,12 @@ app.use((req, res, next) => {
 });
 ```
 
-## Create - `app.post`
-
-We want the client to be able to add a fellow to the server's list of fellows through a `POST` request with a JSON `body` that looks like this: `{ fellowName: 'Ben' }`
-
-This data can be found in `req.body`.
-
-However, because the data coming in is JSON, we need to parse it first. The `express.json()` function is a built-in middleware function in Express. It parses incoming requests with JSON payloads. 
+## Read - `app.get`
 
 ```js
-app.use(express.json()); // Parses request body JSON
-
-// More middleware...
-
-app.post('/fellows', (req, res) => {
-  const { Fellow, body } = req;
-  const { fellowName } = body; // won't work without the middleware above!
-  const newFellow = new Fellow(fellowName); // creates a fellow and adds it to the list
-  res.send(newFellow);
+app.get('/fellows', (req, res) => {
+  const fellowsList = req.Fellow.list();
+  res.send(fellowsList); // Send back HTML
 });
 ```
 
@@ -157,6 +145,27 @@ app.get('/fellows/:id', (req, res) => {
   if (!fellow) return res.status(404).send(`No fellow with the id ${id}`);
 
   res.send(fellow);
+});
+```
+
+## Create - `app.post`
+
+We want the client to be able to add a fellow to the server's list of fellows through a `POST` request with a JSON `body` that looks like this: `{ fellowName: 'Ben' }`
+
+This data can be found in `req.body`.
+
+However, because the data coming in is JSON, we need to parse it first. The `express.json()` function is a built-in middleware function in Express. It parses incoming requests with JSON payloads. 
+
+```js
+app.use(express.json()); // Parses request body JSON
+
+// More middleware...
+
+app.post('/fellows', (req, res) => {
+  const { Fellow, body } = req;
+  const { fellowName } = body; // won't work without the middleware above!
+  const newFellow = new Fellow(fellowName); // creates a fellow and adds it to the list
+  res.send(newFellow);
 });
 ```
 
