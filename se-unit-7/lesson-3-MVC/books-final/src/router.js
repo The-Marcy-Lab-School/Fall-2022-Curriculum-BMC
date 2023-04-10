@@ -9,25 +9,18 @@ const express = require('express');
 const addBooks = require('./middleware/add-books');
 
 // import route handlers
-const {
-  list,
-  find,
-  destroy,
-  update,
-  create,
-  destroyAll
-} = require('./controllers/books');
+const bookControllers = require('./controllers/books');
 
 const router = express.Router();
 
 router.use(addBooks);
 
 // Put your routes here!
-router.get('/', list);
-router.get('/:id', find);
-router.delete('/:id', destroy);
-router.patch('/:id', update);
-router.post('/', create);
-router.delete('/', destroyAll);
+router.get('/', bookControllers.list);
+router.get('/:id', bookControllers.find);
+router.delete('/:id', bookControllers.destroy);
+router.patch('/:id', bookControllers.update);
+router.post('/', bookControllers.create);
+router.delete('/', bookControllers.destroyAll);
 
 module.exports = router;
