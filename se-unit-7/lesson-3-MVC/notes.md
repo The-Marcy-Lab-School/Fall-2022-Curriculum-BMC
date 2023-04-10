@@ -7,6 +7,17 @@
 
 ![](img/mvc.png)
 
+### Why MVC?
+
+**Q: What design principle does MVC encourage us to follow?**
+
+<details><summary>Answer</summary>
+<br>
+
+Separation of concerns
+
+</details>
+
 ### MVC with Express
 
 **View**
@@ -44,20 +55,80 @@ Only the controllers will have access to the model's interface.
 
 ### File Structure for ToDo Application
 
+![](img/todo-app-diagram.svg)
 
-
-- **[View]** `public/`
+- `public/` **(View)** 
     - `index.html`, `index.css`, `index.js`
 - `src/`
-    - **[Controller]** `controllers/`
-        - `index.js` (imports all of the files below) - “barrel file”
+    - `controllers/` **(Controller)** 
+        - `index.js` (“barrel file” - imports all of the files below)
         - `create.js`, `list.js`, `update.js`, `delete.js`, `delete-all.js` (bonus `find.js`)
     - `middleware/`
         - `add-todos.js`, `log-routes.js`
-    - **[Model]** `models/`
+    - `models/` **(Model)**
         - `todo.js` - defines the `ToDo` model (in-memory array + CRUD actions)
-        - `console.js` - this is just for testing
     - `index.js` - entry point, imports the `server`, starts the `server`
     - `server.js` - imports `router`, sets up middleware
     - `routes.js` - imports controllers and defines routes, sets up ToDo middleware
     - `utils.js` - exports id generator function
+
+### Express Router
+
+A Express [router](https://expressjs.com/en/api.html#router) object is an isolated instance of middleware and routes. You can think of it as a “mini-application,” capable only of performing middleware and routing functions. Every Express application has a built-in app router.
+
+A router behaves like middleware itself, so you can use it as an argument to `app.use()` or as the argument to another router’s `use()` method.
+
+The top-level `express` object has a `Router()` method that creates a new router object.
+
+Once you’ve created a router object, you can add middleware and HTTP method routes (such as `get`, `put`, `post`, and so on) to it just like an application. For example:
+
+```js
+// invoked for any requests passed to this router
+router.use((req, res, next) => {
+  // .. some logic here .. like any other middleware
+  next()
+})
+
+// will handle any request that ends in /events
+// depends on where the router is "use()'d"
+router.get('/events', function (req, res, next) {
+  // ..
+})
+```
+
+You can then use a router for a particular root URL in this way separating your routes into files or even mini-apps.
+
+```js
+// only requests to /calendar/* will be sent to our "router"
+app.use('/calendar', router);
+```
+
+**Q: What URL paths will be handled by the `get` handler in the first code snippet above?**
+
+<details><summary>Answer</summary>
+<br>
+
+`/calendar/events`
+
+</details>
+
+### Summary
+
+* MVC stands for **M**odel **V**iew **C**ontroller and it is a _software architecture pattern_.
+* MVC promotes separation of concern
+* The view renders the current state of the model and provides a UI for interacting with the model via the controllers
+* The controllers take inputs from the view and use them to call on the models interface. Then, it takes the updated model and sends new data to the view.
+* The model is the dynamic data structure that is independent from the UI. It creates an interface that controllers can use to manage the data.
+* The Express `router` object lets us break up the routes in our application into "mini" applications for particular sub-routes.
+* In Express, we can organize our code with the following file structure:
+  * `index.js`
+  * `server.js`
+  * `router.js`
+  * `controllers/`
+    * `featureA/` (with a barrel file)
+    * `featureB/` (with a barrel file)
+  * `models/`
+    * `featureA.js`
+    * `featureB.js`
+  * `middleware/`
+  

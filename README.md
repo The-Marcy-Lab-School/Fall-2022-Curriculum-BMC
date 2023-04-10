@@ -291,14 +291,19 @@ Additional Resources:
 
 ### Week 1
 
-* **4/4/23 Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md) | [Node Demo Code](./se-unit-7/lesson-0-intro_to_node/demo/) | [Recording pt. 1](https://us02web.zoom.us/rec/share/q-oTrYnE2uqVDR1-UcPXfyjgsslhZArmjtj7UddEJPlosCSE5OkpDXja5ePLs7LY.iPTSAoJBdh5qr0d1) + [pt. 2](https://youtu.be/VtTk3gETzKI) 
-* **4/5/23 Intro to HTTP Server** | [Notes](./se-unit-7/lesson-1-http/notes.md) | [HTTP Server Demo Code](./se-unit-7/lesson-1-http/demo/) | [Recording](https://us02web.zoom.us/rec/share/m4JPJInVEGtHkebX2-upry1nxC2lW6_dsgrF07UsY_8C8obkJLwp-byjLd5NTzA.6ktNs3TxcJCH3oRg)
-* **4/6/23 Express** | [Notes](./se-unit-7/lesson-2-intro_to_express/notes.md) | [Demo Code](./se-unit-7/lesson-2-intro_to_express/demo/) | [Recording](https://us02web.zoom.us/rec/share/gUArxROtkWi-5ENHV3VEKRHWIpxCAyE5b95EQqdkd7_DF5IxDRh6MTccFvyUGeg.T6an2L_h2EdkHcSc)
-* **4/7/23 Review** | [Books Full Stack Code](./se-unit-7/lesson-2-intro_to_express/books/) | [Recording](https://us02web.zoom.us/rec/share/xu-W9R3yqGz90AI75u892JytEqa3JdYniaugfwLmluiYQVwTmUG-o5DNiXPyNLs.3x-b343t2hgyedyV)
+* **4/4/23 - Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md) | [Node Demo Code](./se-unit-7/lesson-0-intro_to_node/demo/) | [Recording pt. 1](https://us02web.zoom.us/rec/share/q-oTrYnE2uqVDR1-UcPXfyjgsslhZArmjtj7UddEJPlosCSE5OkpDXja5ePLs7LY.iPTSAoJBdh5qr0d1) + [pt. 2](https://youtu.be/SAC-zPaODPE) 
+* **4/5/23 - Intro to HTTP Server** | [Notes](./se-unit-7/lesson-1-http/notes.md) | [HTTP Server Demo Code](./se-unit-7/lesson-1-http/demo/) | [Recording](https://us02web.zoom.us/rec/share/m4JPJInVEGtHkebX2-upry1nxC2lW6_dsgrF07UsY_8C8obkJLwp-byjLd5NTzA.6ktNs3TxcJCH3oRg)
+* **4/6/23 - Express** | [Notes](./se-unit-7/lesson-2-intro_to_express/notes.md) | [Demo Code](./se-unit-7/lesson-2-intro_to_express/demo/) | [Recording](https://us02web.zoom.us/rec/share/gUArxROtkWi-5ENHV3VEKRHWIpxCAyE5b95EQqdkd7_DF5IxDRh6MTccFvyUGeg.T6an2L_h2EdkHcSc)
+* **4/7/23 - Review** | [Books Full Stack Code](./se-unit-7/lesson-2-intro_to_express/books/) | [Recording](https://us02web.zoom.us/rec/share/xu-W9R3yqGz90AI75u892JytEqa3JdYniaugfwLmluiYQVwTmUG-o5DNiXPyNLs.3x-b343t2hgyedyV)
 
 ### Week 2
 
-* **4/10/23 MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md)
+* **4/10/23 - MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md) | [Books Code Before](./se-unit-7/lesson-3-MVC/books-before/) and [After](./se-unit-7/lesson-3-MVC/books-final/) | Recording coming soon...
+* **4/12/23 - Intro to SQL** | 
+* **4/13/23 - One:Many Relationships** | 
+* **4/14/23 - Many:Many Relationships** | 
+
+
 
 ## Unit 8 - React
 ## Unit 9 - Capstone

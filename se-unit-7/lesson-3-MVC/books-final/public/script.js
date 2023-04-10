@@ -5,7 +5,7 @@ const main = async () => {
   const newBookInput = document.querySelector('#new-book-input');
 
   const getBooks = async () => {
-    const books = await fetch(url).then((r) => r.json()).catch((err) => alert.error(err));
+    const books = await fetch(url).then((r) => r.json()).catch((e) => alert.error(e));
     booksUl.innerHTML = '';
     books.forEach(({ title, id }) => {
       const li = document.createElement('li');
