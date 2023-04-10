@@ -296,5 +296,9 @@ Additional Resources:
 * **4/6/23 Express** | [Notes](./se-unit-7/lesson-2-intro_to_express/notes.md) | [Demo Code](./se-unit-7/lesson-2-intro_to_express/demo/) | [Recording](https://us02web.zoom.us/rec/share/gUArxROtkWi-5ENHV3VEKRHWIpxCAyE5b95EQqdkd7_DF5IxDRh6MTccFvyUGeg.T6an2L_h2EdkHcSc)
 * **4/7/23 Review** | [Books Full Stack Code](./se-unit-7/lesson-2-intro_to_express/books/) | [Recording](https://us02web.zoom.us/rec/share/xu-W9R3yqGz90AI75u892JytEqa3JdYniaugfwLmluiYQVwTmUG-o5DNiXPyNLs.3x-b343t2hgyedyV)
 
+### Week 2
+
+* **4/10/23 MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md)
+
 ## Unit 8 - React
 ## Unit 9 - Capstone
