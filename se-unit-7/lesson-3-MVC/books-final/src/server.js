@@ -1,9 +1,10 @@
 /* eslint-disable no-shadow */
 const path = require('path');
 const express = require('express');
-const booksRouter = require('./router');
-const logRoutes = require('./middleware/log-routes');
 
+const bookRoutes = require('./routers/book-routes');
+const authorRoutes = require('./routers/author-routes');
+const logRoutes = require('./middleware/log-routes');
 
 // creating the express app server
 const app = express();
@@ -18,7 +19,8 @@ app.use(express.json());
 app.use(logRoutes);
 
 // Other routers we are using
-app.use('/books', booksRouter);
+app.use('/books', bookRoutes);
+app.use('/authors', authorRoutes);
 
 // export the server to be used in index.js
 module.exports = app;

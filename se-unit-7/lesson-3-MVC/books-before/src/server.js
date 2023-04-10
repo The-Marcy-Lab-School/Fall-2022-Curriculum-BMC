@@ -11,9 +11,9 @@ const app = express();
 // Setting up the /public/ folder to be served at / path
 const publicDir = path.join(__dirname, '..', 'public');
 console.log(`sending client files from ${publicDir}`);
-app.use(express.static(publicDir));
 
 // Parse any incoming JSON request bodies
+app.use(express.static(publicDir));
 app.use(express.json());
 
 // Add the Book model to our request object

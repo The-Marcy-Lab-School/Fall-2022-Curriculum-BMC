@@ -5,7 +5,7 @@
 * **View**: How the application's model is presented visually to the user. Provides UI components for interacting with the controllers.
 * **Controller**: Accepts inputs from the view and uses the model's interface to make changes. Sends back updated model state to update the view.
 
-![](img/mvc.png)
+![](img/mvc-diagram.svg)
 
 ### Why MVC?
 
