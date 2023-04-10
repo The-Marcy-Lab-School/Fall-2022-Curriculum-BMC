@@ -298,7 +298,7 @@ Additional Resources:
 
 ### Week 2
 
-* **4/10/23 - MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md) | [Books Code Before](./se-unit-7/lesson-3-MVC/books-before/) and [After](./se-unit-7/lesson-3-MVC/books-final/) | Recording coming soon...
+* **4/10/23 - MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md) | [Books Code Before](./se-unit-7/lesson-3-MVC/books-before/) and [After](./se-unit-7/lesson-3-MVC/books-final/) | [Recording](https://us02web.zoom.us/rec/share/stGh8lGOY670vKBUwIx_B3tixY4RX62atReF6JbuUoQMviM5MG437CMeK2JGc4xV.MFhomY21_9I41L3R)
 * **4/12/23 - Intro to SQL** | 
 * **4/13/23 - One:Many Relationships** | 
 * **4/14/23 - Many:Many Relationships** | 

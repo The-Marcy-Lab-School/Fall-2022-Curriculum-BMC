@@ -1,16 +1,33 @@
+/* 
+This router file handles all middleware and routes
+related to books.
+*/
+
 const express = require('express');
-const addBook = require('./middleware/add-book');
-const { list, find, destroy, destroyAll, update, create } = require('./controllers/to-do');
+
+// import middleware
+const addBooks = require('./middleware/add-books');
+
+// import route handlers
+const {
+  list,
+  find,
+  destroy,
+  update,
+  create,
+  destroyAll
+} = require('./controllers/books');
 
 const router = express.Router();
 
-router.use(addBook);
+router.use(addBooks);
 
-router.get('/books', list);
-router.get('/books/:id', find);
-router.delete('/books/:id', destroy);
-router.patch('/books/:id', update);
-router.post('/books', create);
-router.delete('/books', destroyAll);
+// Put your routes here!
+router.get('/', list);
+router.get('/:id', find);
+router.delete('/:id', destroy);
+router.patch('/:id', update);
+router.post('/', create);
+router.delete('/', destroyAll);
 
 module.exports = router;

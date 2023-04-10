@@ -1,8 +1,9 @@
 /* eslint-disable no-shadow */
 const path = require('path');
 const express = require('express');
-const router = require('./router');
+const booksRouter = require('./router');
 const logRoutes = require('./middleware/log-routes');
+
 
 // creating the express app server
 const app = express();
@@ -11,13 +12,13 @@ const app = express();
 const publicDir = path.join(__dirname, '..', 'public');
 console.log(`sending client files from ${publicDir}`);
 
-// Middleware
+// General Purpose Middleware
 app.use(express.static(publicDir));
 app.use(express.json());
 app.use(logRoutes);
 
-// Put your routes here!
-app.use(router);
+// Other routers we are using
+app.use('/books', booksRouter);
 
 // export the server to be used in index.js
 module.exports = app;

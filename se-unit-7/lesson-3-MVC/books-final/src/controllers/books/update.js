@@ -6,8 +6,9 @@ const update = (req, res) => {
   } = req;
   // const Book = req.Book
   // const id = req.params.id
+  // const title = req.body.title
   const bookToEdit = Book.editTitle(Number(id), title);
-  if (!bookToEdit) return res.status(404).send('Not Found');
+  if (!bookToEdit) return res.sendStatus(404);
 
   res.send(bookToEdit);
 };

@@ -7,6 +7,6 @@ const create = (req, res) => {
   // const title = body.title;
   const newBook = new Book(title); // adding data to the model
   res.status(201).send(newBook); // sending data back
-};
+}
 
 module.exports = create;

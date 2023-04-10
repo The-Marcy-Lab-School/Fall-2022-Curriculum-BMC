@@ -3,13 +3,14 @@ const { generateId } = require('../utils');
 class Book {
   static #all = [
     {
+      id: 101,
       title: 'all about love',
-      id: 100
     },
     {
+      id: 102,
       title: 'Atomic Habits',
-      id: 101
     },
+
   ];
 
   constructor(title) {
