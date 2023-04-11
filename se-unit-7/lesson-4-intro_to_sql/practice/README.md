@@ -34,12 +34,12 @@
 **Exercise 5: BASIC QUERIES - POPULATE TABLES**
 
 - Give your table some data. Follow the Postgres documentation for [populating tables with rows](https://www.postgresql.org/docs/12/tutorial-populate.html).
-- Run the command `INSERT INTO lessons VALUES(1, 'data structures', 'ruben');`
+- Run the command `INSERT INTO projects VALUES(1, 'data structures', 'ruben');`
 - Input 5 more lessons using the same syntax for different lessons and partners.
 
 **Exercise 6: BASIC QUERIES - SELECT DATA**
 
-- Run the command `SELECT * FROM lessons`. **What does this command do?**
+- Run the command `SELECT * FROM projects`. **What does this command do?**
 - Run other SELECT commands and use the [Querying a Table Documentation as a reference](https://www.postgresql.org/docs/12/tutorial-select.html)
 - **Write a reflection on the pros and cons of inputting and accessing data using the `INSERT` and `SELECT` commands.**
 
