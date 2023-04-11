@@ -21,14 +21,15 @@
 - Create a database called `marcy` by running the command `create database marcy;`
 - **NOTE** the semi-colon is important for ending the execution of this command! Makes sure to include it.
 - You have successfully created a database if your `psql` command line outputs `CREATE DATABASE`.
-- Next, connect to your database by running the command `\c`. Successfully connecting to your database will output `You are now connected to database "marcy" as user "[your username]"`.
+- Next, connect to your database by running the command `\c marcy`. Successfully connecting to your database will output `You are now connected to database "marcy" as user "[your username]"`.
 
 **Exercise 4: CREATE TABLES**
 
 - Created a table called `projects` by running the command
-`create table projects(id SERIAL PRIMARY KEY, name TEXT NOT NULL, partners TEXT NOT NULL);`
+`CREATE TABLE projects(id SERIAL PRIMARY KEY, name TEXT NOT NULL, partners TEXT NOT NULL);`
+- You should see `CREATE TABLE` if this was successful
 - **Based on this command, what do you imagine the rows and columns of your projects table to be?**
-- To see a description of the table you just created, run the command `\d lessons`.
+- To see a description of the table you just created, run the command `\d projects`.
 
 **Exercise 5: BASIC QUERIES - POPULATE TABLES**
 
