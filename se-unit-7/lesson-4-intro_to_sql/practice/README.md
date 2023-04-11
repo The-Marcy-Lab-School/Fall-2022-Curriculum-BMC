@@ -25,21 +25,21 @@
 
 **Exercise 4: CREATE TABLES**
 
-- Created a table called `projects` by running the command
-`CREATE TABLE projects(id SERIAL PRIMARY KEY, name TEXT NOT NULL, partners TEXT NOT NULL);`
+- Created a table called `lessons` by running the command
+`CREATE TABLE lessons(id SERIAL PRIMARY KEY, title TEXT NOT NULL, instructor TEXT NOT NULL);`
 - You should see `CREATE TABLE` if this was successful
-- **Based on this command, what do you imagine the rows and columns of your projects table to be?**
-- To see a description of the table you just created, run the command `\d projects`.
+- **Based on this command, what do you imagine the rows and columns of your lessons table to be?**
+- To see a description of the table you just created, run the command `\d lessons`.
 
 **Exercise 5: BASIC QUERIES - POPULATE TABLES**
 
 - Give your table some data. Follow the Postgres documentation for [populating tables with rows](https://www.postgresql.org/docs/12/tutorial-populate.html).
-- Run the command `INSERT INTO projects VALUES(1, 'data structures', 'ruben');`
-- Input 5 more lessons using the same syntax for different lessons and partners.
+- Run the command `INSERT INTO lessons VALUES(1, 'data structures', 'ben');`
+- Input 5 more lessons using the same syntax for different lessons and instructors.
 
 **Exercise 6: BASIC QUERIES - SELECT DATA**
 
-- Run the command `SELECT * FROM projects`. **What does this command do?**
+- Run the command `SELECT * FROM lessons`. **What does this command do?**
 - Run other SELECT commands and use the [Querying a Table Documentation as a reference](https://www.postgresql.org/docs/12/tutorial-select.html)
 - **Write a reflection on the pros and cons of inputting and accessing data using the `INSERT` and `SELECT` commands.**
 
