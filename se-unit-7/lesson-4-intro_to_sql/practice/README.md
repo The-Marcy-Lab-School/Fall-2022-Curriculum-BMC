@@ -45,6 +45,6 @@
 
 **Exercise 7: MORE BASIC QUERIES**
 
-- PostgreSQL Exercises Provides listings of simple SQL Queries. Keep your documentation handy.
+- pgexercises.com provides listings of simple SQL Queries. Keep your documentation handy.
 - Visit the [exercises](https://pgexercises.com/questions/basic/).
 - Solutions are embedded in the exercise app after you complete a prompt.
