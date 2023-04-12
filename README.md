@@ -289,6 +289,8 @@ Additional Resources:
 
 ## Unit 7 - Server-side Web Development with Node.js
 
+* [Set up Postgres and Tableplus](https://github.com/The-Marcy-Lab-School/postgres-setup)
+
 ### Week 1
 
 * **4/4/23 - Intro to Node** | [Notes](./se-unit-7/lesson-0-intro_to_node/notes.md) | [Node Demo Code](./se-unit-7/lesson-0-intro_to_node/demo/) | [Recording pt. 1](https://us02web.zoom.us/rec/share/q-oTrYnE2uqVDR1-UcPXfyjgsslhZArmjtj7UddEJPlosCSE5OkpDXja5ePLs7LY.iPTSAoJBdh5qr0d1) + [pt. 2](https://youtu.be/oFn8svdlcPI) 
@@ -300,7 +302,7 @@ Additional Resources:
 
 * **4/10/23 - MVC Project Organization** | [Notes](./se-unit-7/lesson-3-MVC/notes.md) | [Books Code Before](./se-unit-7/lesson-3-MVC/books-before/) and [After](./se-unit-7/lesson-3-MVC/books-final/) | [Recording](https://us02web.zoom.us/rec/share/stGh8lGOY670vKBUwIx_B3tixY4RX62atReF6JbuUoQMviM5MG437CMeK2JGc4xV.MFhomY21_9I41L3R)
 * **4/10/23 - MVC Lab Review** | [Recording](https://us02web.zoom.us/rec/share/uvG-oZQzbPd6FUnypMzjqmw_cI6p4BYo4-50rQjn7Lq5LaS5ZwL2-I2kfoLqR70i.-y4erwg5vH10CMXc)
-* **4/12/23 - Intro to SQL** | [Notes](./se-unit-7/lesson-4-intro_to_sql/notes.md) | [Practice](./se-unit-7/lesson-4-intro_to_sql/practice/) & [Solutions](./se-unit-7/lesson-4-intro_to_sql/solutions/) | Recording
+* **4/12/23 - Intro to SQL** | [Notes](./se-unit-7/lesson-4-intro_to_sql/notes.md) | [Practice](./se-unit-7/lesson-4-intro_to_sql/practice/) & [Solutions](./se-unit-7/lesson-4-intro_to_sql/solutions/) | [Recording](https://us02web.zoom.us/rec/share/TfJ1i-ej33vcbCh0RdX154NGWECnbBgJYN_eIcxiOMXcq_Ee8JOMnNoH97DUO1fB.pcxfY6U8I25T4zcw)
 * **4/13/23 - One:Many Relationships** | Notes | Recording
 * **4/14/23 - Many:Many Relationships** | Notes | Recording
 
