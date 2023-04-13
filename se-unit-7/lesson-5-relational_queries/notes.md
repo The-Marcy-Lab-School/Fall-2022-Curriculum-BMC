@@ -59,21 +59,21 @@ How can we create this join table?
 
 | person_id  | first_name  | last_name     | pet_id | name        | type | owner_id |
 | --| ----------- | ---- | ---------| --- | ----------- | ------------- |
-| 1	 | Ann	Duong | 	3 | 	Bora 	| bird	| 1 | 
-| 1	 | Ann	Duong | 	4 | 	Tora 	| dog	| 1 | 
-| 1 | 	Ann	Duong | 	7 | 	Kora 	| cat	| 1 | 
-| 2 | 	Reuben	Ogbonna | 	2 | 	Juan  Pablo	| dog	| 2 | 
-| 2 | 	Reuben	Ogbonna | 	6 | 	Pon  Juablo	| cat	| 2 | 
-| 3 | 	Maya	Bhattacharjee | 	1 | 	Khalo 	| dog	| 3 | 
-| 3 | 	Maya	Bhattacharjee | 	5 | 	Frida 	| cat	| 3 | 
+| 1	 | Ann	| Duong | 	3 | 	Bora 	| bird	| 1 | 
+| 1	 | Ann	| Duong | 	4 | 	Tora 	| dog	| 1 | 
+| 1 | 	Ann| 	Duong | 	7 | 	Kora 	| cat	| 1 | 
+| 2 | 	Reuben	| Ogbonna | 	2 | 	Juan  Pablo	| dog	| 2 | 
+| 2 | 	Reuben	| Ogbonna | 	6 | 	Pon  Juablo	| cat	| 2 | 
+| 3 | 	Maya	| Bhattacharjee | 	1 | 	Khalo 	| dog	| 3 | 
+| 3 | 	Maya	| Bhattacharjee | 	5 | 	Frida 	| cat	| 3 | 
 
 <details><summary>Answer</summary>
 
 ```sql
 SELECT * 
-	FROM people 
-JOIN pets 
-	ON people.id = pets.owner_id;
+FROM people 
+	JOIN pets 
+		ON people.person_id = pets.owner_id;
 ```
 
 </details>
@@ -95,6 +95,11 @@ WHERE
 ```
 
 
-### Other Examples
+### Other One-to-Many Examples
 
-Let's build a `cohort` and `fellows` one-to-many database!
+- `cohort` and `fellows`
+- `students` and a `teachers`
+- `solar system` and `planets`
+- `chefs` and `restaurants`
+- `streets` and `houses`
+- `users` and `posts`
