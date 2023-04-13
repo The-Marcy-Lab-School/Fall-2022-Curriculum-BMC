@@ -46,6 +46,8 @@ INSERT INTO pets (pet_id, name, species, owner_id) VALUES (7, 'Kora', 'cat', 1);
 **Has Many:** We say a person has many pets
 **Belongs To:**	We say a pet belongs to a person
 
+![](./img/people-pet-erd.png)
+
 #### Simple Queries
 
 - Who are the cats in our database?
