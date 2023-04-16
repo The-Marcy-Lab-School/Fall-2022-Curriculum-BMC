@@ -39,10 +39,10 @@ Node projects are often much more than just JavaScript files executed in the ter
 
 To create a new Node project, we'll be using `npm` (Node Package Manager). A typical workflow for starting a project looks like this:
 
-1. `npm init` to create a node project and create a `package.json` file
-2. Create `app.js` as your "entry point" file
-3. Add a `"start"` script to `package.json`: `"start": "node app.js"`
-4. Run `npm start`
+1. `npm init -y` to create a node project and create a `package.json` file (`-y` uses default settings)
+2. `touch index.js` to create your "entry point" file
+3. In `package.json`, and below the `"test"` script in `"scripts"`, add a `"start"` script with the `"start": "node app.js"`.
+4. Run `npm start`.
 
 ## Node Package Manager
 
