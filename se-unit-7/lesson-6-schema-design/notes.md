@@ -4,6 +4,8 @@
 
 A well-designed database schema ensures **data consistency, minimizes redundancy, and improves performance**.
 
+## Steps For Designing A Database
+
 When designing a database schema, you'll typically follow these steps:
 
 1. Identify entities: Determine the main objects or concepts in your system that you need to store information about. 
@@ -218,13 +220,7 @@ The `order_items` table tracks the products associated with an order:
 > | student_id* |	student_name |
 > | - | - |
 > | 1 |	Alice |
-> | 1 |	Alice |
-> | 1 |	Alice |
 > | 2 |	Bob |
-> | 2 |	Bob |
-> | 2 |	Bob |
-> | 3 |	Carol |
-> | 3 |	Carol |
 > | 3 |	Carol |
 > 
 > The `enrollments` table:
