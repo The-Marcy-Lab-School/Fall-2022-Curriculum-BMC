@@ -309,7 +309,7 @@ Additional Resources:
 
 ### Week 3
 
-* 4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md)
+* **4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md)
 
 ## Unit 8 - React
 ## Unit 9 - Capstone
