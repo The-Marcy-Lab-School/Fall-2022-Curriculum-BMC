@@ -127,7 +127,7 @@ For practice, [follow along with these instructions](./practice/README.md).
 
 ### Managing Tables 
 
-Creating a Table
+Creating a `lessons` table with the columns `id`, `title`, and `instructor`:
 
 ```sql
 CREATE TABLE lessons(
@@ -136,8 +136,10 @@ CREATE TABLE lessons(
   instructor TEXT NOT NULL
 );
 ```
+* `id` will be the primary key. The `SERIAL` data type allows you to automatically generate unique integer numbers (IDs, identity, auto-increment, sequence) for a column. 
+* `title` and `instructor` will be of type `TEXT` and are required fields (`NOT NULL`).
 
-Dropping a Table
+Dropping the `lessons` table:
 
 ```sql
 DROP TABLE lessons;
@@ -147,40 +149,41 @@ DROP TABLE lessons;
 
 ##### Create - Adding Values to a Table
 
+Inserting a new record/row/object into the `lessons` table with a `title` value of `'Data Structures'` and a `instructor` value of `'Ben'`. The `id` is automatically generated.
+
 ```sql
-INSERT INTO lessons 
-VALUES(1, 'data structures', 'ben');
+INSERT INTO lessons (title, instructor)
+VALUES('Data Structure', 'Ben');
 ```
 
 #### Read - Getting Values From a Table
 
-Get specific columns from a table with `SELECT column FROM table`:
+Get all data from the `title` and `instructor` columns in the `lessons` table:
 ```sql
 SELECT title, instructor
 FROM lessons;
 ```
 
-Get all columns from a table with `SELECT *`:
+Get all data from all columns from the `lessons` table:
 ```sql
 SELECT * 
 FROM lessons;
 ```
 
-
-Filter the rows with `WHERE`:
+Get only all data from all coluns in the `lessons` table, but only from the rows where the value in the `instructor` column is `'Ben'`:
 
 ```sql
 SELECT *
 FROM lessons
-WHERE instructor='ben';
+WHERE instructor='Ben';
 ```
 
-Combine conditions with `AND` or `OR`:
+Same as above, but now we are also including rows where the value in the `instructor` column is `'Gonzalo'`:
 
 ```sql
 SELECT *
 FROM lessons
-WHERE instructor='ben' OR instructor='gonzalo';
+WHERE instructor='Ben' OR instructor='Gonzalo';
 ```
 
 Renaming queries with `AS`:
@@ -190,11 +193,19 @@ SELECT title AS "Course Title"
 FROM lessons;
 ```
 
-Counting values in the table with `COUNT` (we can also limit the search with `WHERE`):
+Counting the number of rows in the `lessons` table:
 
 ```sql
 SELECT COUNT(*)
 FROM lessons
+```
+
+Counting the number of lessons taught by `'Ben'`:
+
+```sql
+SELECT COUNT(*)
+FROM lessons
+WHERE instructor='Ben'
 ```
 
 Collapsing columns with `GROUP BY`:
@@ -210,13 +221,13 @@ GROUP BY instructor;
 
 ```sql
 UPDATE lessons
-SET instructor = 'gonzalo'
-WHERE title = 'data structures';
+SET instructor = 'Gonzalo'
+WHERE title = 'Data Structures';
 ```
 
 #### Delete - Deleting Existing Rows
 
 ```sql
 DELETE FROM lessons
-WHERE title = 'data structures';
+WHERE title = 'Data Structures';
 ```

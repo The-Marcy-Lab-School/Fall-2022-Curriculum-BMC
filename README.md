@@ -306,5 +306,10 @@ Additional Resources:
 * **4/13/23 - One:Many Relationships** | [Notes](./se-unit-7/lesson-5-relational_queries/notes.md) | [Recording](https://us02web.zoom.us/rec/share/Adi3VFwe1XXU0apmeRAIa7n2lx_rTC6EXeMA5ACOZxCLUCbRq3axaHCfPBZEub53.j260JSgipg6xK1xN)
 * **4/14/23 - Many:Many Relationships** | Notes | Recording
 
+
+### Week 3
+
+* 4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md)
+
 ## Unit 8 - React
 ## Unit 9 - Capstone
