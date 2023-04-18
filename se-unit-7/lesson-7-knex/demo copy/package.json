@@ -1,0 +1,16 @@
+{
+  "name": "lesson-7-knex",
+  "version": "1.0.0",
+  "description": "[Knex](https://knexjs.org/) is a JavaScript query builder. Think of it as Marcy's way to connect a Postgres database and a Node JavaScript project.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  }
+}

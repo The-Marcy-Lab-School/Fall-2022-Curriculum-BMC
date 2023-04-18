@@ -310,7 +310,7 @@ Additional Resources:
 ### Week 3
 
 * **4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md) | [Recording](https://us02web.zoom.us/rec/share/Ro0jECiMsemcO5fN7oYRSD3sqhQa_V69kvQiuo8dv0P41feFgN7Ie2SS7FbVh4i8.LTNKXaMabbdVvmFX)
-* **4/18/23 - Knex** | Notes
+* **4/18/23 - Knex** | [Notes](./se-unit-7/lesson-7-knex/notes.md)
 * **4/19/23 - Migrations & Seeds** | Notes
 * **4/20/23 - Knex + Express + MVC** | Notes 
 * **4/21/23 - Review**
