@@ -290,6 +290,7 @@ Additional Resources:
 ## Unit 7 - Server-side Web Development with Node.js
 
 * [Set up Postgres and Tableplus](https://github.com/The-Marcy-Lab-School/postgres-setup)
+* [SQL Cheatsheet](./se-unit-7/sql-cheatsheet.md)
 
 ### Week 1
 
