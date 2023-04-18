@@ -9,11 +9,11 @@ module.exports = {
     client: 'pg',
     connection: {
       database: 'playground',
-      user: 'benspector',
+      user:     'benspector',
       password: 'postgres',
       host: 'localhost',
       port: 5432
-    }
+    },
   },
 
   staging: {
