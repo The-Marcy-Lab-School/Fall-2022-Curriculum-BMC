@@ -312,7 +312,7 @@ Additional Resources:
 
 * **4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md) | [Recording](https://us02web.zoom.us/rec/share/Ro0jECiMsemcO5fN7oYRSD3sqhQa_V69kvQiuo8dv0P41feFgN7Ie2SS7FbVh4i8.LTNKXaMabbdVvmFX)
 * **4/18/23 - Knex** | [Notes](./se-unit-7/lesson-7-knex/notes.md) | [Demo Code](./se-unit-7/lesson-7-knex/demo/) | [Recording](https://us02web.zoom.us/rec/share/bqGJG29jmZdxE0EI2oC5OD1R9AGW_qNDFQu8QoqHcgKuhrcDdAiFt4okfwlp5-WX.iql6v--Cs6G7wRUm)
-* **4/19/23 - Migrations & Seeds** | Notes
+* **4/19/23 - Migrations & Seeds** | [Notes](./se-unit-7/lesson-8-migrations-and-seeds/notes.md)
 * **4/20/23 - Knex + Express + MVC** | Notes 
 * **4/21/23 - Review**
 

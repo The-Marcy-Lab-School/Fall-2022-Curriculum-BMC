@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgo=">
+  <link rel="stylesheet" href="./style.css">
+  <script defer src="./script.js"></script>
+  <!--
+    `defer` basically means "start loading script immediately,
+    but don't run it until the dom elements are ready."
+  -->
+
+  <title>Reading List</title>
+</head>
+<body>
+  <h1>Reading list</h1>
+  <form id="new-book-form">
+    <label style='display:none' for="new-book-input" id="new-book-label">Book Title</label>
+    <input placeholder='Book Title' name="new-book-input" type="text" id="new-book-input">
+    <label style='display:none' for="publish-year-input" id="publish-year-label">Publish Year</label>
+    <input placeholder='Publish Year' name="publish-year-input" type="text" id="publish-year-input">
+    <input type="submit" id="new-book-submit" value="Add">
+  </form>
+  <h2>Look at all these books!</h2>
+  <ul id="books"></ul>
+</body>
+</html>
