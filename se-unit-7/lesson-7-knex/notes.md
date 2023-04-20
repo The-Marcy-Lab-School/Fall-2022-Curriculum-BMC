@@ -8,6 +8,8 @@ We will learn knex so that our Express APIs can access data from a persistent st
 
 ### Setting up the Database
 
+We'll be using [this SQL file](./demo/db.sql) called `db.sql` to seed our database. To follow along, create a new folder and then make your own copy of `db.sql` in that folder.
+
 Take a look at the `db.sql` file. It contains the SQL commands to create and populate a database called `playground`. This database will have five tables: `people`, `pets`, `customers`, `orders`, `products`.
 
 We can run these commands to set up our work (if working on windows, add `sudo -u postgres` before each command)
