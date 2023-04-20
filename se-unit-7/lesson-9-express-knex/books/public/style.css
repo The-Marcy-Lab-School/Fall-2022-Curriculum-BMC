@@ -1,0 +1,34 @@
+body {
+  background-color: #261F1D;
+  color: #FFFCF7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+#books>li{
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#books>li>p{
+  display: flex;
+  gap: .3em;
+}
+
+
+.title-update-input {
+  width: -webkit-fill-available;
+}

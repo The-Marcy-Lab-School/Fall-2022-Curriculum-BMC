@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 
 const bookRoutes = require('./routers/book-routes');
-const authorRoutes = require('./routers/author-routes');
 const logRoutes = require('./middleware/log-routes');
 
 // creating the express app server
@@ -20,7 +19,6 @@ app.use(logRoutes);
 
 // Other routers we are using
 app.use('/books', bookRoutes);
-app.use('/authors', authorRoutes);
 
 // export the server to be used in index.js
 module.exports = app;

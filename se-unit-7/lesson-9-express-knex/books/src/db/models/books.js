@@ -1,6 +1,5 @@
 const knex = require('./knex');
 
-
 class Book {
 
   static async create(title, publishedYear) {
@@ -15,7 +14,6 @@ class Book {
       console.error(err);
       return null;
     }
-    
   }
 
   static async list() {

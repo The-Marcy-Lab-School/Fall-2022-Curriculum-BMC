@@ -2,10 +2,11 @@ const destroy = async (req, res) => {
   const { Book, params: { id } } = req;
   // const Book = req.Book
   // const id = req.params.id
+  console.log('destroying')
   const didDelete = await Book.delete(Number(id));
-  if (!didDelete) return res.status(404).send('Not Found');
+  if (!didDelete) return res.status(404).send(null);
 
-  res.sendStatus(204);
+  res.status(204).send(true);
 };
 
 module.exports = destroy;
