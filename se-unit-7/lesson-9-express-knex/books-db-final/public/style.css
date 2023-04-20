@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: #261F1D;
   color: #FFFCF7;
@@ -10,24 +16,46 @@ body {
   justify-content: center;
 }
 
+h1, form, li {
+  margin: 1rem;
+}
+
+button {
+  width: 1.5rem;
+  aspect-ratio: 1 / 1;
+  background: none;
+  color: white;
+  border-radius: 50%;
+  border: 1px solid;
+}
+
+button:hover {
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+
+input[type=submit] {
+  padding: .3rem;
+}
+
 form {
   display: flex;
-  flex-direction: column;
+  height: 2rem;
   gap: 1em;
 }
 
-#books>li{
+#books {
+  min-width: 300px;
+}
+
+#books>li, #books>li>*{
   display: flex;
   gap: 1em;
   align-items: center;
   justify-content: space-between;
+  height: 2em;
 }
-
-#books>li>p{
-  display: flex;
-  gap: .3em;
-}
-
 
 .title-update-input {
   width: -webkit-fill-available;

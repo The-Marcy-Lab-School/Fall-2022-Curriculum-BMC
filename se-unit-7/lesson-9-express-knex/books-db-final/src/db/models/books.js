@@ -1,14 +1,23 @@
+const { generateId } = require('../../utils');
+
 const knex = require('./knex');
 
 class Book {
+  static #all = [
+    // { id: 1, title: 'Learn to Git With It',	published_year: 2015 },
+    // { id: 2, title: 'HTML for Dummies',	published_year: 2018 },
+    // { id: 3, title: 'Advanced JavaScript',	published_year: 2009 },
+    // { id: 4, title: 'Starting Express',	published_year: 2010 },
+    // { id: 5, title: 'Node for Noobies',	published_year: 2020 }
+  ];
 
-  static async create(title, publishedYear) {
+  static async create({ title, published_year }) {
     try {
       const result = await knex.raw(`
         INSERT INTO books (title, published_year)
         VALUES (?, ?)
         RETURNING *;
-      `, [title, publishedYear]);
+      `, [title, published_year]);
       return result.rows[0];
     } catch (err) {
       console.error(err);
@@ -22,7 +31,6 @@ class Book {
         SELECT *
         FROM books;
       `);
-      console.log(result.rows);
       return result.rows;
     } catch (err) {
       console.error(err);
@@ -35,7 +43,7 @@ class Book {
       const result = await knex.raw(`
         SELECT *
         FROM books
-        WHERE id=?;
+        WHERE id=?
       `, [bookId]);
       return result.rows[0];
     } catch (err) {
@@ -50,7 +58,7 @@ class Book {
         UPDATE books
         SET title=?
         WHERE id=?
-        RETURNING *;
+        RETURNING *
       `, [newTitle, id]);
       return result.rows[0];
     } catch (err) {
@@ -63,9 +71,10 @@ class Book {
     try {
       const result = await knex.raw(`
         DELETE FROM books
-        WHERE id=?;
-      `, bookId);
-      return result.rowCount ? true : false;
+        WHERE id=?
+        RETURNING *
+      `, [bookId]);
+      return result.rows[0];
     } catch (err) {
       console.error(err);
       return null;
@@ -74,8 +83,11 @@ class Book {
 
   static async deleteAll() {
     try {
-      await knex.raw('TRUNCATE books');
-      return true;
+      const result = await knex.raw(`
+        TRUNCATE books
+        RETURNING *
+      `);
+      return result.rows;
     } catch (err) {
       console.error(err);
       return null;

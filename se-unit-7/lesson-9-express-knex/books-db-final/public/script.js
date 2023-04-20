@@ -11,7 +11,7 @@ const main = async () => {
   const booksUl = document.querySelector('#books');
   const newBookForm = document.querySelector('#new-book-form');
   const newBookInput = document.querySelector('#new-book-input');
-  const publishYearInput = document.querySelector('#publish-year-input');
+  const publishedYearInput = document.querySelector('#published-year-input');
 
   const getBooks = async () => {
     const books = await fetch(url).then((r) => r.json()).catch((e) => alert.error(e));
@@ -26,16 +26,19 @@ const main = async () => {
     const { title, id, published_year } = book;
 
     const li = document.createElement('li');
-    const p = document.createElement('p');
+    const leftDiv = document.createElement('div');
+    const rightDiv = document.createElement('div');
+    li.append(leftDiv, rightDiv);
+
     const titleSpan = document.createElement('span');
     const yearSpan = document.createElement('span');
     const editTitleInput = document.createElement('input');
     const button = document.createElement('button');
 
-    p.append(titleSpan, editTitleInput, yearSpan);  
-    li.append(p, button);
+    leftDiv.append(titleSpan, editTitleInput);
+    rightDiv.append(yearSpan, button);
     
-    titleSpan.innerText = `${title} `;
+    titleSpan.innerText = `${title}`;
     yearSpan.innerText = `(${published_year})`;
     editTitleInput.className = 'title-update-input';
     editTitleInput.style.display = 'none';
@@ -72,7 +75,7 @@ const main = async () => {
 
     const options = getOptionsWithBody('POST', { 
       title: newBookInput.value, 
-      publishYear: publishYearInput.value
+      published_year: publishedYearInput.value
     });
     const response = await fetch(url, options);
     if (response.status !== 201) return alert("error, please try again");

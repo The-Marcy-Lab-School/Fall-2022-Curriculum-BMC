@@ -13,4 +13,3 @@ exports.seed = async function(knex) {
     { title: 'Node for Noobies',	published_year: 2020 }
   ]);
 };
-
