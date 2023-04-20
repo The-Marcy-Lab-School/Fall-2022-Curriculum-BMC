@@ -1,4 +1,5 @@
 // Update with your config settings.
+const path = require('path');
 
 /**
  * @type { Object.<string, import("knex").Knex.Config> }
@@ -12,6 +13,12 @@ module.exports = {
       user:     'benspector',
       password: 'postgres'
     },
+    migrations: {
+      directory: path.join(__dirname, 'src', 'db', 'migrations')
+    },
+    seeds: {
+      directory: path.join(__dirname, 'src', 'db', 'seeds')
+    }
   },
 
   staging: {
