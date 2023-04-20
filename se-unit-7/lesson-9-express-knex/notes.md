@@ -6,6 +6,8 @@ In this lecture, we are going to be refactoring a reading list Express applicati
 
 Currently, that application's model uses an in-memory array to manage a list of books. As a result, the data will only persist as long as the server is up and running. We will refactor this project using Knex to connect to a PostgreSQL database to manage a **persistent** set of data.
 
+![](img/full-stack-diagram.svg)
+
 ## Setup + File Structure
 
 * Create a database called `books`
