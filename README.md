@@ -313,8 +313,8 @@ Additional Resources:
 * **4/17/23 - Schema Design** | [Notes](./se-unit-7/lesson-6-schema-design/notes.md) | [Recording](https://us02web.zoom.us/rec/share/Ro0jECiMsemcO5fN7oYRSD3sqhQa_V69kvQiuo8dv0P41feFgN7Ie2SS7FbVh4i8.LTNKXaMabbdVvmFX)
 * **4/18/23 - Knex** | [Notes](./se-unit-7/lesson-7-knex/notes.md) | [Demo Code](./se-unit-7/lesson-7-knex/demo/) | [Recording](https://us02web.zoom.us/rec/share/bqGJG29jmZdxE0EI2oC5OD1R9AGW_qNDFQu8QoqHcgKuhrcDdAiFt4okfwlp5-WX.iql6v--Cs6G7wRUm)
 * **4/19/23 - Migrations & Seeds** | [Notes](./se-unit-7/lesson-8-migrations-and-seeds/notes.md) | [Demo Code](./se-unit-7/lesson-8-migrations-and-seeds/demo/) | [Recording](https://youtu.be/4SNNxC6Kv8s)
-* **4/20/23 - Knex + Express + MVC** | [Notes](./se-unit-7/lesson-9-express-knex/notes.md) | [Starting Code Repo](https://github.com/The-Marcy-Lab-School/books-express-no-db/) | [Final Books App w/ Knex](./se-unit-7/lesson-9-express-knex/books-db-one-table/) | Recording Coming Soon...
-* **4/21/23 - Review**
+* **4/20/23 - Knex + Express + MVC** | [Notes](./se-unit-7/lesson-9-express-knex/notes.md) | [Starting Code Repo](https://github.com/The-Marcy-Lab-School/books-express-no-db/) | [Final Books App w/ Knex](./se-unit-7/lesson-9-express-knex/books-db-one-table/) | [Recording](https://us02web.zoom.us/rec/share/8x2qfbJbWJMy_BROcssByCDXrYfGDen37NK-9vS2wz03nXqYSqhINXt5EIUnM-eS.JjgyeFXb3PxH2owJ)
+* **4/21/23 - Review** |[Building A Users DB for Snake](https://us02web.zoom.us/rec/share/ecWwZ1xORgY1RSq-iJSGUZm0h4JWfGqZcX5f7OmFXUdtX1fOOKvDPXc0_9przUCd.hkF2xCs4zsZrSzfY)
 
 ### Week 4
 
