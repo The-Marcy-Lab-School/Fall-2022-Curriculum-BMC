@@ -13,12 +13,7 @@ async function generateJwt(user) {
   // This should be kept secret
   const secretKey = "notverysecretorsecure";
 
-  const token = await jwt.sign(
-    {
-      userId: user.id,
-    },
-    secretKey
-  );
+  const token = await jwt.sign({ userId: user.id }, secretKey );
   console.log(token);
   return token;
 }
