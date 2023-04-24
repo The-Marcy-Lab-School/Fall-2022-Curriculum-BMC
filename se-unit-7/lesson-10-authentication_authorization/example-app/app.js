@@ -1,5 +1,10 @@
-const express = require("express");
+//////////////////////////
+// Imports
+//////////////////////////
+
 const exphbs = require("express-handlebars");
+
+const express = require("express");
 // Sessions
 const session = require("express-session");
 // Password hasher
@@ -12,18 +17,21 @@ const users = require("./users");
 // used purely for generating an id
 const { randomBytes } = require("crypto");
 
+//////////////////////////
+// SERVER CONFIGURATION
+//////////////////////////
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // handlebars templating engine
 app.engine("handlebars", exphbs());
 app.set("view engine", "handlebars");
 
+// process forms data
+app.use(express.urlencoded({ extended: true }));
+
 // Mount our api subrouter
 app.use("/api", api);
 
-// process forms data
-app.use(express.urlencoded({ extended: true }));
 
 // Configure session middleware
 app.use(
@@ -35,10 +43,17 @@ app.use(
   })
 );
 
+//////////////////////////
+// Index Page
+//////////////////////////
 app.get("/", (req, res) => {
   res.render("index");
 });
 
+
+//////////////////////////
+// Login Page
+//////////////////////////
 app.get("/login", (req, res) => {
   res.render("login");
 });
@@ -79,6 +94,10 @@ app.post("/login", async (req, res) => {
   res.redirect("/home");
 });
 
+
+//////////////////////////
+// Register Page
+//////////////////////////
 app.get("/register", (req, res) => {
   res.render("register");
 });
@@ -114,6 +133,9 @@ app.post("/register", async (req, res) => {
   res.redirect("/home");
 });
 
+//////////////////////////
+// Home Page (Logged In)
+//////////////////////////
 app.get("/home", (req, res) => {
   // check if user is in session and if not then we know they aren't authenticated
   if (!req.session.user) {
@@ -126,10 +148,18 @@ app.get("/home", (req, res) => {
   });
 });
 
+//////////////////////////
+// Logout Page
+//////////////////////////
 app.get("/logout", (req, res) => {
   req.session.destroy();
 
   res.redirect("/");
 });
 
-app.listen(PORT, () => console.log(`listening on http://localhost:${PORT}`));
+//////////////////////////
+// Start Listening
+//////////////////////////
+const PORT = process.env.PORT || 3000;
+const HOST = process.env.HOST || 'localhost';
+app.listen(PORT, HOST, () => console.log(`listening on http://${HOST}:${PORT}`));
