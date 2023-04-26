@@ -1,5 +1,3 @@
-const { generateId } = require('../../utils');
-
 const knex = require('./knex');
 
 class Book {
