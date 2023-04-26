@@ -178,7 +178,12 @@ const isValidPassword = async (password, hash) => {
 ```
 
 
-A full Express app with bcrypt:
+A Full Express app with bcrypt can be seen below. 
+To test it out, use Postman or the REST Client VSCode extension to:  
+1. send a `GET /users` request to see that the `users` array is empty.
+2. send a `POST /users` request to create a new user, sending along a `{ username, password }` object as the body
+3. send a `GET /users` request to see your new user
+4. send a `POST /users/login` request to log in as the existing user, sending along a `{ username, password }` object as the body. 
 
 ```js
 const express = require('express');
@@ -187,7 +192,6 @@ const app = express();
 app.use(express.json());
 
 const users = [];
-
 
 const hashPassword = async (password, saltRounds = 8) => {
   try {
