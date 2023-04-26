@@ -8,21 +8,28 @@ Key Concepts:
 
 ## Basic Setup
 
-```js
-const express = require('express');
-const app = express();
-app.use(express.json());
+* `npm init -y` (create the `package.json`)
+* `npm i express bcrypt` (installs `express` and `bcrypt` node modules)
+* `npm i -D nodemon` (installs `nodemon` as a dev dependency)
+* `touch server.js` (create the `server.js` file)
+* `"start": "nodemon ./server.js"` (define the `npm start` script)
+* I'm going to use the REST Client VSCode extension to issue my HTTP requests (but you could also use Postman for this)
 
-const users = [];
+```js
+// server.js
+const express = require('express'); // import express
+const app = express(); // create the express app
+app.use(express.json()); // parse incoming req.body data as JSON
+
+const users = []; // our "database"
 
 app.get('/users', (req, res) => {
   res.send(users);
 });
 
 app.post('/users', (req, res) => {
-  const { body: { name, password } } = req;
-  const user = { name, password };
-  users.push(user);
+  const newUser = req.body; // { username, password }
+  users.push(newUser);
   res.sendStatus(201);
 });
 
@@ -31,8 +38,8 @@ app.listen(3000, () => {
 })
 ```
 
-Problem: we're storing all of the passwords in plain text. 
-Solution: Use salting and hashing.
+**Problem:** we're storing all of the passwords in plain text. 
+**Solution:** encode the passwords!
 
 ## Hashing
 
@@ -108,8 +115,9 @@ const hash = (pw) => someComplexAlgorithm(pw);
 const getSalt = () => generateSomeRandomString();
 
 const createNewUser = (username, password) => {
-  const salt = getSalt(); // unique for every new user
+  const salt = getSalt(); // unique for every new user. eg. 'bkdh23'
   const hashedPassword = hash(salt + plainTextPassword);
+  // hash('bkdh23' + 'ilovedogs')
 
   // store the username, hashed password, and the salt in the database
   users.push({ username, hashedPassword, salt });
