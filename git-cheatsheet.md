@@ -9,7 +9,7 @@ Each team member should own their own branch and work exclusively on that branch
 To create a branch run:
 
 ```sh
-git branch myBranch
+git branch ben-branch-feature-A
 ```
 
 To see all branches, run:
@@ -22,7 +22,7 @@ You should then see: (the `*` indicates the current branch)
 
 ```
   main
-* myBranch
+* ben-branch-feature-A
 ```
 
 **When working, always check to make sure that you are NOT working in the `main` branch**
@@ -31,7 +31,7 @@ To switch back and forth between `main` and your branch, run:
 
 ```sh
 git checkout main
-git checkout myBranch
+git checkout ben-branch-feature-A
 ```
 
 ### Pulling Code and Merging With Your Branch
@@ -48,11 +48,15 @@ git pull
 Then, switch back to your branch and merge the changes from `main` into your branch.
 
 ```sh
-git checkout myBranch
+git checkout ben-branch-feature-A
 git merge main
 ```
 
-You may need to resolve merge conflicts at this point.
+You may need to resolve merge conflicts at this point. 
+
+If you see this screen asking you to enter a commit message, simply type <kbd>:q</kbd> to quit and accept the default merge message.
+
+![](assets/git-merge-message.png)
 
 ### Pushing Code
 
