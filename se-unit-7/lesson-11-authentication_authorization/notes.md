@@ -6,15 +6,19 @@
 
 Template is available, we aren't expected you to build this from scratch. We're not expecting you to fully understand the details of it. We are expecting you to understand the high-level picture.
 
-### Cookies
+## Cookies
 
-In the context of computing and the internet, a cookie is a small text file that is sent by a website to your web browser (such as Google Chrome, Firefox, or Safari) and stored on your computer or mobile device. Cookies contain information about your preferences and interactions with the website, such as login information, shopping cart contents, or browsing history.
+In the context of computing and the internet, a cookie is a small text file that is sent by a website to your web browser and stored on your computer or mobile device. 
 
-When you visit the website again, the website retrieves the information from the cookie to personalize your experience and provide you with relevant content. Cookies can also be used to track your behavior on the website and across different websites, which can be used for targeted advertising and analytics purposes.
+Cookies contain information about your preferences and interactions with the website, such as login information, shopping cart contents, or browsing history.
 
-There are different types of cookies, including session cookies (which are deleted when you close your browser) and persistent cookies (which are stored on your device for a longer period of time). Cookies can also be first-party (set by the website you are visiting) or third-party (set by a different website, such as an advertising network).
+When you visit the website again, the server retrieves the information from the cookie to personalize your experience and provide you with relevant content.
 
-It's worth noting that while cookies are generally harmless and serve useful purposes, they can also be used for malicious purposes such as tracking your personal information or spreading malware. It's important to be aware of the types of cookies being used on websites you visit and to adjust your browser settings to control how cookies are used.
+> ⚠️ It's worth noting that while cookies are generally harmless and serve useful purposes, they can also be used for malicious purposes such as tracking your personal information or spreading malware.
+
+### The cookie-session package
+
+The `cookie-session` middleware module makes it incredibly easy to use cookies to store information about our user. 
 
 ```js
 const cookieSession = require('cookie-session');
@@ -25,10 +29,14 @@ Router.use(cookieSession({
   secret: process.env.SESSION_SECRET,
 }));
 ```
-> 💡 Note: By default, the cookie's lifetime is "session", which means until we close the browser. We like this for now! But in real life you'd set the cookie to expire, and implement an automatic re-auth flow (recreate the cookie right before it expires), but that's too much at this point.
 
-* Cookies are made by the server and sent to the client.
-* The browser automatically saves the cookie and sends it back to the server with every future request
+With this middleware, all incoming Request objects will have a `req.session` property. We can add whatever data we want to it!
+
+> <details><summary>💡 Note about cookie lifetimes</summary>
+> <br>
+> By default, the cookie's lifetime is "session", which means until we close the browser. We like this for now! But in real life you'd set the cookie to expire, and implement an automatic re-auth flow (recreate the cookie right before it expires), but that's too much at this point.
+>
+> </details>
 
 ```js
 Router.get('/cookieCounter', (req, res) => {
@@ -38,6 +46,14 @@ Router.get('/cookieCounter', (req, res) => {
   res.status(200).send({ count: session.viewCount });
 });
 ```
+
+### Storing User ids on the cookie
+
+In our application, we are using cookies to store the `userId` of the currently logged-in user. This will allow us to implement **authentication** (confirm that the user is logged in).
+
+The flow of cookie data looks like this:
+
+![](img/cookies-diagram.svg)
 
 ### Routes
 
