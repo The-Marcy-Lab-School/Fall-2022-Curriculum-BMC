@@ -58,6 +58,8 @@ The flow of cookie data looks like this:
 
 ![](img/cookies-diagram.svg)
 
+
+
 ### Routes
 
 ```js
