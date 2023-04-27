@@ -4,7 +4,10 @@
 * **Authentication** is the process of verifying the identity of a user or entity
 * **Authorization** is the process of determining what resources or actions a user or entity is allowed to access or perform.
 
-Template is available, we aren't expected you to build this from scratch. We're not expecting you to fully understand the details of it. We are expecting you to understand the high-level picture.
+We are going to be working with [this template repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) which will be available for you to use as a starting point for your project. 
+* You are NOT expected you to build this from scratch. 
+* We are NOT expecting you to fully understand the details of it. 
+* We are hoping for you to understand the high-level picture so that you can build on top of the template.
 
 ## Cookies
 
