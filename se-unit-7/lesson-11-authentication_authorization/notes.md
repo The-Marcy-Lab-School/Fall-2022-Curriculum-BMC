@@ -58,9 +58,7 @@ The flow of cookie data looks like this:
 
 ![](img/cookies-diagram.svg)
 
-
-
-### Routes
+## Routes
 
 ```js
 // Create
@@ -82,6 +80,64 @@ Router.patch('/users/:id', checkAuthentication, userController.update);
 // Delete
 Router.delete('/users/logout', userController.logout);
 ```
+
+## Creating an Account
+
+#### The client initiates the process
+
+A user visits `/create` and enters their username and password. They click <kbd>Create User</kbd>.
+* sends a `POST /api/users` request along with a `username` and `password` from the form.
+
+#### The server receives the request to create a new user
+
+<details><summary>The router invokes the <code>userController.create</code> method</summary>
+
+```js
+Router.post('/users', userController.create);
+```
+</details>
+
+<details><summary>The controller invokes the model's <code>User.create</code> method which returns a <code>User</code> instance. The <code>user.id</code> is stored on the <code>session</code> and the <code>user</code> is sent to the client</summary>
+
+```js
+const createUser = async (req, res) => {
+  const {
+    session,
+    db: { User },
+    body: { username, password },
+  } = req;
+
+  const user = await User.create(username, password);
+  session.userId = user.id;
+
+  res.send(user);
+};
+```
+</details>
+
+<details><summary>The model hashes the password and stores the username and hashed password in the database. A <code>User</code> instance is made to nicely package the data (<code>userInstance.id</code> and <code>.username</code>) and provide methods for interacting directly with that <code>User</code> instance (<code>userInstance.update</code> and <code>.isValidPassword</code>).</summary>
+
+```js
+const knex = require('../knex');
+const { hashPassword, isValidPassword } = require('../../utils/auth-utils');
+class User {
+  
+  // other User methods
+  
+  static async create(username, password) {
+    const passwordHash = await hashPassword(password);
+
+    const query = `INSERT INTO users (username, password_hash)
+      VALUES (?, ?) RETURNING *`;
+    const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
+    return new User(user);
+  }
+}
+```
+</details>
+
+#### The client receives the created user and stores the information in the form
+
 
 ### Client Side
 
