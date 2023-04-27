@@ -322,7 +322,7 @@ Additional Resources:
 * **4/24/23 - 7.5 Review** | [Recording](https://us02web.zoom.us/rec/share/oEqChv-FWCc4p6xRVwTrKN2MyZufmzBHa5hM9I5JcR2LtIpVMMOSFQGsxqMccw0.VAetvyxPNMXdBjxR) 
 * **4/24/23 - Using the Express+Knex Template to Build a 1:Many Users:Todos Model** | [Express+Knex Template](https://github.com/The-Marcy-Lab-School/express-knex-template) | [Recording](https://us02web.zoom.us/rec/share/8OHunTBlDMrvakeLHx68xAw2A8cMzP6dATN2M05P5mV-tY1kQUmGEUcnT-kghIrP.JWPByVv1XNd0X-qk) 
 * **4/26/23 - Hashing & Salting** | [Notes](./se-unit-7/lesson-10-hashing-passwords/notes.md) | [Demo Code](./se-unit-7/lesson-10-hashing-passwords/demo/server-final.js) | [Recording](https://us02web.zoom.us/rec/share/KYocjQ3IWlLGaLIn-wKvFclfFCFV9wpCeLWO_WQwgTPSt1PYO44BZlz29lRGXRZy.3WgB2VISQENFTYGD)
-* **4/27/23 - Authentication & Authorization** | Notes 
+* **4/27/23 - Authentication & Authorization** | [Notes](./se-unit-7/lesson-11-authentication_authorization/notes.md) | [Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) |  
 
 ### Project Week
 

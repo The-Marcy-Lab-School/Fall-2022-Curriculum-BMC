@@ -4,105 +4,141 @@
 * **Authentication** is the process of verifying the identity of a user or entity
 * **Authorization** is the process of determining what resources or actions a user or entity is allowed to access or perform.
 
-### Day 1: User Class
-* using bcrypt
-* making a hashed password
-* saving it in the db
-* Not exposing hashed password in API
+Template is available, we aren't expected you to build this from scratch. We're not expecting you to fully understand the details of it. We are expecting you to understand the high-level picture.
 
+### Cookies
 
-### Day 2: Sessions
+In the context of computing and the internet, a cookie is a small text file that is sent by a website to your web browser (such as Google Chrome, Firefox, or Safari) and stored on your computer or mobile device. Cookies contain information about your preferences and interactions with the website, such as login information, shopping cart contents, or browsing history.
 
-**Server Side**
-* Create session
-* Server remembers session
-* Send sessionId to client in a cookie
-* When logging out, destroy session
+When you visit the website again, the website retrieves the information from the cookie to personalize your experience and provide you with relevant content. Cookies can also be used to track your behavior on the website and across different websites, which can be used for targeted advertising and analytics purposes.
+
+There are different types of cookies, including session cookies (which are deleted when you close your browser) and persistent cookies (which are stored on your device for a longer period of time). Cookies can also be first-party (set by the website you are visiting) or third-party (set by a different website, such as an advertising network).
+
+It's worth noting that while cookies are generally harmless and serve useful purposes, they can also be used for malicious purposes such as tracking your personal information or spreading malware. It's important to be aware of the types of cookies being used on websites you visit and to adjust your browser settings to control how cookies are used.
 
 ```js
-const cookieParse = require('cookie-parser');
-const sesion = require('express-session');
-const KnexSessionStore = require('connect-session-knex')(session);
-const knex = require('../db/knex.js');
+const cookieSession = require('cookie-session');
 
-const sessionOpts = {
-  store: new KnexSessionStore({ knex })
-}
+const Router = express.Router();
+
+Router.use(cookieSession({
+  secret: process.env.SESSION_SECRET,
+}));
 ```
-* `cookieParser`
-* `sessions`
-* `KnexSessionStore = require('connect-session-knex')(session)`
+> 💡 Note: By default, the cookie's lifetime is "session", which means until we close the browser. We like this for now! But in real life you'd set the cookie to expire, and implement an automatic re-auth flow (recreate the cookie right before it expires), but that's too much at this point.
 
-The `session` is put on our `req` by the Session middleware.
-
-1. Client makes a create request
-2. Server makes a session
-
-**Client Side**
-* Separate HTML pages
-  * `login.html` - log in
-  * `create.html` - register an account
-  * `user.html` - user profile
-  * `index.html` - see primary resources (posts, pictures, etc...)
-* Before navigating away from `/login` or `/register`, save `sessionId` to `localStorage` (in React, use context)
-* Client JavaScript can't modify the cookie, but we can see it in Chrome's Application > Cookies tab (`connect.sid`).
+* Cookies are made by the server and sent to the client.
+* The browser automatically saves the cookie and sends it back to the server with every future request
 
 ```js
-// global.js
+Router.get('/cookieCounter', (req, res) => {
+  const { session } = req;
+  session.viewCount = (session.viewCount || 0) + 1;
+  console.log(session.viewCount);
+  res.status(200).send({ count: session.viewCount });
+});
+```
 
-const saveUserToLocalStorage = (user) => {
-  try {
-    console.log('hi:', );
-    return localStorage.setItem('user', JSON.stringify(user));
-  } catch (error) {
-    return null;
-  }
-};
+### Routes
 
-const getUserFromLocalStorage = () => JSON.parse(localStorage.getItem('user'));
+```js
+// Create
+Router.post('/users', userController.create);
+Router.post('/users/login', userController.login);
 
-const fetchHandler = async (url, options) => {
-  const response = await fetch(url, options);
-  if (!response.ok) return null;
-  return (response.status === 204) || response.json();
-};
-
-const getPostOptions = (body) => ({
-  method: 'POST',
-  credentials: 'include',
-  headers: {
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify(body),
+// Read
+Router.get('/users', userController.list);
+Router.get('/users/:id', userController.show);
+Router.get('/me', userController.showMe);
+  // checkAuthentication middleware is applied to only to this route (and /logged-in-secret)
+Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
+  res.send({ msg: 'The secret is: there is no secret.' });
 });
 
-const signupAndLoginHandler = async (url, form) => {
-  const formData = new FormData(form);
-  const options = getPostOptions(Object.fromEntries(formData.entries()));
-  const response = await fetchHandler(url, options);
-  if (!response) {
-    form.reset();
-    return alert('Something went wrong');
-  }
-  saveUserToLocalStorage(response);
-  window.location.assign('/user.html');
-};
+// Update
+Router.patch('/users/:id', checkAuthentication, userController.update);
 
-const setNav = () => {
-  const loggedOutNavHtml = `<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="./create.html">Sign Up</a></li>
-    <li><a href="./login.html">Login</a></li>
-  </ul>`;
-
-  const loggedInNavHtml = `<ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="./user.html">Profile</a></li>
-  </ul>`;
-
-  const navHtml = isUserLoggedIn() ? loggedInNavHtml : loggedOutNavHtml;
-  document.querySelector('nav').innerHTML = navHtml;
-};
+// Delete
+Router.delete('/users/logout', userController.logout);
 ```
 
-What to do with Auth
+### Client Side
+
+* 4 pages
+  * `/create` - register an account
+  * `/` - see primary resources (posts, pictures, etc...)
+  * `/user` - user profile with log out button
+  * `login` - log in
+* Key fetching methods:
+  <details><summary>Create - <code>signupAndLoginHandle</code></summary>
+
+    * sends a `POST /api/users` request when creating a new user on the `/create` page along with a `username` and `password` from the form.
+    * sends a `POST /api/users/login` request when logging in on the `/login` page along with a `username` and `password` from the form.
+
+  </details>
+
+  <details><summary>Read - <code>fetchLoggedInUser</code></summary>
+
+    * sends a `GET /api/me` request which returns a `user` if signed in (the cookie sent to the server has a session id), or `null` if not.
+    * sent when hitting the `/` page. If a user is signed in, show the <kbd>Profile</kbd> button in the nav. If not, show the <kbd>Login</kbd> and <kbd>Sign Up</kbd> buttons
+    * sent when hitting the `/create` and `/login` pages. If a user is signed in, redirects to `/user`.
+    * sent when hitting the `/users` page. If a user is NOT signed in, redirects to `/login`. If a user IS signed it, it uses the returned `user` object to store the `user.id` on the <kbd>Update Username</kbd> form as a `data-user-id` attribute.
+
+  </details>
+  <details><summary>Update - <code>updateUsernameHandler</code></summary>
+
+    * sends a `PATCH /api/users/:userId` request along with the updated username.
+    * sent when a user presses the <kbd>Update Username</kbd> button from `/user`.
+  </details>
+  <details><summary>Delete - <code>logoutHandler</code></summary>
+
+    * sends a `DELETE /api/users/logout` request which only returns an error if something went wrong.
+    * sent when a user presses the <kbd>Log Out</kbd> button from `/user`.
+  </details>
+    
+
+### Server Side
+
+* `index.js`
+  * imports and starts `server.js`
+* `server.js` 
+  * imports and uses `routes.js` on all routes
+  * imports and uses `handleCookieSessions` middleware on all routes
+  * uses `express.json()` middleware on all routes
+  * uses `express.static()` middleware on all routes
+* `routes.js`
+  * imports `userController`
+  * imports and uses `addModels` middleware on all routes
+  * imports `checkAuthentication` middleware and uses it on `patch('/users/:id')` requests and `get('/logged-in-secret')`
+  * defines CRUD routes 
+* `src/middleware/handleCookieSessions`
+* `src/middleware/check-authentication`
+* `utils/auth-utils`
+
+#### CRUD Flows
+<details><summary> Creating a User on <code>/create</code></summary>
+
+  * User enters username and password into the form and clicks <kbd>Create User</kdbd>
+  * `POST /users` > server > router > `userController.create` > `User.create`
+  * The model hashes the password and stores the username and hashed password in the DB
+  * A `User` instance is made to nicely package the data (`userInstance.id` and `.username`) and provide methods for interacting directly with that `User` instance (`userInstance.update` and `.isValidPassword`).
+  * The controller receives the instance, stores the `userId` on the `session`, and sends the `user` to the client.
+
+</details>
+<details><summary>Logging in on <code>/login</code></summary>
+
+  * User enters username and password into the form and clicks <kbd>Log in!</kdbd>
+  * `POST /users/login` > server > router > `userController.login` > `User.findByUsername`
+  * The model returns the user with the matching username and returns a `User` instance
+  * The controller called the `user.isValidPassword` method to verify the input password
+  * A `User` instance is made to nicely package the data (`userInstance.id` and `.username`) and provide methods for interacting directly with that `User` instance (`userInstance.update` and `.isValidPassword`)
+  * The controller receives the instance, stores the `userId` on the `session`, and sends the `user` to the client.
+
+</details>
+
+<details><summary>Verifying Logins at <code>/api/me</code></summary>
+
+  * 
+
+</details>
+
