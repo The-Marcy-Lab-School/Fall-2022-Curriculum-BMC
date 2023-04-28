@@ -7,8 +7,9 @@ const Router = express.Router();
 Router.use(addModels);
 
 Router.get('/cookieCounter', (req, res) => {
-  const { session } = req;
+  const { session } = req; // req.session
   console.log(session);
+
   session.viewCount = (session.viewCount || 0) + 1;
   console.log(session.viewCount);
   res.status(200).send({ count: session.viewCount });

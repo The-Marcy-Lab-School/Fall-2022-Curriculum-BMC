@@ -324,6 +324,7 @@ Additional Resources:
 * **4/26/23 - Hashing & Salting** | [Notes](./se-unit-7/lesson-10-hashing-passwords/notes.md) | [Demo Code](./se-unit-7/lesson-10-hashing-passwords/demo/server-final.js) | [Recording](https://us02web.zoom.us/rec/share/KYocjQ3IWlLGaLIn-wKvFclfFCFV9wpCeLWO_WQwgTPSt1PYO44BZlz29lRGXRZy.3WgB2VISQENFTYGD)
 * **4/26/23 - LR: Full Stack Review** | [Building Out A User Login From the Express+Knex Template Recording](https://us02web.zoom.us/rec/share/IlOMoFe5FljIudJqpCcya5SGK3jjh9QZZnW3BdvkyNjirL1P-Zow58kdsblZGuIq.g5EGWeFuLbseYMja)
 * **4/27/23 - Authentication vs. Authorization & Cookies** | [Notes](./se-unit-7/lesson-11-authentication_authorization/notes.md) | [Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) | [Recording](https://us02web.zoom.us/rec/share/vCm4hdmaXjlr9YrCWQHh6v2qabjS-gYYlRiKxr3BQF4xeRvRPGnooOZUxrIslbzM._bfHo3yOymP1zVYu)
+* **4/28/23 - Cookies, Authentication & fetchLoggedInUser** | [Recording](https://us02web.zoom.us/rec/share/iqPvwzvFl3sgTSCc_6xQ7S_3jL61gbJK0rxSfFjcw0c93fXxyHUkE752ZugFQW6y.6vV_4Ybu5_-9Wdkt)
 
 ### Project Week
 

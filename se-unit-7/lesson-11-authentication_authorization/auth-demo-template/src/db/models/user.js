@@ -28,7 +28,9 @@ class User {
   static async find(id) {
     try {
       const query = 'SELECT * FROM users WHERE id = ?';
-      const { rows: [user] } = await knex.raw(query, [id]);
+      // const { rows: [user] } = await knex.raw(query, [id]);
+      const result = await knex.raw(query, [id]);
+      const user = result.rows[0];
       return user ? new User(user) : null;
     } catch (err) {
       console.error(err);
