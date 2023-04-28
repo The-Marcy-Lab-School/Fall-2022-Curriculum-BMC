@@ -323,12 +323,13 @@ Additional Resources:
 * **4/24/23 - LR: Using the Express+Knex Template to Build a 1:Many Users:Todos Model** | [Express+Knex Template](https://github.com/The-Marcy-Lab-School/express-knex-template) | [Recording](https://us02web.zoom.us/rec/share/8OHunTBlDMrvakeLHx68xAw2A8cMzP6dATN2M05P5mV-tY1kQUmGEUcnT-kghIrP.JWPByVv1XNd0X-qk) 
 * **4/26/23 - Hashing & Salting** | [Notes](./se-unit-7/lesson-10-hashing-passwords/notes.md) | [Demo Code](./se-unit-7/lesson-10-hashing-passwords/demo/server-final.js) | [Recording](https://us02web.zoom.us/rec/share/KYocjQ3IWlLGaLIn-wKvFclfFCFV9wpCeLWO_WQwgTPSt1PYO44BZlz29lRGXRZy.3WgB2VISQENFTYGD)
 * **4/26/23 - LR: Full Stack Review** | [Building Out A User Login From the Express+Knex Template Recording](https://us02web.zoom.us/rec/share/IlOMoFe5FljIudJqpCcya5SGK3jjh9QZZnW3BdvkyNjirL1P-Zow58kdsblZGuIq.g5EGWeFuLbseYMja)
-* **4/27/23 - Authentication & Authorization** | [Notes](./se-unit-7/lesson-11-authentication_authorization/notes.md) | [Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) |  
+* **4/27/23 - Authentication vs. Authorization & Cookies** | [Notes](./se-unit-7/lesson-11-authentication_authorization/notes.md) | [Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) | [Recording](https://us02web.zoom.us/rec/share/vCm4hdmaXjlr9YrCWQHh6v2qabjS-gYYlRiKxr3BQF4xeRvRPGnooOZUxrIslbzM._bfHo3yOymP1zVYu)
 
 ### Project Week
 
 * [Github Teamwork Cheatsheet](./git-cheatsheet.md)
 * [Project Week Rollout](https://github.com/benspector-mls/unit-7-project-week-rollout)
+* [Express + Knex + Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions)
 
 ## Unit 8 - React
 ## Unit 9 - Capstone

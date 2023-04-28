@@ -1,13 +1,55 @@
 # Auth
 
 **Authentication** and **authorization** are two different concepts related to security and access control. 
-* **Authentication** is the process of verifying the identity of a user or entity
-* **Authorization** is the process of determining what resources or actions a user or entity is allowed to access or perform.
+* **Authentication** is the process of verifying the identity of a user or entity.
+* **Authorization** is the process of determining what resources or actions a user is allowed to access or perform.
+
+## The Template Repo
 
 We are going to be working with [this template repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions) which will be available for you to use as a starting point for your project. 
-* You are NOT expected you to build this from scratch. 
-* We are NOT expecting you to fully understand the details of it. 
-* We are hoping for you to understand the high-level picture so that you can build on top of the template.
+* You are NOT expected you to build this from scratch. You are expected to be able to build on top of it.
+* It will take time to understand the details. To start, we are hoping for you to understand the high-level picture. To help break it down, consider the 4 main user flows:
+  1. Creating a new account
+  2. Logging into an existing account
+  3. Viewing a home page with information that only logged-in users can see (requires authentication)
+  4. Viewing a user profile page where you can update your profile (requires authorization)
+
+## Routes
+
+This auth example uses the following routes defined in `src/routes.js`. In `src/server.js`, we can see that this `Router` is used on all routes starting with `api/`
+
+
+
+```js
+/* src/server.js */
+  const routes = require('./routes.js');
+  app.use('/api', routes);
+
+/* src/routes.js */
+
+  // Create
+  Router.post('/users', userController.create);
+  Router.post('/users/login', userController.login);
+
+  // Read
+  Router.get('/users', userController.list);
+  Router.get('/users/:id', userController.show);
+  Router.get('/me', userController.showMe);
+
+  Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
+    res.send({ msg: 'The secret is: there is no secret.' });
+  });
+
+  // Update
+  Router.patch('/users/:id', checkAuthentication, userController.update);
+
+  // Delete
+  Router.delete('/users/logout', userController.logout);
+
+  module.exports = Router;
+```
+
+Note that `checkAuthentication` is a middleware function that is manually applied to the `GET /logged-in-secret` and `PATCH /users/:id` routes. 
 
 ## Cookies
 
@@ -35,53 +77,86 @@ Router.use(cookieSession({
 
 With this middleware, all incoming Request objects will have a `req.session` property. We can add whatever data we want to it!
 
-> <details><summary>💡 Note about cookie lifetimes</summary>
-> <br>
-> By default, the cookie's lifetime is "session", which means until we close the browser. We like this for now! But in real life you'd set the cookie to expire, and implement an automatic re-auth flow (recreate the cookie right before it expires), but that's too much at this point.
->
-> </details>
+For example, let's put a `viewCount` on the `req.session` and increment it each time the user visits `/api/cookieCounter`. 
 
 ```js
 Router.get('/cookieCounter', (req, res) => {
   const { session } = req;
+  console.log(session); // an empty object at first
   session.viewCount = (session.viewCount || 0) + 1;
   console.log(session.viewCount);
   res.status(200).send({ count: session.viewCount });
 });
 ```
 
-### Storing User ids on the cookie
+Open the dev tools > Applications > Cookies and delete the cookie. Then refresh the page and you'll see that the `req.session.viewCount` has been reset!
+
+### Storing User IDs on the Cookie for Authentication
 
 In our application, we are using cookies to store the `userId` of the currently logged-in user. This will allow us to implement **authentication** (confirm that the user is logged in).
 
 The flow of cookie data looks like this:
 
-![](img/cookies-diagram.svg)
+![](img/cookies-session-userid-diagram.svg)
 
-## Routes
+## Fetch Logged-In User
 
-```js
-// Create
-Router.post('/users', userController.create);
-Router.post('/users/login', userController.login);
+The first user-flow we are going to look at to demonstrate how cookies are used is seeing if a user is already logged in.
 
-// Read
-Router.get('/users', userController.list);
-Router.get('/users/:id', userController.show);
-Router.get('/me', userController.showMe);
-  // checkAuthentication middleware is applied to only to this route (and /logged-in-secret)
-Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
-  res.send({ msg: 'The secret is: there is no secret.' });
-});
+In the UI, an authenticated user will see the <kbd>Profile</kbd> button in the navigation bar while an un-authenticated user will see the <kbd>Sign Up</kbd> and <kbd>Login</kbd> buttons.
 
-// Update
-Router.patch('/users/:id', checkAuthentication, userController.update);
+Files Involved:
+* **public/scripts/index.js** (invokes **global.js** functions `fetchLoggedInUser`)
+* **public/scripts/global.js** (sends a `GET /api/me` request)
+* **src/routes.js** (passes control to `userController.showMe`)
+* **src/controllers/user/show-me.js** (checks the `session.userId`, finds the `user` (if present), and returns it)
+* **src/db/models/user.js** (finds and returns the `user` from the DB)
 
-// Delete
-Router.delete('/users/logout', userController.logout);
-```
+If at the end of this process the client receives back the `user`, then the `setNav` function is invoked and we attempt to fetch the secret message that only logged-in users can see. 
+
+All of the pages use this `fetchLoggedInUser` function to make some modification to the UI shown to the user. Explore how each page does it!
+
+## Logging In
+
+A user can log in when they visit the `/login.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
+
+Files Involved:
+* **public/scripts/login.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
+* **public/scripts/global.js** (sends a `POST /api/users/login` request)
+* **src/routes.js** (passes control to `userController.login`)
+* **src/controllers/user/login.js** (finds the user by username, checks if the password is correct, sets the `session.id`, and sends the `user` to the client)
+* **src/db/models/user.js** (finds and returns the `user` from the DB and uses `bcrypt` to verify the password)
+
+If at the end of this process the client receives back a response without any errors, the user has successfully logged in and is redirected to `/user.html`.
 
 ## Creating an Account
+
+A user can log in when they visit the `/login.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
+
+Files Involved:
+* **public/scripts/login.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
+* **public/scripts/global.js** (sends a `POST /api/users/login` request)
+* **src/routes.js** (passes control to `userController.login`)
+* **src/controllers/user/login.js** (finds the user by username, checks if the password is correct, sets the `session.id`, and sends the `user` to the client)
+* **src/db/models/user.js** (finds and returns the `user` from the DB and uses `bcrypt` to verify the password)
+
+If at the end of this process the client receives back a response without any errors, the user has successfully logged in and is redirected to `/user.html`.
+
+
+
+---
+# Old garbage notes 
+## Creating an Account [old]
+
+Files Involved:
+* public/create.html
+* public/scripts/create.js
+* public/scripts/global.js
+* src/routes.js
+* src/middleware/handle-cookie-sessions.js
+* src/controllers/user/create.js
+* src/db/models/user.js
+* src/utils/
 
 #### The client initiates the process
 
@@ -137,6 +212,10 @@ class User {
 </details>
 
 #### The client receives the created user and stores the information in the form
+
+* Refreshing the page will trigger `fetchLoggedInUser` which sends a `GET /api/me` request along with the same cookie to the server. 
+* The server knows that the client is already logged in because of the `session.userId` value and sends the logged-in user back
+* The client then renders the `/user` page
 
 
 ### Client Side

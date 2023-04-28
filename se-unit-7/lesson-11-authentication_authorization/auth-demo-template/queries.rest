@@ -1,0 +1,32 @@
+GET http://localhost:3000/api/users
+
+#######################################
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "username": "test_15",
+  "password": "password1"
+}
+
+#######################################
+POST http://localhost:3000/api/users/login
+Content-Type: application/json
+
+{
+  "username": "test_15",
+  "password": "password1"
+}
+
+#################################################
+
+GET http://localhost:3000/api/me
+
+#######################################
+GET http://localhost:3000/api/users/19
+
+#######################################
+DELETE http://localhost:3000/api/users/logout
+
+#######################################
+GET http://localhost:3000/api/logged-in-secret
