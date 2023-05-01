@@ -99,7 +99,11 @@ Router.get('/cookieCounter', (req, res) => {
 });
 ```
 
-Open the dev tools > Applications > Cookies and delete the cookie. Then refresh the page and you'll see that the `req.session.viewCount` has been reset!
+Open the dev tools > Applications > Cookies to see the cookie. The `session` value is the encoded `session` data that we sent over from the server (see it change as the view count increases).
+
+![](img/delete-cookie-session.png)
+
+Delete the cookie and then refresh the page. You'll see that the `req.session.viewCount` has been reset!
 
 ### Storing User IDs on the Cookie for Authentication
 
