@@ -158,6 +158,13 @@ Files Involved:
 
 If at the end of this process the client receives back a response without any errors, the user has successfully logged in and is redirected to `/user.html`.
 
+## The User Page
+
+### Updating a Username
+
+
+
+## Logging Out 
 
 ---
 # Old garbage notes 

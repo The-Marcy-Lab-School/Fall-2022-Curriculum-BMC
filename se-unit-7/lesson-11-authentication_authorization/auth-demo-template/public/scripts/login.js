@@ -6,10 +6,10 @@ import {
 } from './global.js';
 
 const main = async () => {
-  const user = await fetchLoggedInUser();
+  const user = await fetchLoggedInUser(); // GET /api/me
   if (user) return window.location.assign('/user.html');
 
-  setNav();
+  setNav(false); // show logged-out nav
   document.querySelector('#create-form')
     .addEventListener('submit', async (event) => {
       event.preventDefault();

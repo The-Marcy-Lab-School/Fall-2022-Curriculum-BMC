@@ -57,7 +57,10 @@ class User {
   static async findByUsername(username) {
     try {
       const query = 'SELECT * FROM users WHERE username = ?';
-      const { rows: [user] } = await knex.raw(query, [username]);
+      // const { rows: [user] } = await knex.raw(query, [username]);
+      const result = await knex.raw(query, [username]);
+      const user = result.rows[0];
+      console.log(`found user in database`, user);
       return user ? new User(user) : null;
     } catch (err) {
       console.error(err);

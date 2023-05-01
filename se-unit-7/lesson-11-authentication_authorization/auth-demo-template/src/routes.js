@@ -15,6 +15,12 @@ Router.get('/cookieCounter', (req, res) => {
   res.status(200).send({ count: session.viewCount });
 });
 
+Router.post('/photos', (req, res) => {
+  const { body: { url } } = req;
+  console.log(`add ${url} to database`);
+  res.send(`${url} received!`);
+});
+
 // Create
 Router.post('/users', userController.create);
 Router.post('/users/login', userController.login);
