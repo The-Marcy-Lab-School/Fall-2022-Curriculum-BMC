@@ -334,6 +334,7 @@ Additional Resources:
     * [Understanding the Auth Template Repo Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-7/lesson-11-authentication_authorization/notes.md)
     * [Understanding the Auth Template Recording I (`fetchLoggedInUser`)](https://us02web.zoom.us/rec/share/iqPvwzvFl3sgTSCc_6xQ7S_3jL61gbJK0rxSfFjcw0c93fXxyHUkE752ZugFQW6y.6vV_4Ybu5_-9Wdkt)
     * [Understanding the Auth Template Recording II (`signUpAndLoginHandler`)](https://us02web.zoom.us/rec/share/1N5ZAou4Vd9o3bNwtAQKc3BJWEqEP5dllAA5AnKK2SGtOCRVCaP7b_5fx8TnD9Sp.5uNI0vIO51KtToed)
+* [Knex Migration & Seeds Notes](./se-unit-7/lesson-8-migrations-and-seeds/notes.md) | [Demo Code](./se-unit-7/lesson-8-migrations-and-seeds/demo/) | [Recording](https://youtu.be/4SNNxC6Kv8s)
 
 ## Unit 8 - React
 ## Unit 9 - Capstone
