@@ -20,9 +20,13 @@ const getFetchOptions = (body, method = 'POST') => ({
 });
 
 // CREATE USER
+
+// Create - POST /api/user
+// Login - POST /api/user/login
 const signupAndLoginHandler = async (url, form) => {
   const formData = new FormData(form);
-  const options = getFetchOptions(Object.fromEntries(formData.entries()));
+  const formValues = Object.fromEntries(formData.entries());
+  const options = getFetchOptions(formValues);
   const [_response, err] = await handleFetch(url, options);
   if (err) {
     form.reset();

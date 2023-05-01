@@ -14,6 +14,22 @@ class User {
     this.#passwordHash = password_hash;
   }
 
+  static async create(username, password) {
+    try {
+      const passwordHash = await authUtils.hashPassword(password);
+
+      const query = `INSERT INTO users (username, password_hash)
+        VALUES (?, ?) RETURNING *`;
+      const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
+      // const result = await knex.raw(query, [username, passwordHash]);
+      // const user = result.rows[0];
+      return new User(user);
+    } catch (err) {
+      console.error(err);
+      return null;
+    }
+  }
+
   static async list() {
     try {
       const query = 'SELECT * FROM users';
@@ -43,20 +59,6 @@ class User {
       const query = 'SELECT * FROM users WHERE username = ?';
       const { rows: [user] } = await knex.raw(query, [username]);
       return user ? new User(user) : null;
-    } catch (err) {
-      console.error(err);
-      return null;
-    }
-  }
-
-  static async create(username, password) {
-    try {
-      const passwordHash = await authUtils.hashPassword(password);
-
-      const query = `INSERT INTO users (username, password_hash)
-        VALUES (?, ?) RETURNING *`;
-      const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
-      return new User(user);
     } catch (err) {
       console.error(err);
       return null;

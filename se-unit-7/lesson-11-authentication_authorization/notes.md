@@ -107,7 +107,7 @@ Delete the cookie and then refresh the page. You'll see that the `req.session.vi
 
 ### Storing User IDs on the Cookie for Authentication
 
-In our application, we are using cookies to store the `userId` of the currently logged-in user. This will allow us to implement **authentication** (confirm that the user is logged in).
+In our application, we are using cookies to store the `userId` of the currently logged-in user on the `req.session` object. This will allow us to implement **authentication** (confirm that the user is logged in).
 
 The flow of cookie data looks like this:
 
@@ -126,7 +126,7 @@ Files Involved:
 * **src/controllers/user/show-me.js** (checks the `session.userId`, finds the `user` (if present), and returns it)
 * **src/db/models/user.js** (finds and returns the `user` from the DB)
 
-If at the end of this process the client receives back the `user`, then the `setNav` function is invoked and we attempt to fetch the secret message that only logged-in users can see. 
+If at the end of this process the client receives back the `user`, then the `setNav` function sets the navigation bar to show the <kbd>Profile</kbd> page. If not, then the <kbd>Sign Up</kbd> and <kbd>Login</kbd> buttons are shown instead.
 
 All of the pages use this `fetchLoggedInUser` function to make some modification to the UI shown to the user. Explore how each page does it!
 
@@ -138,24 +138,25 @@ Files Involved:
 * **public/scripts/login.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
 * **public/scripts/global.js** (sends a `POST /api/users/login` request)
 * **src/routes.js** (passes control to `userController.login`)
-* **src/controllers/user/login.js** (finds the user by username, checks if the password is correct, sets the `session.id`, and sends the `user` to the client)
-* **src/db/models/user.js** (finds and returns the `user` from the DB and uses `bcrypt` to verify the password)
+* **src/controllers/user/login.js** (finds the user by username, checks if the password is correct, sets the `session.userId`, and sends the `user` to the client)
+* **src/db/models/user.js** (finds and returns the `user` from the DB and verifies the password with `authUtils.isValidPassword`)
+* **src/utils/auth-utils.js** (uses the `bcrypt.compare` method to compare the plaintext password with the hashed password)
 
 If at the end of this process the client receives back a response without any errors, the user has successfully logged in and is redirected to `/user.html`.
 
 ## Creating an Account
 
-A user can log in when they visit the `/login.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
+A user can create an account when they visit the `/create.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
 
 Files Involved:
-* **public/scripts/login.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
-* **public/scripts/global.js** (sends a `POST /api/users/login` request)
-* **src/routes.js** (passes control to `userController.login`)
-* **src/controllers/user/login.js** (finds the user by username, checks if the password is correct, sets the `session.id`, and sends the `user` to the client)
-* **src/db/models/user.js** (finds and returns the `user` from the DB and uses `bcrypt` to verify the password)
+* **public/scripts/create.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
+* **public/scripts/global.js** (sends a `POST /api/users` request)
+* **src/routes.js** (passes control to `userController.create`)
+* **src/controllers/user/create.js** (uses the `User.create` method and sets the `session.userId`)
+* **src/db/models/user.js** (uses the `authUtils.hashPassword` method and inserts the username and hashed password into the database)
+* **src/utils/auth-utils.js** (uses the `bcrypt.hash` method to convert the plaintext password into a hashed password)
 
 If at the end of this process the client receives back a response without any errors, the user has successfully logged in and is redirected to `/user.html`.
-
 
 
 ---
