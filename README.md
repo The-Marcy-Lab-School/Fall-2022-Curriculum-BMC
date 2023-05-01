@@ -331,6 +331,7 @@ Additional Resources:
 * [Github Teamwork Cheatsheet](./git-cheatsheet.md)
 * [Project Week Rollout](https://github.com/benspector-mls/unit-7-project-week-rollout)
 * [Express + Knex + Auth Template Repo](https://github.com/The-Marcy-Lab-School/auth-example-bcyrpt-sessions)
+* [Understanding the Auth Template Repo Notes](https://github.com/The-Marcy-Lab-School/Fall-2022-Curriculum-BMC/blob/main/se-unit-7/lesson-11-authentication_authorization/notes.md)
 
 ## Unit 8 - React
 ## Unit 9 - Capstone
