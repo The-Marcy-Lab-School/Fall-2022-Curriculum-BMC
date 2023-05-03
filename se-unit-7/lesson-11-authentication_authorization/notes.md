@@ -132,7 +132,9 @@ All of the pages use this `fetchLoggedInUser` function to make some modification
 
 ## Logging In
 
-A user can log in when they visit the `/login.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
+A user can log in when they visit the `/login.html` page using the provided form. 
+
+Starting in the `main()` function of the `public/scripts/login.js` file, if the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
 
 Files Involved:
 * **public/scripts/login.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
@@ -146,7 +148,9 @@ If at the end of this process the client receives back a response without any er
 
 ## Creating an Account
 
-A user can create an account when they visit the `/create.html` page. If the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
+A user can create an account when they visit the `/create.html` page using the provided form. 
+
+Starting in the `main()` function of the `public/scripts/create.js` file, if the user is already logged in (using the `fetchLoggedInUser` function), they will immediately be redirected to the `/user.html` page
 
 Files Involved:
 * **public/scripts/create.js** (invokes **global.js** methods `signupAndLoginHandler` when the form is submitted)
@@ -160,163 +164,24 @@ If at the end of this process the client receives back a response without any er
 
 ## The User Page
 
+The `/users.html` page handles two key features: updating a username and logging out. For each of these features, there is a form
+* `<form id="username-form">`
+* `<form id="logout-form">`
+
+Each form is given an event handler in `main` function of the `public/scripts/user.js` file.
+
 ### Updating a Username
 
+1. The `public/scripts/user.js` executes the `main` function.
+2. Assuming a user is already logged in, the `fetchLoggedInUser` function returns a `user` object which has the `user.id` property. That value is added to the `dataset` field of the form, storing the user's id directly on the HTML form.
+    * You can see this if you view the elements of the page. The `<form>` element will have a `data-user-id` attribute.
+3. When the form is submitted, control is passed to the `public/scripts/global.js` file's `updateUsernameHandler` function.
+4. Using the user id stored on the form, a `PATCH /api/users/${form.dataset.userId}` request is sent to the server (e.g. `PATCH /api/users/5`).
+5. The server and router pass control to the `src/controllers/user/update` controller. BUT, before the request gets there, it must pass through the `checkAuthentication` middleware. This middleware behaves exactly like the `show-me` controller. This ensures that only authenticated users can update a user.
+6. The `update` controller uses the `isAuthorized` helper function which compares the `userId` value provided as the path parameter (e.g. `/api/users/5`) with the `session.userId` value provided by the cookie. Since the cookie is the source of truth for the user, this guarantees that the user making the request is the same user as the user specified by the path to be updated.
 
+### Logging Out
 
-## Logging Out 
-
----
-# Old garbage notes 
-## Creating an Account [old]
-
-Files Involved:
-* public/create.html
-* public/scripts/create.js
-* public/scripts/global.js
-* src/routes.js
-* src/middleware/handle-cookie-sessions.js
-* src/controllers/user/create.js
-* src/db/models/user.js
-* src/utils/
-
-#### The client initiates the process
-
-A user visits `/create` and enters their username and password. They click <kbd>Create User</kbd>.
-* sends a `POST /api/users` request along with a `username` and `password` from the form.
-
-#### The server receives the request to create a new user
-
-<details><summary>The router invokes the <code>userController.create</code> method</summary>
-
-```js
-Router.post('/users', userController.create);
-```
-</details>
-
-<details><summary>The controller invokes the model's <code>User.create</code> method which returns a <code>User</code> instance. The <code>user.id</code> is stored on the <code>session</code> and the <code>user</code> is sent to the client</summary>
-
-```js
-const createUser = async (req, res) => {
-  const {
-    session,
-    db: { User },
-    body: { username, password },
-  } = req;
-
-  const user = await User.create(username, password);
-  session.userId = user.id;
-
-  res.send(user);
-};
-```
-</details>
-
-<details><summary>The model hashes the password and stores the username and hashed password in the database. A <code>User</code> instance is made to nicely package the data (<code>userInstance.id</code> and <code>.username</code>) and provide methods for interacting directly with that <code>User</code> instance (<code>userInstance.update</code> and <code>.isValidPassword</code>).</summary>
-
-```js
-const knex = require('../knex');
-const { hashPassword, isValidPassword } = require('../../utils/auth-utils');
-class User {
-  
-  // other User methods
-  
-  static async create(username, password) {
-    const passwordHash = await hashPassword(password);
-
-    const query = `INSERT INTO users (username, password_hash)
-      VALUES (?, ?) RETURNING *`;
-    const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
-    return new User(user);
-  }
-}
-```
-</details>
-
-#### The client receives the created user and stores the information in the form
-
-* Refreshing the page will trigger `fetchLoggedInUser` which sends a `GET /api/me` request along with the same cookie to the server. 
-* The server knows that the client is already logged in because of the `session.userId` value and sends the logged-in user back
-* The client then renders the `/user` page
-
-
-### Client Side
-
-* 4 pages
-  * `/create` - register an account
-  * `/` - see primary resources (posts, pictures, etc...)
-  * `/user` - user profile with log out button
-  * `login` - log in
-* Key fetching methods:
-  <details><summary>Create - <code>signupAndLoginHandle</code></summary>
-
-    * sends a `POST /api/users` request when creating a new user on the `/create` page along with a `username` and `password` from the form.
-    * sends a `POST /api/users/login` request when logging in on the `/login` page along with a `username` and `password` from the form.
-
-  </details>
-
-  <details><summary>Read - <code>fetchLoggedInUser</code></summary>
-
-    * sends a `GET /api/me` request which returns a `user` if signed in (the cookie sent to the server has a session id), or `null` if not.
-    * sent when hitting the `/` page. If a user is signed in, show the <kbd>Profile</kbd> button in the nav. If not, show the <kbd>Login</kbd> and <kbd>Sign Up</kbd> buttons
-    * sent when hitting the `/create` and `/login` pages. If a user is signed in, redirects to `/user`.
-    * sent when hitting the `/users` page. If a user is NOT signed in, redirects to `/login`. If a user IS signed it, it uses the returned `user` object to store the `user.id` on the <kbd>Update Username</kbd> form as a `data-user-id` attribute.
-
-  </details>
-  <details><summary>Update - <code>updateUsernameHandler</code></summary>
-
-    * sends a `PATCH /api/users/:userId` request along with the updated username.
-    * sent when a user presses the <kbd>Update Username</kbd> button from `/user`.
-  </details>
-  <details><summary>Delete - <code>logoutHandler</code></summary>
-
-    * sends a `DELETE /api/users/logout` request which only returns an error if something went wrong.
-    * sent when a user presses the <kbd>Log Out</kbd> button from `/user`.
-  </details>
-    
-
-### Server Side
-
-* `index.js`
-  * imports and starts `server.js`
-* `server.js` 
-  * imports and uses `routes.js` on all routes
-  * imports and uses `handleCookieSessions` middleware on all routes
-  * uses `express.json()` middleware on all routes
-  * uses `express.static()` middleware on all routes
-* `routes.js`
-  * imports `userController`
-  * imports and uses `addModels` middleware on all routes
-  * imports `checkAuthentication` middleware and uses it on `patch('/users/:id')` requests and `get('/logged-in-secret')`
-  * defines CRUD routes 
-* `src/middleware/handleCookieSessions`
-* `src/middleware/check-authentication`
-* `utils/auth-utils`
-
-#### CRUD Flows
-<details><summary> Creating a User on <code>/create</code></summary>
-
-  * User enters username and password into the form and clicks <kbd>Create User</kdbd>
-  * `POST /users` > server > router > `userController.create` > `User.create`
-  * The model hashes the password and stores the username and hashed password in the DB
-  * A `User` instance is made to nicely package the data (`userInstance.id` and `.username`) and provide methods for interacting directly with that `User` instance (`userInstance.update` and `.isValidPassword`).
-  * The controller receives the instance, stores the `userId` on the `session`, and sends the `user` to the client.
-
-</details>
-<details><summary>Logging in on <code>/login</code></summary>
-
-  * User enters username and password into the form and clicks <kbd>Log in!</kdbd>
-  * `POST /users/login` > server > router > `userController.login` > `User.findByUsername`
-  * The model returns the user with the matching username and returns a `User` instance
-  * The controller called the `user.isValidPassword` method to verify the input password
-  * A `User` instance is made to nicely package the data (`userInstance.id` and `.username`) and provide methods for interacting directly with that `User` instance (`userInstance.update` and `.isValidPassword`)
-  * The controller receives the instance, stores the `userId` on the `session`, and sends the `user` to the client.
-
-</details>
-
-<details><summary>Verifying Logins at <code>/api/me</code></summary>
-
-  * 
-
-</details>
-
+* Logging out is handled by the `public/scripts/global.js` function `logOutHandler` which sends a `DELETE /api/users/logout` request to the server.
+* The server and router pass control to the `logout` controller which very simply sets the cookie `session` to `null`, effectively destroying the cookie.
+* When the client recieves a response, it immediately redirects the user to the home page `/`. You can confirm that the cookie is gone by checking the developer tools > Application > cookies. 
