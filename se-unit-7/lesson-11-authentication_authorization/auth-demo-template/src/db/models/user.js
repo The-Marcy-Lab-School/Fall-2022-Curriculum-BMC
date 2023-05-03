@@ -20,10 +20,13 @@ class User {
 
       const query = `INSERT INTO users (username, password_hash)
         VALUES (?, ?) RETURNING *`;
-      const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
-      // const result = await knex.raw(query, [username, passwordHash]);
-      // const user = result.rows[0];
-      return new User(user);
+      // const { rows: [user] } = await knex.raw(query, [username, passwordHash]);
+      const result = await knex.raw(query, [username, passwordHash]);
+      console.log(result.rows);
+      const user = result.rows[0];
+      const userInstance = new User(user);
+      console.log(userInstance);
+      return userInstance;
     } catch (err) {
       console.error(err);
       return null;

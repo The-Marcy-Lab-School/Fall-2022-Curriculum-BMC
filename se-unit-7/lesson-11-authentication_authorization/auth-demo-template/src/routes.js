@@ -1,5 +1,5 @@
 const express = require('express');
-const userController = require('./controllers/user');
+const userController = require('./controllers/user/index');
 const addModels = require('./middleware/add-models');
 const checkAuthentication = require('./middleware/check-authentication');
 
@@ -15,11 +15,14 @@ Router.get('/cookieCounter', (req, res) => {
   res.status(200).send({ count: session.viewCount });
 });
 
-Router.post('/photos', (req, res) => {
-  const { body: { url } } = req;
-  console.log(`add ${url} to database`);
-  res.send(`${url} received!`);
-});
+const handlePhotos = (req, res) => {
+  const { body: { url } } = req; // parsing the req
+
+  console.log(`add ${url} to database`); // doing something with the model
+
+  res.send({ msg: `${url} received!` }); // sending a response
+};
+Router.post('/photos', handlePhotos);
 
 // Create
 Router.post('/users', userController.create);
@@ -28,6 +31,7 @@ Router.post('/users/login', userController.login);
 // Read
 Router.get('/users', userController.list);
 Router.get('/users/:id', userController.show);
+
 Router.get('/me', userController.showMe);
 // checkAuthentication middleware is applied to only to this route (and /logged-in-secret)
 Router.get('/logged-in-secret', checkAuthentication, (req, res) => {

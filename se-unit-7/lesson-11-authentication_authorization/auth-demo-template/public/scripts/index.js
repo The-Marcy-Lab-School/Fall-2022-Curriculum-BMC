@@ -14,7 +14,9 @@ const main = async () => {
   const photoUrlInput = document.querySelector("#photo-url-input");
   photoUrlForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    await fetch('/api/photos', getFetchOptions({ url: photoUrlInput.value }));
+    const response = await fetch('/api/photos', getFetchOptions({ url: photoUrlInput.value }));
+    const data = await response.json();
+    console.log(data);
   });
 
   const [secret, _err] = await handleFetch('/api/logged-in-secret');

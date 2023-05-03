@@ -1,3 +1,6 @@
+// Barrel file
+// Groups together the separate controller files
+
 const list = require('./list');
 const create = require('./create');
 const show = require('./show');

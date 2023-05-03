@@ -1,3 +1,4 @@
+// This file, turns on the server
 require('dotenv').config();
 const server = require('./server');
 

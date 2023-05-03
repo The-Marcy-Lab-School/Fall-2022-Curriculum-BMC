@@ -1,3 +1,4 @@
+// This file defines Express middleware (sets up Express)
 const express = require('express');
 const path = require('path');
 // const handleSessions = require('./middleware/handle-sessions');

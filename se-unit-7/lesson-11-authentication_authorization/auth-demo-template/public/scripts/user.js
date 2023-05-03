@@ -13,7 +13,7 @@ const renderUsername = (username) => {
 };
 
 const main = async () => {
-  const user = await fetchLoggedInUser();
+  const user = await fetchLoggedInUser(); // GET /api/me
   if (!user) return redirectToLogin();
 
   const logoutForm = document.querySelector('#logout-form');

@@ -1,4 +1,5 @@
 // Fetch Helpers
+
 const handleFetch = async (url, options) => {
   try {
     const response = await fetch(url, options);
@@ -26,6 +27,10 @@ const getFetchOptions = (body, method = 'POST') => ({
 const signupAndLoginHandler = async (url, form) => {
   const formData = new FormData(form);
   const formValues = Object.fromEntries(formData.entries());
+  // const formValues = {
+  //   username: formData.get("username"),
+  //   password: formData.get("password"),
+  // };
   const options = getFetchOptions(formValues);
   const [_response, err] = await handleFetch(url, options);
   if (err) {
