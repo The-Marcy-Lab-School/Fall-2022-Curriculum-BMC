@@ -335,6 +335,7 @@ Additional Resources:
     * [Understanding the Auth Template Recording I (`fetchLoggedInUser`)](https://us02web.zoom.us/rec/share/iqPvwzvFl3sgTSCc_6xQ7S_3jL61gbJK0rxSfFjcw0c93fXxyHUkE752ZugFQW6y.6vV_4Ybu5_-9Wdkt)
     * [Understanding the Auth Template Recording II (`signUpAndLoginHandler`)](https://us02web.zoom.us/rec/share/1N5ZAou4Vd9o3bNwtAQKc3BJWEqEP5dllAA5AnKK2SGtOCRVCaP7b_5fx8TnD9Sp.5uNI0vIO51KtToed)
     * [Understanding the Auth Template Recording III (update username and logout)](https://us02web.zoom.us/rec/share/ajvN0JrvVoxgbzdu4hvsLTF_ierTjdDEZYEW8B5zwoFe9LMYndBQMoyu7xca6nIB.9vBIjuvJ8Uf2JhvG)
+    * [Building a Photo Form](https://us02web.zoom.us/rec/share/RaCtEJ7yiKUeo5IWcb6j0Hb9Xqk_g6xvmK43p9H6Hr8hFAP2DvfysimLeX1PZISr.u-VbgNZ3oyPr--FH)
 * [Knex Migration & Seeds Notes](./se-unit-7/lesson-8-migrations-and-seeds/notes.md) | [Demo Code](./se-unit-7/lesson-8-migrations-and-seeds/demo/) | [Recording](https://youtu.be/4SNNxC6Kv8s)
 
 ## Unit 8 - React
