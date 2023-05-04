@@ -1,0 +1,40 @@
+{
+  "name": "auth-example-bcyrpt-sessions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "kickstart": "npm i && npm run migrate && npm run seed && npm start",
+    "start": "node src/index.js",
+    "dev": "nodemon ./src/index.js",
+    "console": "node -r ./src/db/models/console.js",
+    "connect": "psql -U postgres -d auth_example",
+    "migrate": "knex migrate:latest",
+    "migrate:make": "knex migrate:make",
+    "migrate:rollback": "knex migrate:rollback",
+    "seed": "knex seed:run",
+    "seed:make": "knex seed:make",
+    "play:bcrypt": "nodemon ./playground-examples/bcrypt-example.js",
+    "lint": "eslint . --fix"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-session-knex": "^3.0.1",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "knex": "^2.4.2",
+    "pg": "^8.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "nodemon": "^2.0.22"
+  }
+}

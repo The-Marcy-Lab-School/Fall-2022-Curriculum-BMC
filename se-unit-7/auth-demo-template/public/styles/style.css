@@ -1,0 +1,24 @@
+body {
+  font-family: sans-serif;
+}
+
+nav {
+  height: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li:first-child {
+  flex-grow: 1;
+}
+
+#secret-container {
+  text-align: center;
+  border: black 1px dashed;
+}
