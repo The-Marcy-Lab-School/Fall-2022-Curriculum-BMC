@@ -130,7 +130,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(<App />);
 
 React code cannot simply be loaded into an HTML file. It must first be **compiled** (converted to vanilla JS).
 
-We're using a tool called Vite (french for "quick", rhymes with "feet") to create a development server that will do that compilation and serve our website.
+We're using a tool called [Vite](https://vitejs.dev/) (french for "quick", rhymes with "feet") to create a development server that will do that compilation and serve our website.
 
 Use the `npm run dev` command to start the React development server.
 
