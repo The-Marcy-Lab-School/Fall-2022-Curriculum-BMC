@@ -1,25 +1,73 @@
 
 # Intro to React
 
-## Components 
+Key Terms:
+* React
+* Component
+* JSX
+* Render
+* ReactDom
+* ESModule `import` syntax (to import `react` and `react-dom/client`
+* injecting JS
+* props
+
+```js
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+```
+
+## What is React?
+
+**React** is a JavaScript framework for building user-interfaces. 
+
+React focuses on building small **components** that can be composed into larger components. 
+
+Components can be reused and generated dynamically, allowing developers to build applications at scale efficiently.
+
+## Why Use React?
+
+It is fast and lets us use JSX to intuitively build UIs.
+
+Vanilla JS with the DOM API (imperative style):
+
+```js
+const makeHeader = (message) => {
+  const h1 = document.createElement('h1');
+  h1.className = 'header';
+  h1.innerText = message;
+  return h1;
+}
+```
+
+React (declarative style):
+
+```jsx
+const Header = ({ message }) => {
+  return (
+    <h1 className='header'>{message}</h1>
+  )
+}
+```
+
+## Components & JSX
 
 In React, a **component** is a piece of __reusable__ code that represents a part of a user interface. 
 
-Components are used to **render**, **manage**, and **update** the UI elements in your application.
-
-React uses JSX, an HTML-like syntax that can be written in JS files, to create components.
+React uses JSX, an HTML-like syntax that can be written in JS files, to create React components.
 
 Components in React are functions that return a single JSX element:
 
 ```jsx
-function Header() {
+const Header = () => {
   return <h1>Hello World</h1>;
 }
 ```
 * This `Header` component returns a `<h1>` _JSX element_.
 * Component names are capitalized
 
-Components can return as much (or as little) JSX as you want, but they all need to return a single surrounding element. An easy way to achieve this is by using **fragments** (`<> </>`) or just use a `<div>`
+## Component Composition
+
+Components can return as much (or as little) JSX as you want, **but they all need to return a single surrounding element.** An easy way to achieve this is by using **fragments** (`<> </>`) or just use a `<div>`
 
 ```jsx
 function Header() {
@@ -35,7 +83,7 @@ function InstagramPost() {
   );
 }
 
-export default function App() {
+function App() {
   return ( 
     <div>
       <Header />
@@ -46,65 +94,59 @@ export default function App() {
 ```
 
 * Note how our custom `<Header />` and `<InstagramPost />` components are used within the `App` component. Custom components _must_ be self-closed.
-* Here we are also exporting `App` as the `default`. This means that it is the main component of this file.
 
 ## Rendering Components
 
-To make our components visible in our UI, we need to **render** them. 
-
-This requires a few steps:
-* Import `React` to use JSX in our files
-* Import the `StrictMode` component to wrap our entire application.
-* Import the `createRoot` function from `react-dom/client` to attach our React application to the `#root` element in the DOM and create a `root` object.
-* Import our component(s)
-* Call `root.render`, passing along our component.
+To make our components visible in our UI, we need to **render** them. React doesn't provide this functionality out of the box. Instead, we import a package called `ReactDOM`. We're using the `client` version (there is also a `native` version for mobile).
 
 ```jsx
-// index.js
-import React, { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import App from './app.js';
+import ReactDOM from 'react-dom/client'
 
-const rootEl = document.getElementById("root");
-const root = createRoot(rootEl);
+const Header = () => {
+  return (
+    <h1>Hello World</h1>
+  )
+}
 
-root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
+// It is a best practice to bundle all components in a top-level App component.
+const App = () => {
+  return (
+    <>
+      <Header />
+      <Header />
+      <Header />
+    </>
+  )
+}
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+<App />);
 ```
-* The `StrictMode` component is a tool that highlights potential issues in a program. It works by encapsulating a portion of your full application as a component. `StrictMode` does not render any visible elements in the DOM in development mode, but it enables checks and gives warnings.
 
-Use the `npm start` command to start the React server.
+React code cannot simply be loaded into an HTML file. It must first be **compiled** (converted to vanilla JS).
+
+We're using a tool called Vite (french for "quick", rhymes with "feet") to do that compilation and serve our website.
+
+Use the `npm run dev` command to start the React development server.
+
+* The React development server 
 
 ## Injecting JavaScript Values
 
 We can inject JavaScript values into our components using `{}`. 
 
 ```jsx
-// Notice how we inject this into the <p> inner text
+// We can inject these JS values into JSX
 const catName = 'Tom';
+const catPicUrl = './img/cat-pic.jpg'
 
 function InstagramPost() {
   return (
     <div>
-      <img alt="cat pic" src='./img/cat-pic.jpg' />
+      <img alt="cat pic" src={catPicUrl} />
       <p>Check out my cute cat named ${catName}!</p>
     </div>
   );
-}
-
-// The `style` prop accepts an object like this
-const styles = { width: '300px', background: 'red' };
-
-export default function App() {
-  return ( 
-    <div style={styles}>
-      <Header />
-      <InstagramPost />
-    </div>
-  )
 }
 ```
 
@@ -115,6 +157,8 @@ Every React function-component is passed an argument called `props`. It is an ob
 In this example, the parent component is `App` and it provides a `name` prop to each instance of the `NameHeader` component.
 
 ```jsx
+import React from 'react';
+
 function NameHeader(props) {
   const { name } = props;
   return (
@@ -145,3 +189,39 @@ function NameHeader({ name }) {
 }
 ```
 
+## Adding Style
+
+We can add style by using the `className` prop and defining styles for that class in an imported CSS file.
+
+```jsx
+import React from 'react';
+import './styles/styles.css'
+
+function NameHeader({ name }) {
+  return (
+    <h1 className='red'>Hello! My name is {name}</h1>
+  )
+}
+
+export default function App() {
+  return (
+    <div>
+      <NameHeader name="Ben" />
+      <NameHeader name="Carmen" />
+      <NameHeader name="Motun" />
+    </div>
+  )
+}
+```
+
+With this CSS in a `styles/styles.css` file:
+
+```css
+.red {
+  color: red;
+}
+```
+
+Which will render this...
+
+![](./img/classes.png)

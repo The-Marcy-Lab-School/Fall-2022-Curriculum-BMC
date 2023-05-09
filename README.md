@@ -337,6 +337,7 @@ Additional Resources:
     * [Understanding the Auth Template Recording III (update username and logout)](https://us02web.zoom.us/rec/share/ajvN0JrvVoxgbzdu4hvsLTF_ierTjdDEZYEW8B5zwoFe9LMYndBQMoyu7xca6nIB.9vBIjuvJ8Uf2JhvG)
     * [Building a Photo Form](https://us02web.zoom.us/rec/share/RaCtEJ7yiKUeo5IWcb6j0Hb9Xqk_g6xvmK43p9H6Hr8hFAP2DvfysimLeX1PZISr.u-VbgNZ3oyPr--FH) | [Code](./se-unit-7/auth-demo-template/)
 * [Knex Migration & Seeds Notes](./se-unit-7/lesson-8-migrations-and-seeds/notes.md) | [Demo Code](./se-unit-7/lesson-8-migrations-and-seeds/demo/) | [Recording](https://youtu.be/4SNNxC6Kv8s)
+* [Presentation Recordings](https://us02web.zoom.us/rec/share/bcx9HSnQSXfQJ8qhxrVDaQlpskiJ4EXvMZiwRM6eKd17ER1d86OPa2jZ6Fsb58BJ.oGzQlz0-lMJD4SOJ)
 
 ## Unit 8 - React
 ## Unit 9 - Capstone
