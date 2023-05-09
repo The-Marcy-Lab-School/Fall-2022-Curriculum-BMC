@@ -388,6 +388,14 @@ Additional Resources:
 
 ### Week 2
 
+**5/15/23 - Async & useEffect** | Notes | Recording
+**5/15/23 - Lab Review** | Notes | Recording
+**5/16/23 - Context** | Notes | Recording
+**5/17/23 - Routing** | Notes | Recording
+**5/17/23 - Lab Review** | Notes | Recording
+**5/18/23 - Routing** | Notes | Recording
+**5/19/23 - Review** | Notes | Recording
+
 ### Week 3
 
 ---
