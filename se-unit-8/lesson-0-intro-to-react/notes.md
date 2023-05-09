@@ -12,7 +12,7 @@ Key Terms:
 - props
 
 ```js
-import React from "react";
+import { useState } from "react";
 import ReactDOM from "react-dom/client";
 ```
 
