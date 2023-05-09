@@ -381,20 +381,20 @@ Additional Resources:
 
 ### Week 1
 
-**5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./se-unit-8/lesson-0-intro-to-react/demo/) Recording
-**5/10/23 - Lab Review** | Notes | Recording
-**5/11/23 - Managing State** | Notes | Recording
-**5/12/23 - Controlled Forms** | Notes | Recording
+- **5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./- se-unit-8/lesson-0-intro-to-react/demo/) Recording
+- **5/10/23 - Lab Review** | Notes | Recording-
+- **5/11/23 - Managing State** | Notes | Recording-
+- **5/12/23 - Controlled Forms** | Notes | Recording-
 
 ### Week 2
 
-**5/15/23 - Async & useEffect** | Notes | Recording
-**5/15/23 - Lab Review** | Notes | Recording
-**5/16/23 - Context** | Notes | Recording
-**5/17/23 - Routing** | Notes | Recording
-**5/17/23 - Lab Review** | Notes | Recording
-**5/18/23 - Routing** | Notes | Recording
-**5/19/23 - Review** | Notes | Recording
+- **5/15/23 - Async & useEffect** | Notes | Recording
+- **5/15/23 - Lab Review** | Notes | Recording
+- **5/16/23 - Context** | Notes | Recording
+- **5/17/23 - Routing** | Notes | Recording
+- **5/17/23 - Lab Review** | Notes | Recording
+- **5/18/23 - Routing** | Notes | Recording
+- **5/19/23 - Review** | Notes | Recording
 
 ### Week 3
 
