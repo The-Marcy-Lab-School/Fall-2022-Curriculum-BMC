@@ -383,7 +383,7 @@ Additional Resources:
 
 - **5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./se-unit-8/lesson-0-intro-to-react/demo/) | Recording
 - **5/10/23 - Lab Review** | Notes | Recording-
-- **5/11/23 - Managing State** | Notes | Recording-
+- **5/11/23 - Managing State** | [Notes](./se-unit-8/lesson-1-state/notes.md) | [Demo](./se-unit-8/lesson-1-state/demo/) | Recording-
 - **5/12/23 - Controlled Forms** | Notes | Recording-
 
 ### Week 2
