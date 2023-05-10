@@ -5,11 +5,14 @@ Key Terms
 - Props
 - `useState`
 - `onClick` event handlers
+- Lifting state up
+
+## Use State
 
 ```jsx
 import { useState } from "react";
 
-const App = () => {
+const Counter = () => {
   const [count, setCount] = useState(0);
 
   const incrementCount = () => {
@@ -25,5 +28,7 @@ const App = () => {
   );
 };
 
-export default App;
+export default Counter;
 ```
+
+## Lifting State Up

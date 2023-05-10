@@ -1,15 +1,15 @@
 # Intro to React
 
-Key Terms:
+Key Topics:
 
 - React
 - Component
 - JSX
 - Render
-- ReactDom
-- ESModule `import` syntax (to import `react` and `react-dom/client`
-- injecting JS
-- props
+- ReactDOM
+- Style / `className`
+- Props
+- Injecting JS
 
 ## What is React & Why Use It?
 

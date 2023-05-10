@@ -1,3 +1,5 @@
+// ESModules import syntax
+// ReactDOM is the "default" export of this package
 import ReactDOM from "react-dom/client";
 
 const Header = () => {
