@@ -379,6 +379,12 @@ Additional Resources:
 
 ## Unit 8 - React
 
+**Resources**
+
+- [React Docs](https://react.dev/)
+- [Vite Docs](https://vitejs.dev/)
+  - [How to Set Up a Vite (React) + Express Project](https://www.youtube.com/watch?v=PPjpHaLkV7A&ab_channel=NathanKrasney)
+
 ### Week 1
 
 - **5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./se-unit-8/lesson-0-intro-to-react/main-final.jsx) | [Recording](https://us02web.zoom.us/rec/share/xiRKwyE96i3ik7gFUjsuXol92pyBNT0dMvv-fgkW5MsMsU-a0QEp7w5int1tEZ06.mR12fbeH30szxd1c)
@@ -388,7 +394,7 @@ Additional Resources:
 
 ### Week 2
 
-- **5/15/23 - Async & useEffect** | Notes | Recording
+- **5/15/23 - Async & useEffect** | [Notes](./se-unit-8/lesson-3-useEffect-async/notes.md) | Recording
 - **5/15/23 - Lab Review** | Notes | Recording
 - **5/16/23 - Context** | Notes | Recording
 - **5/17/23 - Routing** | Notes | Recording
