@@ -132,9 +132,11 @@ export default Counter;
 
 **Important Concept**: `setCount` does NOT change the value of `count`. It tells React to re-render the `Counter` component with a new value of `count`.
 
+![](./notes-imgs/setCount-rerender.svg)
+
 You can see this if you place a `console.log(count)` statement inside of `incrementCount` and then move it to inside of the component itself (after `useState`).
 
-### Code Break!
+### Instapets Code Break: Lifting State Up
 
 ![](./notes-imgs/instacat-component-tree.svg)
 
@@ -203,11 +205,15 @@ const CounterDisplay = ({ count }) => {
 export default CounterDisplay;
 ```
 
-</details>
+</details><br>
 
-#### Define how the state can be updated in the same place where the state is created
+**Important Concept**: The `count` and `setCount` values are tied to the `App` component, where they were created.
 
-In the example above, we are passing down the `count` and `setCount` values directly to the child, letting it decide how it is going to update the sate.
+Because of this, when `setCount` is invoked it will cause the `App` to re-render, even if the `App` component itself doesn't invoke `setCount`.
+
+### Best Practice: Define _how_ the state can be updated in the same place where the state is created
+
+In the example above, we are passing down the `count` and `setCount` values directly to `CounterButtons`, letting `CounterButtons` decide how it is going to update the sate.
 
 Instead, we may decide to define functions for updating the state in `App` and pass those functions down as props:
 
@@ -254,12 +260,12 @@ export default CounterButtons;
 
 <details><summary>Ben's Answer</summary><br>
 
-> I think the main benefit of this is that it also keeps all of the logic related to managing the `count` state in one place.
+> I think the main benefit of this is that it also keeps all of the logic related to managing the `count` state in one place. Think MVC.
 >
 > The result is that both the `CounterButtons` and `CounterDisplay` components are blissfully un-aware of the state values themselves. They are simply told what value to display (`count`) or what to do when the buttons are clicked (`increment` or `decrement`).
 
 </details>
 
-### Code Break!
+### Instapets Code Break: Lifting State Up
 
-Keep a total likes tally displayed in the header
+Keep a `totalLikes` piece of state displayed in the header that shows the sum of all likes.
