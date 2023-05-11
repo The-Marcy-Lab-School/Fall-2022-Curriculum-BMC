@@ -136,7 +136,7 @@ export default Counter;
 
 You can see this if you place a `console.log(count)` statement inside of `incrementCount` and then move it to inside of the component itself (after `useState`).
 
-### Instapets Code Break: Lifting State Up
+### Instapets Code Break: useState
 
 ![](./notes-imgs/instacat-component-tree.svg)
 

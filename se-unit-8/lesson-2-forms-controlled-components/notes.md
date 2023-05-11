@@ -40,12 +40,16 @@ const Form = () => {
 
   return (
     <form onSubmit={handleSubmit} id="name-form">
-      <input onChange={handleChange} type="text" placeholder="name">
+      <input onChange={handleChange} type="text" placeholder="name" value={name}>
       <input type="submit" value="Submit">
     </form>
   )
 }
 ```
+
+- The `<input type='text'>` element has an `onChange` handler that uses the `setName` to keep the `name` state up-to-date
+- The `<input type='text'>` also uses the `value={name}` prop to match the UI with the internal `name` state.
+- When the form is submitted, we are simply printing the `name` to the console, but we could do anything with that value at this point.
 
 ## Comparing Controlled and Uncontrolled Form Components
 
