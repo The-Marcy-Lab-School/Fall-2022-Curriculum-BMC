@@ -1,40 +1,53 @@
 import './App.css'
 import { useState, useEffect } from 'react'
-import SearchForm from './components/SearchForm'
-import SearchResults from './components/SearchResults'
 
 const RANDOM_JOKE_URL = "https://v2.jokeapi.dev/joke/Pun?blacklistFlags=nsfw,religious,political,racist,sexist,explicit&type=twopart";
 const getApiUrl = (query) => {
-  if (!query) {
-    return RANDOM_JOKE_URL;
+  return (query) 
+    ? RANDOM_JOKE_URL + `&contains=${query}`
+    : RANDOM_JOKE_URL
+};
+const fetchData = async (url) => {
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log(error);
+    return null;
   }
-  return RANDOM_JOKE_URL + `&contains=${query}`;
 }
 
-
 function App() {
-  
+
   const [query, setQuery] = useState('');
   const [joke, setJoke] = useState({ delivery: '', setup: ''});
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-          const url = getApiUrl(query);
-          const response = await fetch(url)
-          const { delivery, setup } = await response.json();
-          setJoke({ delivery, setup });
-      } catch (error) {
-          console.log(error);
-      }
+    const doFetch = async () => {
+      const url = getApiUrl(query);
+      const { delivery, setup } = await fetchData(url);
+      setJoke({ delivery, setup });
     }
-    fetchData();
+    doFetch();
+
   }, [query])
 
   return (
     <>
-      <SearchForm setQuery={setQuery}/>
-      <SearchResults joke={joke}/>
+      <form>
+        <input onChange={e=>setQuery(e.target.value)} type="text" placeholder="query" value={query}></input>
+        <input type="submit" value="submit"></input>
+      </form>
+      
+      <div className='results'>
+        <h1>{joke.setup}</h1>
+        <details><summary>Reveal</summary>
+        
+        <p>{joke.delivery}</p>
+
+        </details>
+      </div>
     </>
   );
 }

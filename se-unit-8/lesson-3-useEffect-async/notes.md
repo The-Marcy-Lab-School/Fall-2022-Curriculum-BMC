@@ -51,9 +51,9 @@ useEffect(() => {
 ```
 
 - `useEffect` takes in two arguments
-  1. [required] a callback function to execute when the component is first rendered
-  2. [optional] an array of state values to track (a "dependency array").
-- If the dependency array is provided, the effect will be only be re-executed if any of those state values are updated. If the component is re-rendered but those values are not updated, the effect will be skipped.
+  1. a callback function to execute when the component is first rendered
+  2. (optional) an array of state values to track (a "dependency array").
+- If the dependency array is provided, the effect will be only be re-executed if any of those state values are updated.
 - If the array is empty, the effect is only executed on the first render of the component.
 - If the array is omitted, the effect is executed on EVERY render of the component.
 
@@ -80,8 +80,131 @@ function Counter(props) {
 
 ## Fetching with useEffect
 
-The most
+When we want to fetch data from an API (a public one or our own API), we will put that fetching logic into a `useEffect` callback.
+
+**Review: how to fetch**
+
+```js
+// the function is async so it returns a promise too
+const fetchData = async (url) => {
+  try {
+    const response = await fetch(url); // use fetch
+    const data = await response.json(); // convert incoming json data to js object
+    return data; // return that data
+  } catch (error) {
+    console.log(error);
+    return null;
+  }
+};
+
+const doFetch = async () => {
+  const data = await fetchData("https://v2.jokeapi.dev/joke/Any");
+  if (data) console.log(data);
+};
+
+doFetch();
+```
+
+In the example, we're using the [joke API](https://sv443.net/jokeapi/v2/). When a joke is request, an object is returned with a `delivery` and a `setup`.
+
+In our application, we can render that joke like this:
 
 ```jsx
+// lets start with a hard-coded joke
+const joke = {
+  delivery: "A meowntain",
+  setup: "What do you call a pile of cats?",
+};
 
+function App() {
+  return (
+    <>
+      <div className="joke">
+        <h1>{joke.setup}</h1>
+        <p>{joke.delivery}</p>
+      </div>
+    </>
+  );
+}
+```
+
+If we want the `joke` to be set by our fetch call, we need to first use `useState`:
+
+```jsx
+function App() {
+  const [joke, setJoke] = useState({ delivery: "", setup: "" });
+
+  return (
+    <>
+      <div className="joke">
+        <h1>{joke.setup}</h1>
+        <p>{joke.delivery}</p>
+      </div>
+    </>
+  );
+}
+```
+
+Now, let's fetch the joke using the API and `useEffect`:
+
+```jsx
+function App() {
+  const [joke, setJoke] = useState({ delivery: "", setup: "" });
+
+  useEffect(async () => {
+    const url = "https://v2.jokeapi.dev/joke/Any";
+    const { delivery, setup } = await fetchData(url);
+    setJoke({ delivery, setup }); // use the state setter to trigger a re-render
+  }, []); // fetch only one time
+
+  return (
+    <>
+      <div className="joke">
+        <h1>{joke.setup}</h1>
+        <p>{joke.delivery}</p>
+      </div>
+    </>
+  );
+}
+```
+
+### Using a form to trigger the effect
+
+```jsx
+function App() {
+  const [query, setQuery] = useState("");
+  const [joke, setJoke] = useState({ delivery: "", setup: "" });
+
+  useEffect(() => {
+    const doFetch = async () => {
+      const url = getApiUrl(query);
+      const { delivery, setup } = await fetchData(url);
+      setJoke({ delivery, setup });
+    };
+    doFetch();
+  }, [query]);
+
+  return (
+    <>
+      <form>
+        <input
+          onChange={(e) => setQuery(e.target.value)}
+          type="text"
+          placeholder="query"
+          value={query}
+        ></input>
+        <input type="submit" value="submit"></input>
+      </form>
+
+      <div className="results">
+        <h1>{joke.setup}</h1>
+        <details>
+          <summary>Reveal</summary>
+
+          <p>{joke.delivery}</p>
+        </details>
+      </div>
+    </>
+  );
+}
 ```
