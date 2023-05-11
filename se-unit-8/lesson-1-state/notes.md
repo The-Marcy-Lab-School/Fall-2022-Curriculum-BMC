@@ -130,7 +130,9 @@ const Counter = () => {
 export default Counter;
 ```
 
-**Note:** `count` is only updated on the next render of `Counter`. You can see this if you place a `console.log(count)` statement inside of `incrementCount` and then move it to inside of the component itself (after `useState`).
+**Important Concept**: `setCount` does NOT change the value of `count`. It tells React to re-render the `Counter` component with a new value of `count`.
+
+You can see this if you place a `console.log(count)` statement inside of `incrementCount` and then move it to inside of the component itself (after `useState`).
 
 ### Code Break!
 

@@ -1,13 +1,13 @@
 import InstagramPost from './InstagramPost'
 
-const PicturesList = ({incrementLikes}) => {
 
-  // imagine if this came from an API!
-  const pictures = [
-    { src: "./cat.jpeg", caption: "meow!" },
-    { src: "./dog.jpeg", caption: "arf!" },
-    { src: "./duck.jpeg", caption: "quack!" },
-  ];
+const pictures = [
+  { src: "./cat.jpeg", caption: "meow!" },
+  { src: "./dog.jpeg", caption: "arf!" },
+  { src: "./duck.jpeg", caption: "quack!" },
+];
+
+const PicturesList = ({incrementLikes}) => {
   
   // Create an <InstagramPost /> for each element
   const InstagramPosts = pictures.map((picture, idx) => {
