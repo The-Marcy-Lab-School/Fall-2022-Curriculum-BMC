@@ -1,45 +1,47 @@
-import ReactDOM from "react-dom/client";
+import ReactDOM from 'react-dom/client';
 
-const Header = () => {
-  return <h1>My Pet Pics</h1>;
+const Header = (props) => {
+
+  console.log('Header props:', props)
+
+  return (
+    <h1>My Pet Pics</h1>
+  )
 };
 
-const InstagramPost = ({src, caption}) => {
+const InstagramPost = (props) => {
+  console.log('InstagramPost props:', props)
+
   return (
-    <div className="insta-pic">
-      <img alt="cat pic" src={src} />
-      <p>{caption}</p>
+    <div className='insta-pic'>
+      <img alt="cat pic" src={props.source} />
+      <p>My pet says {props.caption}</p>
     </div>
   );
 };
 
+// Array of data
 const pictures = [
   { src: "img/cat.jpeg", caption: "meow!" },
   { src: "img/dog.jpeg", caption: "arf!" },
   { src: "img/duck.jpeg", caption: "quack!" },
 ];
 
-// Create an <InstagramPost /> for each element
-const InstagramPosts = pictures.map((picture, idx) => {
-  return (
-    <InstagramPost key={idx} src={picture.src} caption={picture.caption} />
-  );
-});
+const firstImage = <InstagramPost source="img/cat.jpeg" caption="meow!"/>
+const secondImage = <InstagramPost source="img/dog.jpeg" caption="arf!"/>
+const thirdImage = <InstagramPost source="img/duck.jpeg" caption="quack!"/>
 
-// Render the array in a ul
-const PicturesList = () => {
-  return <div>{InstagramPosts}</div>;
-};
+const App = (props) => {
+  console.log('App props:', props)
 
-const App = () => {
   return (
     <>
       <Header />
-      <PicturesList />
+      {Math.random() > 0.5 ? firstImage : secondImage}
     </>
   );
 };
 
 ReactDOM.createRoot(document.querySelector("#root")).render(
   <App />
-);
+)

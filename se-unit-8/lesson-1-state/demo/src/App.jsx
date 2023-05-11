@@ -1,17 +1,14 @@
-import { useState } from 'react';
+import BadCounter from './components/BadCounter';
+import GoodCounter from './components/GoodCounter';
+import './App.css'
 
 const App = () => {
-  const [count, setCount] = useState(0);
-
-  const incrementCount = () => {
-    setCount(count+1);
-  }
-
   return (
     <>
-      <button onClick={incrementCount}>+</button>
-      <button onClick={() => setCount(count-1)}>-</button>
-      <p>{count}</p>
+      <h2>Bad Counter</h2>
+      <BadCounter />
+      <h2>Good Counter</h2>
+      <GoodCounter />
     </>
   )
 }

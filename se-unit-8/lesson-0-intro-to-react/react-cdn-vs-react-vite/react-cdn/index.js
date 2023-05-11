@@ -1,6 +1,8 @@
-const rootEl = document.getElementById("root");
-const root = ReactDOM.createRoot(rootEl);
 
-root.render(
+
+const rootEl = document.getElementById("root");
+const ReactDOMRoot = ReactDOM.createRoot(rootEl);
+
+ReactDOMRoot.render(
   React.createElement("h1", {}, "Hello World")
 );

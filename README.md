@@ -381,10 +381,10 @@ Additional Resources:
 
 ### Week 1
 
-- **5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./se-unit-8/lesson-0-intro-to-react/main-final.jsx) | Recording
-- **5/10/23 - Lab Review** | Notes | Recording
-- **5/11/23 - Managing State** | [Notes](./se-unit-8/lesson-1-state/notes.md) | [Demo](./se-unit-8/lesson-1-state/demo/) | Recording
-- **5/12/23 - Controlled Forms** | Notes | Recording
+- **5/10/23 - Intro to React** | [Notes](./se-unit-8/lesson-0-intro-to-react/notes.md) | [Demo Code](./se-unit-8/lesson-0-intro-to-react/main-final.jsx) | [Recording](https://us02web.zoom.us/rec/share/xiRKwyE96i3ik7gFUjsuXol92pyBNT0dMvv-fgkW5MsMsU-a0QEp7w5int1tEZ06.mR12fbeH30szxd1c)
+- **5/10/23 - LR: Intro to Vite** | [Notes](./se-unit-8/lab-review-0-intro-to-vite/notes.md) | [Recording](https://us02web.zoom.us/rec/share/3_O29CisrZjMpJRRw_lIpjQ0BZTkyslZ-6EV0HnbQUMLAWq9kCKs_Tg2qLqEyyBV.CakW72e-pk95mzIU)
+- **5/11/23 - Managing State** | [Notes](./se-unit-8/lesson-1-state/notes.md) | [Counter Demo](./se-unit-8/lesson-1-state/demo/) | [Instacat Demo](./se-unit-8/lesson-1-state/instacat/) | Recording
+- **5/12/23 - Controlled Forms** | [Notes](./se-unit-8/lesson-2-forms-controlled-components/notes.md) | Recording
 
 ### Week 2
 

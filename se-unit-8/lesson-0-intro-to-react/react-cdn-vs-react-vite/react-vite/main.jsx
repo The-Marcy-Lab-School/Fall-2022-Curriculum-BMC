@@ -1,8 +1,8 @@
 import ReactDOM from "react-dom/client";
 
 const rootEl = document.querySelector("#root");
-const root = ReactDOM.createRoot(rootEl);
+const ReactDOMRoot = ReactDOM.createRoot(rootEl);
 
-root.render(
+ReactDOMRoot.render(
   <h1>Hello World</h1>
 );
