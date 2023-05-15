@@ -1,8 +1,8 @@
 /* eslint-disable react/prop-types */
-const SearchForm = ({ query, setQuery }) => {
+const SearchForm = ({ userInput, setUserInput }) => {
   return (
     <form>
-      <input onChange={e=>setQuery(e.target.value)} type="text" placeholder="query" value={query}></input>
+      <input onChange={e=>setUserInput(e.target.value)} type="text" placeholder="query" value={userInput}></input>
       <input type="submit" value="submit"></input>
     </form>
   );

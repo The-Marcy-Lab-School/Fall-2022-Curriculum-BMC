@@ -384,6 +384,7 @@ Additional Resources:
 - [React Docs](https://react.dev/)
 - [Vite Docs](https://vitejs.dev/)
   - [How to Set Up a Vite (React) + Express Project](https://www.youtube.com/watch?v=PPjpHaLkV7A&ab_channel=NathanKrasney)
+- [DummyJSON.com](https://dummyjson.com/)
 
 ### Week 1
 
@@ -394,7 +395,7 @@ Additional Resources:
 
 ### Week 2
 
-- **5/15/23 - Async & useEffect** | [Notes](./se-unit-8/lesson-3-useEffect-async/notes.md) | Recording
+- **5/15/23 - Async & useEffect** | [Notes](./se-unit-8/lesson-3-useEffect-async/notes.md) | [Joke Fetch Example Repo](https://github.com/The-Marcy-Lab-School/react-useEffect-fetch-example) | [DummyJSON.com](https://dummyjson.com/) | [Recording](https://us02web.zoom.us/rec/share/osyNNbB27JONhEdx8PnhtkKsu_Zkpp51ou7Cd68Kk53jRBVzzDXkyjjeezXN8iak.IwQ_CXpto3Pqf1Kx)
 - **5/15/23 - Lab Review** | Notes | Recording
 - **5/16/23 - Context** | Notes | Recording
 - **5/17/23 - Routing** | Notes | Recording
