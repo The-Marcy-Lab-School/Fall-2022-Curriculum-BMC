@@ -6,18 +6,16 @@ const pictures = [
   { src: "./duck.jpeg", caption: "quack!" },
 ];
 
-const PicturesList = ({incrementLikes}) => {  
+const PicturesList = () => {  
   // Create an <InstagramPost /> for each element
   return <div>{
     pictures.map((picture, idx) => <InstagramPost 
         key={idx} 
         src={picture.src} 
         caption={picture.caption} 
-        incrementLikes={incrementLikes}
       />
     )
   }</div>;
 };
-
 
 export default PicturesList;

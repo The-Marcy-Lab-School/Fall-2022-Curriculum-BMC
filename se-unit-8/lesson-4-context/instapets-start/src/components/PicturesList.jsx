@@ -19,5 +19,4 @@ const PicturesList = ({incrementLikes}) => {
   }</div>;
 };
 
-
 export default PicturesList;
