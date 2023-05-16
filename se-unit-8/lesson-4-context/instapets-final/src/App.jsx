@@ -2,7 +2,7 @@ import './App.css';
 import Header from './components/Header';
 import PicturesList from './components/PicturesList';
 import { useState } from 'react';
-import Context from './context/Context';
+import InstagramContext from './context/InstagramContext';
 
 const App = () => {
 
@@ -12,9 +12,9 @@ const App = () => {
   return (
     <>
       <Header likes={totalLikes}/>
-      <Context.Provider value={incrementLikes}>
+      <InstagramContext.Provider value={incrementLikes}>
         <PicturesList />
-      </Context.Provider>
+      </InstagramContext.Provider>
     </>
   );
 };
