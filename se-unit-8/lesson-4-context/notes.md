@@ -6,11 +6,10 @@ Consider the instagram clone app that renders something like this:
 
 > Note how there is a **total tally** of likes at the top that sums the likes on each individual picture.
 
-![](./notes-img/instagram-example.png)
-
-It has the following component structure.
-
-![](./notes-img/instacat-component-tree.svg)
+<div style="display: flex; gap:1rem">
+  <img src="./notes-img/instagram-example.png" style="width: 40%">
+  <img src="./notes-img/instacat-component-tree.svg" style="width: 50%">
+</div><br>
 
 To achieve the `totalLikes` feature, we need to make a `totalLikes` piece of state and pass down a function `incrementLikes` that can modify that value.
 
@@ -38,7 +37,7 @@ It isn't _always_ an issue but at about 3 layers, it starts to feel tedious.
 
 The solution is to create something called a **Context**. Think of Context as an object where we can store global data and that any component within that context's scope can access that data.
 
-![](./notes-img/instagram-context-diagram.svg)
+<img src='./notes-img/instagram-context-diagram.svg' style="max-width: 800px">
 
 To use React's Context API, there are **3 concepts to understand**.
 
@@ -146,4 +145,4 @@ To use React's Context API, there are **3 concepts to understand**.
 - Rendering a Context Provider - `<Context.Provider values={} />`
 - Getting values from a Context - `useContext()`
 
-![](./notes-img/instagram-context-diagram.svg)
+<img src='./notes-img/instagram-context-diagram.svg' style="max-width: 800px">
