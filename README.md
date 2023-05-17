@@ -396,10 +396,11 @@ Additional Resources:
 ### Week 2
 
 - **5/15/23 - Async & useEffect** | [Notes](./se-unit-8/lesson-3-useEffect-async/notes.md) | [Joke Fetch Example Repo](https://github.com/The-Marcy-Lab-School/react-useEffect-fetch-example) | [DummyJSON.com](https://dummyjson.com/) | [Recording](https://us02web.zoom.us/rec/share/osyNNbB27JONhEdx8PnhtkKsu_Zkpp51ou7Cd68Kk53jRBVzzDXkyjjeezXN8iak.IwQ_CXpto3Pqf1Kx)
-- **5/16/23 - Context** | [Notes](./se-unit-8/lesson-4-context/notes.md) | [Recording](https://us02web.zoom.us/rec/share/tE2_iD3lgO3LxPC8lHdbtPASsQjpt19mPLk1kad-Z0ybUuF6zFwiJtPDbgGlNsZz.eChbOCjw4hvK3g4Q)
-- **5/17/23 - Routing** | [Notes](./se-unit-8/lesson-5-react-router/notes.md) | [Demo App](./se-unit-8/lesson-5-react-router/demo/src/App.jsx) | Recording
-- **5/17/23 - Lab Review** | Notes | Recording
-- **5/18/23 - Routing** | Notes | Recording
+- **5/16/23 - Context** | [Notes](./se-unit-8/lesson-4-context/notes.md) | [Demo Final Code (using context)](./se-unit-8/lesson-4-context/instapets-2-context/) | [Recording](https://us02web.zoom.us/rec/share/tE2_iD3lgO3LxPC8lHdbtPASsQjpt19mPLk1kad-Z0ybUuF6zFwiJtPDbgGlNsZz.eChbOCjw4hvK3g4Q)
+- **5/17/23 - Global Context Provider Pattern** | [Notes](./se-unit-8/lesson-4-context/notes.md#context-design-pattern) | [Demo App](./se-unit-8/lesson-4-context/instapets-3-global-context/) | [Recording](https://us02web.zoom.us/rec/share/gDdmYMYh8bWqWmJysoHffhpUNozX1N72v2ViGUb_H_adswN0tUJ-tdRSA_sEUlBh.Nwb38NN69E07Udpt)
+- **5/17/23 - Lab Review** | Recording
+- **5/18/23 - React Router** | [Notes](./se-unit-8/lesson-5-react-router/notes.md) | [Demo App](./se-unit-8/lesson-5-react-router/demo/src/App.jsx) | Recording
+- **5/18/23 - React Router** | Notes | Recording
 - **5/19/23 - Review** | Notes | Recording
 
 ### Week 3
