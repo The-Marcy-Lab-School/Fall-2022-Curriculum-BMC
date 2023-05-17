@@ -4,10 +4,10 @@ import InstagramContext from '../context/InstagramContext';
 const LikesButton = () => {
 
   const [likes, setLikes] = useState(0);
-  const incrementLikes = useContext(InstagramContext);
+  const incrementTotalLikes = useContext(InstagramContext);
 
   const handleClick = () => {
-    incrementLikes();
+    incrementTotalLikes();
     setLikes(likes+1)
   }
 

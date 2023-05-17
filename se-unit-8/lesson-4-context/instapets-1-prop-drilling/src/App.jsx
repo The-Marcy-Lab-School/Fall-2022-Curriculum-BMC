@@ -6,12 +6,12 @@ import './App.css';
 const App = () => {
 
   const [totalLikes, setTotalLikes] = useState(0);
-  const incrementLikes = () => setTotalLikes(totalLikes+1);
+  const incrementTotalLikes = () => setTotalLikes(totalLikes+1);
 
   return (
     <>
       <Header likes={totalLikes}/>
-      <PicturesList incrementLikes={incrementLikes} />
+      <PicturesList incrementTotalLikes={incrementTotalLikes} />
     </>
   );
 };
