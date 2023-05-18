@@ -1,36 +1,59 @@
 # React Router
 
+[React docs](https://reactrouter.com/en/main/router-components/browser-router)
+
 ## React Router Basics
 
-React Router is a package for handling **client-side routing** in a React application.
+React Router is a package for handling **client-side routing** in a React application and lets us simulate navigation between different "pages" in our application.
 
-React Router lets us simulate navigation between different "pages" in our application.
+> **What do we mean by "simulate navigation"?**
 
-**What do we mean by "simulate navigation"?**
+Normally, when we click on a link like...
 
-Normally, when we click on an anchor like `<a href="./home.html">Home</a>`, we are redirected to a separate HTML page that is loaded up by the browser.
+```html
+<a href="./home.html">Home</a>
+```
 
-With React Router, we can do the same kind of navigation, but we actually never leave the page. **Instead of opening a separate HTML file, the same HTML file is used, but we just render different components to the screen.**
+...we are redirected to a separate HTML page that our browser needs to fetch from the server.
 
-This is easier to understand by seeing it in action.
+With React Router, we can do the same kind of navigation, _but we actually never leave the page_. **Instead of opening a separate HTML file, the same HTML file is used, but we just render different components to the screen.**
 
-### 0) Import `react-router-dom`
+![](./notes-img/react-router-demo.gif)
 
-Install the package: `npm i react-router-dom`
+😮 _oooooh so smooth_...
+
+## Using React Router
+
+### 0) Install the package `react-router-dom`
+
+React Router is not provided by default in Vite projects so we have to install it.
+
+```sh
+npm i react-router-dom
+```
+
+_There is also a `react-router-native` version for building mobile React apps with React Router_
 
 ### 1) Render a `<BrowserRouter>`
 
-A `<BrowserRouter>` stores the current location in the browser's address bar using clean URLs and navigates using the browser's built-in history stack.
+We're going to be importing a lot of things from the `react-router-dom` package. The first is the `BrowserRouter` component.
+
+The `BrowserRouter` component hijacks the URL bar, letting us:
+
+- render what we want to render based on the current URL (the "browser location")
+- use back-and-forward navigation
+- directly update the current browser location
 
 <!-- prettier-ignore -->
 ```jsx
 import ReactDOM from 'react-dom/client'
-import { BrowserRouter } from 'react-router-dom';
 import App from './App.jsx'
-import './index.css'
+
+// import BrowserRouter
+import { BrowserRouter } from 'react-router-dom'; 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
+  <BrowserRouter> {/* wrap the entire App */}
     <App />
   </BrowserRouter>
 )
@@ -38,12 +61,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
 ### 2) Create your `<Routes>` and `<Route>`s
 
-Rendered anywhere in the app, `<Routes>` will match a set of child routes from the current location.
-
-Whenever the location changes, `<Routes>` looks through all its child routes to find the best match and renders that branch of the UI. `<Route>` elements may be nested to indicate nested UI, which also correspond to nested URL paths. Parent routes render their child routes by rendering an `<Outlet>`.
+Whenever the location changes, `<Routes>` looks through all its child `<Route>`s to find the best matching `path` and renders the provided `element`.
 
 ```jsx
-import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
 const Dashboard = () => <h1>Dashboard</h1>;
@@ -61,8 +81,6 @@ function App() {
     </>
   );
 }
-
-export default App;
 ```
 
 ### 3) Create `<Link>`s
@@ -70,7 +88,7 @@ export default App;
 The `<Link>` component will replace the `<a>` tags in our HTML.
 
 - Like the `<a>` tag, the `<Link>` will provide a clickable button to redirect to another page.
-- Unlike the `<a>` tag, the `<Link>` will NOT _actually_ change the page, causing a refresh. Instead, the URL is changed, causing the `<Routes>` to render a new `<Route>`, but we stay on the same "page".
+- Unlike the `<a>` tag, the `<Link>` will NOT actually navigate to a different file, causing a fetch. Instead, only the URL is changed, causing the `<Routes>` to render a new `<Route>`, but we stay on the same "page".
 
 <!-- prettier-ignore -->
 ```jsx
