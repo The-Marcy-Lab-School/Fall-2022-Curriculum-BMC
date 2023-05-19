@@ -400,7 +400,7 @@ Additional Resources:
 - **5/17/23 - Global Context Provider Pattern** | [Notes](./se-unit-8/lesson-4-context/notes.md#context-design-pattern) | [Demo App](./se-unit-8/lesson-4-context/instapets-3-global-context/) | [Recording](https://us02web.zoom.us/rec/share/gDdmYMYh8bWqWmJysoHffhpUNozX1N72v2ViGUb_H_adswN0tUJ-tdRSA_sEUlBh.Nwb38NN69E07Udpt)
 - **5/17/23 - Lab Review** | Recording
 - **5/18/23 - React Router** | [Notes](./se-unit-8/lesson-5-react-router/notes.md) | [Demo App](./se-unit-8/lesson-5-react-router/demo/src/App.jsx) | [Recording](https://us02web.zoom.us/rec/share/ie98KLZOvlV02pTQYoVnw1rd5HT-7vCw8M8OW3Dnqc3z3xOfgZZrBM843LgkZ2M9.OibGvQmxwXCxmz_L)
-- **5/19/23 - React Router II** | (See above for notes) | Recording
+- **5/19/23 - React Router II** | [Full Products App w/ Fetch and Context](./se-unit-8/lesson-5-react-router/full-app-with-fetch-and-context/) | [Recording](https://us02web.zoom.us/rec/share/sDg-UvH_90b3Ob_g8XRzPw8UgzWTfuZIiL1BbJe1GCAEmo7Ry-ubTDv5ls8zR7-o.CSdpVDWW3txqu4fl)
 
 ### Week 3
 

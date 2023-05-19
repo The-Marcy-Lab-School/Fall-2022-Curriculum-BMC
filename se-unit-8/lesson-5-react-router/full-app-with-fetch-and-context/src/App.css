@@ -47,3 +47,8 @@ nav {
 .read-the-docs {
   color: #888;
 }
+
+.active {
+  font-weight: bold;
+}
+
