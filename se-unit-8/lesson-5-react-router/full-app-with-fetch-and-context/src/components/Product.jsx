@@ -7,10 +7,8 @@ const Product = () => {
   const { id } = useParams();
   const { products } = useContext(ProductsContext);
   const product = products.find(product => product.id === Number(id));
-  
-  console.log(product);
 
-  if (!/[0-9]/.test(id)) return <Fallback />
+  if (!/[0-9]/.test(id) || !product) return <Fallback />
   
   return (
     <div className='product'>
