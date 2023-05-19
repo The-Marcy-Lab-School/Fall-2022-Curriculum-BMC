@@ -1,19 +1,6 @@
 import { useState, useEffect } from "react";
 import ProductsContext from "./ProductsContext";
-
-const handleFetch = async (url, options) => {
-  try {
-    const res = await fetch(url, options)
-    if (res.ok) {
-      const data = await res.json();
-      return data;
-    }
-    return null;
-  } catch (err) {
-    console.error(err);
-    return null;
-  }
-}
+import { handleFetch } from '../utils.jsx';
 
 const ProductsProvider = ({ children }) => {
 
@@ -27,16 +14,13 @@ const ProductsProvider = ({ children }) => {
     doFetch();
   }, []);
 
-  const contextValues = {
-    products
-  }
+  const contextValues = { products } // this object is returned by useContext(ProductsContext)
 
   return (
     <ProductsContext.Provider value={contextValues}>
       {children}
     </ProductsContext.Provider>
   )
-
 }
 
 export default ProductsProvider;
