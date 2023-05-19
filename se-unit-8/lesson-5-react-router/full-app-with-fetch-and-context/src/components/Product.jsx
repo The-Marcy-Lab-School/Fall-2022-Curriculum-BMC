@@ -8,7 +8,7 @@ const Product = () => {
   const { products } = useContext(ProductsContext);
   const product = products.find(product => product.id === Number(id));
 
-  if (!/[0-9]/.test(id) || !product) return <Fallback />
+  if (!product) return <Fallback />
   
   return (
     <div className='product'>
