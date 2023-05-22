@@ -107,3 +107,20 @@ export default defineConfig({
 ```
 
 We basically are saying that any `fetch` that starts with the `/api` endpoint will be redirected to `localhost:3000` (or wherever you are running your Express server from).
+
+### Handle bad routes
+
+If the user tries to navigate to a User profile page by entering something like `/users`, the browser is going to send a `GET /users` request to the server. The server will then look in the `public` folder for a file called `users`. It won't find one so it will send back a `Cannot GET /users` message.
+
+Instead, we want the React front-end to handle all routing that has to do with viewing different parts of the UI. The problem is that this all happens based on the `index.html` file and if a user sends a request for a different page, we will leave the `index.html` page.
+
+So, we have to configure the server to send the user back to the `index.html` file if they make a request like this.
+
+```js
+app.get("*", (req, res, next) => {
+  if (req.originalUrl.startsWith("/api")) next();
+  res.sendFile(path.join(__dirname, "..", "public", "index.html"));
+});
+```
+
+We still want requests sent to `/api/*` to work, since those deal with the back-end API itself and not with the UI.

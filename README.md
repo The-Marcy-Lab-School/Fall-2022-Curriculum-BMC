@@ -403,8 +403,4 @@ Additional Resources:
 
 ### Week 3
 
-- **5/22/23 - Express + React + Proxies** | [Notes](./se-unit-8/lesson-6-react-express-full-stack/notes.md)
-
----
-
-## Unit 9 - Capstone
+- **5/22/23 - Express + React + Proxies** | [Notes](./se-unit-8/lesson-6-react-express-full-stack/notes.md) | [Demo-App Repo (fork me!)](https://github.com/The-Marcy-Lab-School/react-express-proxy-demo) | [Recording](https://us02web.zoom.us/rec/share/67G5GqsHXsUPBeKhcBXRQR20ZucamGrBLoK9ygNrqAYIvlgjqPd1NE7hJ6znVfg._ZNWncX0nGP7cOAX)

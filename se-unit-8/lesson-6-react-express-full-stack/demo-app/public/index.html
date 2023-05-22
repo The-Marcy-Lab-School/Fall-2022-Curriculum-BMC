@@ -2,24 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Vite + React</title>
+    <script type="module" crossorigin src="/assets/index-e77fa6ae.js"></script>
+    <link rel="stylesheet" href="/assets/index-d526a0c5.css">
   </head>
   <body>
-    <h1>Hello World</h1>
-    <script>
-      async function main() {
-        try {
-          console.log("trying fetch");
-          const res = await fetch("/api/hello");
-          const data = await res.json();
-          document.body.append(`Message from server: ${data.msg}`);
-        } catch (err) {
-          console.log(err);
-        }
-      }
-      main();
-    </script>
+    <div id="root"></div>
+    
   </body>
 </html>
