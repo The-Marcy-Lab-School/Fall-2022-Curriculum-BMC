@@ -385,6 +385,7 @@ Additional Resources:
 - [Vite Docs](https://vitejs.dev/)
   - [How to Set Up a Vite (React) + Express Project](https://www.youtube.com/watch?v=PPjpHaLkV7A&ab_channel=NathanKrasney)
 - [DummyJSON.com](https://dummyjson.com/)
+- [React Recipes (Cheatsheet)](./se-unit-8/react-recipes.md)
 
 ### Week 1
 
