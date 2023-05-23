@@ -27,17 +27,22 @@ const pictures = [
   { src: "img/duck.jpeg", caption: "quack!" },
 ];
 
-const firstImage = <InstagramPost source="img/cat.jpeg" caption="meow!"/>
-const secondImage = <InstagramPost source="img/dog.jpeg" caption="arf!"/>
-const thirdImage = <InstagramPost source="img/duck.jpeg" caption="quack!"/>
 
 const App = (props) => {
   console.log('App props:', props)
-
+  
   return (
     <>
       <Header />
-      {Math.random() > 0.5 ? firstImage : secondImage}
+      {/* 
+      const firstImage = <InstagramPost source="img/cat.jpeg" caption="meow!"/>
+      const secondImage = <InstagramPost source="img/dog.jpeg" caption="arf!"/>
+      const thirdImage = <InstagramPost source="img/duck.jpeg" caption="quack!"/> 
+      */}
+      {
+        pictures.map((picture) => <InstagramPost source={picture.src} caption={picture.caption} />)
+      }
+
     </>
   );
 };

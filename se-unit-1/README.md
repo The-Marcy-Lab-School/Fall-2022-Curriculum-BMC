@@ -1,6 +1,4 @@
-# The Marcy Lab School - Software Engineering Track - Unit 1
-
-## HTML5/CSS3 Foundations
+# Unit 1: HTML5/CSS3 Foundations
 
 > HTML is how we create a website with text, images, and links.
 > CSS is how we style it!
@@ -21,9 +19,9 @@ Technical units at the Marcy Lab School end in a Unit Assessment, a Project Week
 
 ### Code a little, test a little
 
-* Preview my code > Pop out into a new tab. 
-* Make changes. 
-* Save code.
-* Make a prediction - what change to I expect to see?
-* Refresh the preview - did it turn out the way I expected?
-* Learn!
+- Preview my code > Pop out into a new tab.
+- Make changes.
+- Save code.
+- Make a prediction - what change to I expect to see?
+- Refresh the preview - did it turn out the way I expected?
+- Learn!

@@ -1,1 +1,7 @@
-# Server-side Web Development with Node.js
+# Unit 7: Express Servers & SQL
+
+### Learning Objectives
+
+By the end of Unit 7, Fellows will be able to…
+
+- ...

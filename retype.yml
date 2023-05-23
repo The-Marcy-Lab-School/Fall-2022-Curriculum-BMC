@@ -1,0 +1,12 @@
+input: .
+output: .retype
+url: # Add your website address here
+branding:
+  title: Fall 2022 Curriculum
+  label: Docs
+links:
+  - text: Getting Started
+    link: https://retype.com/guides/getting-started/
+exclude: [*] 
+footer:
+  copyright: "&copy; Copyright {{ year }}. All rights reserved."
