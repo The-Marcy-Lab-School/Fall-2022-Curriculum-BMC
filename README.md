@@ -407,3 +407,22 @@ Additional Resources:
 
 - **5/22/23 - Express + React + Proxies** | [Notes](./se-unit-8/lesson-6-react-express-full-stack/notes.md) | [Demo-App Repo (fork me!)](https://github.com/The-Marcy-Lab-School/react-express-proxy-demo) | [Recording](https://us02web.zoom.us/rec/share/67G5GqsHXsUPBeKhcBXRQR20ZucamGrBLoK9ygNrqAYIvlgjqPd1NE7hJ6znVfg._ZNWncX0nGP7cOAX)
 - **5/23/23 - The React+Express Auth Template** | [The Repo](https://github.com/The-Marcy-Lab-School/react-express-auth) | [Recording](https://us02web.zoom.us/rec/share/6CAVCPSU6TqFMP6qdCJYCMcP5AuQTQ9tREdqRvLc1kKuG0yapgZ2FHfoAoaOh3UO.f53uU88tPISWOWUW)
+
+## Civic Tech Hackathon
+
+**CTH Docs**
+
+- [Civic Tech Hackathon Guidebook](https://docs.google.com/document/d/1AK6HOK9vikKsU7uN1ldv-L6qfYvPYVqyH3g1Yjpm3NE/)
+- [Civic Tech Hackathon Rubric](https://docs.google.com/spreadsheets/d/1NooPoda9wb4EOKGYWLsMWCWXYOy9fq0FuS0lDaCv0IU)
+
+**Sprint Planning**
+
+- [Evan's Sprint Planning Workshop Slides](https://docs.google.com/presentation/d/1LtLMWDi2I-zdQ2cTOiuf4X5GyAjOQuL5oILZJLIfUWQ/edit#slide=id.g1daa1ab0a7a_0_0)
+- [MayaSnax Product Specs](https://docs.google.com/document/d/1pUjQ5itf3WRjt3Fb5AYTGT6MCBs9pJUzCyNskLO1Iaw/edit)
+- [MayaSnax Scrum Board](https://github.com/users/EMarcantonio/projects/1/views/1?layout=board)
+- [Workshop Recording](https://zoom.us/rec/play/_xu7pnoZ4we6b_UIAcA-CPAYbPSOffK-TBHNxbIAsildaKOrsUp_PpOrTeYMRyTgJXxHFqN1eLMYgKxi.97DAJW9eeUJPSkIB)
+
+**Coding Resources**
+
+- [React+Express+Auth Template Repo](https://github.com/The-Marcy-Lab-School/react-express-auth)
+- [Github Workflow](./git-cheatsheet.md)

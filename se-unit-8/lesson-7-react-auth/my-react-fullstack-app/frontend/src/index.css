@@ -1,0 +1,54 @@
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  margin: 0;
+}
+
+input, label {
+  display: block;
+}
+
+input {
+  margin-bottom: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background: #000;
+}
+
+#logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+nav a {
+  display: block;
+  color: #FFF;
+}
+
+form {
+  padding: 1rem;
+  border: 1px solid #CCC;
+  width: 15rem;
+  margin: 1rem auto;
+}
+
+/* automatically added by NavLink component */
+.active {
+  color: #EEBC32;
+  font-weight: bold;
+  font-style: italic;
+}

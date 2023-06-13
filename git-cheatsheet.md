@@ -1,18 +1,16 @@
 # Git Cheatsheet
 
-## Working in Teams with Branches
-
 ### Creating and Moving Between Branches
 
 Each team member should own their own branch and work exclusively on that branch.
 
-To create a branch run:
+First, create a branch and switch to it:
 
-```sh
-git branch ben-branch-feature-A
+```
+git checkout -b ben-feature-A
 ```
 
-To see all branches, run:
+Then see all branches:
 
 ```sh
 git branch
@@ -22,21 +20,21 @@ You should then see: (the `*` indicates the current branch)
 
 ```
   main
-* ben-branch-feature-A
+* ben-feature-A
 ```
 
-**When working, always check to make sure that you are NOT working in the `main` branch**
+> TIP: Always check to make sure that you are NOT working in the `main` branch
 
 To switch back and forth between `main` and your branch, run:
 
 ```sh
 git checkout main
-git checkout ben-branch-feature-A
+git checkout ben-feature-A
 ```
 
 ### Pulling Code and Merging With Your Branch
 
-When a teammate pushes their code to the remove `main` branch, you want to ensure that your local `main` branch is up to date as well as your own local branch.
+When a teammate pushes their code to the remote `main` branch, you want to pull those changes to your local `main` branch.
 
 First, switch to the `main` branch and `pull` the changes:
 
@@ -48,11 +46,11 @@ git pull
 Then, switch back to your branch and merge the changes from `main` into your branch.
 
 ```sh
-git checkout ben-branch-feature-A
+git checkout ben-feature-A
 git merge main
 ```
 
-You may need to resolve merge conflicts at this point. 
+You may need to resolve merge conflicts at this point.
 
 If you see this screen asking you to enter a commit message, simply type <kbd>:q</kbd> to quit and accept the default merge message.
 
