@@ -32,7 +32,7 @@ git checkout main
 git checkout ben-feature-A
 ```
 
-### Pulling Code and Merging With Your Branch
+### Before you push your code: Pulling Code and Merging With Your Branch
 
 When a teammate pushes their code to the remote `main` branch, you want to pull those changes to your local `main` branch.
 
