@@ -2,12 +2,38 @@
 
 **Table of Contents**
 
+- [Review Branching](#review-branching)
 - [Creating Branches](#creating-branches)
 - [Commit Changes](#commit-changes)
 - [Merge before you push](#merge-before-you-push)
 - [Push and make a PR](#push-and-make-a-pr)
 
-### Creating Branches
+## Review Branching
+
+<details><summary>When should we create a new branch?</summary><br>
+
+Branches are used to diverge from the main code base. They are useful because they create a copy of existing code without modifying the existing code. Think of it as your very own sandbox where you can create anything new.
+
+Therefore, a new branch should be created for any new change to any of the files in the project. This includes but is not limited to creating a new feature in the repo and/or fixing a bug in the repo.
+
+</details>
+
+<details><summary>When do merge conflicts occur?</summary><br>
+
+Merge conflicts occur when we have code that could possibly overwrite code that was already there. They are bound to happen if multiple people are working on the same file.
+
+</details>
+
+<details><summary>Things to avoid</summary><br>
+
+The main branch should always have working code so as a best practice, we shouldn't
+
+- Work off of the `main` branch.
+- Merge code that hasn't been tested into the `main` branch .
+
+</details>
+
+## Creating Branches
 
 Each team member should own their own branch and work exclusively on that branch.
 
@@ -39,7 +65,7 @@ git checkout main
 git checkout ben-feature-A
 ```
 
-### Commit Changes
+## Commit Changes
 
 When you're ready to save your current changes, create a _local commit_.
 
@@ -50,7 +76,7 @@ git add -A
 git commit -m 'a message describing your changes'
 ```
 
-### Merge before you push
+## Merge before you push
 
 While you have been working on your code, your teammates may have pushed changes.
 
@@ -74,7 +100,7 @@ You may need to resolve merge conflicts at this point.
 
 ![](assets/git-merge-message.png)
 
-### Push and make a PR
+## Push and make a PR
 
 Once you have merged `main` into your branch, go ahead and `git push`.
 
