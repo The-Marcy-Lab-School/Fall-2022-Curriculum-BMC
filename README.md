@@ -1,6 +1,6 @@
 # Curriculum Resources
 
-**[> Skip to current unit <](#unit-8---react)**
+**[> Skip to current unit <](#civic-tech-hackathon)**
 
 **Table of Contents**
 
