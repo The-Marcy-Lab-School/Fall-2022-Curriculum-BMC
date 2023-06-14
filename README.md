@@ -427,3 +427,7 @@ Additional Resources:
 - [React+Express+Auth Template Repo](https://github.com/The-Marcy-Lab-School/react-express-auth)
 - [Github Workflow](./cheatsheets/git-cheatsheet.md)
 - [Postgres Setup](https://github.com/The-Marcy-Lab-School/postgres-setup)
+
+**Spring 1: MVP**
+
+- [What to Prioritize for MVP Demos (slides)](https://docs.google.com/presentation/d/1KjqlofaHPwRvrr3Uj121staVAMUjxqtdZru528X-_JU/)
