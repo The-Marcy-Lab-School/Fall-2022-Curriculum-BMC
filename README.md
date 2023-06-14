@@ -428,6 +428,6 @@ Additional Resources:
 - [Github Workflow](./cheatsheets/git-cheatsheet.md)
 - [Postgres Setup](https://github.com/The-Marcy-Lab-School/postgres-setup)
 
-**Spring 1: MVP**
+**Sprint 1: MVP**
 
 - [What to Prioritize for MVP Demos (slides)](https://docs.google.com/presentation/d/1KjqlofaHPwRvrr3Uj121staVAMUjxqtdZru528X-_JU/)
