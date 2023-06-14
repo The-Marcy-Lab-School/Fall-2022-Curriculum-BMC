@@ -415,7 +415,7 @@ Additional Resources:
 - [Civic Tech Hackathon Guidebook](https://docs.google.com/document/d/1AK6HOK9vikKsU7uN1ldv-L6qfYvPYVqyH3g1Yjpm3NE/)
 - [Civic Tech Hackathon Rubric](https://docs.google.com/spreadsheets/d/1NooPoda9wb4EOKGYWLsMWCWXYOy9fq0FuS0lDaCv0IU)
 
-**Sprint Planning**
+**Sprint Planning Workshop**
 
 - [Evan's Sprint Planning Workshop Slides](https://docs.google.com/presentation/d/1LtLMWDi2I-zdQ2cTOiuf4X5GyAjOQuL5oILZJLIfUWQ/edit#slide=id.g1daa1ab0a7a_0_0)
 - [MayaSnax Product Specs](https://docs.google.com/document/d/1pUjQ5itf3WRjt3Fb5AYTGT6MCBs9pJUzCyNskLO1Iaw/edit)
@@ -425,8 +425,8 @@ Additional Resources:
 **Coding Resources**
 
 - [React+Express+Auth Template Repo](https://github.com/The-Marcy-Lab-School/react-express-auth)
-- [Github Workflow](./cheatsheets/git-cheatsheet.md)
-- [Postgres Setup](https://github.com/The-Marcy-Lab-School/postgres-setup)
+- [Github Workflow Cheatsheet](./cheatsheets/git-cheatsheet.md)
+- [Postgres Cheatsheet](./cheatsheets/postgres-cheatsheet.md)
 
 **Sprint 1: MVP**
 
