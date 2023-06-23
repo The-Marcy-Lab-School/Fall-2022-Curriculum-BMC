@@ -414,6 +414,7 @@ Additional Resources:
 
 - [Civic Tech Hackathon Guidebook](https://docs.google.com/document/d/1AK6HOK9vikKsU7uN1ldv-L6qfYvPYVqyH3g1Yjpm3NE/)
 - [Civic Tech Hackathon Rubric](https://docs.google.com/spreadsheets/d/1NooPoda9wb4EOKGYWLsMWCWXYOy9fq0FuS0lDaCv0IU)
+- [What to Prioritize for Sprint 1 Demos (slides)](https://docs.google.com/presentation/d/1KjqlofaHPwRvrr3Uj121staVAMUjxqtdZru528X-_JU/)
 
 **Sprint Planning Workshop**
 
@@ -427,7 +428,5 @@ Additional Resources:
 - [React+Express+Auth Template Repo](https://github.com/The-Marcy-Lab-School/react-express-auth)
 - [Github Workflow Cheatsheet](./cheatsheets/git-cheatsheet.md)
 - [Postgres Cheatsheet](./cheatsheets/postgres-cheatsheet.md)
-
-**Sprint 1: MVP**
-
-- [What to Prioritize for MVP Demos (slides)](https://docs.google.com/presentation/d/1KjqlofaHPwRvrr3Uj121staVAMUjxqtdZru528X-_JU/)
+- [Deployment Instructions](https://docs.google.com/document/d/1IABN4SZTtYQx7FC9zd_VdAKdmTyrIyp-MMZJ12gV-CA/edit)
+- [Example README](https://github.com/benspector-mls/civic-tech-example-readme)
