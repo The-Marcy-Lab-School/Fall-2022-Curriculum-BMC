@@ -1,9 +1,9 @@
 # Organizing a Project with MVC
 
 **MVC (Model-View-Controller)** is a software architecture pattern that divides program logic into three responsibilites:
-* **Model**: The application's dynamic data structure, independent of the user interface. Provides an interface for CRUD actions.
-* **View**: How the application's model is presented visually to the user. Provides UI components for interacting with the controllers.
-* **Controller**: Accepts inputs from the view and uses the model's interface to make changes. Sends back updated model state to update the view.
+* **Model**: The application's dynamic data structure, independent of the user interface. Provides an interface (a set of methods) for performing CRUD actions, often with a database.
+* **View**: How the application's model is presented visually to the user. Renders data fetched from the server. Interactive UI components send requests to the server to update the model.
+* **Controller**: Parses requests made by the View and uses the Model's interface to make changes to the application's state. Sends back the updated model state to update the view.
 
 ![](img/mvc-diagram.svg)
 
@@ -47,11 +47,9 @@ These will be imported by the server and assigned as request handlers.
 
 **Model**
 
-CRUD (create, read, update, delete) actions lie at the core of any model. Typically, the model is represented with a database. In our applications so far, it has been a `class`. 
+CRUD (create, read, update, delete) actions lie at the core of any model. Our models have been created as a `class` with methods. Typically, the model's data is stored in a database. In our applications so far, the Model's data has been stored in an array. 
 
-In both cases, the model will have a dedicated file with functions for managing the underlying data.
-
-Only the controllers will have access to the model's interface.
+Only the controllers will use the model's interface.
 
 ### File Structure for ToDo Application
 
@@ -66,7 +64,7 @@ Only the controllers will have access to the model's interface.
     - `middleware/`
         - `add-todos.js`, `log-routes.js`
     - `models/` **(Model)**
-        - `todo.js` - defines the `ToDo` model (in-memory array + CRUD actions)
+        - `todo.js` - defines the `ToDo` model (methods for performing CRUD actions on the data)
     - `index.js` - entry point, imports the `server`, starts the `server`
     - `server.js` - imports `router`, sets up middleware
     - `routes.js` - imports controllers and defines routes, sets up ToDo middleware
