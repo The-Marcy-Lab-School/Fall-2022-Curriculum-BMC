@@ -22,31 +22,38 @@ const express = require('express');
 // Create an express server object
 const server = express();
 
+// Some data that our backend program stores
+const data = {
+  names: ['John', 'Jane', 'Jack', 'Jill'],
+  count: 0
+}
+
 /////////////////////////////////
-//////// ROUTES ////////////////
+///// Define Route Handlers ////
 ///////////////////////////////
 
-/*
-Route components
-- method (get, post, put, delete)
-- path name ('/', '/about', '/health')
-- handler: (req, res) => {}
-*/
+const homepageHandler = (req, res) => {
+  res.sendFile(__dirname + '/index.html') // Send back HTML
+}
 
-server.get('/', (req, res) => {
-  res.send('Hi'); // Send back plain text
-});
+const dataHandler = (req, res) => {
+  res.send(data);
+}
 
-server.get('/about', (req, res) => {
-  res.send('<h1>About Page</h1>') // Send back HTML
-})
+/////////////////////////////////
+//////// Register Routes ///////
+///////////////////////////////
 
-server.get('/health', (req, res) => {
-  res.send({ status: 'OK', name: 'Ben' }); // Send back JSON
-});
+// When the client requests 'localhost:8080' execute the homepageHandler
+server.get('/', homepageHandler);
 
+// When the client requests 'localhost:8080/api/data' execute the dataHandler
+server.get('/api/data', dataHandler);
 
-// Start the server
+/////////////////////////////////
+//////// Start the server //////
+///////////////////////////////
+
 const port = 8080;
 server.listen(port, () => {
   console.log(`Server is now running on http://localhost:${port}`);
