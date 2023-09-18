@@ -16,27 +16,40 @@ After installing, you can use Express in your project by requiring it and creati
 
 
 ```js
+// Import express
 const express = require('express');
-const app = express();
-const port = process.env.PORT || 8080;
-const host = process.env.HOST || '127.0.0.1';
 
-// Define routes and middleware
-app.get('/', (req, res) => {
+// Create an express server object
+const server = express();
+
+/////////////////////////////////
+//////// ROUTES ////////////////
+///////////////////////////////
+
+/*
+Route components
+- method (get, post, put, delete)
+- path name ('/', '/about', '/health')
+- handler: (req, res) => {}
+*/
+
+server.get('/', (req, res) => {
   res.send('Hi'); // Send back plain text
 });
 
-app.get('/about', (req, res) => {
+server.get('/about', (req, res) => {
   res.send('<h1>About Page</h1>') // Send back HTML
 })
 
-app.get('/health', (req, res) => {
+server.get('/health', (req, res) => {
   res.send({ status: 'OK', name: 'Ben' }); // Send back JSON
 });
 
+
 // Start the server
-app.listen(port, host, () => {
-  console.log(`Server is now running on http://${host}:${port}`);
+const port = 8080;
+server.listen(port, () => {
+  console.log(`Server is now running on http://localhost:${port}`);
 });
 ```
 
