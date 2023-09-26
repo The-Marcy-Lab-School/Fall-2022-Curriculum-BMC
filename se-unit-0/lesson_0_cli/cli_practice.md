@@ -4,10 +4,6 @@
 * Complete the "Navigating the File System" and "Viewing and Changing the File System" sections of [Learn the Command Line](https://www.codecademy.com/learn/learn-the-command-line) on Codecademy.
 * Set up your coding environment on [Windows](https://github.com/The-Marcy-Lab-School/local-environment-setup-wsl), [Mac](https://github.com/The-Marcy-Lab-School/local-environment-setup-mac), or [AWS Cloud9](https://github.com/The-Marcy-Lab-School/aws-cloud9-environment-setup)
 
-## Guided Practices
-
-If you _could not_ set up your environment, you can practice using [Repl.it](https://repl.it/languages/bash). Otherwise, you should complete the exercises below in your Cloud9 environment.
-
 ### Directory Set-Up
 1. Type `pwd` to see your working directory.
 2. For this practice, we will be creating folders and files using only the command line. Determine where you want to create them and `cd` to that folder.
