@@ -166,13 +166,13 @@ const promise = new Promise((resolve, reject) => {
         if (random > 0.5) {
             resolve(random);
         } else {
-            reject(random)
+            reject(new Error(random))
         }
     }, 3000);
 }); 
 promise
     .then(data => console.log(`Promise fulfilled: random was ${data}`)) // executes if `resolve()` was invoked
-    .catch(error => console.log(`Promise fulfilled: random was ${error}`)) // executes if `reject()` was invoked
+    .catch(error => console.error(`Promise rejected: random was ${error.message}`)) // executes if `reject()` was invoked
 ```
 
 If a `Promise` object is fulfilled (the `resolve` callback is invokd), the callback passed to `then` is executed with the resolved data passed in as an argument.
