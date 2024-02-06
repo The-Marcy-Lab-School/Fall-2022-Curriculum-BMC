@@ -21,7 +21,7 @@ An **abstract data type (ADT)** is a general description about a data type: how 
 <img src="./img/abstract-numbers.png">
 
 For example, an integer is an abstract data type. 
-* **How they store data**: integers represent a single numerical value in the range `...`, -2`, `-1`, `0`, `1`, `2`, `...`. 
+* **How they store data**: integers represent a single numerical value in the range `...`, `-2`, `-1`, `0`, `1`, `2`, `...`. 
 * **Operations that can be performed**: integers can be added together, subtracted, multiplied, and divided. 
 * **Implementations may vary**: In Java, integers are their own data type, separate from floats (numbers that have decimal points). In JavaScript, integers and floats are all considered the same data type.
 
