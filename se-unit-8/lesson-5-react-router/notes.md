@@ -39,12 +39,6 @@ _There is also a `react-router-native` version for building mobile React apps wi
 
 We're going to be importing a lot of things from the `react-router-dom` package. The first is the `BrowserRouter` component.
 
-The `BrowserRouter` component hijacks the URL bar, letting us:
-
-- render what we want to render based on the current URL (the "browser location")
-- use back-and-forward navigation
-- directly update the current browser location
-
 <!-- prettier-ignore -->
 ```jsx
 import ReactDOM from 'react-dom/client'
@@ -59,6 +53,12 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   </BrowserRouter>
 )
 ```
+
+The `BrowserRouter` component hijacks the URL bar, letting us:
+
+- render what we want to render based on the current URL (the "browser location")
+- use back-and-forward navigation
+- directly update the current browser location
 
 ### 2) Create your `<Routes>` and `<Route>`s
 
